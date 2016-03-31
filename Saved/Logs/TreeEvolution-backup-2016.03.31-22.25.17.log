@@ -1,0 +1,85 @@
+﻿[2016.03.31-20.24.03:466][  0]Log file open, 03/31/16 22:24:03
+[2016.03.31-20.24.03:466][  0]LogInit:Display: Running engine for game: TreeEvolution
+[2016.03.31-20.24.03:466][  0]LogPlatformFile: Not using cached read wrapper
+[2016.03.31-20.24.03:466][  0]LogInit:Display: RandInit(-2040703020) SRandInit(-2040703019).
+[2016.03.31-20.24.03:466][  0]LogTaskGraph: Started task graph with 4 named threads and 7 total threads.
+[2016.03.31-20.24.03:466][  0]LogStats: Stats thread started at 0.073728
+[2016.03.31-20.24.03:466][  0]LogInit: Version: 4.10.4-2872498+++depot+UE4-Releases+4.10
+[2016.03.31-20.24.03:466][  0]LogInit: API Version: 2758231
+[2016.03.31-20.24.03:466][  0]LogInit: Compiled (64-bit): Feb 18 2016 15:47:04
+[2016.03.31-20.24.03:466][  0]LogInit: Compiled with Visual C++: 19.00.23026.00
+[2016.03.31-20.24.03:466][  0]LogInit: Build Configuration: Development
+[2016.03.31-20.24.03:466][  0]LogInit: Branch Name: ++depot+UE4-Releases+4.10
+[2016.03.31-20.24.03:466][  0]LogInit: Command line:  
+[2016.03.31-20.24.03:466][  0]LogInit: Base directory: D:/Program Files (x86)/Epic Games/4.10/Engine/Binaries/Win64/
+[2016.03.31-20.24.03:466][  0]LogInit: Rocket: 1
+[2016.03.31-20.24.03:473][  0]LogInit: Using libcurl 7.41.0
+[2016.03.31-20.24.03:473][  0]LogInit:  - built for x86_64-pc-win32
+[2016.03.31-20.24.03:473][  0]LogInit:  - supports SSL with WinSSL
+[2016.03.31-20.24.03:473][  0]LogInit:  - other features:
+[2016.03.31-20.24.03:473][  0]LogInit:      CURL_VERSION_SSL
+[2016.03.31-20.24.03:473][  0]LogInit:      CURL_VERSION_IPV6
+[2016.03.31-20.24.03:473][  0]LogInit:      CURL_VERSION_ASYNCHDNS
+[2016.03.31-20.24.03:473][  0]LogInit:      CURL_VERSION_LARGEFILE
+[2016.03.31-20.24.03:473][  0]LogInit:      CURL_VERSION_IDN
+[2016.03.31-20.24.03:473][  0]LogInit:  CurlRequestOptions (configurable via config and command line):
+[2016.03.31-20.24.03:473][  0]LogInit:  - bVerifyPeer = true  - Libcurl will verify peer certificate
+[2016.03.31-20.24.03:473][  0]LogInit:  - bUseHttpProxy = false  - Libcurl will NOT use HTTP proxy
+[2016.03.31-20.24.03:473][  0]LogInit:  - bDontReuseConnections = false  - Libcurl will reuse connections
+[2016.03.31-20.24.03:473][  0]LogInit:  - CertBundlePath = nullptr  - Libcurl will use whatever was configured at build time.
+[2016.03.31-20.24.03:477][  0]LogInit: Presizing for 0 objects not considered by GC, pre-allocating 0 bytes.
+[2016.03.31-20.24.03:482][  0]LogInit: Object subsystem initialized
+[2016.03.31-20.24.03:483][  0]LogInit: Selected Device Profile: [Windows]
+[2016.03.31-20.24.03:483][  0]LogInit: Applying CVar settings loaded from the selected device profile: [Windows]
+[2016.03.31-20.24.03:491][  0]LogInit: Computer: MSI
+[2016.03.31-20.24.03:491][  0]LogInit: User: tobia
+[2016.03.31-20.24.03:491][  0]LogInit: CPU Page size=4096, Cores=4
+[2016.03.31-20.24.03:491][  0]LogInit: High frequency timer resolution =2.531247 MHz
+[2016.03.31-20.24.03:491][  0]LogMemory: Memory total: Physical=15.9GB (16GB approx)
+[2016.03.31-20.24.03:491][  0]LogMemory: Platform Memory Stats for Windows
+[2016.03.31-20.24.03:491][  0]LogMemory: Process Physical Memory: 56.15 MB used, 56.15 MB peak
+[2016.03.31-20.24.03:491][  0]LogMemory: Process Virtual Memory: 56.91 MB used, 56.91 MB peak
+[2016.03.31-20.24.03:491][  0]LogMemory: Physical Memory: 6979.32 MB used, 16294.66 MB total
+[2016.03.31-20.24.03:491][  0]LogMemory: Virtual Memory: 382.88 MB used, 134217728.00 MB total
+[2016.03.31-20.24.03:523][  0]LogTextLocalizationManager: No translations for ('sv-SE') exist, falling back to 'en' for localization and internationalization data.
+[2016.03.31-20.24.03:878][  0]LogD3D11RHI: Found D3D11 adapter 0: NVIDIA GeForce GTX 970M           (Feature Level 11_0)
+[2016.03.31-20.24.03:878][  0]LogD3D11RHI: Adapter has 2991MB of dedicated video memory, 0MB of dedicated system memory, and 8147MB of shared system memory, 1 output[s]
+[2016.03.31-20.24.03:884][  0]LogD3D11RHI: Found D3D11 adapter 1: Intel(R) HD Graphics 530 (Feature Level 11_0)
+[2016.03.31-20.24.03:884][  0]LogD3D11RHI: Adapter has 128MB of dedicated video memory, 0MB of dedicated system memory, and 8147MB of shared system memory, 0 output[s]
+[2016.03.31-20.24.03:885][  0]LogD3D11RHI: Found D3D11 adapter 2: Microsoft Basic Render Driver (Feature Level 11_0)
+[2016.03.31-20.24.03:885][  0]LogD3D11RHI: Adapter has 0MB of dedicated video memory, 0MB of dedicated system memory, and 8147MB of shared system memory, 0 output[s]
+[2016.03.31-20.24.03:885][  0]LogD3D11RHI: Chosen D3D11 Adapter Id = 0
+[2016.03.31-20.24.03:890][  0]LogD3D11RHI: !Direct3DDevice
+[2016.03.31-20.24.03:890][  0]LogRHI: Texture pool is 1361 MB (70% of 1945 MB)
+[2016.03.31-20.24.03:904][  0]LogD3D11RHI: Async texture creation enabled
+[2016.03.31-20.24.03:922][  0]LogShaderCompilers: Guid format shader working directory is 14 characters bigger than the processId version (../../../../../../TreeEvolution/Intermediate/Shaders/WorkingDirectory/12324/).
+[2016.03.31-20.24.03:922][  0]LogShaderCompilers: Cleaned the shader compiler working directory 'C:/Users/tobia/AppData/Local/Temp/UnrealShaderWorkingDir/42F26FF346C43FD6EFF42682C10E9E8C/'.
+[2016.03.31-20.24.03:922][  0]LogShaderCompilers:Display: Using Local Shader Compiler.
+[2016.03.31-20.24.04:621][  0]LogTemp:Display: Loaded TP AllDesktopTargetPlatform
+[2016.03.31-20.24.04:625][  0]LogTemp:Display: Loaded TP WindowsClientTargetPlatform
+[2016.03.31-20.24.04:629][  0]LogTemp:Display: Loaded TP WindowsNoEditorTargetPlatform
+[2016.03.31-20.24.04:632][  0]LogTemp:Display: Loaded TP WindowsServerTargetPlatform
+[2016.03.31-20.24.04:636][  0]LogTemp:Display: Loaded TP WindowsTargetPlatform
+[2016.03.31-20.24.04:638][  0]LogTemp:Display: Loaded TP AndroidTargetPlatform
+[2016.03.31-20.24.04:640][  0]LogTemp:Display: Loaded TP Android_ASTCTargetPlatform
+[2016.03.31-20.24.04:643][  0]LogTemp:Display: Loaded TP Android_ATCTargetPlatform
+[2016.03.31-20.24.04:646][  0]LogTemp:Display: Loaded TP Android_DXTTargetPlatform
+[2016.03.31-20.24.04:648][  0]LogTemp:Display: Loaded TP Android_ETC1TargetPlatform
+[2016.03.31-20.24.04:651][  0]LogTemp:Display: Loaded TP Android_ETC2TargetPlatform
+[2016.03.31-20.24.04:656][  0]LogTemp:Display: Loaded TP Android_MultiTargetPlatform
+[2016.03.31-20.24.04:656][  0]LogTemp:Display: Loaded TP Android_PVRTCTargetPlatform
+[2016.03.31-20.24.04:656][  0]LogTemp:Display: Loaded TP HTML5TargetPlatform
+[2016.03.31-20.24.04:672][  0]LogTemp:Display: Loaded TP IOSTargetPlatform
+[2016.03.31-20.24.04:674][  0]LogTemp:Display: Loaded TP LinuxNoEditorTargetPlatform
+[2016.03.31-20.24.04:676][  0]LogTemp:Display: Loaded TP LinuxServerTargetPlatform
+[2016.03.31-20.24.04:679][  0]LogTemp:Display: Loaded TP LinuxTargetPlatform
+[2016.03.31-20.24.04:679][  0]LogTargetPlatformManager:Display: Building Assets For Windows
+[2016.03.31-20.24.04:735][  0]LogDerivedDataCache:Display: Max Cache Size: 512 MB
+[2016.03.31-20.24.04:779][  0]LogDerivedDataCache: Loaded boot cache 0.04s 42MB C:/Users/tobia/AppData/Local/UnrealEngine/4.10/DerivedDataCache/Boot.ddc.
+[2016.03.31-20.24.04:779][  0]LogDerivedDataCache:Display: Loaded Boot cache: C:/Users/tobia/AppData/Local/UnrealEngine/4.10/DerivedDataCache/Boot.ddc
+[2016.03.31-20.24.04:779][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  Pak pak cache file ../../../../../../TreeEvolution/DerivedDataCache/DDC.ddp not found, will not use a pak cache.
+[2016.03.31-20.24.04:779][  0]LogDerivedDataCache: Unable to find inner node Pak for hierarchical cache Hierarchy.
+[2016.03.31-20.24.04:779][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  CompressedPak pak cache file ../../../../../../TreeEvolution/DerivedDataCache/Compressed.ddp not found, will not use a pak cache.
+[2016.03.31-20.24.04:779][  0]LogDerivedDataCache: Unable to find inner node CompressedPak for hierarchical cache Hierarchy.
+[2016.03.31-20.24.04:832][  0]LogDerivedDataCache:Display: Pak cache opened for reading ../../../Engine/DerivedDataCache/Compressed.ddp.
+[2016.03.31-20.24.04:844][  0]LogDerivedDataCache: Using Local data cache path C:/Users/tobia/AppData/Local/UnrealEngine/Common/Derive

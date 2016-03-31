@@ -1,0 +1,160 @@
+﻿[2016.03.31-15.16.36:599][  0]Log file open, 03/31/16 17:16:36
+[2016.03.31-15.16.36:599][  0]LogInit:Display: Running engine for game: TreeEvolution
+[2016.03.31-15.16.36:599][  0]LogPlatformFile: Not using cached read wrapper
+[2016.03.31-15.16.36:599][  0]LogInit:Display: RandInit(-1489763709) SRandInit(-1489763708).
+[2016.03.31-15.16.36:599][  0]LogTaskGraph: Started task graph with 4 named threads and 7 total threads.
+[2016.03.31-15.16.36:599][  0]LogStats: Stats thread started at 0.075592
+[2016.03.31-15.16.36:599][  0]LogInit: Version: 4.10.4-2872498+++depot+UE4-Releases+4.10
+[2016.03.31-15.16.36:599][  0]LogInit: API Version: 2758231
+[2016.03.31-15.16.36:599][  0]LogInit: Compiled (64-bit): Feb 18 2016 15:47:04
+[2016.03.31-15.16.36:599][  0]LogInit: Compiled with Visual C++: 19.00.23026.00
+[2016.03.31-15.16.36:599][  0]LogInit: Build Configuration: Development
+[2016.03.31-15.16.36:599][  0]LogInit: Branch Name: ++depot+UE4-Releases+4.10
+[2016.03.31-15.16.36:599][  0]LogInit: Command line:  
+[2016.03.31-15.16.36:599][  0]LogInit: Base directory: D:/Program Files (x86)/Epic Games/4.10/Engine/Binaries/Win64/
+[2016.03.31-15.16.36:599][  0]LogInit: Rocket: 1
+[2016.03.31-15.16.36:603][  0]LogInit: Using libcurl 7.41.0
+[2016.03.31-15.16.36:603][  0]LogInit:  - built for x86_64-pc-win32
+[2016.03.31-15.16.36:603][  0]LogInit:  - supports SSL with WinSSL
+[2016.03.31-15.16.36:603][  0]LogInit:  - other features:
+[2016.03.31-15.16.36:603][  0]LogInit:      CURL_VERSION_SSL
+[2016.03.31-15.16.36:603][  0]LogInit:      CURL_VERSION_IPV6
+[2016.03.31-15.16.36:603][  0]LogInit:      CURL_VERSION_ASYNCHDNS
+[2016.03.31-15.16.36:603][  0]LogInit:      CURL_VERSION_LARGEFILE
+[2016.03.31-15.16.36:603][  0]LogInit:      CURL_VERSION_IDN
+[2016.03.31-15.16.36:603][  0]LogInit:  CurlRequestOptions (configurable via config and command line):
+[2016.03.31-15.16.36:603][  0]LogInit:  - bVerifyPeer = true  - Libcurl will verify peer certificate
+[2016.03.31-15.16.36:603][  0]LogInit:  - bUseHttpProxy = false  - Libcurl will NOT use HTTP proxy
+[2016.03.31-15.16.36:603][  0]LogInit:  - bDontReuseConnections = false  - Libcurl will reuse connections
+[2016.03.31-15.16.36:603][  0]LogInit:  - CertBundlePath = nullptr  - Libcurl will use whatever was configured at build time.
+[2016.03.31-15.16.36:607][  0]LogInit: Presizing for 0 objects not considered by GC, pre-allocating 0 bytes.
+[2016.03.31-15.16.36:612][  0]LogInit: Object subsystem initialized
+[2016.03.31-15.16.36:613][  0]LogInit: Selected Device Profile: [Windows]
+[2016.03.31-15.16.36:613][  0]LogInit: Applying CVar settings loaded from the selected device profile: [Windows]
+[2016.03.31-15.16.36:620][  0]LogInit: Computer: MSI
+[2016.03.31-15.16.36:620][  0]LogInit: User: tobia
+[2016.03.31-15.16.36:620][  0]LogInit: CPU Page size=4096, Cores=4
+[2016.03.31-15.16.36:620][  0]LogInit: High frequency timer resolution =2.531247 MHz
+[2016.03.31-15.16.36:620][  0]LogMemory: Memory total: Physical=15.9GB (16GB approx)
+[2016.03.31-15.16.36:620][  0]LogMemory: Platform Memory Stats for Windows
+[2016.03.31-15.16.36:620][  0]LogMemory: Process Physical Memory: 56.10 MB used, 56.10 MB peak
+[2016.03.31-15.16.36:620][  0]LogMemory: Process Virtual Memory: 56.90 MB used, 56.90 MB peak
+[2016.03.31-15.16.36:620][  0]LogMemory: Physical Memory: 6629.38 MB used, 16294.66 MB total
+[2016.03.31-15.16.36:620][  0]LogMemory: Virtual Memory: 382.88 MB used, 134217728.00 MB total
+[2016.03.31-15.16.36:987][  0]LogTextLocalizationManager: No translations for ('sv-SE') exist, falling back to 'en' for localization and internationalization data.
+[2016.03.31-15.16.37:332][  0]LogD3D11RHI: Found D3D11 adapter 0: NVIDIA GeForce GTX 970M           (Feature Level 11_0)
+[2016.03.31-15.16.37:332][  0]LogD3D11RHI: Adapter has 2991MB of dedicated video memory, 0MB of dedicated system memory, and 8147MB of shared system memory, 1 output[s]
+[2016.03.31-15.16.37:339][  0]LogD3D11RHI: Found D3D11 adapter 1: Intel(R) HD Graphics 530 (Feature Level 11_0)
+[2016.03.31-15.16.37:339][  0]LogD3D11RHI: Adapter has 128MB of dedicated video memory, 0MB of dedicated system memory, and 8147MB of shared system memory, 0 output[s]
+[2016.03.31-15.16.37:340][  0]LogD3D11RHI: Found D3D11 adapter 2: Microsoft Basic Render Driver (Feature Level 11_0)
+[2016.03.31-15.16.37:340][  0]LogD3D11RHI: Adapter has 0MB of dedicated video memory, 0MB of dedicated system memory, and 8147MB of shared system memory, 0 output[s]
+[2016.03.31-15.16.37:340][  0]LogD3D11RHI: Chosen D3D11 Adapter Id = 0
+[2016.03.31-15.16.37:346][  0]LogD3D11RHI: !Direct3DDevice
+[2016.03.31-15.16.37:346][  0]LogRHI: Texture pool is 1361 MB (70% of 1945 MB)
+[2016.03.31-15.16.37:358][  0]LogD3D11RHI: Async texture creation enabled
+[2016.03.31-15.16.37:377][  0]LogShaderCompilers: Guid format shader working directory is 14 characters bigger than the processId version (../../../../../../TreeEvolution/Intermediate/Shaders/WorkingDirectory/10664/).
+[2016.03.31-15.16.37:378][  0]LogShaderCompilers: Cleaned the shader compiler working directory 'C:/Users/tobia/AppData/Local/Temp/UnrealShaderWorkingDir/8D53E46D476EC8F39D06A0858E4D7849/'.
+[2016.03.31-15.16.37:378][  0]LogShaderCompilers:Display: Using Local Shader Compiler.
+[2016.03.31-15.16.38:067][  0]LogTemp:Display: Loaded TP AllDesktopTargetPlatform
+[2016.03.31-15.16.38:070][  0]LogTemp:Display: Loaded TP WindowsClientTargetPlatform
+[2016.03.31-15.16.38:074][  0]LogTemp:Display: Loaded TP WindowsNoEditorTargetPlatform
+[2016.03.31-15.16.38:077][  0]LogTemp:Display: Loaded TP WindowsServerTargetPlatform
+[2016.03.31-15.16.38:080][  0]LogTemp:Display: Loaded TP WindowsTargetPlatform
+[2016.03.31-15.16.38:082][  0]LogTemp:Display: Loaded TP AndroidTargetPlatform
+[2016.03.31-15.16.38:084][  0]LogTemp:Display: Loaded TP Android_ASTCTargetPlatform
+[2016.03.31-15.16.38:086][  0]LogTemp:Display: Loaded TP Android_ATCTargetPlatform
+[2016.03.31-15.16.38:089][  0]LogTemp:Display: Loaded TP Android_DXTTargetPlatform
+[2016.03.31-15.16.38:091][  0]LogTemp:Display: Loaded TP Android_ETC1TargetPlatform
+[2016.03.31-15.16.38:094][  0]LogTemp:Display: Loaded TP Android_ETC2TargetPlatform
+[2016.03.31-15.16.38:099][  0]LogTemp:Display: Loaded TP Android_MultiTargetPlatform
+[2016.03.31-15.16.38:099][  0]LogTemp:Display: Loaded TP Android_PVRTCTargetPlatform
+[2016.03.31-15.16.38:099][  0]LogTemp:Display: Loaded TP HTML5TargetPlatform
+[2016.03.31-15.16.38:114][  0]LogTemp:Display: Loaded TP IOSTargetPlatform
+[2016.03.31-15.16.38:116][  0]LogTemp:Display: Loaded TP LinuxNoEditorTargetPlatform
+[2016.03.31-15.16.38:118][  0]LogTemp:Display: Loaded TP LinuxServerTargetPlatform
+[2016.03.31-15.16.38:121][  0]LogTemp:Display: Loaded TP LinuxTargetPlatform
+[2016.03.31-15.16.38:121][  0]LogTargetPlatformManager:Display: Building Assets For Windows
+[2016.03.31-15.16.38:173][  0]LogDerivedDataCache:Display: Max Cache Size: 512 MB
+[2016.03.31-15.16.38:215][  0]LogDerivedDataCache: Loaded boot cache 0.04s 41MB C:/Users/tobia/AppData/Local/UnrealEngine/4.10/DerivedDataCache/Boot.ddc.
+[2016.03.31-15.16.38:215][  0]LogDerivedDataCache:Display: Loaded Boot cache: C:/Users/tobia/AppData/Local/UnrealEngine/4.10/DerivedDataCache/Boot.ddc
+[2016.03.31-15.16.38:215][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  Pak pak cache file ../../../../../../TreeEvolution/DerivedDataCache/DDC.ddp not found, will not use a pak cache.
+[2016.03.31-15.16.38:215][  0]LogDerivedDataCache: Unable to find inner node Pak for hierarchical cache Hierarchy.
+[2016.03.31-15.16.38:215][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  CompressedPak pak cache file ../../../../../../TreeEvolution/DerivedDataCache/Compressed.ddp not found, will not use a pak cache.
+[2016.03.31-15.16.38:215][  0]LogDerivedDataCache: Unable to find inner node CompressedPak for hierarchical cache Hierarchy.
+[2016.03.31-15.16.38:267][  0]LogDerivedDataCache:Display: Pak cache opened for reading ../../../Engine/DerivedDataCache/Compressed.ddp.
+[2016.03.31-15.16.38:279][  0]LogDerivedDataCache: Using Local data cache path C:/Users/tobia/AppData/Local/UnrealEngine/Common/DerivedDataCache: Writable
+[2016.03.31-15.16.38:436][  0]LogInit: Selected Device Profile: [Windows]
+[2016.03.31-15.16.38:438][  0]LogContentStreaming: Texture pool size is 0.000000MB
+[2016.03.31-15.16.38:529][  0]LogMeshUtilities: No automatic mesh reduction module available
+[2016.03.31-15.16.38:529][  0]LogMeshUtilities: No automatic mesh merging module available
+[2016.03.31-15.16.38:702][  0]LogInit: WinSock: version 1.1 (2.2), MaxSocks=32767, MaxUdp=65467
+[2016.03.31-15.16.39:310][  0]UdpMessaging: Initializing bridge on interface 0.0.0.0:0 to multicast group 230.0.0.1:6666.
+[2016.03.31-15.16.39:430][  0]LogAssetRegistry: FAssetRegistry took 0.0115 seconds to start up
+[2016.03.31-15.16.39:550][  0]SourceControl: Info Source control is disabled
+[2016.03.31-15.16.39:551][  0]SourceControl: Info Source control is disabled
+[2016.03.31-15.16.39:558][  0]SourceControl: Info Source control is disabled
+[2016.03.31-15.16.39:564][  0]SourceControl: Info Source control is disabled
+[2016.03.31-15.16.39:700][  0]LogObj: 28660 objects as part of root set at end of initial load.
+[2016.03.31-15.16.39:700][  0]LogUObjectAllocator: 6108720 out of 0 bytes used by permanent object pool.
+[2016.03.31-15.16.39:747][  0]LogEngine: Initializing Engine...
+[2016.03.31-15.16.39:750][  0]LogHMD: Can't find Oculus library dev build: is proper Runtime installed? Version: 0.8.0.0
+[2016.03.31-15.16.39:750][  0]LogHMD: SteamVR failed to initialize.  Err: 110
+[2016.03.31-15.16.39:852][  0]LogAIModule: Creating AISystem for world NewWorld
+[2016.03.31-15.16.39:856][  0]LogInit: XAudio2 using 'Speakers (Realtek High Definition Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
+[2016.03.31-15.16.40:243][  0]LogInit: FAudioDevice initialized.
+[2016.03.31-15.16.40:261][  0]LogDerivedDataCache: Saved boot cache 0.02s 41MB C:/Users/tobia/AppData/Local/UnrealEngine/4.10/DerivedDataCache/Boot.ddc.
+[2016.03.31-15.16.40:265][  0]LogInit: Texture streaming: Enabled
+[2016.03.31-15.16.40:269][  0]LogAnalytics: Creating configured Analytics provider AnalyticsET
+[2016.03.31-15.16.40:269][  0]LogAnalytics: [UEEditor.Rocket.Release] APIServer = http://et2.epicgames.com/ET2/. AppVersion = 4.10.4-2872498+++depot+UE4-Releases+4.10
+[2016.03.31-15.16.40:269][  0]LogAnalytics: [UEEditor.Rocket.Release] SetUserId 3750e6d1405e52e99c08f9974cd5569f|471a4cb9a5c14167995f8bc8b175918a|446fe6e5-1b13-4339-81c8-b1f6f83a87c4
+[2016.03.31-15.16.40:269][  0]LogAnalytics: [UEEditor.Rocket.Release] AnalyticsET::StartSession
+[2016.03.31-15.16.40:276][  0]LogInit: Transaction tracking system initialized
+[2016.03.31-15.16.40:293][  0]BlueprintLog: New page: Editor Load
+[2016.03.31-15.16.40:343][  0]LocalizationService: Info Localization service is disabled
+[2016.03.31-15.16.40:396][  0]LogConsoleResponse:Display: 
+[2016.03.31-15.16.40:494][  0]LogCook:Display: Done creating registry. It took  0.00s.
+[2016.03.31-15.16.40:529][  0]LogFileCache: Scanning file cache for directory 'D:/TreeEvolution/Content/' took 0.01s
+[2016.03.31-15.16.40:529][  0]SourceControl: Info Source control is disabled
+[2016.03.31-15.16.40:530][  0]Cmd: MAP LOAD FILE="../../../../../../TreeEvolution/Content/StarterContent/Maps/Minimal_Default.umap" TEMPLATE=0 SHOWPROGRESS=1 FEATURELEVEL=3
+[2016.03.31-15.16.40:530][  0]LightingResults: New page: Lighting Build
+[2016.03.31-15.16.40:532][  0]MapCheck: New page: Map Check
+[2016.03.31-15.16.40:532][  0]LightingResults: New page: Lighting Build
+[2016.03.31-15.16.40:541][  0]LogParticles: Destroying 0 GPU particle simulations for FXSystem 0x0000026665B0E160
+[2016.03.31-15.16.40:778][  0]LogAIModule: Creating AISystem for world Minimal_Default
+[2016.03.31-15.16.40:785][  0]LogEditorServer: Finished looking for orphan Actors (0.000 secs)
+[2016.03.31-15.16.40:785][  0]Cmd: MAP CHECKDEP NOCLEARLOG
+[2016.03.31-15.16.40:819][  0]MapCheck: Info Map check complete: 0 Error(s), 0 Warning(s), took 32.979ms to complete.
+[2016.03.31-15.16.40:819][  0]LogFileHelpers: Loading map 'Minimal_Default' took 0.289
+[2016.03.31-15.16.40:974][  0]LogCollectionManager: Loaded 0 collections in 0.001109 seconds
+[2016.03.31-15.16.41:017][  0]LogFileCache: Scanning file cache for directory 'D:/TreeEvolution/Saved/Collections/' took 0.01s
+[2016.03.31-15.16.41:017][  0]LogFileCache: Scanning file cache for directory 'D:/TreeEvolution/Content/Developers/tobia/Collections/' took 0.01s
+[2016.03.31-15.16.41:017][  0]LogFileCache: Scanning file cache for directory 'D:/TreeEvolution/Content/Collections/' took 0.01s
+[2016.03.31-15.16.41:017][  0]LogCollectionManager: Rebuilt the GUID cache for 0 collections in 0.000003 seconds
+[2016.03.31-15.16.41:031][  0]LogContentBrowser: Native class hierarchy populated in 0.0146 seconds. Added 1897 classes and 340 folders.
+[2016.03.31-15.16.41:041][  0]LogContentBrowser: Native class hierarchy updated for 'WidgetCarousel' in 0.0010 seconds. Added 0 classes and 0 folders.
+[2016.03.31-15.16.41:074][  0]LogContentBrowser: Native class hierarchy updated for 'AddContentDialog' in 0.0009 seconds. Added 0 classes and 0 folders.
+[2016.03.31-15.16.41:078][  0]LogContentBrowser: Native class hierarchy updated for 'SceneOutliner' in 0.0010 seconds. Added 1 classes and 2 folders.
+[2016.03.31-15.16.41:116][  0]LogCrashTracker: Crashtracker disabled due to settings.
+[2016.03.31-15.16.41:121][  0]LogUObjectGlobals:Warning: Failed to find object 'Class None.'
+[2016.03.31-15.16.41:144][  0]LogLoad: Full Startup: 5.12 seconds (BP compile: 0.03 seconds)
+[2016.03.31-15.16.41:157][  0]LogOcInput: Can't find Oculus library dev build: is proper Runtime installed? Version: 0.8.0.0
+[2016.03.31-15.16.41:211][  0]LogContentStreaming: Texture pool size now 1000 MB
+[2016.03.31-15.16.41:353][  0]LogRenderer: Reallocating scene render targets to support 884x452 (Frame:2).
+[2016.03.31-15.16.41:494][  2]LogAssetRegistry: Asset discovery search completed in 2.0762 seconds
+[2016.03.31-15.16.41:494][  2]LogCollectionManager: Rebuilt the object cache for 0 collections in 0.000001 seconds (found 0 objects)
+[2016.03.31-15.16.41:494][  2]LogCollectionManager: Fixed up redirectors for 0 collections in 0.000016 seconds (updated 0 objects)
+[2016.03.31-15.18.16:277][542]LogEditorViewport: Clicking on Actor (LMB): TreeBP_C (TreeBP)
+[2016.03.31-15.18.20:589][871]LogLinker:Warning: Asset '../../../Engine/Content/ArtTools/RenderToTexture/Macros/RenderToTextureMacros.uasset' has been saved with empty engine version. The asset will be loaded but may be incompatible.
+[2016.03.31-15.18.21:003][871]LogContentBrowser: Native class hierarchy updated for 'BlueprintGraph' in 0.0012 seconds. Added 107 classes and 0 folders.
+[2016.03.31-15.18.33:331][481]Recompiling TreeEvolution...
+[2016.03.31-15.18.33:331][481]Launching UnrealBuildTool... [D:/Program Files (x86)/Epic Games/4.10/Engine/Binaries/DotNET/UnrealBuildTool.exe TreeEvolution -ModuleWithSuffix TreeEvolution 8273 Win64 Development -editorrecompile -canskiplink "D:/TreeEvolution/TreeEvolution.uproject" -rocket  -rocket -2015]
+[2016.03.31-15.18.33:332][481]Warning: Starting HotReload took  0.0s.
+[2016.03.31-15.18.49:611][321]CompilerResultsLog: New page: Compilation - Mar 31, 2016, 7:18:49 PM
+[2016.03.31-15.18.49:611][321]CompilerResultsLog: Info Creating makefile for hot reloading TreeEvolution (modules to compile have changed)
+[2016.03.31-15.18.49:611][321]CompilerResultsLog: Info Compiling game modules for hot reload
+[2016.03.31-15.18.49:611][321]CompilerResultsLog: Info Parsing headers for TreeEvolutionEditor
+[2016.03.31-15.18.49:611][321]CompilerResultsLog: Info   Running UnrealHeaderTool "D:/TreeEvolution/TreeEvolution.uproject" "D:\TreeEvolution\Intermediate\Build\Win64\TreeEvolutionEditor\Development\UnrealHeaderTool.manifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -rocket -installed
+[2016.03.31-15.18.49:611][321]CompilerResultsLog: Info Reflection code generated for TreeEvolutionEditor in 7,8295354 seconds
+[2016.03.31-15.18.49:611][321]CompilerResultsLog: Info Performing 3 actions (4 in parallel)
+[2016.03.31-15.18.49:611][321]CompilerResultsLog: Info Branch.cpp
+[2016.03.31
