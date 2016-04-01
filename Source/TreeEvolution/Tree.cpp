@@ -181,7 +181,7 @@ void ATree::spawnRandomBranch() {
 
 
 
-		GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Red, "Spawned Branch");
+		//GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Red, "Spawned Branch");
 		branches.Add(spawnedBranch);
 
 

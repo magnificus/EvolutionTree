@@ -91,7 +91,7 @@ void ABranch::spawnRandomLeaf()
 	spawnedLeaf->SetActorLocation(trans.GetLocation());
 	spawnedLeaf->SetActorRotation(trans.Rotator());
 
-	GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Green, "Spawned Leaf");
+	//GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Green, "Spawned Leaf");
 	leafs.Add(spawnedLeaf);
 
 
