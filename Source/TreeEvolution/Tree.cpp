@@ -8,16 +8,16 @@
 // Sets default values
 ATree::ATree()
 {
-	/*static ConstructorHelpers::FObjectFinder<UClass> TreeFinder(TEXT("Class'/Game/TreeBP.TreeBP_C'"));
+	static ConstructorHelpers::FObjectFinder<UClass> TreeFinder(TEXT("Class'/Game/TreeBP.TreeBP_C'"));
 	if (TreeFinder.Object != NULL)
 		Tree_BP = TreeFinder.Object;
 
 	static ConstructorHelpers::FObjectFinder<UClass> BranchFinder(TEXT("Class'/Game/BranchBP.BranchBP_C'"));
 	if (BranchFinder.Object != NULL)
-		Branch_BP = BranchFinder.Object;*/
+		Branch_BP = BranchFinder.Object;
 
 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
-	PrimaryActorTick.bCanEverTick = true;
+	PrimaryActorTick.bCanEverTick = false;
 	random.GenerateNewSeed();
 
 
