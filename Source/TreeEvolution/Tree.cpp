@@ -109,13 +109,13 @@ float ATree::calculateCost()
 void ATree::mutate() {
 	float f = random.FRand();
 
-	if (f < mutationChance) {
+	if (f < spawnMutationChance) {
 		spawnRandomBranch();
 	}
 
 	f = random.FRand();
 
-	if (f < mutationChance && branches.Num() > 0) {
+	if (f < removeMutationChance && branches.Num() > 0) {
 		int32 index = random.GetUnsignedInt() % branches.Num();
 		ABranch* b = branches[index];
 		b->annihilate();
@@ -127,7 +127,7 @@ void ATree::mutate() {
 		b->mutate();
 	}
 
-	currentValue = calculateHits() * hitRewardMultiplier - calculateCost();
+	currentValue = (calculateHits() * hitRewardMultiplier) - calculateCost();
 
 }
 

@@ -27,12 +27,12 @@ public:
 
 	void spawnRandomLeaf();
 	void spawnRandomBranch();
-	FTransform getRandomPositionOnBranch(int offset);
+	FTransform getRandomPositionOnBranch();
 
 	UPROPERTY(EditAnywhere, Category = "Algorithm")
-		float branchMutationChance = .1f;
+		float branchMutationChance = .01f;
 	UPROPERTY(EditAnywhere, Category = "Algorithm")
-		float leafMutationChance = .6f;
+		float leafMutationChance = .01f;
 	UPROPERTY(EditAnywhere, Category = "Algorithm")
 		float cost = 1;
 
