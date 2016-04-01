@@ -2,4 +2,4 @@
 
 #include "TreeEvolution.h"
 
-IMPLEMENT_PRIMARY_GAME_MODULE( FDefaultGameModuleImpl, TreeEvolution, "TreeEvolution" );
+IMPLEMENT_PRIMARY_GAME_MODULE( FDefaultGameModuleImpl, TreeEvolution, "TreeEvolution");

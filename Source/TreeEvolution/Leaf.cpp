@@ -11,7 +11,8 @@ ALeaf::ALeaf()
 	static ConstructorHelpers::FObjectFinder<UClass> LeafFinder(TEXT("Class'/Game/LeafBP.LeafBP_C'"));
 	if (LeafFinder.Object != NULL)
 		Leaf_BP = LeafFinder.Object;
-	//// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
+
+
 	PrimaryActorTick.bCanEverTick = false;
 
 
