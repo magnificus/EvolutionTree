@@ -210,7 +210,10 @@ ABranch* ABranch::duplicate(FVector originalLocation, FVector newLocation) {
 
 	ABranch* spawnedBranch = (ABranch*)GetWorld()->SpawnActor(Branch_BP);
 	FVector diff = GetActorLocation() - originalLocation;
-	spawnedBranch->SetActorLocation(newLocation - diff);
+	FTransform t = GetTransform();
+	t.SetLocation(newLocation + diff);
+	spawnedBranch->SetActorTransform(t);
+
 	for (ABranch* b : branches) {
 		spawnedBranch->addBranch(b->duplicate(originalLocation, newLocation));
 	}
