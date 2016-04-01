@@ -27,7 +27,7 @@ public:
 
 	void spawnRandomLeaf();
 	void spawnRandomBranch();
-	FTransform getRandomPositionOnBranch();
+	FTransform getRandomPositionOnBranch(int offset);
 
 	UPROPERTY(EditAnywhere, Category = "Algorithm")
 		float branchMutationChance = .1f;
@@ -36,6 +36,7 @@ public:
 	UPROPERTY(EditAnywhere, Category = "Algorithm")
 		float cost = 1;
 
+	ABranch* duplicate(FVector originalLocation, FVector newLocation);
 
 	float calculateCost();
 

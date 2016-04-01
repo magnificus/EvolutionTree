@@ -31,15 +31,14 @@ void ALeaf::Tick(float DeltaTime)
 
 }
 
-//ALeaf* ALeaf::duplicate(FVector originalLocation, FVector newLocation) {
-	//if (Leaf_BP == NULL) {
-	//	return NULL;
-	//}
-	//FVector diff = GetActorLocation() - originalLocation;
-	//ALeaf* spawnedLeaf = (ALeaf*)GetWorld()->SpawnActor(Leaf_BP);
+ALeaf* ALeaf::duplicate(FVector originalLocation, FVector newLocation) {
+	if (Leaf_BP == NULL) {
+		return NULL;
+	}
+	FVector diff = GetActorLocation() - originalLocation;
+	ALeaf* spawnedLeaf = (ALeaf*)GetWorld()->SpawnActor(Leaf_BP);
 
-	//spawnedLeaf->SetActorLocation(newLocation - diff);
-	//return spawnedLeaf;
-//	return this;
-//}
+	spawnedLeaf->SetActorLocation(newLocation - diff);
+	return spawnedLeaf;
+}
 

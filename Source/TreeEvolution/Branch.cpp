@@ -85,10 +85,8 @@ void ABranch::mutate()
 void ABranch::spawnRandomLeaf()
 {
 
-	FTransform trans = getRandomPositionOnBranch();
+	FTransform trans = getRandomPositionOnBranch(5);
 	ALeaf* spawnedLeaf = (ALeaf*)GetWorld()->SpawnActor(Leaf_BP);
-
-
 
 	spawnedLeaf->SetActorLocation(trans.GetLocation());
 	spawnedLeaf->SetActorRotation(trans.Rotator());
@@ -103,7 +101,7 @@ void ABranch::spawnRandomBranch() {
 
 	ABranch* spawnedBranch = (ABranch*) GetWorld()->SpawnActor(Branch_BP);
 
-	FTransform trans = getRandomPositionOnBranch();
+	FTransform trans = getRandomPositionOnBranch(0);
 
 	spawnedBranch->SetActorLocation(trans.GetLocation());
 	spawnedBranch->SetActorRotation(trans.Rotator());
@@ -121,7 +119,7 @@ void ABranch::annihilate() {
 	Destroy();
 }
 
-FTransform ABranch::getRandomPositionOnBranch() {
+FTransform ABranch::getRandomPositionOnBranch(int offset) {
 
 	// beginning and end of branch...
 	TArray<UPrimitiveComponent*> comps;
@@ -178,7 +176,8 @@ FTransform ABranch::getRandomPositionOnBranch() {
 	FVector Direction = pos - beamStart;
 	FRotator Rot = FRotationMatrix::MakeFromX(Direction).Rotator();
 	FTransform t;
-	t.SetLocation(RV_Hit.ImpactPoint);
+	FVector finalLoc = RV_Hit.ImpactPoint + (beamStart - RV_Hit.ImpactPoint).Normalize() * offset;
+	t.SetLocation(finalLoc);
 	t.SetRotation(FQuat(Rot));
 	return t;
 
@@ -207,19 +206,17 @@ void ABranch::addLeaf(ALeaf * l)
 	leafs.Add(l);
 }
 
-//ABranch* ABranch::duplicate(FVector originalLocation, FVector newLocation) {
+ABranch* ABranch::duplicate(FVector originalLocation, FVector newLocation) {
 
-	//ABranch* spawnedBranch; /*= (ABranch*) spawner.spawnBranch(GetWorld());*/
-	//FVector diff = GetActorLocation() - originalLocation;
-	//spawnedBranch->SetActorLocation(newLocation - diff);
-	//for (ABranch* b : branches) {
-	//	spawnedBranch->addBranch(b->duplicate(originalLocation, newLocation));
-	//}
-	//for (ALeaf* l : leafs) {
-	//	spawnedBranch->addLeaf(l->duplicate(originalLocation, newLocation));
-	//}
+	ABranch* spawnedBranch = (ABranch*)GetWorld()->SpawnActor(Branch_BP);
+	FVector diff = GetActorLocation() - originalLocation;
+	spawnedBranch->SetActorLocation(newLocation - diff);
+	for (ABranch* b : branches) {
+		spawnedBranch->addBranch(b->duplicate(originalLocation, newLocation));
+	}
+	for (ALeaf* l : leafs) {
+		spawnedBranch->addLeaf(l->duplicate(originalLocation, newLocation));
+	}
 
-	//return spawnedBranch;
-
-//	return this;
-//}
+	return spawnedBranch;
+}
