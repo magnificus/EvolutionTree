@@ -127,6 +127,8 @@ void ATree::mutate() {
 		b->mutate();
 	}
 
+	currentValue = calculateHits() * hitRewardMultiplier - calculateCost();
+
 }
 
 void ATree::spawnRandomBranch() {
@@ -192,6 +194,8 @@ ATree* ATree::duplicate(FVector location) {
 
 	spawnedTree->SetActorLocation(location);
 
+	spawnedTree->currentValue = currentValue;
+
 	for (ABranch* b : branches) {
 		spawnedTree->addBranch(b->duplicate(GetActorLocation(), location));
 	}
@@ -202,4 +206,12 @@ ATree* ATree::duplicate(FVector location) {
 
 void ATree::addBranch(ABranch* b) {
 	branches.Add(b);
+}
+
+void ATree::annihilate() {
+	for (ABranch* b : branches) {
+		b->annihilate();
+	}
+
+	Destroy();
 }
