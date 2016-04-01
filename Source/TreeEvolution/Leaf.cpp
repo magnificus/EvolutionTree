@@ -35,10 +35,13 @@ ALeaf* ALeaf::duplicate(FVector originalLocation, FVector newLocation) {
 	if (Leaf_BP == NULL) {
 		return NULL;
 	}
-	FVector diff = GetActorLocation() - originalLocation;
 	ALeaf* spawnedLeaf = (ALeaf*)GetWorld()->SpawnActor(Leaf_BP);
 
-	spawnedLeaf->SetActorLocation(newLocation - diff);
+	FVector diff = GetActorLocation() - originalLocation;
+	FTransform t = GetTransform();
+	t.SetLocation(newLocation + diff);
+	spawnedLeaf->SetActorTransform(t);
+
 	return spawnedLeaf;
 }
 
