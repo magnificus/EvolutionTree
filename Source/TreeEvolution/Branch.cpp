@@ -23,6 +23,7 @@ ABranch::ABranch()
 
 	random.GenerateNewSeed();
 
+	
 
 }
 
@@ -84,12 +85,26 @@ void ABranch::mutate()
 
 void ABranch::spawnRandomLeaf()
 {
+	TArray<UPrimitiveComponent*> comps;
+	this->GetComponents(comps);
+	for (auto Itr(comps.CreateIterator()); Itr; ++Itr)
+	{
+		if ((*Itr)->GetName() == "start") {
+			begin = (*Itr)->GetComponentLocation();
+		}
+		else if ((*Itr)->GetName() == "end")
+		{
+			end = (*Itr)->GetComponentLocation();
 
-	FTransform trans = getRandomPositionOnBranch();
+		}
+	}
+
+	//FTransform trans = getRandomPositionOnBranch();
 	ALeaf* spawnedLeaf = (ALeaf*)GetWorld()->SpawnActor(Leaf_BP);
-
-	spawnedLeaf->SetActorLocation(trans.GetLocation());
-	spawnedLeaf->SetActorRotation(trans.Rotator());
+	FVector location = begin + (end - begin)*random.FRand();
+	spawnedLeaf->SetActorLocation(location);
+	FRotator f(random.FRand() * 360, random.FRand() * 360, random.FRand() * 360);
+	spawnedLeaf->SetActorRotation(f);
 
 	//GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Green, "Spawned Leaf");
 	leafs.Add(spawnedLeaf);
@@ -98,6 +113,21 @@ void ABranch::spawnRandomLeaf()
 }
 
 void ABranch::spawnRandomBranch() {
+
+	TArray<UPrimitiveComponent*> comps;
+	this->GetComponents(comps);
+	for (auto Itr(comps.CreateIterator()); Itr; ++Itr)
+	{
+		if ((*Itr)->GetName() == "start") {
+			begin = (*Itr)->GetComponentLocation();
+		}
+		else if ((*Itr)->GetName() == "end")
+		{
+			end = (*Itr)->GetComponentLocation();
+
+		}
+	}
+
 
 	ABranch* spawnedBranch = (ABranch*) GetWorld()->SpawnActor(Branch_BP);
 
@@ -122,21 +152,8 @@ void ABranch::annihilate() {
 FTransform ABranch::getRandomPositionOnBranch() {
 
 	// beginning and end of branch...
-	TArray<UPrimitiveComponent*> comps;
-	this->GetComponents(comps);
-	FVector begin;
-	FVector end;
-	for (auto Itr(comps.CreateIterator()); Itr; ++Itr)
-	{
-		if ((*Itr)->GetName() == "start") {
-			begin = (*Itr)->GetComponentLocation();
-		}
-		else if ((*Itr)->GetName() == "end")
-		{
-			end = (*Itr)->GetComponentLocation();
-
-		}
-	}
+	
+	
 	FVector pos = begin + (random.FRand() * (end - begin));
 
 	FVector beamStart = pos;
