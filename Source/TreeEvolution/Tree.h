@@ -47,9 +47,15 @@ public:
 		bool debugLine = false;
 
 	UPROPERTY(EditAnywhere, Category = "Algorithm")
-		float mutationChance = .5;
+		float mutationChance = .2;
+	UPROPERTY(EditAnywhere, Category = "Algorithm")
+		float hitRewardMultiplier = 10000;
 
 	void addBranch(ABranch* b);
+
+	void annihilate();
+
+	float currentValue = 0;
 
 private:
 	FRandomStream random;
