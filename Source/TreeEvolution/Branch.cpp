@@ -85,7 +85,7 @@ void ABranch::mutate()
 void ABranch::spawnRandomLeaf()
 {
 
-	FTransform trans = getRandomPositionOnBranch(5);
+	FTransform trans = getRandomPositionOnBranch();
 	ALeaf* spawnedLeaf = (ALeaf*)GetWorld()->SpawnActor(Leaf_BP);
 
 	spawnedLeaf->SetActorLocation(trans.GetLocation());
@@ -101,7 +101,7 @@ void ABranch::spawnRandomBranch() {
 
 	ABranch* spawnedBranch = (ABranch*) GetWorld()->SpawnActor(Branch_BP);
 
-	FTransform trans = getRandomPositionOnBranch(0);
+	FTransform trans = getRandomPositionOnBranch();
 
 	spawnedBranch->SetActorLocation(trans.GetLocation());
 	spawnedBranch->SetActorRotation(trans.Rotator());
@@ -119,7 +119,7 @@ void ABranch::annihilate() {
 	Destroy();
 }
 
-FTransform ABranch::getRandomPositionOnBranch(int offset) {
+FTransform ABranch::getRandomPositionOnBranch() {
 
 	// beginning and end of branch...
 	TArray<UPrimitiveComponent*> comps;
@@ -176,8 +176,7 @@ FTransform ABranch::getRandomPositionOnBranch(int offset) {
 	FVector Direction = pos - beamStart;
 	FRotator Rot = FRotationMatrix::MakeFromX(Direction).Rotator();
 	FTransform t;
-	FVector finalLoc = RV_Hit.ImpactPoint + (beamStart - RV_Hit.ImpactPoint).Normalize() * offset;
-	t.SetLocation(finalLoc);
+	t.SetLocation(RV_Hit.ImpactPoint);
 	t.SetRotation(FQuat(Rot));
 	return t;
 

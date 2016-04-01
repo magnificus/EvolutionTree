@@ -29,11 +29,11 @@ public:
 
 
 	UPROPERTY(EditAnywhere, Category = "Gameplay")
-		int32 distance = 1000;
+		int32 distance = 500;
 
 
 	UPROPERTY(EditAnywhere, Category = "Performance")
-		int32 nbrLines = 10;
+		int32 nbrLines = 5;
 
 
 private:

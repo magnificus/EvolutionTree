@@ -35,13 +35,15 @@ void ASimLogic::Tick( float DeltaTime )
 
 void ASimLogic::simulationTick()
 {
-	trees.Sort([](const ATree& t1, const ATree& t2) { return t1.currentValue < t2.currentValue;});
+	trees.Sort([](const ATree& t1, const ATree& t2) { return t1.currentValue > t2.currentValue;});
 
 	TArray<ATree*> winners;
 	TArray<ATree*> losers;
 
-	if (winners.Num() > 0)
-		winners.Add(trees[0]);
+	if (trees.Num() == 0) {
+		return;
+	}
+	winners.Add(trees[0]);
 	for (int32 i = 1; i < trees.Num(); ++i) {
 		if (random.FRand() * trees.Num() > i) {
 			winners.Add(trees[i]);
@@ -50,13 +52,14 @@ void ASimLogic::simulationTick()
 		}
 	}
 	for (ATree* t : losers) {
-		ATree* parent = winners[random.RandRange(0, winners.Num())];
+		ATree* parent = winners[random.RandRange(0, winners.Num()-1)];
 		ATree* newTree = parent->duplicate(t->GetActorLocation());
 		newTree->mutate();
 
 		winners.Add(newTree);
 		t->annihilate();
 	}
+
 
 	trees = winners;
 }

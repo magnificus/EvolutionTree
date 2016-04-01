@@ -47,9 +47,11 @@ public:
 		bool debugLine = false;
 
 	UPROPERTY(EditAnywhere, Category = "Algorithm")
-		float mutationChance = .2;
+		float spawnMutationChance = .05f;
 	UPROPERTY(EditAnywhere, Category = "Algorithm")
-		float hitRewardMultiplier = 10000;
+		float removeMutationChance = .01f;
+	UPROPERTY(EditAnywhere, Category = "Algorithm")
+		float hitRewardMultiplier = 50000;
 
 	void addBranch(ABranch* b);
 
