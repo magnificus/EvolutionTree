@@ -38,11 +38,11 @@ public:
 	void spawnRandomBranch();
 
 	UPROPERTY(EditAnywhere, Category = "RayTrace")
-		float zDist = 1500;
+		float zDist = 800;
 	UPROPERTY(EditAnywhere, Category = "RayTrace")
-		float maxSpread = 1000;
+		float maxSpread = 600;
 	UPROPERTY(EditAnywhere, Category = "RayTrace")
-		float numberRays = 100;
+		float numberRays = 15;
 	UPROPERTY(EditAnywhere, Category = "RayTrace")
 		bool debugLine = false;
 

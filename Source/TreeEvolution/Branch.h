@@ -32,7 +32,7 @@ public:
 	UPROPERTY(EditAnywhere, Category = "Algorithm")
 		float branchMutationChance = .01f;
 	UPROPERTY(EditAnywhere, Category = "Algorithm")
-		float leafMutationChance = .01f;
+		float leafMutationChance = .04f;
 	UPROPERTY(EditAnywhere, Category = "Algorithm")
 		float cost = 1;
 
@@ -50,4 +50,7 @@ private:
 	TSubclassOf<class ABranch> Branch_BP;
 	TArray<ALeaf*> leafs;
 	TArray<ABranch*> branches;
+
+	FVector begin;
+	FVector end;
 };
