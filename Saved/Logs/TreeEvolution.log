@@ -372,4 +372,341 @@
 [2016.04.01-10.11.58:609][394]LogWorld: Bringing World /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default up for play (max tick rate 0) at 2016.04.01-12.11.58
 [2016.04.01-10.11.58:609][394]LogActor:Warning: GameSession /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default:PersistentLevel.GameSession_3 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
 [2016.04.01-10.11.58:609][394]LogActor:Warning: GameNetworkManager /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default:PersistentLevel.GameNetworkManager_3 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
-[201
+[2016.04.01-10.11.58:609][394]LogWorld: Bringing up level for play took: 0.001286
+[2016.04.01-10.11.58:610][394]PIE: Info Play in editor start time for /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default -0.261
+[2016.04.01-10.11.58:610][394]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.01-10.11.59:530][502]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.12.00:532][622]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.12.01:536][742]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.12.02:538][862]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.12.03:543][982]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.12.04:547][102]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.12.05:549][222]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.12.06:553][342]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.12.07:557][462]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.12.08:560][582]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.12.09:564][702]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.12.10:566][820]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.12.11:569][940]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.12.12:573][ 60]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.12.13:575][180]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.12.14:577][300]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.12.15:580][420]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.12.15:650][428]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.01-10.12.15:681][428]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.01-10.12.15:699][428]LogParticles: Destroying 0 GPU particle simulations for FXSystem 0x000000004CA5CEA0
+[2016.04.01-10.14.13:540][607]LogEditorViewport: Clicking on Actor (LMB): BP_Sky_Sphere_C (BP_Sky_Sphere)
+[2016.04.01-10.14.14:305][694]LogEditorViewport: Clicking on Actor (LMB): TreeBP_C (TreeBP)
+[2016.04.01-10.16.56:264][640]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.01-10.16.56:264][640]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2016.04.01-10.16.56:264][640]PIE: New page: PIE session: Minimal_Default (Apr 1, 2016, 2:16:56 PM)
+[2016.04.01-10.16.56:264][640]LogPlayLevel: Creating play world package: /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default
+[2016.04.01-10.16.56:268][640]LogPlayLevel: PIE: StaticDuplicateObject took: (0.003974s)
+[2016.04.01-10.16.56:268][640]LogAIModule: Creating AISystem for world Minimal_Default
+[2016.04.01-10.16.56:268][640]LogPlayLevel: PIE: World Init took: (0.000450s)
+[2016.04.01-10.16.56:268][640]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/StarterContent/Maps/Minimal_Default.Minimal_Default to /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default (0.004572s)
+[2016.04.01-10.16.56:287][640]LogInit: XAudio2 using 'Speakers (Realtek High Definition Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
+[2016.04.01-10.16.56:294][640]LogInit: FAudioDevice initialized.
+[2016.04.01-10.16.56:320][640]LogWorld: Game class is 'TreeEvolutionGameMode'
+[2016.04.01-10.16.56:322][640]LogWorld: Bringing World /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default up for play (max tick rate 0) at 2016.04.01-12.16.56
+[2016.04.01-10.16.56:322][640]LogActor:Warning: GameSession /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default:PersistentLevel.GameSession_4 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2016.04.01-10.16.56:322][640]LogActor:Warning: GameNetworkManager /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default:PersistentLevel.GameNetworkManager_4 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2016.04.01-10.16.56:322][640]LogWorld: Bringing up level for play took: 0.001391
+[2016.04.01-10.16.56:323][640]PIE: Info Play in editor start time for /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default -0.553
+[2016.04.01-10.16.56:323][640]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.01-10.16.57:253][748]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.16.58:256][868]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.16.59:258][988]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.17.00:261][108]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.17.01:263][228]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.17.02:264][348]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.17.03:267][468]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.17.04:270][588]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.17.05:273][707]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.17.06:275][827]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.17.07:277][947]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.17.08:280][ 67]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.17.09:282][187]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.17.10:285][306]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.17.11:287][426]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.17.12:290][546]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.17.13:292][666]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.17.14:294][786]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.17.15:296][906]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.17.16:298][ 26]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.17.17:301][146]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.17.18:303][266]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.17.19:305][386]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.17.20:308][506]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.17.21:310][626]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.17.21:720][675]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.01-10.17.21:753][675]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.01-10.17.21:770][675]LogParticles: Destroying 0 GPU particle simulations for FXSystem 0x00000000497BBCE0
+[2016.04.01-10.17.29:420][477]BlueprintLog: New page: Compile LeafBP
+[2016.04.01-10.17.29:470][477]BlueprintEditorCompileResults: Info [0670.21] Compile of LeafBP successful! [in 50 ms]
+[2016.04.01-10.17.44:259][104]BlueprintLog: New page: Compile LeafBP
+[2016.04.01-10.17.44:310][104]BlueprintEditorCompileResults: Info [0685.05] Compile of LeafBP successful! [in 51 ms]
+[2016.04.01-10.17.45:887][145]LogSavePackage: Save=43.929428ms
+[2016.04.01-10.17.45:887][145]LogSavePackage: Moving '../../../../../../TreeEvolution/EvolutionTree/Saved/Minimal_Default09C01603401B4714F65A958764BEBC5A.tmp' to '../../../../../../TreeEvolution/EvolutionTree/Content/StarterContent/Maps/Minimal_Default.umap'
+[2016.04.01-10.17.45:888][145]LogSavePackage: Total save time: 66.416074ms
+[2016.04.01-10.17.45:888][145]LogSavePackage:Display: Finished SavePackage ../../../../../../TreeEvolution/EvolutionTree/Content/StarterContent/Maps/Minimal_Default.umap
+[2016.04.01-10.17.45:903][145]LogFileHelpers: Saving map 'Minimal_Default' took 1.157
+[2016.04.01-10.17.45:916][145]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/LeafBP" FILE="../../../../../../TreeEvolution/EvolutionTree/Content/LeafBP.uasset" SILENT=true
+[2016.04.01-10.17.45:934][145]LogSavePackage: Save=14.370984ms
+[2016.04.01-10.17.45:934][145]LogSavePackage: Moving '../../../../../../TreeEvolution/EvolutionTree/Saved/LeafBP8B50091543E9A683C5EFFCBB1A222206.tmp' to '../../../../../../TreeEvolution/EvolutionTree/Content/LeafBP.uasset'
+[2016.04.01-10.17.45:935][145]LogSavePackage: Total save time: 18.421136ms
+[2016.04.01-10.17.45:935][145]LogSavePackage:Display: Finished SavePackage ../../../../../../TreeEvolution/EvolutionTree/Content/LeafBP.uasset
+[2016.04.01-10.18.09:825][616]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.01-10.18.09:825][616]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2016.04.01-10.18.09:825][616]PIE: New page: PIE session: Minimal_Default (Apr 1, 2016, 2:18:09 PM)
+[2016.04.01-10.18.09:825][616]LogPlayLevel: Creating play world package: /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default
+[2016.04.01-10.18.09:829][616]LogPlayLevel: PIE: StaticDuplicateObject took: (0.003816s)
+[2016.04.01-10.18.09:829][616]LogAIModule: Creating AISystem for world Minimal_Default
+[2016.04.01-10.18.09:829][616]LogPlayLevel: PIE: World Init took: (0.000451s)
+[2016.04.01-10.18.09:830][616]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/StarterContent/Maps/Minimal_Default.Minimal_Default to /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default (0.004411s)
+[2016.04.01-10.18.09:853][616]LogInit: XAudio2 using 'Speakers (Realtek High Definition Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
+[2016.04.01-10.18.09:864][616]LogInit: FAudioDevice initialized.
+[2016.04.01-10.18.09:898][616]LogWorld: Game class is 'TreeEvolutionGameMode'
+[2016.04.01-10.18.09:899][616]LogWorld: Bringing World /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default up for play (max tick rate 0) at 2016.04.01-12.18.09
+[2016.04.01-10.18.09:899][616]LogActor:Warning: GameSession /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default:PersistentLevel.GameSession_5 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2016.04.01-10.18.09:899][616]LogActor:Warning: GameNetworkManager /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default:PersistentLevel.GameNetworkManager_5 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2016.04.01-10.18.09:899][616]LogWorld: Bringing up level for play took: 0.001347
+[2016.04.01-10.18.09:901][616]PIE: Info Play in editor start time for /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default 1.023
+[2016.04.01-10.18.09:901][616]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.01-10.18.10:814][722]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.18.11:817][842]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.18.12:821][962]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.18.13:825][ 82]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.18.14:829][202]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.18.15:833][322]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.18.16:838][442]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.18.17:845][562]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.18.18:850][682]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.18.19:857][802]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.18.20:862][922]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.18.21:867][ 42]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.18.22:873][162]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.18.23:880][282]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.18.24:886][402]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.18.25:582][485]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.01-10.18.25:614][485]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.01-10.18.25:632][485]LogParticles: Destroying 0 GPU particle simulations for FXSystem 0x000000006833D300
+[2016.04.01-10.18.42:032][833]BlueprintLog: New page: Compile LeafBP
+[2016.04.01-10.18.42:080][833]BlueprintEditorCompileResults: Info [0742.81] Compile of LeafBP successful! [in 48 ms]
+[2016.04.01-10.18.45:922][ 64]LogFileHelpers: Saving map 'Minimal_Default' took 1.593
+[2016.04.01-10.18.48:611][ 64]LogSavePackage: Save=44.268246ms
+[2016.04.01-10.18.48:611][ 64]LogSavePackage: Moving '../../../../../../TreeEvolution/EvolutionTree/Saved/Minimal_Default7010F3E94834CB414233AB957DFE6554.tmp' to '../../../../../../TreeEvolution/EvolutionTree/Content/StarterContent/Maps/Minimal_Default.umap'
+[2016.04.01-10.18.48:612][ 64]LogSavePackage: Total save time: 46.292718ms
+[2016.04.01-10.18.48:612][ 64]LogSavePackage:Display: Finished SavePackage ../../../../../../TreeEvolution/EvolutionTree/Content/StarterContent/Maps/Minimal_Default.umap
+[2016.04.01-10.18.48:628][ 64]LogFileHelpers: Saving map 'Minimal_Default' took 1.333
+[2016.04.01-10.18.48:640][ 64]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/LeafBP" FILE="../../../../../../TreeEvolution/EvolutionTree/Content/LeafBP.uasset" SILENT=true
+[2016.04.01-10.18.48:672][ 64]LogSavePackage: Save=29.684635ms
+[2016.04.01-10.18.48:672][ 64]LogSavePackage: Moving '../../../../../../TreeEvolution/EvolutionTree/Saved/LeafBP1A03538048CDD839966A78B77D60CC13.tmp' to '../../../../../../TreeEvolution/EvolutionTree/Content/LeafBP.uasset'
+[2016.04.01-10.18.48:673][ 64]LogSavePackage: Total save time: 31.563941ms
+[2016.04.01-10.18.48:673][ 64]LogSavePackage:Display: Finished SavePackage ../../../../../../TreeEvolution/EvolutionTree/Content/LeafBP.uasset
+[2016.04.01-10.22.39:837][888]LogHotReload: New module detected: UE4Editor-TreeEvolution-4204.dll
+[2016.04.01-10.22.40:179][890]LogHotReload: Starting Hot-Reload from IDE
+[2016.04.01-10.22.40:246][890]LogContentBrowser: Native class hierarchy updated for 'TreeEvolution' in 0.0007 seconds. Added 4 classes and 2 folders.
+[2016.04.01-10.22.40:248][890]Warning: HotReload successful (3 functions remapped  0 scriptstructs remapped)
+[2016.04.01-10.22.40:484][890]LogContentBrowser: Native class hierarchy populated in 0.0059 seconds. Added 1898 classes and 342 folders.
+[2016.04.01-10.22.44:377][ 25]LogRenderer: Reallocating scene render targets to support 1228x692 (Frame:54525).
+[2016.04.01-10.22.45:204][109]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.01-10.22.45:204][109]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2016.04.01-10.22.45:204][109]PIE: New page: PIE session: Minimal_Default (Apr 1, 2016, 2:22:45 PM)
+[2016.04.01-10.22.45:204][109]LogPlayLevel: Creating play world package: /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default
+[2016.04.01-10.22.45:208][109]LogPlayLevel: PIE: StaticDuplicateObject took: (0.003932s)
+[2016.04.01-10.22.45:208][109]LogAIModule: Creating AISystem for world Minimal_Default
+[2016.04.01-10.22.45:208][109]LogPlayLevel: PIE: World Init took: (0.000502s)
+[2016.04.01-10.22.45:208][109]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/StarterContent/Maps/Minimal_Default.Minimal_Default to /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default (0.004585s)
+[2016.04.01-10.22.45:244][109]LogInit: XAudio2 using 'Speakers (Realtek High Definition Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
+[2016.04.01-10.22.45:250][109]LogInit: FAudioDevice initialized.
+[2016.04.01-10.22.45:282][109]LogWorld: Game class is 'TreeEvolutionGameMode'
+[2016.04.01-10.22.45:283][109]LogWorld: Bringing World /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default up for play (max tick rate 0) at 2016.04.01-12.22.45
+[2016.04.01-10.22.45:283][109]LogActor:Warning: GameSession /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default:PersistentLevel.GameSession_6 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2016.04.01-10.22.45:283][109]LogActor:Warning: GameNetworkManager /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default:PersistentLevel.GameNetworkManager_6 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2016.04.01-10.22.45:283][109]LogWorld: Bringing up level for play took: 0.001243
+[2016.04.01-10.22.45:284][109]PIE: Info Play in editor start time for /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default 0.402
+[2016.04.01-10.22.45:284][109]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.01-10.22.46:193][209]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.22.47:197][309]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.22.48:205][424]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.22.49:206][542]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.22.50:207][660]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.22.51:209][779]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.22.52:211][897]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.22.53:219][ 15]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.22.54:225][134]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.22.55:231][252]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.22.56:236][371]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.22.57:243][490]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.22.58:243][608]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.22.59:250][727]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.23.00:253][846]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.23.01:256][965]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.23.02:260][ 84]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.23.03:266][203]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.23.04:268][322]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.23.05:272][441]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.23.06:273][559]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.23.07:274][677]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.23.08:276][796]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.23.09:281][915]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.23.10:298][ 33]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.23.11:299][152]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.23.12:304][270]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.23.13:309][389]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.23.14:316][508]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.23.15:317][627]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.23.16:319][746]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.23.17:321][865]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.23.18:324][984]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.23.19:329][103]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.23.20:333][222]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.23.21:340][341]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.23.22:347][459]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.23.23:351][577]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.23.24:358][696]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.23.25:365][815]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.23.26:369][934]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.23.27:369][ 52]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.23.28:376][170]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.23.29:382][289]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.23.30:388][408]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.23.31:389][526]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.23.32:395][645]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.23.33:398][763]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.23.34:403][881]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.23.35:405][999]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.23.36:412][118]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.23.37:419][237]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.23.38:419][355]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.23.39:425][473]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.23.40:425][591]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.23.41:427][709]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.23.42:430][828]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.23.42:781][869]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.01-10.23.42:817][869]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.01-10.23.42:840][869]LogParticles: Destroying 0 GPU particle simulations for FXSystem 0x00000000580AE5C0
+[2016.04.01-10.24.12:313][ 97]LogHotReload: New module detected: UE4Editor-TreeEvolution-4570.dll
+[2016.04.01-10.24.12:659][ 99]LogHotReload: Starting Hot-Reload from IDE
+[2016.04.01-10.24.12:727][ 99]LogContentBrowser: Native class hierarchy updated for 'TreeEvolution' in 0.0007 seconds. Added 4 classes and 2 folders.
+[2016.04.01-10.24.12:731][ 99]Warning: HotReload successful (3 functions remapped  0 scriptstructs remapped)
+[2016.04.01-10.24.12:980][ 99]LogContentBrowser: Native class hierarchy populated in 0.0060 seconds. Added 1898 classes and 342 folders.
+[2016.04.01-10.24.16:759][184]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.01-10.24.16:759][184]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2016.04.01-10.24.16:759][184]PIE: New page: PIE session: Minimal_Default (Apr 1, 2016, 2:24:16 PM)
+[2016.04.01-10.24.16:759][184]LogPlayLevel: Creating play world package: /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default
+[2016.04.01-10.24.16:764][184]LogPlayLevel: PIE: StaticDuplicateObject took: (0.004440s)
+[2016.04.01-10.24.16:764][184]LogAIModule: Creating AISystem for world Minimal_Default
+[2016.04.01-10.24.16:764][184]LogPlayLevel: PIE: World Init took: (0.000630s)
+[2016.04.01-10.24.16:764][184]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/StarterContent/Maps/Minimal_Default.Minimal_Default to /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default (0.005233s)
+[2016.04.01-10.24.16:813][184]LogInit: XAudio2 using 'Speakers (Realtek High Definition Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
+[2016.04.01-10.24.16:819][184]LogInit: FAudioDevice initialized.
+[2016.04.01-10.24.16:848][184]LogWorld: Game class is 'TreeEvolutionGameMode'
+[2016.04.01-10.24.16:850][184]LogWorld: Bringing World /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default up for play (max tick rate 0) at 2016.04.01-12.24.16
+[2016.04.01-10.24.16:850][184]LogActor:Warning: GameSession /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default:PersistentLevel.GameSession_7 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2016.04.01-10.24.16:850][184]LogActor:Warning: GameNetworkManager /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default:PersistentLevel.GameNetworkManager_7 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2016.04.01-10.24.16:850][184]LogWorld: Bringing up level for play took: 0.001230
+[2016.04.01-10.24.16:851][184]PIE: Info Play in editor start time for /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default -0.033
+[2016.04.01-10.24.16:851][184]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.01-10.24.17:745][286]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.24.18:747][402]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.24.19:754][503]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.24.20:761][617]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.24.21:763][735]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.24.22:771][854]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.24.23:775][973]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.24.24:781][ 92]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.24.25:783][211]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.24.26:788][330]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.24.27:793][449]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.24.28:799][568]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.24.29:800][687]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.24.31:076][799]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.24.31:778][843]LogSelection:Warning: PIE object was selected: "PostProcessVolume /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default:PersistentLevel.GlobalPostProcessVolume"
+[2016.04.01-10.24.32:124][857]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.24.33:126][975]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.24.34:128][ 94]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.24.35:129][211]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.24.36:131][330]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.24.37:134][449]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.24.38:136][568]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.24.39:139][687]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.24.40:143][806]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.24.40:977][904]LogSelection:Warning: PIE object was selected: "HUD /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default:PersistentLevel.HUD_7"
+[2016.04.01-10.24.41:212][930]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.24.41:665][983]LogSelection:Warning: PIE object was selected: "ParticleEventManager /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default:PersistentLevel.ParticleEventManager_14"
+[2016.04.01-10.24.42:257][ 53]LogSelection:Warning: PIE object was selected: "LeafBP_C /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default:PersistentLevel.LeafBP_C_1"
+[2016.04.01-10.24.42:388][ 66]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.24.43:390][181]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.24.44:398][300]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.24.45:402][419]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.24.46:406][537]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.24.47:408][656]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.24.48:414][775]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.24.49:418][894]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.24.50:422][ 13]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.24.51:426][131]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.24.52:428][249]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.24.53:435][368]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.24.54:437][487]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.24.55:443][606]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.24.56:447][725]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.24.57:453][844]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.24.58:459][963]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.24.59:462][ 82]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.25.00:466][200]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.25.01:471][318]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.25.02:471][436]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.25.03:473][555]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.25.04:480][674]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.25.05:485][793]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.25.06:488][912]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.25.07:495][ 31]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.25.08:496][150]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.25.09:498][268]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.25.10:499][384]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.25.11:509][503]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.25.12:515][621]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.25.13:522][739]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.25.14:528][858]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.25.15:534][977]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.25.16:539][ 96]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.25.17:544][207]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.25.18:545][325]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.25.19:547][443]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.25.20:555][562]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.25.21:562][681]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.25.22:565][799]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.25.23:573][918]LogBlueprintUserMessages: [TreeBP_C_0] mutated
+[2016.04.01-10.25.24:109][981]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.01-10.25.24:141][981]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.01-10.25.24:163][981]LogParticles: Destroying 0 GPU particle simulations for FXSystem 0x00000000571DD760
+[2016.04.01-10.26.58:917][616]Recompiling TreeEvolution...
+[2016.04.01-10.26.58:917][616]Launching UnrealBuildTool... [E:/Program Files/Epic Games/4.10/Engine/Binaries/DotNET/UnrealBuildTool.exe TreeEvolution -ModuleWithSuffix TreeEvolution 5429 Win64 Development -editorrecompile -canskiplink "E:/TreeEvolution/EvolutionTree/TreeEvolution.uproject" -rocket  -rocket -2015]
+[2016.04.01-10.26.58:917][616]Warning: Starting HotReload took  0.0s.
+[2016.04.01-10.27.12:199][874]CompilerResultsLog: New page: Compilation - Apr 1, 2016, 2:27:12 PM
+[2016.04.01-10.27.12:199][874]CompilerResultsLog: Info Creating makefile for hot reloading TreeEvolution (modules to compile have changed)
+[2016.04.01-10.27.12:199][874]CompilerResultsLog: Info Compiling game modules for hot reload
+[2016.04.01-10.27.12:199][874]CompilerResultsLog: Info Parsing headers for TreeEvolutionEditor
+[2016.04.01-10.27.12:199][874]CompilerResultsLog: Info   Running UnrealHeaderTool "E:/TreeEvolution/EvolutionTree/TreeEvolution.uproject" "E:\TreeEvolution\EvolutionTree\Intermediate\Build\Win64\TreeEvolutionEditor\Development\UnrealHeaderTool.manifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -rocket -installed
+[2016.04.01-10.27.12:199][874]CompilerResultsLog: Info Reflection code generated for TreeEvolutionEditor in 6,4044424 seconds
+[2016.04.01-10.27.12:199][874]CompilerResultsLog: Info Performing 5 actions (4 in parallel)
+[2016.04.01-10.27.12:199][874]CompilerResultsLog: Info Leaf.cpp
+[2016.04.01-10.27.12:199][874]CompilerResultsLog: Info Branch.cpp
+[2016.04.01-10.27.12:199][874]CompilerResultsLog: Info Tree.cpp
+[2016.04.01-10.27.12:199][874]CompilerResultsLog: Info TreeEvolution.generated.cpp
+[2016.04.01-10.27.12:199][874]CompilerResultsLog:Error: Error e:\treeevolution\evolutiontree\source\treeevolution\branch.cpp(213)  : error C4700: uninitialized local variable 'spawnedBranch' used
+[2016.04.01-10.27.12:199][874]CompilerResultsLog: Info -------- End Detailed Actions Stats -----------------------------------------------------------
+[2016.04.01-10.27.12:199][874]CompilerResultsLog: Info ERROR: UBT ERROR: Failed to produce item: E:\TreeEvolution\EvolutionTree\Binaries\Win64\UE4Editor-TreeEvolution-5429.dll
+[2016.04.01-10.27.12:199][874]CompilerResultsLog: Info Total build time: 13,24 seconds
+[2016.04.01-10.27.12:199][874]LogMainFrame: MainFrame: Module compiling took 13.294 seconds
+[2016.04.01-10.27.12:199][874]Warning: HotReload failed, recompile failed
+[2016.04.01-10.27.57:910][ 56]LogHotReload: New module detected: UE4Editor-TreeEvolution-5990.dll
+[2016.04.01-10.27.58:253][ 58]LogHotReload: Starting Hot-Reload from IDE
+[2016.04.01-10.27.58:305][ 58]LogParticles: Destroying 0 GPU particle simulations for FXSystem 0x0000000049728900
+[2016.04.01-10.27.58:336][ 58]LogClass: Could not find existing class Tree in package /Script/TreeEvolution for HotReload, assuming new class
+[2016.04.01-10.27.58:336][ 58]LogClass: Function calculateCost is new.
+[2016.04.01-10.27.58:336][ 58]LogClass: Function calculateHits is new.
+[2016.04.01-10.27.58:336][ 58]LogClass: Function duplicate is new.
+[2016.04.01-10.27.58:336][ 58]LogCl

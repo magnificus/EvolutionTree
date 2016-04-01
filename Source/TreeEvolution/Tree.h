@@ -23,8 +23,8 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaSeconds) override;
 
-	//UFUNCTION(BlueprintCallable, Category = "General")
-		//ATree* duplicate(FVector location);
+	UFUNCTION(BlueprintCallable, Category = "General")
+		ATree* duplicate(FVector location);
 
 	UFUNCTION(BlueprintCallable, Category = "Statistics")
 		float calculateHits();

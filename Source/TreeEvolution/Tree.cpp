@@ -187,19 +187,18 @@ void ATree::spawnRandomBranch() {
 
 }
 
-//ATree* ATree::duplicate(FVector location) {
-	//ATree* spawnedTree = (ATree*)GetWorld()->SpawnActor(Tree_BP);
+ATree* ATree::duplicate(FVector location) {
+	ATree* spawnedTree = (ATree*)GetWorld()->SpawnActor(Tree_BP);
 
-	//spawnedTree->SetActorLocation(location);
+	spawnedTree->SetActorLocation(location);
 
-	//for (ABranch* b : branches) {
-	//	spawnedTree->addBranch(b->duplicate(GetActorLocation(), location));
-	//}
+	for (ABranch* b : branches) {
+		spawnedTree->addBranch(b->duplicate(GetActorLocation(), location));
+	}
 
-	//return spawnedTree;
-	//return this;
+	return spawnedTree;
 
-//}
+}
 
 void ATree::addBranch(ABranch* b) {
 	branches.Add(b);

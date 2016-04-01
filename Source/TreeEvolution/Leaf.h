@@ -23,8 +23,7 @@ public:
 	UPROPERTY(EditAnywhere, Category = "Algorithm")
 		float cost = 0.5f;
 
-	//ALeaf* duplicate(FVector originalLocation, FVector newLocation);
-	//ASpawnHandler spawner;
+	ALeaf* duplicate(FVector originalLocation, FVector newLocation);
 
 private:
 	TSubclassOf<class ALeaf> Leaf_BP;
