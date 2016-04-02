@@ -38,31 +38,40 @@ public:
 	void spawnRandomBranch();
 
 	UPROPERTY(EditAnywhere, Category = "RayTrace")
-		float zDist = 800;
+		float zDist = 500;
 	UPROPERTY(EditAnywhere, Category = "RayTrace")
-		float maxSpread = 600;
+		float maxSpread = 400;
 	UPROPERTY(EditAnywhere, Category = "RayTrace")
 		float numberRays = 15;
 	UPROPERTY(EditAnywhere, Category = "RayTrace")
 		bool debugLine = false;
 
 	UPROPERTY(EditAnywhere, Category = "Algorithm")
-		float spawnMutationChance = .05f;
+		float spawnMutationChance = .1f;
 	UPROPERTY(EditAnywhere, Category = "Algorithm")
-		float removeMutationChance = .01f;
+		float removeMutationChance = .1f;
 	UPROPERTY(EditAnywhere, Category = "Algorithm")
-		float hitRewardMultiplier = 50000;
+		float hitRewardMultiplier = 800;
+
+	UPROPERTY(EditAnywhere, Category = "Algorithm")
+		int32 maxBranches = 5;
+	UPROPERTY(EditAnywhere, Category = "Algorithm")
+		int32 maxLeafs = 20;
 
 	void addBranch(ABranch* b);
 
 	void annihilate();
 
 	float currentValue = 0;
+	int32 currentBranches = 0;
+	int32 currentLeafs = 0;
 
 private:
 	FRandomStream random;
 	TSubclassOf<class ABranch> Branch_BP;
 	TSubclassOf<class ATree> Tree_BP;
 	TArray<ABranch*> branches;
+
+	
 };
 

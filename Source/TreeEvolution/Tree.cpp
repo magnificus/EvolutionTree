@@ -40,7 +40,7 @@ void ATree::Tick(float DeltaTime)
 
 float ATree::calculateHits() {
 	FVector startLocation = GetActorLocation();
-	startLocation.Z += zDist;
+	startLocation.Z += zDist + 200;
 
 	int hits = 0;
 	FCollisionQueryParams RV_TraceParams = FCollisionQueryParams(FName(TEXT("RV_Trace")), true, this);
@@ -86,7 +86,7 @@ float ATree::calculateHits() {
 			if (RV_Hit.bBlockingHit) {
 				ALeaf* leaf = Cast<ALeaf>(RV_Hit.GetActor());
 				if (leaf) {
-					hits++;
+					hits ++;
 				}
 
 			}
@@ -122,9 +122,8 @@ void ATree::mutate() {
 		branches.RemoveAt(index);
 	}
 
-
 	for (ABranch* b : branches) {
-		b->mutate();
+		b->mutate(currentBranches, maxBranches, currentLeafs, maxLeafs);
 	}
 
 	currentValue = (calculateHits() * hitRewardMultiplier) - calculateCost();
@@ -132,6 +131,11 @@ void ATree::mutate() {
 }
 
 void ATree::spawnRandomBranch() {
+	UWorld* const World = GetWorld();
+
+	if (!World) {
+		return;
+	}
 	FVector target = GetActorLocation();
 	target.Z += random.FRand() * 300;
 
@@ -162,7 +166,7 @@ void ATree::spawnRandomBranch() {
 			);
 	}
 	
-	GetWorld()->LineTraceSingleByChannel(
+	World->LineTraceSingleByChannel(
 		RV_Hit,        //result
 		beamOrigin,    //start
 		target, //end
@@ -171,15 +175,10 @@ void ATree::spawnRandomBranch() {
 		);
 
 	if (RV_Hit.bBlockingHit) {
-		ABranch* spawnedBranch = (ABranch*)GetWorld()->SpawnActor(Branch_BP);
-
 		FVector Direction = target - beamOrigin;
 		FRotator Rot = FRotationMatrix::MakeFromX(Direction).Rotator();
 
-		spawnedBranch->SetActorLocation(RV_Hit.ImpactPoint);
-		spawnedBranch->SetActorRotation(Rot);
-
-
+		ABranch* spawnedBranch = World->SpawnActor<ABranch>(Branch_BP, RV_Hit.ImpactPoint, Rot, FActorSpawnParameters());
 
 		//GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Red, "Spawned Branch");
 		branches.Add(spawnedBranch);
@@ -190,11 +189,18 @@ void ATree::spawnRandomBranch() {
 }
 
 ATree* ATree::duplicate(FVector location) {
-	ATree* spawnedTree = GetWorld()->SpawnActor<ATree>(Tree_BP, location, GetActorRotation());
+	UWorld* const World = GetWorld();
+
+	if (!World) {
+		return NULL;
+	}
+	ATree* spawnedTree = World->SpawnActor<ATree>(Tree_BP, location, GetActorRotation());
 
 	for (ABranch* b : branches) {
 		spawnedTree->addBranch(b->duplicate(GetActorLocation(), location));
 	}
+	spawnedTree->currentBranches = currentBranches;
+	spawnedTree->currentLeafs = currentLeafs;
 
 	return spawnedTree;
 
