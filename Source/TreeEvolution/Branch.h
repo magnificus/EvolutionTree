@@ -21,7 +21,7 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaSeconds) override;
 
-	void mutate();
+	void mutate(int32 &currentBranches, int32 maxBranches, int32 &currentLeafs, int32 maxLeafs);
 
 	void annihilate();
 
@@ -32,9 +32,9 @@ public:
 	UPROPERTY(EditAnywhere, Category = "Algorithm")
 		float branchMutationChance = .01f;
 	UPROPERTY(EditAnywhere, Category = "Algorithm")
-		float leafMutationChance = .04f;
+		float leafMutationChance = .01f;
 	UPROPERTY(EditAnywhere, Category = "Algorithm")
-		float cost = 1;
+		float cost = 0.3;
 
 	ABranch* duplicate(FVector originalLocation, FVector newLocation);
 

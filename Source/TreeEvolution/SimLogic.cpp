@@ -15,7 +15,7 @@ ASimLogic::ASimLogic()
 		Tree_BP = TreeFinder.Object;
 
 	random.GenerateNewSeed();
-
+	currentBestLocation.X = -1000;
 }
 
 // Called when the game starts or when spawned
@@ -43,7 +43,14 @@ void ASimLogic::simulationTick()
 	if (trees.Num() == 0) {
 		return;
 	}
+
+	if (currentBest != NULL) {
+		currentBest->annihilate();
+	}
+	currentBest = trees[0]->duplicate(currentBestLocation);
+
 	winners.Add(trees[0]);
+	
 	for (int32 i = 1; i < trees.Num(); ++i) {
 		if (random.FRand() * trees.Num() > i) {
 			winners.Add(trees[i]);

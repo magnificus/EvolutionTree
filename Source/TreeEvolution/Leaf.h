@@ -21,11 +21,17 @@ public:
 	virtual void Tick(float DeltaSeconds) override;
 
 	UPROPERTY(EditAnywhere, Category = "Algorithm")
-		float cost = 0.5f;
+		float cost = 1;
 
 	ALeaf* duplicate(FVector originalLocation, FVector newLocation);
 
+	UPROPERTY(EditAnywhere, Category = "Algorithm")
+		float leafMutationChance = .005f;
+
+	void mutate();
+
 private:
 	TSubclassOf<class ALeaf> Leaf_BP;
+	FRandomStream random;
 	
 };

@@ -30,7 +30,8 @@ public:
 
 	UPROPERTY(EditAnywhere, Category = "Gameplay")
 		int32 distance = 500;
-
+	UPROPERTY(EditAnywhere, Category = "Gameplay")
+		FVector currentBestLocation;
 
 	UPROPERTY(EditAnywhere, Category = "Performance")
 		int32 nbrLines = 5;
@@ -40,5 +41,6 @@ private:
 	TSubclassOf<class ATree> Tree_BP;
 	TArray<ATree*> trees;
 	FRandomStream random;
+	ATree* currentBest;
 	
 };

@@ -14,6 +14,7 @@ ALeaf::ALeaf()
 
 	PrimaryActorTick.bCanEverTick = false;
 
+	random.GenerateNewSeed();
 
 }
 
@@ -32,7 +33,9 @@ void ALeaf::Tick(float DeltaTime)
 }
 
 ALeaf* ALeaf::duplicate(FVector originalLocation, FVector newLocation) {
-	if (Leaf_BP == NULL) {
+	UWorld* const World = GetWorld();
+
+	if (!World) {
 		return NULL;
 	}
 
@@ -40,10 +43,16 @@ ALeaf* ALeaf::duplicate(FVector originalLocation, FVector newLocation) {
 	FVector location = newLocation + diff;
 
 
-	ALeaf* const spawnedLeaf = GetWorld()->SpawnActor<ALeaf>(Leaf_BP, location, GetActorRotation());
+	ALeaf* const spawnedLeaf = World->SpawnActor<ALeaf>(Leaf_BP, location, GetActorRotation());
 
-	//spawnedLeaf->SetActorTransform(t);
 
 	return spawnedLeaf;
 }
 
+void ALeaf::mutate() {
+	if (random.FRand() < leafMutationChance) {
+		FRotator r(random.FRand() * 360, random.FRand() * 360, random.FRand() * 360);
+		SetActorRotation(FQuat(r));
+	}
+	
+}
