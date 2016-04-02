@@ -190,11 +190,7 @@ void ATree::spawnRandomBranch() {
 }
 
 ATree* ATree::duplicate(FVector location) {
-	ATree* spawnedTree = (ATree*)GetWorld()->SpawnActor(Tree_BP);
-
-	spawnedTree->SetActorLocation(location);
-
-	spawnedTree->currentValue = currentValue;
+	ATree* spawnedTree = GetWorld()->SpawnActor<ATree>(Tree_BP, location, GetActorRotation());
 
 	for (ABranch* b : branches) {
 		spawnedTree->addBranch(b->duplicate(GetActorLocation(), location));

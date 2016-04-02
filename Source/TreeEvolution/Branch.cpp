@@ -224,11 +224,15 @@ void ABranch::addLeaf(ALeaf * l)
 
 ABranch* ABranch::duplicate(FVector originalLocation, FVector newLocation) {
 
-	ABranch* spawnedBranch = (ABranch*)GetWorld()->SpawnActor(Branch_BP);
+	//ABranch* spawnedBranch = (ABranch*)GetWorld()->SpawnActor(Branch_BP);
 	FVector diff = GetActorLocation() - originalLocation;
-	FTransform t = GetTransform();
-	t.SetLocation(newLocation + diff);
-	spawnedBranch->SetActorTransform(t);
+	//FTransform t = GetTransform();
+	FVector location = newLocation + diff;
+	//t.SetLocation();
+	//spawnedBranch->SetActorTransform(t);
+
+	ABranch* spawnedBranch = GetWorld()->SpawnActor<ABranch>(Branch_BP, location, GetActorRotation());
+
 
 	for (ABranch* b : branches) {
 		spawnedBranch->addBranch(b->duplicate(originalLocation, newLocation));
@@ -236,6 +240,7 @@ ABranch* ABranch::duplicate(FVector originalLocation, FVector newLocation) {
 	for (ALeaf* l : leafs) {
 		spawnedBranch->addLeaf(l->duplicate(originalLocation, newLocation));
 	}
+
 
 	return spawnedBranch;
 }

@@ -12,7 +12,6 @@ ALeaf::ALeaf()
 	if (LeafFinder.Object != NULL)
 		Leaf_BP = LeafFinder.Object;
 
-
 	PrimaryActorTick.bCanEverTick = false;
 
 
@@ -36,12 +35,14 @@ ALeaf* ALeaf::duplicate(FVector originalLocation, FVector newLocation) {
 	if (Leaf_BP == NULL) {
 		return NULL;
 	}
-	ALeaf* spawnedLeaf = (ALeaf*)GetWorld()->SpawnActor(Leaf_BP);
 
 	FVector diff = GetActorLocation() - originalLocation;
-	FTransform t = GetTransform();
-	t.SetLocation(newLocation + diff);
-	spawnedLeaf->SetActorTransform(t);
+	FVector location = newLocation + diff;
+
+
+	ALeaf* const spawnedLeaf = GetWorld()->SpawnActor<ALeaf>(Leaf_BP, location, GetActorRotation());
+
+	//spawnedLeaf->SetActorTransform(t);
 
 	return spawnedLeaf;
 }
