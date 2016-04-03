@@ -8,9 +8,9 @@
 // Sets default values
 ATree::ATree()
 {
-	static ConstructorHelpers::FObjectFinder<UClass> TreeFinder(TEXT("Class'/Game/TreeBP.TreeBP_C'"));
-	if (TreeFinder.Object != NULL)
-		Tree_BP = TreeFinder.Object;
+	//static ConstructorHelpers::FObjectFinder<UClass> TreeFinder(TEXT("Class'/Game/TreeBP.TreeBP_C'"));
+	//if (TreeFinder.Object != NULL)
+	//	Tree_BP = TreeFinder.Object;
 
 	static ConstructorHelpers::FObjectFinder<UClass> BranchFinder(TEXT("Class'/Game/BranchBP.BranchBP_C'"));
 	if (BranchFinder.Object != NULL)
@@ -40,7 +40,7 @@ void ATree::Tick(float DeltaTime)
 
 float ATree::calculateHits() {
 	FVector startLocation = GetActorLocation();
-	startLocation.Z += zDist + 200;
+	startLocation.Z += zDist + 100;
 
 	int hits = 0;
 	FCollisionQueryParams RV_TraceParams = FCollisionQueryParams(FName(TEXT("RV_Trace")), true, this);
@@ -109,17 +109,32 @@ float ATree::calculateCost()
 void ATree::mutate() {
 	float f = random.FRand();
 
-	if (f < spawnMutationChance) {
-		spawnRandomBranch();
-	}
-
-	f = random.FRand();
-
 	if (f < removeMutationChance && branches.Num() > 0) {
 		int32 index = random.GetUnsignedInt() % branches.Num();
 		ABranch* b = branches[index];
 		b->annihilate();
 		branches.RemoveAt(index);
+	}
+
+	f = random.FRand();
+
+	if (f < spawnMutationChance && currentBranches < maxBranches) {
+		FTransform t = GetRandomPosition();
+		ABranch* spawnedBranch = GetWorld()->SpawnActor<ABranch>(Branch_BP, t.GetLocation(), t.GetRotation().Rotator(), FActorSpawnParameters());
+		spawnedBranch->AttachRootComponentToActor(this, NAME_None, EAttachLocation::KeepWorldPosition);
+		branches.Add(spawnedBranch);
+	}
+
+	
+
+	
+
+	if (random.FRand() < displacementChance && branches.Num() > 0) {
+		FTransform t = GetRandomPosition();
+		int32 index = random.GetUnsignedInt() % branches.Num();
+		ABranch* b = branches[index];
+		b->displace(t.GetLocation(), t.Rotator());
+
 	}
 
 	for (ABranch* b : branches) {
@@ -130,12 +145,8 @@ void ATree::mutate() {
 
 }
 
-void ATree::spawnRandomBranch() {
-	UWorld* const World = GetWorld();
-
-	if (!World) {
-		return;
-	}
+FTransform ATree::GetRandomPosition() {
+	
 	FVector target = GetActorLocation();
 	target.Z += random.FRand() * 300;
 
@@ -166,7 +177,7 @@ void ATree::spawnRandomBranch() {
 			);
 	}
 	
-	World->LineTraceSingleByChannel(
+	GetWorld()->LineTraceSingleByChannel(
 		RV_Hit,        //result
 		beamOrigin,    //start
 		target, //end
@@ -174,30 +185,28 @@ void ATree::spawnRandomBranch() {
 		RV_TraceParams
 		);
 
-	if (RV_Hit.bBlockingHit) {
-		FVector Direction = target - beamOrigin;
-		FRotator Rot = FRotationMatrix::MakeFromX(Direction).Rotator();
-
-		ABranch* spawnedBranch = World->SpawnActor<ABranch>(Branch_BP, RV_Hit.ImpactPoint, Rot, FActorSpawnParameters());
-
-		//GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Red, "Spawned Branch");
-		branches.Add(spawnedBranch);
-
-
+	ATree* tree = Cast<ATree>(RV_Hit.GetActor());
+	if (!tree) {
+		return GetRandomPosition();
 	}
+	FVector Direction = target - beamOrigin;
+	FRotator Rot = FRotationMatrix::MakeFromX(Direction).Rotator();
+	FTransform t(FQuat(Rot), RV_Hit.Location,  GetActorScale());
+	return t;
+
+
+	
 
 }
 
-ATree* ATree::duplicate(FVector location) {
-	UWorld* const World = GetWorld();
-
-	if (!World) {
-		return NULL;
-	}
-	ATree* spawnedTree = World->SpawnActor<ATree>(Tree_BP, location, GetActorRotation());
+ATree* ATree::duplicate(ATree* spawnedTree, FVector location) {
+	//ATree* spawnedTree = World->SpawnActor<ATree>(Tree_BP, location, GetActorRotation());
 
 	for (ABranch* b : branches) {
-		spawnedTree->addBranch(b->duplicate(GetActorLocation(), location));
+		FVector diff = b->GetActorLocation() - GetActorLocation();
+		FVector newLocation = location + diff;
+		ABranch* spawnedBranch = GetWorld()->SpawnActor<ABranch>(Branch_BP, newLocation, b->GetActorRotation());
+		spawnedTree->addBranch(b->duplicate(spawnedBranch, GetActorLocation(), location));
 	}
 	spawnedTree->currentBranches = currentBranches;
 	spawnedTree->currentLeafs = currentLeafs;
@@ -207,6 +216,7 @@ ATree* ATree::duplicate(FVector location) {
 }
 
 void ATree::addBranch(ABranch* b) {
+	b->AttachRootComponentToActor(this, NAME_None, EAttachLocation::KeepWorldPosition);
 	branches.Add(b);
 }
 

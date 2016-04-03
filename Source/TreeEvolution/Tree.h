@@ -24,7 +24,7 @@ public:
 	virtual void Tick(float DeltaSeconds) override;
 
 	UFUNCTION(BlueprintCallable, Category = "General")
-		ATree* duplicate(FVector location);
+		ATree* duplicate(ATree* tree, FVector location);
 
 	UFUNCTION(BlueprintCallable, Category = "Statistics")
 		float calculateHits();
@@ -35,14 +35,14 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Mutation")
 		void mutate();
 
-	void spawnRandomBranch();
+	FTransform GetRandomPosition();
 
 	UPROPERTY(EditAnywhere, Category = "RayTrace")
 		float zDist = 500;
 	UPROPERTY(EditAnywhere, Category = "RayTrace")
 		float maxSpread = 400;
 	UPROPERTY(EditAnywhere, Category = "RayTrace")
-		float numberRays = 15;
+		float numberRays = 30;
 	UPROPERTY(EditAnywhere, Category = "RayTrace")
 		bool debugLine = false;
 
@@ -50,6 +50,8 @@ public:
 		float spawnMutationChance = .1f;
 	UPROPERTY(EditAnywhere, Category = "Algorithm")
 		float removeMutationChance = .1f;
+	UPROPERTY(EditAnywhere, Category = "Algorithm")
+		float displacementChance = .1f;
 	UPROPERTY(EditAnywhere, Category = "Algorithm")
 		float hitRewardMultiplier = 800;
 
@@ -69,7 +71,7 @@ public:
 private:
 	FRandomStream random;
 	TSubclassOf<class ABranch> Branch_BP;
-	TSubclassOf<class ATree> Tree_BP;
+	//TSubclassOf<class ATree> Tree_BP;
 	TArray<ABranch*> branches;
 
 	

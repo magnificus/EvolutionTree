@@ -47,7 +47,8 @@ void ASimLogic::simulationTick()
 	if (currentBest != NULL) {
 		currentBest->annihilate();
 	}
-	currentBest = trees[0]->duplicate(currentBestLocation);
+	ATree* newTree = GetWorld()->SpawnActor<ATree>(Tree_BP, currentBestLocation, trees[0]->GetActorRotation());
+	currentBest = trees[0]->duplicate(newTree, currentBestLocation);
 
 	winners.Add(trees[0]);
 	
@@ -60,7 +61,9 @@ void ASimLogic::simulationTick()
 	}
 	for (ATree* t : losers) {
 		ATree* parent = winners[random.RandRange(0, winners.Num()-1)];
-		ATree* newTree = parent->duplicate(t->GetActorLocation());
+
+		ATree* newTree = GetWorld()->SpawnActor<ATree>(Tree_BP, t->GetActorLocation(), parent->GetActorRotation());
+			parent->duplicate(newTree, t->GetActorLocation());
 		newTree->mutate();
 
 		winners.Add(newTree);
