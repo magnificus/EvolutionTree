@@ -23,7 +23,7 @@ public:
 	UPROPERTY(EditAnywhere, Category = "Algorithm")
 		float cost = 1;
 
-	ALeaf* duplicate(FVector originalLocation, FVector newLocation);
+//	ALeaf* duplicate(ALeaf* spawnedLeaf, FVector originalLocation, FVector newLocation);
 
 	UPROPERTY(EditAnywhere, Category = "Algorithm")
 		float leafMutationChance = .005f;
@@ -31,7 +31,7 @@ public:
 	void mutate();
 
 private:
-	TSubclassOf<class ALeaf> Leaf_BP;
+	//TSubclassOf<class ALeaf> Leaf_BP;
 	FRandomStream random;
 	
 };

@@ -26,30 +26,34 @@ public:
 	void annihilate();
 
 	void spawnRandomLeaf();
-	void spawnRandomBranch();
+	//void spawnRandomBranch();
 	FTransform getRandomPositionOnBranch();
 
 	UPROPERTY(EditAnywhere, Category = "Algorithm")
 		float branchMutationChance = .01f;
 	UPROPERTY(EditAnywhere, Category = "Algorithm")
-		float leafMutationChance = .01f;
+		float leafMutationChance = .04f;
 	UPROPERTY(EditAnywhere, Category = "Algorithm")
-		float cost = 0.3;
+		float displacementChance = .01f;
+	UPROPERTY(EditAnywhere, Category = "Algorithm")
+		float cost = 0.5;
 
-	ABranch* duplicate(FVector originalLocation, FVector newLocation);
+	ABranch* duplicate(ABranch* spawnedBranch, FVector originalLocation, FVector newLocation);
 
 	float calculateCost();
 
-	void addBranch(ABranch* b);
+	void displace(FVector loc, FRotator rot);
+
+	//void addBranch(ABranch* b);
 	void addLeaf(ALeaf* l);
 
 
 private:
 	FRandomStream random;
 	TSubclassOf<class ALeaf> Leaf_BP;
-	TSubclassOf<class ABranch> Branch_BP;
+	//TSubclassOf<class ABranch> Branch_BP;
 	TArray<ALeaf*> leafs;
-	TArray<ABranch*> branches;
+//	TArray<ABranch*> branches;
 
 	FVector begin;
 	FVector end;

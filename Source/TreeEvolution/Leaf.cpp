@@ -8,9 +8,9 @@
 // Sets default values
 ALeaf::ALeaf()
 {
-	static ConstructorHelpers::FObjectFinder<UClass> LeafFinder(TEXT("Class'/Game/LeafBP.LeafBP_C'"));
-	if (LeafFinder.Object != NULL)
-		Leaf_BP = LeafFinder.Object;
+	//static ConstructorHelpers::FObjectFinder<UClass> LeafFinder(TEXT("Class'/Game/LeafBP.LeafBP_C'"));
+	//if (LeafFinder.Object != NULL)
+	//	Leaf_BP = LeafFinder.Object;
 
 	PrimaryActorTick.bCanEverTick = false;
 
@@ -32,26 +32,18 @@ void ALeaf::Tick(float DeltaTime)
 
 }
 
-ALeaf* ALeaf::duplicate(FVector originalLocation, FVector newLocation) {
-	UWorld* const World = GetWorld();
-
-	if (!World) {
-		return NULL;
-	}
-
-	FVector diff = GetActorLocation() - originalLocation;
-	FVector location = newLocation + diff;
-
-
-	ALeaf* const spawnedLeaf = World->SpawnActor<ALeaf>(Leaf_BP, location, GetActorRotation());
-
-
-	return spawnedLeaf;
-}
+//ALeaf* ALeaf::duplicate(ALeaf* spawnedLeaf, FVector originalLocation, FVector newLocation) {
+//		FVector diff = GetActorLocation() - originalLocation;
+//		FVector location = newLocation + diff;
+//		//ALeaf* const spawnedLeaf = World->SpawnActor<ALeaf>(Leaf_BP, location, GetActorRotation());
+//		return spawnedLeaf;
+//
+//}
 
 void ALeaf::mutate() {
 	if (random.FRand() < leafMutationChance) {
-		FRotator r(random.FRand() * 360, random.FRand() * 360, random.FRand() * 360);
+		
+		FRotator r(random.FRandRange(0, 4) * .25, random.FRandRange(0, 4) * .25, random.FRandRange(0, 4) * .25);
 		SetActorRotation(FQuat(r));
 	}
 	

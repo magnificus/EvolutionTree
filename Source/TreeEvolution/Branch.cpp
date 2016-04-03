@@ -12,9 +12,9 @@ ABranch::ABranch()
 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = false;
 
-	static ConstructorHelpers::FObjectFinder<UClass> BranchFinder(TEXT("Class'/Game/BranchBP.BranchBP_C'"));
-	if (BranchFinder.Object != NULL)
-		Branch_BP = BranchFinder.Object;
+	//static ConstructorHelpers::FObjectFinder<UClass> BranchFinder(TEXT("Class'/Game/BranchBP.BranchBP_C'"));
+	//if (BranchFinder.Object != NULL)
+	//	Branch_BP = BranchFinder.Object;
 
 	static ConstructorHelpers::FObjectFinder<UClass> LeafFinder(TEXT("Class'/Game/LeafBP.LeafBP_C'"));
 	if (LeafFinder.Object != NULL)
@@ -46,13 +46,13 @@ void ABranch::mutate(int32 &currentBranches, int32 maxBranches, int32 &currentLe
 
 	// destruction branch
 
-	if (random.FRand() < branchMutationChance && branches.Num() > 0) {
-		int32 index = random.GetUnsignedInt() % branches.Num();
-		ABranch* b = branches[index];
-		b->annihilate();
-		branches.RemoveAt(index);
-		currentBranches--;
-	}
+	//if (random.FRand() < branchMutationChance && branches.Num() > 0) {
+	//	int32 index = random.GetUnsignedInt() % branches.Num();
+	//	ABranch* b = branches[index];
+	//	b->annihilate();
+	//	branches.RemoveAt(index);
+	//	currentBranches--;
+	//}
 
 	// destruction leaf
 
@@ -65,12 +65,11 @@ void ABranch::mutate(int32 &currentBranches, int32 maxBranches, int32 &currentLe
 	}
 
 
-	// creation branch
-	if (random.FRand() < branchMutationChance && currentBranches < maxBranches) {
-		spawnRandomBranch();
-		currentBranches++;
-	}
-
+	//// creation branch
+	//if (false && random.FRand() < branchMutationChance && currentBranches < maxBranches) {
+	//	spawnRandomBranch();
+	//	currentBranches++;
+	//}
 
 	// creation leaf
 
@@ -83,9 +82,9 @@ void ABranch::mutate(int32 &currentBranches, int32 maxBranches, int32 &currentLe
 
 	// propagation
 
-	for (ABranch* a : branches) {
-		a->mutate(currentBranches, maxBranches, currentLeafs, maxLeafs);
-	}
+	//for (ABranch* a : branches) {
+	//	a->mutate(currentBranches, maxBranches, currentLeafs, maxLeafs);
+	//}
 
 	for (ALeaf* l : leafs) {
 		l->mutate();
@@ -95,10 +94,6 @@ void ABranch::mutate(int32 &currentBranches, int32 maxBranches, int32 &currentLe
 
 void ABranch::spawnRandomLeaf()
 {
-	UWorld* const World = GetWorld();
-	if (!World) {
-		return;
-	}
 
 	TArray<UPrimitiveComponent*> comps;
 	this->GetComponents(comps);
@@ -114,9 +109,15 @@ void ABranch::spawnRandomLeaf()
 		}
 	}
 
-	FVector location = begin + (end - begin)*random.FRand();
-	FRotator f(random.FRand() * 360, random.FRand() * 360, random.FRand() * 360);
-	ALeaf* spawnedLeaf = (ALeaf*)World->SpawnActor<ALeaf>(Leaf_BP, location,f );
+	FVector location = begin + (end - begin)*random.FRand() + FVector(random.RandRange(-10,10), random.RandRange(-10, 10), random.RandRange(-10, 10));
+	//FRotator f(random.FRand() * 360, random.FRand() * 360, random.FRand() * 360);
+
+	//FTransform t = getRandomPositionOnBranch();
+
+	ALeaf* spawnedLeaf = (ALeaf*)GetWorld()->SpawnActor<ALeaf>(Leaf_BP, location, FRotator(random.FRandRange(-90, 90), random.FRandRange(-90, 90), random.FRandRange(-90, 90)));
+
+	spawnedLeaf->AttachRootComponentToActor(this, NAME_None, EAttachLocation::KeepWorldPosition);
+	
 	
 	//GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Green, "Spawned Leaf");
 	leafs.Add(spawnedLeaf);
@@ -124,37 +125,35 @@ void ABranch::spawnRandomLeaf()
 
 }
 
-void ABranch::spawnRandomBranch() {
-	UWorld* const World = GetWorld();
-	if (!World) {
-		return;
-	}
-
-	TArray<UPrimitiveComponent*> comps;
-	this->GetComponents(comps);
-	for (auto Itr(comps.CreateIterator()); Itr; ++Itr)
-	{
-		if ((*Itr)->GetName() == "start") {
-			begin = (*Itr)->GetComponentLocation();
-		}
-		else if ((*Itr)->GetName() == "end")
-		{
-			end = (*Itr)->GetComponentLocation();
-
-		}
-	}
-
-	FTransform trans = getRandomPositionOnBranch();
-
-	ABranch* spawnedBranch = World->SpawnActor<ABranch>(Branch_BP, trans.GetLocation(), trans.Rotator());
-
-	branches.Add(spawnedBranch);
-
-}
+//void ABranch::spawnRandomBranch() {
+//
+//	TArray<UPrimitiveComponent*> comps;
+//	this->GetComponents(comps);
+//	for (auto Itr(comps.CreateIterator()); Itr; ++Itr)
+//	{
+//		if ((*Itr)->GetName() == "start") {
+//			begin = (*Itr)->GetComponentLocation();
+//		}
+//		else if ((*Itr)->GetName() == "end")
+//		{
+//			end = (*Itr)->GetComponentLocation();
+//
+//		}
+//	}
+//
+//	FTransform trans = getRandomPositionOnBranch();
+//
+//	ABranch* spawnedBranch = GetWorld()->SpawnActor<ABranch>(Branch_BP, trans.GetLocation(), trans.Rotator());
+//
+//	spawnedBranch->AttachRootComponentToActor(this, NAME_None, EAttachLocation::KeepWorldPosition);
+//
+//	//branches.Add(spawnedBranch);
+//
+//}
 void ABranch::annihilate() {
-	for (ABranch* b : branches) {
-		b->annihilate();
-	}
+	//for (ABranch* b : branches) {
+	//	b->annihilate();
+	//}
 	for (ALeaf* l : leafs) {
 		l->Destroy();
 	}
@@ -204,9 +203,9 @@ FTransform ABranch::getRandomPositionOnBranch() {
 
 float ABranch::calculateCost() {
 	float totalCost(0);
-	for (ABranch* b : branches) {
+	/*for (ABranch* b : branches) {
 		totalCost += b->calculateCost();
-	}
+	}*/
 	for (ALeaf* l : leafs) {
 		totalCost += l->cost;
 	}
@@ -215,35 +214,39 @@ float ABranch::calculateCost() {
 	return totalCost;
 }
 
-void ABranch::addBranch(ABranch * b)
-{
-	branches.Add(b);
-}
+//void ABranch::addBranch(ABranch * b)
+//{
+//	b->AttachRootComponentToActor(this, NAME_None, EAttachLocation::KeepWorldPosition);
+//	branches.Add(b);
+//}
 
 void ABranch::addLeaf(ALeaf * l)
 {
 	leafs.Add(l);
+	l->AttachRootComponentToActor(this, NAME_None, EAttachLocation::KeepWorldPosition);
 }
 
-ABranch* ABranch::duplicate(FVector originalLocation, FVector newLocation) {
-	UWorld* const World = GetWorld();
-	if (!World) {
-		return NULL;
-	}
+ABranch* ABranch::duplicate(ABranch* spawnedBranch, FVector originalLocation, FVector newLocation) {
 
-	FVector diff = GetActorLocation() - originalLocation;
-	FVector location = newLocation + diff;
-
-	ABranch* spawnedBranch = World->SpawnActor<ABranch>(Branch_BP, location, GetActorRotation());
+	//ABranch* spawnedBranch = GetWorld()->SpawnActor<ABranch>(Branch_BP, location, GetActorRotation());
 
 
-	for (ABranch* b : branches) {
+	/*for (ABranch* b : branches) {
 		spawnedBranch->addBranch(b->duplicate(originalLocation, newLocation));
-	}
+	}*/
 	for (ALeaf* l : leafs) {
-		spawnedBranch->addLeaf(l->duplicate(originalLocation, newLocation));
+		FVector leafDiff = l->GetActorLocation() - originalLocation;
+		FVector leafLocation = newLocation + leafDiff;
+		ALeaf* spawnedLeaf = GetWorld()->SpawnActor<ALeaf>(Leaf_BP, leafLocation, l->GetActorRotation());
+		spawnedBranch->addLeaf(spawnedLeaf);
 	}
 
 
 	return spawnedBranch;
+}
+
+void ABranch::displace(FVector loc, FRotator rot) {
+
+	SetActorLocation(loc);
+	SetActorRotation(rot);
 }
