@@ -3,6 +3,7 @@
 #pragma once
 
 #include "Leaf.h"
+#include "mutable.h"
 #include "GameFramework/Actor.h"
 #include "Branch.generated.h"
 
@@ -22,6 +23,7 @@ public:
 	virtual void Tick(float DeltaSeconds) override;
 
 	void mutate(int32 &currentBranches, int32 maxBranches, int32 &currentLeafs, int32 maxLeafs);
+	void mutateSelf();
 
 	void annihilate();
 
@@ -38,7 +40,7 @@ public:
 	UPROPERTY(EditAnywhere, Category = "Algorithm")
 		float cost = 0.5;
 
-	ABranch* duplicate(ABranch* spawnedBranch, FVector originalLocation, FVector newLocation);
+	ABranch* duplicate(ABranch* spawnedBranch, FVector originalLocation, FVector newLocation, bool hidden);
 
 	float calculateCost();
 

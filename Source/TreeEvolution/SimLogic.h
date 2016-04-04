@@ -32,6 +32,8 @@ public:
 		int32 distance = 500;
 	UPROPERTY(EditAnywhere, Category = "Gameplay")
 		FVector currentBestLocation;
+	UPROPERTY(EditAnywhere, Category = "Gameplay")
+		bool hidden = false;
 
 	UPROPERTY(EditAnywhere, Category = "Performance")
 		int32 nbrLines = 5;
