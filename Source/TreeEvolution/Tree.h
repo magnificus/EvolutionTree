@@ -24,11 +24,10 @@ public:
 	virtual void Tick(float DeltaSeconds) override;
 
 	UFUNCTION(BlueprintCallable, Category = "General")
-		ATree* duplicate(ATree* tree, FVector location);
+		ATree* duplicate(ATree* tree, FVector location, bool hidden);
 
 	UFUNCTION(BlueprintCallable, Category = "Statistics")
 		float calculateHits();
-
 	UFUNCTION(BlueprintCallable, Category = "Statistics")
 		float calculateCost();
 
@@ -59,6 +58,8 @@ public:
 		int32 maxBranches = 5;
 	UPROPERTY(EditAnywhere, Category = "Algorithm")
 		int32 maxLeafs = 20;
+
+	
 
 	void addBranch(ABranch* b);
 

@@ -121,6 +121,7 @@ void ATree::mutate() {
 	if (f < spawnMutationChance && currentBranches < maxBranches) {
 		FTransform t = GetRandomPosition();
 		ABranch* spawnedBranch = GetWorld()->SpawnActor<ABranch>(Branch_BP, t.GetLocation(), t.GetRotation().Rotator(), FActorSpawnParameters());
+		spawnedBranch->SetActorHiddenInGame(true);
 		spawnedBranch->AttachRootComponentToActor(this, NAME_None, EAttachLocation::KeepWorldPosition);
 		branches.Add(spawnedBranch);
 	}
@@ -199,14 +200,15 @@ FTransform ATree::GetRandomPosition() {
 
 }
 
-ATree* ATree::duplicate(ATree* spawnedTree, FVector location) {
-	//ATree* spawnedTree = World->SpawnActor<ATree>(Tree_BP, location, GetActorRotation());
+ATree* ATree::duplicate(ATree* spawnedTree, FVector location, bool hidden) {
 
 	for (ABranch* b : branches) {
 		FVector diff = b->GetActorLocation() - GetActorLocation();
 		FVector newLocation = location + diff;
 		ABranch* spawnedBranch = GetWorld()->SpawnActor<ABranch>(Branch_BP, newLocation, b->GetActorRotation());
-		spawnedTree->addBranch(b->duplicate(spawnedBranch, GetActorLocation(), location));
+		spawnedBranch->SetActorHiddenInGame(hidden);
+		
+		spawnedTree->addBranch(b->duplicate(spawnedBranch, GetActorLocation(), location, hidden));
 	}
 	spawnedTree->currentBranches = currentBranches;
 	spawnedTree->currentLeafs = currentLeafs;

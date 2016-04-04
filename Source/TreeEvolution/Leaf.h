@@ -2,6 +2,7 @@
 
 #pragma once
 
+#include "mutable.h"
 #include "GameFramework/Actor.h"
 #include "Leaf.generated.h"
 
@@ -29,6 +30,8 @@ public:
 		float leafMutationChance = .005f;
 
 	void mutate();
+	void mutateSelf();
+	void annihilate();
 
 private:
 	//TSubclassOf<class ALeaf> Leaf_BP;
