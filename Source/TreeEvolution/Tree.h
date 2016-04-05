@@ -39,9 +39,9 @@ public:
 	UPROPERTY(EditAnywhere, Category = "RayTrace")
 		float zDist = 500;
 	UPROPERTY(EditAnywhere, Category = "RayTrace")
-		float maxSpread = 400;
+		float maxSpread = 300;
 	UPROPERTY(EditAnywhere, Category = "RayTrace")
-		float numberRays = 30;
+		float numberRays = 15;
 	UPROPERTY(EditAnywhere, Category = "RayTrace")
 		bool debugLine = false;
 

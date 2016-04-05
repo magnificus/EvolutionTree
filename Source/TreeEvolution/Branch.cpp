@@ -12,10 +12,6 @@ ABranch::ABranch()
 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = false;
 
-	//static ConstructorHelpers::FObjectFinder<UClass> BranchFinder(TEXT("Class'/Game/BranchBP.BranchBP_C'"));
-	//if (BranchFinder.Object != NULL)
-	//	Branch_BP = BranchFinder.Object;
-
 	static ConstructorHelpers::FObjectFinder<UClass> LeafFinder(TEXT("Class'/Game/LeafBP.LeafBP_C'"));
 	if (LeafFinder.Object != NULL)
 		Leaf_BP = LeafFinder.Object;
@@ -43,26 +39,6 @@ void ABranch::Tick(float DeltaTime)
 
 void ABranch::mutate(int32 &currentBranches, int32 maxBranches, int32 &currentLeafs, int32 maxLeafs)
 {
-
-	// destruction branch
-
-	//if (random.FRand() < branchMutationChance && branches.Num() > 0) {
-	//	int32 index = random.GetUnsignedInt() % branches.Num();
-	//	ABranch* b = branches[index];
-	//	b->annihilate();
-	//	branches.RemoveAt(index);
-	//	currentBranches--;
-	//}
-
-	// destruction leaf
-
-	if (random.FRand() < leafMutationChance && leafs.Num() > 0) {
-		int32 index = random.GetUnsignedInt() % leafs.Num();
-		ALeaf* l = leafs[index];
-		l->Destroy();
-		leafs.RemoveAt(index);
-		currentLeafs--;
-	}
 
 
 	// creation leaf
@@ -116,9 +92,6 @@ void ABranch::spawnRandomLeaf()
 }
 
 void ABranch::annihilate() {
-	//for (ABranch* b : branches) {
-	//	b->annihilate();
-	//}
 	for (ALeaf* l : leafs) {
 		l->Destroy();
 	}

@@ -29,14 +29,14 @@ public:
 
 
 	UPROPERTY(EditAnywhere, Category = "Gameplay")
-		int32 distance = 500;
+		int32 distance = 1000;
 	UPROPERTY(EditAnywhere, Category = "Gameplay")
 		FVector currentBestLocation;
 	UPROPERTY(EditAnywhere, Category = "Gameplay")
 		bool hidden = false;
 
 	UPROPERTY(EditAnywhere, Category = "Performance")
-		int32 nbrLines = 5;
+		int32 nbrLines = 10;
 
 
 private:

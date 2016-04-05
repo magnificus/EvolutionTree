@@ -8,9 +8,6 @@
 // Sets default values
 ATree::ATree()
 {
-	//static ConstructorHelpers::FObjectFinder<UClass> TreeFinder(TEXT("Class'/Game/TreeBP.TreeBP_C'"));
-	//if (TreeFinder.Object != NULL)
-	//	Tree_BP = TreeFinder.Object;
 
 	static ConstructorHelpers::FObjectFinder<UClass> BranchFinder(TEXT("Class'/Game/BranchBP.BranchBP_C'"));
 	if (BranchFinder.Object != NULL)
@@ -121,6 +118,7 @@ void ATree::mutate() {
 	if (f < spawnMutationChance && currentBranches < maxBranches) {
 		FTransform t = GetRandomPosition();
 		ABranch* spawnedBranch = GetWorld()->SpawnActor<ABranch>(Branch_BP, t.GetLocation(), t.GetRotation().Rotator(), FActorSpawnParameters());
+		//spawnedBranch->SetActorRelativeScale3D(FVector(1, 1, random.FRand() * 3));
 		spawnedBranch->SetActorHiddenInGame(true);
 		spawnedBranch->AttachRootComponentToActor(this, NAME_None, EAttachLocation::KeepWorldPosition);
 		branches.Add(spawnedBranch);
@@ -206,6 +204,8 @@ ATree* ATree::duplicate(ATree* spawnedTree, FVector location, bool hidden) {
 		FVector diff = b->GetActorLocation() - GetActorLocation();
 		FVector newLocation = location + diff;
 		ABranch* spawnedBranch = GetWorld()->SpawnActor<ABranch>(Branch_BP, newLocation, b->GetActorRotation());
+		spawnedBranch->SetActorScale3D(b->GetActorScale3D());
+		
 		spawnedBranch->SetActorHiddenInGame(hidden);
 		
 		spawnedTree->addBranch(b->duplicate(spawnedBranch, GetActorLocation(), location, hidden));
