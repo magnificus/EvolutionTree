@@ -12,11 +12,6 @@ ABranch::ABranch()
 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = false;
 
-	static ConstructorHelpers::FObjectFinder<UClass> LeafFinder(TEXT("Class'/Game/LeafBP.LeafBP_C'"));
-	if (LeafFinder.Object != NULL)
-		Leaf_BP = LeafFinder.Object;
-
-
 	random.GenerateNewSeed();
 
 	
@@ -37,32 +32,16 @@ void ABranch::Tick(float DeltaTime)
 
 }
 
-void ABranch::mutate(int32 &currentBranches, int32 maxBranches, int32 &currentLeafs, int32 maxLeafs)
-{
 
+FVector ABranch::getPositionOnBranch(float offset) {
 
-	// creation leaf
+	// beginning and end of branch...
 
-	if (random.FRand() < leafMutationChance && currentLeafs < maxLeafs) {
-		spawnRandomLeaf();
-		currentLeafs++;
-	}
-	
-
-
-	// propagation
-
-	for (ALeaf* l : leafs) {
-		l->mutate();
-	}
-
-}
-
-void ABranch::spawnRandomLeaf()
-{
-
+	//int32 index = random.RandRange(0, branches.Num() - 1);
 	TArray<UPrimitiveComponent*> comps;
-	this->GetComponents(comps);
+	GetComponents(comps);
+	FVector begin;
+	FVector end;
 	for (auto Itr(comps.CreateIterator()); Itr; ++Itr)
 	{
 		if ((*Itr)->GetName() == "start") {
@@ -75,107 +54,16 @@ void ABranch::spawnRandomLeaf()
 		}
 	}
 
-	FVector location = begin + (end - begin)*random.FRand() + FVector(random.RandRange(-10,10), random.RandRange(-10, 10), random.RandRange(-10, 10));
-	//FRotator f(random.FRand() * 360, random.FRand() * 360, random.FRand() * 360);
-
-	//FTransform t = getRandomPositionOnBranch();
-
-	ALeaf* spawnedLeaf = (ALeaf*)GetWorld()->SpawnActor<ALeaf>(Leaf_BP, location, FRotator(random.FRandRange(-90, 90), random.FRandRange(-90, 90), random.FRandRange(-90, 90)));
-	
-	spawnedLeaf->AttachRootComponentToActor(this, NAME_None, EAttachLocation::KeepWorldPosition);
-	
-	
-	//GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Green, "Spawned Leaf");
-	leafs.Add(spawnedLeaf);
-
-
+	return begin + (end - begin)*offset;
 }
 
-void ABranch::annihilate() {
-	for (ALeaf* l : leafs) {
-		l->Destroy();
-	}
-	Destroy();
-}
-
-FTransform ABranch::getRandomPositionOnBranch() {
-
-	// beginning and end of branch...
-	
-	
-	FVector pos = begin + (random.FRand() * (end - begin));
-
-	FVector beamStart = pos;
-	float distX = (random.FRand() - .5) * 200;
-	float distY = (random.FRand() - .5) * 200;
-	float distZ = (random.FRand() - .5) * 200;
-
-	beamStart.X += distX;
-	beamStart.Y += distY;
-	beamStart.Z += distZ;
-
-	FCollisionQueryParams RV_TraceParams = FCollisionQueryParams(FName(TEXT("RV_Trace")), true);
-	RV_TraceParams.bTraceComplex = true;
-	RV_TraceParams.bTraceAsyncScene = true;
-	RV_TraceParams.bReturnPhysicalMaterial = false;
-
-
-	//Re-initialize hit info
-	FHitResult RV_Hit(ForceInit);
-	GetWorld()->LineTraceSingleByChannel(
-		RV_Hit,        //result
-		beamStart,    //start
-		pos, //end
-		ECC_Pawn, //collision channel
-		RV_TraceParams
-		);
-
-	FVector Direction = pos - beamStart;
-	FRotator Rot = FRotationMatrix::MakeFromX(Direction).Rotator();
-	FTransform t;
-	t.SetLocation(RV_Hit.ImpactPoint);
-	t.SetRotation(FQuat(Rot));
-	return t;
-
-}
 
 float ABranch::calculateCost() {
-	float totalCost(0);
-
-	for (ALeaf* l : leafs) {
-		totalCost += l->cost;
-	}
-	totalCost += cost;
-
-	return totalCost;
+	return cost;
 }
 
-
-void ABranch::addLeaf(ALeaf * l)
-{
-	leafs.Add(l);
-	l->AttachRootComponentToActor(this, NAME_None, EAttachLocation::KeepWorldPosition);
-}
-
-ABranch* ABranch::duplicate(ABranch* spawnedBranch, FVector originalLocation, FVector newLocation, bool hidden) {
-
-	for (ALeaf* l : leafs) {
-		FVector leafDiff = l->GetActorLocation() - originalLocation;
-		FVector leafLocation = newLocation + leafDiff;
-		
-
-		ALeaf* spawnedLeaf = GetWorld()->SpawnActor<ALeaf>(Leaf_BP, leafLocation, l->GetActorRotation());
-		spawnedLeaf->SetActorHiddenInGame(hidden);
-		
-		spawnedBranch->addLeaf(spawnedLeaf);
-	}
-
-
-	return spawnedBranch;
-}
 
 void ABranch::displace(FVector loc, FRotator rot) {
-
 	SetActorLocation(loc);
 	SetActorRotation(rot);
 }

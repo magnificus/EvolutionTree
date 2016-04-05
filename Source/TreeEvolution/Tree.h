@@ -3,6 +3,7 @@
 #pragma once
 
 #include "Branch.h"
+#include "Leaf.h"
 #include "GameFramework/Actor.h"
 #include "Tree.generated.h"
 
@@ -39,9 +40,9 @@ public:
 	UPROPERTY(EditAnywhere, Category = "RayTrace")
 		float zDist = 500;
 	UPROPERTY(EditAnywhere, Category = "RayTrace")
-		float maxSpread = 300;
+		float maxSpread = 600;
 	UPROPERTY(EditAnywhere, Category = "RayTrace")
-		float numberRays = 15;
+		float numberRays = 30;
 	UPROPERTY(EditAnywhere, Category = "RayTrace")
 		bool debugLine = false;
 
@@ -55,25 +56,30 @@ public:
 		float hitRewardMultiplier = 800;
 
 	UPROPERTY(EditAnywhere, Category = "Algorithm")
-		int32 maxBranches = 5;
+		int32 numBranches = 5;
 	UPROPERTY(EditAnywhere, Category = "Algorithm")
-		int32 maxLeafs = 20;
+		int32 numLeafs = 20;
 
 	
+	void init();
+
+	void initRandomLeaf();
+	void initRandomBranch();
 
 	void addBranch(ABranch* b);
+	void addLeaf(ABranch* b, ALeaf* l);
 
 	void annihilate();
 
 	float currentValue = 0;
-	int32 currentBranches = 0;
-	int32 currentLeafs = 0;
+
+	TArray<ABranch*> branches;
+	TArray<ALeaf*> leafs;
 
 private:
 	FRandomStream random;
 	TSubclassOf<class ABranch> Branch_BP;
-	//TSubclassOf<class ATree> Tree_BP;
-	TArray<ABranch*> branches;
+	TSubclassOf<class ALeaf> Leaf_BP;	
 
 	
 };

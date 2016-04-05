@@ -26,8 +26,11 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category = "Gameplay")
 		void simulationTick();
-
-
+	UFUNCTION(BlueprintCallable, Category = "Gameplay")
+		float GetAverageFitness() { return averageFitness; }
+	UFUNCTION(BlueprintCallable, Category = "Gameplay")
+		float GetMaxFitness() { return maxFitness; }
+	
 	UPROPERTY(EditAnywhere, Category = "Gameplay")
 		int32 distance = 1000;
 	UPROPERTY(EditAnywhere, Category = "Gameplay")
@@ -38,9 +41,18 @@ public:
 	UPROPERTY(EditAnywhere, Category = "Performance")
 		int32 nbrLines = 10;
 
+	void combine(ATree* newTree, ATree* p1, ATree* p2, FVector location);
+
+	
+	float averageFitness;
+	float maxFitness;
+
+
 
 private:
 	TSubclassOf<class ATree> Tree_BP;
+	TSubclassOf<class ABranch> Branch_BP;
+	TSubclassOf<class ALeaf> Leaf_BP;
 	TArray<ATree*> trees;
 	FRandomStream random;
 	ATree* currentBest;

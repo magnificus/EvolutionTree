@@ -32,19 +32,24 @@ void ALeaf::Tick(float DeltaTime)
 
 }
 
-//ALeaf* ALeaf::duplicate(ALeaf* spawnedLeaf, FVector originalLocation, FVector newLocation) {
-//		FVector diff = GetActorLocation() - originalLocation;
-//		FVector location = newLocation + diff;
-//		//ALeaf* const spawnedLeaf = World->SpawnActor<ALeaf>(Leaf_BP, location, GetActorRotation());
-//		return spawnedLeaf;
-//
-//}
+void ALeaf::duplicate(ALeaf* spawnedLeaf) {
+		//FVector diff = GetActorLocation() - originalLocation;
+		//FVector location = newLocation + diff;
+		//ALeaf* const spawnedLeaf = World->SpawnActor<ALeaf>(Leaf_BP, location, GetActorRotation());
+
+		spawnedLeaf->attachedToIndex = attachedToIndex;
+		spawnedLeaf->branchOffset = branchOffset;
+		spawnedLeaf->offsetVector = offsetVector;
+		//return spawnedLeaf;
+
+}
 
 void ALeaf::mutate() {
-	if (random.FRand() < leafMutationChance) {
+	if (random.FRand() < rotationChance) {
+		FRotator f(random.FRand()*30, random.FRand()*30, random.FRand()*30);
+		AddActorWorldRotation(f);
 		
-		FRotator r(random.FRandRange(0, 4) * .25, random.FRandRange(0, 4) * .25, random.FRandRange(0, 4) * .25);
-		SetActorRotation(FQuat(r));
+		//SetActorRotation(FQuat(r));
 	}
 	
 }

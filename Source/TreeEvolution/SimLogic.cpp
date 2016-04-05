@@ -14,6 +14,14 @@ ASimLogic::ASimLogic()
 	if (TreeFinder.Object != NULL)
 		Tree_BP = TreeFinder.Object;
 
+	static ConstructorHelpers::FObjectFinder<UClass> BranchFinder(TEXT("Class'/Game/BranchBP.BranchBP_C'"));
+	if (BranchFinder.Object != NULL)
+		Branch_BP = BranchFinder.Object;
+
+	static ConstructorHelpers::FObjectFinder<UClass> LeafFinder(TEXT("Class'/Game/LeafBP.LeafBP_C'"));
+	if (LeafFinder.Object != NULL)
+		Leaf_BP = LeafFinder.Object;
+
 	random.GenerateNewSeed();
 	currentBestLocation.X = -1000;
 }
@@ -40,6 +48,8 @@ void ASimLogic::simulationTick()
 	TArray<ATree*> winners;
 	TArray<ATree*> losers;
 
+	float totalFitness = 0;
+
 	if (trees.Num() == 0) {
 		return;
 	}
@@ -51,19 +61,26 @@ void ASimLogic::simulationTick()
 	currentBest = trees[0]->duplicate(newTree, currentBestLocation, false);
 
 	winners.Add(trees[0]);
-	
+	maxFitness = trees[0]->currentValue;
+	totalFitness += trees[0]->currentValue;
 	for (int32 i = 1; i < trees.Num(); ++i) {
-		if (random.FRand() * trees.Num() * 5 > i) {
+		totalFitness += trees[i]->currentValue;
+		if (random.FRand() * trees.Num() * 4 > i) {
 			winners.Add(trees[i]);
 		} else{
 			losers.Add(trees[i]);
 		}
 	}
 	for (ATree* t : losers) {
-		ATree* parent = winners[random.RandRange(0, winners.Num()-1)];
+		//ATree* parent = winners[random.RandRange(0, winners.Num()-1)];
+		ATree* parent1 = winners[random.RandRange(0, winners.Num() - 1)];
+		ATree* parent2 = winners[random.RandRange(0, winners.Num() - 1)];
 
-		ATree* newTree = GetWorld()->SpawnActor<ATree>(Tree_BP, t->GetActorLocation(), parent->GetActorRotation());
-			parent->duplicate(newTree, t->GetActorLocation(), hidden);
+		//ATree* newTree = GetWorld()->SpawnActor<ATree>(Tree_BP, t->GetActorLocation(), parent->GetActorRotation());
+		//	parent->duplicate(newTree, t->GetActorLocation(), hidden);
+
+		ATree* newTree = GetWorld()->SpawnActor<ATree>(Tree_BP, t->GetActorLocation(), FRotator());
+		combine(newTree, parent1, parent2, t->GetActorLocation());
 		newTree->mutate();
 
 		winners.Add(newTree);
@@ -71,9 +88,47 @@ void ASimLogic::simulationTick()
 	}
 
 	trees = winners;
+
+	averageFitness = totalFitness / trees.Num();
+	
 }
 
+void ASimLogic::combine(ATree* newTree, ATree* p1, ATree* p2, FVector location) {
+	
+	for (int i = 0; i < p1->branches.Num(); ++i) {
+		ABranch* b;
+		FVector treeLoc;
+		if (random.FRand() > .5) {
+			b = p1->branches[i];
+			treeLoc = p1->GetActorLocation();
+		} else {
+			b = p2->branches[i];
+			treeLoc = p2->GetActorLocation();
+		}
+		FVector diff = b->GetActorLocation() - treeLoc;
+		FVector newLocation = location + diff;
+		ABranch* spawnedBranch = GetWorld()->SpawnActor<ABranch>(Branch_BP, newLocation, b->GetActorRotation());
+		//	b->duplicate(spawnedBranch, GetActorLocation(), location);
+		newTree->addBranch(spawnedBranch);
+	}
 
+	for (int i = 0; i < p1->leafs.Num(); ++i) {
+		ALeaf* l;
+		FVector treeLoc;
+		if (random.FRand() > .5) {
+			l = p1->leafs[i];
+			treeLoc = p1->GetActorLocation();
+		}
+		else {
+			l = p2->leafs[i];
+			treeLoc = p2->GetActorLocation();
+		}
+		FVector newLocation = newTree->branches[l->attachedToIndex]->getPositionOnBranch(l->branchOffset) + l->offsetVector;
+		ALeaf* spawnedLeaf = GetWorld()->SpawnActor<ALeaf>(Leaf_BP, newLocation, l->GetActorRotation());
+		l->duplicate(spawnedLeaf);
+		newTree->addLeaf(newTree->branches[l->attachedToIndex], spawnedLeaf);
+	}
+}
 
 void ASimLogic::init() {
 	int xPos = 0;
@@ -82,9 +137,12 @@ void ASimLogic::init() {
 		xPos = i * distance;
 		for (int32 j = 0; j < nbrLines; ++j) {
 			yPos = j * distance;
-			ATree* spawnedTree = (ATree*) GetWorld()->SpawnActor(Tree_BP);
 			FVector spawnVector(xPos, yPos, 0);
-			spawnedTree->SetActorLocation(spawnVector);
+			
+			ATree* spawnedTree = GetWorld()->SpawnActor<ATree>(Tree_BP, spawnVector, FRotator());
+			spawnedTree->init();
+			
+			//spawnedTree->SetActorLocation(spawnVector);
 			trees.Add(spawnedTree);
 
 		}
