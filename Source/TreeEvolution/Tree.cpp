@@ -195,9 +195,19 @@ void ATree::mutate() {
 		newOffset = newOffset > 1 ? 1 : newOffset;
 		newOffset = newOffset < 0 ? 0 : newOffset;
 		leafs[index]->branchOffset = newOffset;
+
+		FVector oldVectorOffset = leafs[index]->offsetVector;
+		FVector newVectorOffset = oldVectorOffset + FVector(random.FRand()*5 - 2.5, random.FRand() * 5 - 2.5, random.FRand() * 5 - 2.5);
+		newVectorOffset.X = newVectorOffset.X > 20 ? 20 : newVectorOffset.X;
+		newVectorOffset.X = newVectorOffset.X < -20 ? -20 : newVectorOffset.X;
+		newVectorOffset.Y = newVectorOffset.Y > 20 ? 20 : newVectorOffset.Y;
+		newVectorOffset.Y = newVectorOffset.Y < -20 ? -20 : newVectorOffset.Y;
+		newVectorOffset.Z = newVectorOffset.Z > 10 ? 10 : newVectorOffset.Z;
+		newVectorOffset.Z = newVectorOffset.Z < -10 ? -10 : newVectorOffset.Z;
 		//leafs[index]->offsetVector += (random.FRand() / 2) - 1 / 4;
 
-		leafs[index]->SetActorLocation(branches[leafs[index]->attachedToIndex]->getPositionOnBranch(newOffset));
+		leafs[index]->offsetVector = newVectorOffset;
+		leafs[index]->SetActorLocation(branches[leafs[index]->attachedToIndex]->getPositionOnBranch(newOffset) + newVectorOffset);
 	/*	leafs[index]->Destroy();
 		leafs.RemoveAt(index);
 		initRandomLeaf();*/
