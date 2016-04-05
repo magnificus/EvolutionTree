@@ -21,14 +21,12 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaSeconds) override;
 
-	void mutate(int32 &currentBranches, int32 maxBranches, int32 &currentLeafs, int32 maxLeafs);
-	void mutateSelf();
+	//void mutate();
+	//void annihilate();
 
-	void annihilate();
-
-	void spawnRandomLeaf();
+	//void spawnRandomLeaf();
 	//void spawnRandomBranch();
-	FTransform getRandomPositionOnBranch();
+	FVector getPositionOnBranch(float offset);
 
 	UPROPERTY(EditAnywhere, Category = "Algorithm")
 		float branchMutationChance = .01f;
@@ -39,23 +37,15 @@ public:
 	UPROPERTY(EditAnywhere, Category = "Algorithm")
 		float cost = 0.5;
 
-	ABranch* duplicate(ABranch* spawnedBranch, FVector originalLocation, FVector newLocation, bool hidden);
 
 	float calculateCost();
 
 	void displace(FVector loc, FRotator rot);
 
-	//void addBranch(ABranch* b);
-	void addLeaf(ALeaf* l);
 
 
 private:
 	FRandomStream random;
-	TSubclassOf<class ALeaf> Leaf_BP;
-	//TSubclassOf<class ABranch> Branch_BP;
-	TArray<ALeaf*> leafs;
-//	TArray<ABranch*> branches;
-
 	FVector begin;
 	FVector end;
 };
