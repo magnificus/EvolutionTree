@@ -44,7 +44,7 @@ void ASimLogic::simulationTick()
 		return;
 	}
 
-	if (currentBest != NULL) {
+	if (currentBest != nullptr) {
 		currentBest->annihilate();
 	}
 	ATree* newTree = GetWorld()->SpawnActor<ATree>(Tree_BP, currentBestLocation, trees[0]->GetActorRotation());
@@ -53,7 +53,7 @@ void ASimLogic::simulationTick()
 	winners.Add(trees[0]);
 	
 	for (int32 i = 1; i < trees.Num(); ++i) {
-		if (random.FRand() * trees.Num() > i) {
+		if (random.FRand() * trees.Num() * 5 > i) {
 			winners.Add(trees[i]);
 		} else{
 			losers.Add(trees[i]);
@@ -69,7 +69,6 @@ void ASimLogic::simulationTick()
 		winners.Add(newTree);
 		t->annihilate();
 	}
-
 
 	trees = winners;
 }
