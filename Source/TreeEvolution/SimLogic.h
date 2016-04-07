@@ -36,7 +36,7 @@ public:
 	UPROPERTY(EditAnywhere, Category = "Gameplay")
 		FVector currentBestLocation;
 	UPROPERTY(EditAnywhere, Category = "Gameplay")
-		bool hidden = false;
+		bool sexualReproduction = true;
 
 	UPROPERTY(EditAnywhere, Category = "Performance")
 		int32 nbrLines = 10;

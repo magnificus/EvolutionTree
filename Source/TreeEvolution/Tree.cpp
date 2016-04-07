@@ -148,26 +148,6 @@ float ATree::calculateCost()
 }
 
 void ATree::mutate() {
-	
-
-	//if (f < removeMutationChance && branches.Num() > 0) {
-	//	int32 index = random.GetUnsignedInt() % branches.Num();
-	//	ABranch* b = branches[index];
-	//	b->annihilate();
-	//	branches.RemoveAt(index);
-	//}
-
-	//f = random.FRand();
-
-	//if (f < spawnMutationChance && currentBranches < maxBranches) {
-	//	FTransform t = GetRandomPosition();
-	//	ABranch* spawnedBranch = GetWorld()->SpawnActor<ABranch>(Branch_BP, t.GetLocation(), t.GetRotation().Rotator(), FActorSpawnParameters());
-	//	//spawnedBranch->SetActorRelativeScale3D(FVector(1, 1, random.FRand() * 3));
-	//	spawnedBranch->AttachRootComponentToActor(this, NAME_None, EAttachLocation::KeepWorldPosition);
-	//	branches.Add(spawnedBranch);
-	//}
-
-	
 
 	for (int i = 0; i < branches.Num(); ++i) {
 		ABranch* b = branches[i];
@@ -180,15 +160,20 @@ void ATree::mutate() {
 		}
 	}
 
-	int count = 0;
+	int count1 = 0;
+	int count2 = 0;
 	for (ALeaf* l : leafs) {
 		float f = random.FRand();
 		if (random.FRand() < displacementChance) {
-			count++;
-
+			count1++;
+		}
+		if (random.FRand() < leafChangeBranchChance) {
+			count2++;
 		}
 	}
-	for (int i = 0; i < count; i++) {
+
+	// change leaf position slightly
+	for (int i = 0; i < count1; ++i) {
 		int index = random.RandRange(0, leafs.Num() - 1);
 		float oldOffset = leafs[index]->branchOffset;
 		float newOffset = oldOffset + (random.FRand() / 2) - 1 / 4;
@@ -208,15 +193,14 @@ void ATree::mutate() {
 
 		leafs[index]->offsetVector = newVectorOffset;
 		leafs[index]->SetActorLocation(branches[leafs[index]->attachedToIndex]->getPositionOnBranch(newOffset) + newVectorOffset);
-	/*	leafs[index]->Destroy();
-		leafs.RemoveAt(index);
-		initRandomLeaf();*/
 	}
-	
 
-	//for (ABranch* b : branches) {
-	//	b->mutate();
-	//}
+	for (int i = 0; i < count2; i++) {
+		int index = random.RandRange(0, leafs.Num() - 1);
+		leafs[index]->attachedToIndex = random.RandRange(0, branches.Num() - 1);
+		leafs[index]->SetActorLocation(branches[leafs[index]->attachedToIndex]->getPositionOnBranch(leafs[index]->branchOffset) + leafs[index]->offsetVector);
+		leafs[index]->AttachRootComponentToActor(branches[leafs[index]->attachedToIndex], NAME_None, EAttachLocation::KeepWorldPosition);
+	}
 
 	for (ALeaf* l : leafs) {
 		l->mutate();
@@ -280,13 +264,12 @@ FTransform ATree::GetRandomPosition() {
 
 }
 
-ATree* ATree::duplicate(ATree* spawnedTree, FVector location, bool hidden) {
+ATree* ATree::duplicate(ATree* spawnedTree, FVector location) {
 
 	for (ABranch* b : branches) {
 		FVector diff = b->GetActorLocation() - GetActorLocation();
 		FVector newLocation = location + diff;
 		ABranch* spawnedBranch = GetWorld()->SpawnActor<ABranch>(Branch_BP, newLocation, b->GetActorRotation());
-	//	b->duplicate(spawnedBranch, GetActorLocation(), location);
 		spawnedTree->addBranch(spawnedBranch);
 	}
 
