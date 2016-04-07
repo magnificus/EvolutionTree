@@ -27,10 +27,6 @@ public:
 
 	UPROPERTY(EditAnywhere, Category = "Algorithm")
 		float rotationChance = .1f;
-	UPROPERTY(EditAnywhere, Category = "Algorithm")
-		float translationChance = .01f;
-	UPROPERTY(EditAnywhere, Category = "Algorithm")
-		float changeBranchChance = .001f;
 
 	void mutate();
 
