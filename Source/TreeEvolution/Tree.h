@@ -47,11 +47,7 @@ public:
 		bool debugLine = false;
 
 	UPROPERTY(EditAnywhere, Category = "Algorithm")
-		float spawnMutationChance = .1f;
-	UPROPERTY(EditAnywhere, Category = "Algorithm")
-		float removeMutationChance = .1f;
-	UPROPERTY(EditAnywhere, Category = "Algorithm")
-		float displacementChance = .05f;
+		float displacementChance = .01f;
 	UPROPERTY(EditAnywhere, Category = "Algorithm")
 		float hitRewardMultiplier = 800;
 	UPROPERTY(EditAnywhere, Category = "Algorithm")
