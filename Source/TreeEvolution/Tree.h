@@ -25,7 +25,7 @@ public:
 	virtual void Tick(float DeltaSeconds) override;
 
 	UFUNCTION(BlueprintCallable, Category = "General")
-		ATree* duplicate(ATree* tree, FVector location, bool hidden);
+		ATree* duplicate(ATree* tree, FVector location);
 
 	UFUNCTION(BlueprintCallable, Category = "Statistics")
 		float calculateHits();
@@ -51,9 +51,11 @@ public:
 	UPROPERTY(EditAnywhere, Category = "Algorithm")
 		float removeMutationChance = .1f;
 	UPROPERTY(EditAnywhere, Category = "Algorithm")
-		float displacementChance = .1f;
+		float displacementChance = .05f;
 	UPROPERTY(EditAnywhere, Category = "Algorithm")
 		float hitRewardMultiplier = 800;
+	UPROPERTY(EditAnywhere, Category = "Algorithm")
+		float leafChangeBranchChance = 0.01f;
 
 	UPROPERTY(EditAnywhere, Category = "Algorithm")
 		int32 numBranches = 5;

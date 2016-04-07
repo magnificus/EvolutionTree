@@ -2,7 +2,10 @@
 
 #include "TreeEvolution.h"
 #include "SimLogic.h"
+#include <vector>
+#include <algorithm> 
 
+using namespace std;
 
 // Sets default values
 ASimLogic::ASimLogic()
@@ -58,7 +61,7 @@ void ASimLogic::simulationTick()
 		currentBest->annihilate();
 	}
 	ATree* newTree = GetWorld()->SpawnActor<ATree>(Tree_BP, currentBestLocation, trees[0]->GetActorRotation());
-	currentBest = trees[0]->duplicate(newTree, currentBestLocation, false);
+	currentBest = trees[0]->duplicate(newTree, currentBestLocation);
 
 	winners.Add(trees[0]);
 	maxFitness = trees[0]->currentValue;
@@ -74,13 +77,19 @@ void ASimLogic::simulationTick()
 	for (ATree* t : losers) {
 		//ATree* parent = winners[random.RandRange(0, winners.Num()-1)];
 		ATree* parent1 = winners[random.RandRange(0, winners.Num() - 1)];
-		ATree* parent2 = winners[random.RandRange(0, winners.Num() - 1)];
+		
 
 		//ATree* newTree = GetWorld()->SpawnActor<ATree>(Tree_BP, t->GetActorLocation(), parent->GetActorRotation());
 		//	parent->duplicate(newTree, t->GetActorLocation(), hidden);
 
 		ATree* newTree = GetWorld()->SpawnActor<ATree>(Tree_BP, t->GetActorLocation(), FRotator());
-		combine(newTree, parent1, parent2, t->GetActorLocation());
+		if (sexualReproduction) {
+			ATree* parent2 = winners[random.RandRange(0, winners.Num() - 1)];
+			combine(newTree, parent1, parent2, t->GetActorLocation());
+		} else{
+			parent1->duplicate(newTree, t->GetActorLocation());
+		}
+		
 		newTree->mutate();
 
 		winners.Add(newTree);
@@ -95,19 +104,28 @@ void ASimLogic::simulationTick()
 
 void ASimLogic::combine(ATree* newTree, ATree* p1, ATree* p2, FVector location) {
 	
+	vector<int> p1Branches;
+	//TArray<FVector> branchPositions;
+	//TArray<FRotator> branchotations;
+	//for (ABranch* b : p1->branches) {
+	//	branchPositions.Add(b->GetActorLocation());
+	//}
+
 	for (int i = 0; i < p1->branches.Num(); ++i) {
 		ABranch* b;
 		FVector treeLoc;
 		if (random.FRand() > .5) {
 			b = p1->branches[i];
 			treeLoc = p1->GetActorLocation();
+			p1Branches.push_back(i);
 		} else {
 			b = p2->branches[i];
 			treeLoc = p2->GetActorLocation();
 		}
-		FVector diff = b->GetActorLocation() - treeLoc;
+		FVector diff = p1->branches[i]->GetActorLocation() - p1->GetActorLocation();
+		//FVector diff = b->GetActorLocation() - treeLoc;
 		FVector newLocation = location + diff;
-		ABranch* spawnedBranch = GetWorld()->SpawnActor<ABranch>(Branch_BP, newLocation, b->GetActorRotation());
+		ABranch* spawnedBranch = GetWorld()->SpawnActor<ABranch>(Branch_BP, newLocation, p1->branches[i]->GetActorRotation());
 		//	b->duplicate(spawnedBranch, GetActorLocation(), location);
 		newTree->addBranch(spawnedBranch);
 	}
@@ -115,7 +133,7 @@ void ASimLogic::combine(ATree* newTree, ATree* p1, ATree* p2, FVector location) 
 	for (int i = 0; i < p1->leafs.Num(); ++i) {
 		ALeaf* l;
 		FVector treeLoc;
-		if (random.FRand() > .5) {
+		if (find(p1Branches.begin(), p1Branches.end(), i) != p1Branches.end()) {
 			l = p1->leafs[i];
 			treeLoc = p1->GetActorLocation();
 		}
