@@ -32,8 +32,7 @@ ASimLogic::ASimLogic()
 // Called when the game starts or when spawned
 void ASimLogic::BeginPlay()
 {
-	Super::BeginPlay();
-	
+	Super::BeginPlay();	
 }
 
 // Called every frame
@@ -56,12 +55,11 @@ void ASimLogic::simulationTick()
 	if (trees.Num() == 0) {
 		return;
 	}
-
-	if (currentBest != nullptr) {
+	if (currentBest)
 		currentBest->annihilate();
-	}
 	ATree* newTree = GetWorld()->SpawnActor<ATree>(Tree_BP, currentBestLocation, trees[0]->GetActorRotation());
 	currentBest = trees[0]->duplicate(newTree, currentBestLocation);
+
 
 	winners.Add(trees[0]);
 	maxFitness = trees[0]->currentValue;
@@ -82,21 +80,21 @@ void ASimLogic::simulationTick()
 		//ATree* newTree = GetWorld()->SpawnActor<ATree>(Tree_BP, t->GetActorLocation(), parent->GetActorRotation());
 		//	parent->duplicate(newTree, t->GetActorLocation(), hidden);
 
-		ATree* newTree = GetWorld()->SpawnActor<ATree>(Tree_BP, t->GetActorLocation(), FRotator());
+		//ATree* newTree = GetWorld()->SpawnActor<ATree>(Tree_BP, t->GetActorLocation(), FRotator());
 		if (sexualReproduction) {
 			ATree* parent2 = winners[random.RandRange(0, winners.Num() - 1)];
-			combine(newTree, parent1, parent2, t->GetActorLocation());
+			combine(t, parent1, parent2, t->GetActorLocation());
 		} else{
-			parent1->duplicate(newTree, t->GetActorLocation());
+			parent1->duplicate(t, t->GetActorLocation());
 		}
 		
-		newTree->mutate();
+		t->mutate();
 
-		winners.Add(newTree);
-		t->annihilate();
+		//winners.Add(newTree);
+		//t->annihilate();
 	}
 
-	trees = winners;
+	//trees = winners;
 
 	averageFitness = totalFitness / trees.Num();
 	
@@ -105,11 +103,6 @@ void ASimLogic::simulationTick()
 void ASimLogic::combine(ATree* newTree, ATree* p1, ATree* p2, FVector location) {
 	
 	vector<int> p1Branches;
-	//TArray<FVector> branchPositions;
-	//TArray<FRotator> branchotations;
-	//for (ABranch* b : p1->branches) {
-	//	branchPositions.Add(b->GetActorLocation());
-	//}
 
 	for (int i = 0; i < p1->branches.Num(); ++i) {
 		ABranch* b;
@@ -125,9 +118,12 @@ void ASimLogic::combine(ATree* newTree, ATree* p1, ATree* p2, FVector location) 
 		FVector diff = p1->branches[i]->GetActorLocation() - p1->GetActorLocation();
 		//FVector diff = b->GetActorLocation() - treeLoc;
 		FVector newLocation = location + diff;
-		ABranch* spawnedBranch = GetWorld()->SpawnActor<ABranch>(Branch_BP, newLocation, p1->branches[i]->GetActorRotation());
+		ABranch* spawnedBranch = newTree->branches[i];
+		spawnedBranch->SetActorLocation(newLocation);
+		spawnedBranch->SetActorRotation(p1->branches[i]->GetActorRotation());
+		//ABranch* spawnedBranch = GetWorld()->SpawnActor<ABranch>(Branch_BP, newLocation, p1->branches[i]->GetActorRotation());
 		//	b->duplicate(spawnedBranch, GetActorLocation(), location);
-		newTree->addBranch(spawnedBranch);
+		//newTree->addBranch(spawnedBranch);
 	}
 
 	for (int i = 0; i < p1->leafs.Num(); ++i) {
@@ -142,23 +138,30 @@ void ASimLogic::combine(ATree* newTree, ATree* p1, ATree* p2, FVector location) 
 			treeLoc = p2->GetActorLocation();
 		}
 		FVector newLocation = newTree->branches[l->attachedToIndex]->getPositionOnBranch(l->branchOffset) + l->offsetVector;
-		ALeaf* spawnedLeaf = GetWorld()->SpawnActor<ALeaf>(Leaf_BP, newLocation, l->GetActorRotation());
+		ALeaf* spawnedLeaf = newTree->leafs[i];
+		spawnedLeaf->SetActorLocation(newLocation);
+		spawnedLeaf->SetActorRotation(l->GetActorRotation());
+		//ALeaf* spawnedLeaf = GetWorld()->SpawnActor<ALeaf>(Leaf_BP, newLocation, l->GetActorRotation());
 		l->duplicate(spawnedLeaf);
-		newTree->addLeaf(newTree->branches[l->attachedToIndex], spawnedLeaf);
+		//newTree->addLeaf(newTree->branches[l->attachedToIndex], spawnedLeaf);
 	}
 }
 
 void ASimLogic::init() {
+	//FPlatformProcess::Sleep(2);
+
 	int xPos = 0;
 	int yPos = 0;
+	currentBest = GetWorld()->SpawnActor<ATree>(Tree_BP, currentBestLocation, FRotator());
 	for (int32 i = 0; i < nbrLines; ++i) {
 		xPos = i * distance;
 		for (int32 j = 0; j < nbrLines; ++j) {
 			yPos = j * distance;
 			FVector spawnVector(xPos, yPos, 0);
-			
+
 			ATree* spawnedTree = GetWorld()->SpawnActor<ATree>(Tree_BP, spawnVector, FRotator());
-			spawnedTree->init();
+			if (spawnedTree)
+				spawnedTree->init();
 			
 			//spawnedTree->SetActorLocation(spawnVector);
 			trees.Add(spawnedTree);
