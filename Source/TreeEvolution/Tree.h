@@ -25,12 +25,10 @@ public:
 	virtual void Tick(float DeltaSeconds) override;
 
 	UFUNCTION(BlueprintCallable, Category = "General")
-		ATree* duplicate(ATree* tree, FVector location);
+		void duplicate(ATree* tree, FVector location);
 
 	UFUNCTION(BlueprintCallable, Category = "Statistics")
 		float calculateHits();
-	UFUNCTION(BlueprintCallable, Category = "Statistics")
-		float calculateCost();
 
 	UFUNCTION(BlueprintCallable, Category = "Mutation")
 		void mutate();
@@ -78,7 +76,5 @@ private:
 	FRandomStream random;
 	TSubclassOf<class ABranch> Branch_BP;
 	TSubclassOf<class ALeaf> Leaf_BP;	
-
-	
 };
 

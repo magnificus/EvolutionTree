@@ -30,14 +30,9 @@ void ALeaf::Tick(float DeltaTime)
 }
 
 void ALeaf::duplicate(ALeaf* spawnedLeaf) {
-		//FVector diff = GetActorLocation() - originalLocation;
-		//FVector location = newLocation + diff;
-		//ALeaf* const spawnedLeaf = World->SpawnActor<ALeaf>(Leaf_BP, location, GetActorRotation());
-
 		spawnedLeaf->attachedToIndex = attachedToIndex;
 		spawnedLeaf->branchOffset = branchOffset;
 		spawnedLeaf->offsetVector = offsetVector;
-		//return spawnedLeaf;
 
 }
 
