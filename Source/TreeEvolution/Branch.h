@@ -21,11 +21,6 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaSeconds) override;
 
-	//void mutate();
-	//void annihilate();
-
-	//void spawnRandomLeaf();
-	//void spawnRandomBranch();
 	FVector getPositionOnBranch(float offset);
 
 	UPROPERTY(EditAnywhere, Category = "Algorithm")

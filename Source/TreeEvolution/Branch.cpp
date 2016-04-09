@@ -13,9 +13,6 @@ ABranch::ABranch()
 	PrimaryActorTick.bCanEverTick = false;
 
 	random.GenerateNewSeed();
-
-	
-
 }
 
 // Called when the game starts or when spawned
@@ -35,13 +32,12 @@ void ABranch::Tick(float DeltaTime)
 
 FVector ABranch::getPositionOnBranch(float offset) {
 
-	// beginning and end of branch...
-
-	//int32 index = random.RandRange(0, branches.Num() - 1);
 	TArray<UPrimitiveComponent*> comps;
 	GetComponents(comps);
 	FVector begin;
 	FVector end;
+
+	// this is a strange way to find the end and starting components, should probably be refactored sometime...
 	for (auto Itr(comps.CreateIterator()); Itr; ++Itr)
 	{
 		if ((*Itr)->GetName() == "start") {
