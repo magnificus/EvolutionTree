@@ -256,22 +256,20 @@ FTransform ATree::GetRandomPosition() {
 void ATree::duplicate(ATree* otherTree, FVector location) {
 
 	for (int i = 0; i < branches.Num(); ++i) {
-		ABranch* b = branches[i];
-		FVector diff = b->GetActorLocation() - GetActorLocation();
+		FVector diff = branches[i]->GetActorLocation() - GetActorLocation();
 		FVector newLocation = location + diff;
-		otherTree->branches[i]->SetActorLocation(newLocation);
-		otherTree->branches[i]->SetActorRotation(branches[i]->GetActorRotation());
+		ABranch* spawnedBranch = otherTree->branches[i];
+		spawnedBranch->SetActorLocation(newLocation);
+		spawnedBranch->SetActorRotation(branches[i]->GetActorRotation());
 	}
 
 	for (int i = 0; i < leafs.Num(); ++i) {
 		ALeaf* l = leafs[i];
-		FVector diff = l->GetActorLocation() - GetActorLocation();
-		FVector newLocation = location + diff;
-	
-		otherTree->leafs[i]->SetActorLocation(newLocation);
-		otherTree->leafs[i]->SetActorRotation(leafs[i]->GetActorRotation());
-		l->duplicate(otherTree->leafs[i]);
-		otherTree->leafs[i]->AttachRootComponentToActor(otherTree->branches[otherTree->leafs[i]->attachedToIndex], NAME_None, EAttachLocation::KeepWorldPosition);
+		FVector newLocation = otherTree->branches[l->attachedToIndex]->getPositionOnBranch(l->branchOffset) + l->offsetVector;
+		ALeaf* spawnedLeaf = otherTree->leafs[i];
+		spawnedLeaf->SetActorLocation(newLocation);
+		spawnedLeaf->SetActorRotation(l->GetActorRotation());
+		l->duplicate(spawnedLeaf);
 	}
 
 }
