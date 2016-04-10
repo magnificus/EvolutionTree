@@ -38,6 +38,7 @@ public:
 		}
 		return toReturn;
 	}
+
 	
 	UPROPERTY(EditAnywhere, Category = "Gameplay")
 		int32 distance = 1000;

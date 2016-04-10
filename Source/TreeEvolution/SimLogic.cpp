@@ -132,6 +132,13 @@ void ASimLogic::combine(ATree* newTree, ATree* p1, ATree* p2, FVector location) 
 }
 
 void ASimLogic::init() {
+	for (ATree* t : trees) {
+		t->annihilate();
+	}
+		trees.Empty();
+	if (currentBest != nullptr) {
+		currentBest->annihilate();
+	}
 
 	int xPos = 0;
 	int yPos = 0;
