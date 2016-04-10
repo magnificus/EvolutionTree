@@ -30,6 +30,14 @@ public:
 		float GetAverageFitness() { return averageFitness; }
 	UFUNCTION(BlueprintCallable, Category = "Gameplay")
 		float GetMaxFitness() { return maxFitness; }
+	UFUNCTION(BlueprintCallable, Category = "Gameplay")
+		TArray<FVector> GetPositions() { 
+		TArray<FVector> toReturn;
+		for (ATree* t : trees) {
+			toReturn.Add(t->GetActorLocation());
+		}
+		return toReturn;
+	}
 	
 	UPROPERTY(EditAnywhere, Category = "Gameplay")
 		int32 distance = 1000;

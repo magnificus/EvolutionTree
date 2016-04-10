@@ -248,9 +248,6 @@ FTransform ATree::GetRandomPosition() {
 	FTransform t(FQuat(Rot), RV_Hit.Location,  GetActorScale());
 	return t;
 
-
-	
-
 }
 
 void ATree::duplicate(ATree* otherTree, FVector location) {
