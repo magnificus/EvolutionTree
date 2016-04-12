@@ -30,6 +30,9 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Statistics")
 		float calculateHits();
 
+	UFUNCTION(BlueprintCallable, Category = "Statistics")
+		float hemisphereHits();
+
 	UFUNCTION(BlueprintCallable, Category = "Mutation")
 		void mutate();
 
