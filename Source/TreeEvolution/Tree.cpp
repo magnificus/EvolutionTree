@@ -95,6 +95,82 @@ float ATree::calculateHits() {
 
 }
 
+
+// Dome-like sunshine
+float ATree::hemisphereHits() {
+
+	FVector origin = GetActorLocation();
+	origin.Z += 300;
+	//startLocation.Z += zDist + 100;
+
+	int hits = 0;
+	FCollisionQueryParams RV_TraceParams = FCollisionQueryParams(FName(TEXT("RV_Trace")), true);
+	RV_TraceParams.bTraceComplex = true;
+	RV_TraceParams.bTraceAsyncScene = true;
+	RV_TraceParams.bReturnPhysicalMaterial = false;
+
+
+	//Re-initialize hit info
+	FHitResult RV_Hit(ForceInit);
+
+	int n = int(numberRays);
+
+	float goldenAngle = PI * (3.0 - sqrt(5));
+	float theta = 0.0;
+	float scale = 1000.0;
+	float dz = (2.0 / numberRays); // 0.02
+	float z = (1.0 - dz / 2.0)*scale; //990
+	float r = 0.0;
+
+	// 
+
+	FVector test = origin;// FVector(-1000.0, -5000.0, 2000.0);
+	FVector coordinate;
+
+	for (int k = 0; k < n - 1; ++k) {
+
+
+		r = sqrt((scale*scale) - z*z);
+		coordinate = FVector(test.X + cos(theta)*r, test.Y + sin(theta)*r, test.Z + z);
+		z -= (dz*scale);
+		theta += goldenAngle;
+		if (coordinate.Z > test.Z) {
+			//call GetWorld() from within an actor extending class
+			GetWorld()->LineTraceSingleByChannel(
+				RV_Hit,        //result
+				coordinate,    //start
+				origin, //end
+				ECC_Pawn, //collision channel
+				RV_TraceParams
+			);
+
+			if (debugLine) {
+				DrawDebugLine(
+					GetWorld(),
+					coordinate,
+					test,
+					FColor(0, 0, 255),
+					true, -1, 0,
+					5
+				);
+			}
+		}
+
+		if (RV_Hit.bBlockingHit) {
+			ALeaf* leaf = Cast<ALeaf>(RV_Hit.GetActor());
+			if (leaf) {
+				hits++;
+			}
+
+		}
+
+
+
+	}
+
+	return hits / numberRays;
+}
+
 void ATree::init() {
 	for (int i = 0; i < numBranches; ++i) {
 		initRandomBranch();
@@ -195,7 +271,7 @@ void ATree::mutate() {
 		l->mutate();
 	}
 
-	currentValue = calculateHits();
+	currentValue = hemisphereHits();
 
 }
 
