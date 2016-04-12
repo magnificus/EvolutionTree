@@ -202,7 +202,7 @@ void ATree::mutate() {
 FTransform ATree::GetRandomPosition() {
 	
 	FVector target = GetActorLocation();
-	target.Z += random.FRand() * 300;
+	target.Z += random.FRand() * 400 + 150;
 
 	FVector beamOrigin = target;
 

@@ -31,6 +31,8 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Gameplay")
 		float GetMaxFitness() { return maxFitness; }
 	UFUNCTION(BlueprintCallable, Category = "Gameplay")
+		FVector GetBestPosition() { return currentBestLocation; }
+	UFUNCTION(BlueprintCallable, Category = "Gameplay")
 		TArray<FVector> GetPositions() { 
 		TArray<FVector> toReturn;
 		for (ATree* t : trees) {
