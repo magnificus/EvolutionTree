@@ -41,6 +41,9 @@ public:
 		return toReturn;
 	}
 
+	UFUNCTION(BlueprintCallable, Category = "Gameplay")
+		void forceReCalculation();
+
 	
 	UPROPERTY(EditAnywhere, Category = "Gameplay")
 		int32 distance = 1000;

@@ -36,7 +36,17 @@ void ATree::Tick(float DeltaTime)
 
 }
 
+
 float ATree::calculateHits() {
+	switch (mode) {
+	case straight_above: return calculateHitsStraightAbove();
+	case hemisphere: return hemisphereHits();
+	}
+	return 0;
+}
+
+float ATree::calculateHitsStraightAbove() {
+
 	FVector startLocation = GetActorLocation();
 	startLocation.Z += zDist + 100;
 
@@ -122,7 +132,6 @@ float ATree::hemisphereHits() {
 	float z = (1.0 - dz / 2.0)*scale; //990
 	float r = 0.0;
 
-	// 
 
 	FVector test = origin;// FVector(-1000.0, -5000.0, 2000.0);
 	FVector coordinate;
@@ -271,7 +280,7 @@ void ATree::mutate() {
 		l->mutate();
 	}
 
-	currentValue = hemisphereHits();
+	currentValue = calculateHits();
 
 }
 

@@ -18,6 +18,8 @@ public:
 	// Sets default values for this actor's properties
 	ATree();
 
+	enum FitnessMode { straight_above, hemisphere };
+
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
@@ -32,6 +34,9 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category = "Statistics")
 		float hemisphereHits();
+
+	UFUNCTION(BlueprintCallable, Category = "Statistics")
+		float calculateHitsStraightAbove();
 
 	UFUNCTION(BlueprintCallable, Category = "Mutation")
 		void mutate();
@@ -78,6 +83,7 @@ public:
 private:
 	FRandomStream random;
 	TSubclassOf<class ABranch> Branch_BP;
-	TSubclassOf<class ALeaf> Leaf_BP;	
+	TSubclassOf<class ALeaf> Leaf_BP;
+	FitnessMode mode = hemisphere;
 };
 
