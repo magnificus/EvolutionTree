@@ -4,6 +4,8 @@
 #include "Tree.h"
 #include "Leaf.h"
 
+using namespace std;
+
 
 // Sets default values
 ATree::ATree()
@@ -375,4 +377,75 @@ void ATree::annihilate() {
 	}
 
 	Destroy();
+}
+
+vector<float> ATree::createChildDNA(ATree* otherParent) {
+
+	vector<float> DNA;
+	for (int i = 0; i < branches.Num(); ++i) {
+		ATree* t;
+		ABranch* b;
+		if (random.FRand() < .5) {
+			t = this;
+			b = branches[i];
+		}
+		else {
+			t = otherParent;
+			b = otherParent->branches[i];
+		}
+		DNA.push_back(b->GetActorLocation().X - t->GetActorLocation().X);
+		DNA.push_back(b->GetActorLocation().Y - t->GetActorLocation().Y);
+		DNA.push_back(b->GetActorLocation().Z - t->GetActorLocation().Z);
+		DNA.push_back(b->GetActorRotation().Pitch);
+		DNA.push_back(b->GetActorRotation().Yaw);
+		DNA.push_back(b->GetActorRotation().Roll);
+
+	}
+	for (int i = 0; i < leafs.Num(); ++i) {
+		ALeaf* l = (random.FRand() < .5) ? leafs[i] : otherParent->leafs[i];
+		DNA.push_back(l->attachedToIndex);
+		DNA.push_back(l->branchOffset);
+		DNA.push_back(l->offsetVector.X);
+		DNA.push_back(l->offsetVector.Y);
+		DNA.push_back(l->offsetVector.Z);
+		DNA.push_back(l->GetActorRotation().Pitch);
+		DNA.push_back(l->GetActorRotation().Yaw);
+		DNA.push_back(l->GetActorRotation().Roll);
+	}
+
+	return DNA;
+	//for (int i = 0; i < p1->leafs.Num(); ++i) {
+	//	ABranch* b = (random.FRand() < .5) ? branches[i] : otherParent->branches[i];
+	//	if (find(p1Branches.begin(), p1Branches.end(), i) != p1Branches.end()) {
+	//		l = p1->leafs[i];
+	//	}
+	//	else {
+	//		l = p2->leafs[i];
+	//	}
+	//	FVector newLocation = newTree->branches[l->attachedToIndex]->getPositionOnBranch(l->branchOffset) + l->offsetVector;
+	//	ALeaf* spawnedLeaf = newTree->leafs[i];
+	//	spawnedLeaf->SetActorLocation(newLocation);
+	//	spawnedLeaf->SetActorRotation(l->GetActorRotation());
+	//	l->duplicate(spawnedLeaf);
+	//}
+}
+
+void ATree::buildFromDNA(vector<float> DNA) {
+	int currPos = 0;
+	for (int i = 0; i < branches.Num(); ++i) {
+		branches[i]->SetActorLocation(FVector(DNA[currPos] + GetActorLocation().X, DNA[currPos + 1] + GetActorLocation().Y, DNA[currPos+2] + GetActorLocation().Z));
+		branches[i]->SetActorRotation(FRotator(DNA[currPos+3], DNA[currPos+4], DNA[currPos+5]));
+		currPos += 6;
+	}
+	for (int i = 0; i < leafs.Num(); ++i) {
+		leafs[i]->attachedToIndex = DNA[currPos];
+		leafs[i]->branchOffset = DNA[currPos+1];
+		leafs[i]->offsetVector = FVector(DNA[currPos+2], DNA[currPos+3], DNA[currPos+4]);
+		leafs[i]->SetActorRotation(FRotator(DNA[currPos+5], DNA[currPos+6], DNA[currPos+7]));
+
+		currPos += 8;
+
+		leafs[i]->updateLocation(branches[leafs[i]->attachedToIndex]->getPositionOnBranch(leafs[i]->branchOffset));
+	}
+
 }

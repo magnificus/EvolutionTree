@@ -101,34 +101,36 @@ void ASimLogic::simulationTick()
 
 void ASimLogic::combine(ATree* newTree, ATree* p1, ATree* p2, FVector location) {
 
+	newTree->buildFromDNA(p1->createChildDNA(p2));
+
 	// right now takes the branchpositions from one tree, and then randomly picks branches from tree 1 and tree 2 and then puts them in that position.
-	vector<int> p1Branches;
+	//vector<int> p1Branches;
 
-	for (int i = 0; i < p1->branches.Num(); ++i) {
-		if (random.FRand() > .5) {
-			p1Branches.push_back(i);
-		} 
-		FVector diff = p1->branches[i]->GetActorLocation() - p1->GetActorLocation();
-		FVector newLocation = location + diff;
-		ABranch* spawnedBranch = newTree->branches[i];
-		spawnedBranch->SetActorLocation(newLocation);
-		spawnedBranch->SetActorRotation(p1->branches[i]->GetActorRotation());
-	}
+	//for (int i = 0; i < p1->branches.Num(); ++i) {
+	//	if (random.FRand() > .5) {
+	//		p1Branches.push_back(i);
+	//	} 
+	//	FVector diff = p1->branches[i]->GetActorLocation() - p1->GetActorLocation();
+	//	FVector newLocation = location + diff;
+	//	ABranch* spawnedBranch = newTree->branches[i];
+	//	spawnedBranch->SetActorLocation(newLocation);
+	//	spawnedBranch->SetActorRotation(p1->branches[i]->GetActorRotation());
+	//}
 
-	for (int i = 0; i < p1->leafs.Num(); ++i) {
-		ALeaf* l;
-		if (find(p1Branches.begin(), p1Branches.end(), i) != p1Branches.end()) {
-			l = p1->leafs[i];
-		}
-		else {
-			l = p2->leafs[i];
-		}
-		FVector newLocation = newTree->branches[l->attachedToIndex]->getPositionOnBranch(l->branchOffset) + l->offsetVector;
-		ALeaf* spawnedLeaf = newTree->leafs[i];
-		spawnedLeaf->SetActorLocation(newLocation);
-		spawnedLeaf->SetActorRotation(l->GetActorRotation());
-		l->duplicate(spawnedLeaf);
-	}
+	//for (int i = 0; i < p1->leafs.Num(); ++i) {
+	//	ALeaf* l;
+	//	if (find(p1Branches.begin(), p1Branches.end(), i) != p1Branches.end()) {
+	//		l = p1->leafs[i];
+	//	}
+	//	else {
+	//		l = p2->leafs[i];
+	//	}
+	//	FVector newLocation = newTree->branches[l->attachedToIndex]->getPositionOnBranch(l->branchOffset) + l->offsetVector;
+	//	ALeaf* spawnedLeaf = newTree->leafs[i];
+	//	spawnedLeaf->SetActorLocation(newLocation);
+	//	spawnedLeaf->SetActorRotation(l->GetActorRotation());
+	//	l->duplicate(spawnedLeaf);
+	//}
 }
 
 void ASimLogic::init() {

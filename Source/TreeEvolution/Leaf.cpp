@@ -43,3 +43,7 @@ void ALeaf::mutate() {
 	}
 	
 }
+
+void ALeaf::updateLocation(FVector branchLoc) {
+	SetActorLocation(branchLoc + offsetVector);
+}

@@ -4,10 +4,12 @@
 
 #include "Branch.h"
 #include "Leaf.h"
+#include <vector>
+
 #include "GameFramework/Actor.h"
 #include "Tree.generated.h"
 
-
+using namespace std;
 
 UCLASS()
 class TREEEVOLUTION_API ATree : public AActor
@@ -64,7 +66,9 @@ public:
 	UPROPERTY(EditAnywhere, Category = "Algorithm")
 		int32 numLeafs = 20;
 
-	
+	vector<float> createChildDNA(ATree* otherParent);
+
+	void buildFromDNA(vector<float>);
 	void init();
 
 	void initRandomLeaf();
@@ -84,6 +88,6 @@ private:
 	FRandomStream random;
 	TSubclassOf<class ABranch> Branch_BP;
 	TSubclassOf<class ALeaf> Leaf_BP;
-	FitnessMode mode = hemisphere;
+	FitnessMode mode = straight_above;
 };
 

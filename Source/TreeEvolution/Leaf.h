@@ -31,9 +31,10 @@ public:
 	void mutate();
 
 	int32 attachedToIndex = 0;
-
 	float branchOffset;
 	FVector offsetVector;
+
+	void updateLocation(FVector branchLoc);
 
 private:
 	FRandomStream random;
