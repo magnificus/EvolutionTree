@@ -41,8 +41,8 @@ void ATree::Tick(float DeltaTime)
 
 float ATree::calculateHits() {
 	switch (mode) {
-	case straight_above: return calculateHitsStraightAbove();
-	case hemisphere: return hemisphereHits();
+	case MODE_STRAIGHT: return calculateHitsStraightAbove();
+	case MODE_HEMISPHERE: return hemisphereHits();
 	}
 	return 0;
 }

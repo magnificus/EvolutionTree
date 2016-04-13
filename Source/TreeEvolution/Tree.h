@@ -9,6 +9,10 @@
 #include "GameFramework/Actor.h"
 #include "Tree.generated.h"
 
+const int MODE_STRAIGHT = 0;
+const int MODE_HEMISPHERE = 1;
+
+
 using namespace std;
 
 UCLASS()
@@ -19,8 +23,6 @@ class TREEEVOLUTION_API ATree : public AActor
 public:
 	// Sets default values for this actor's properties
 	ATree();
-
-	enum FitnessMode { straight_above, hemisphere };
 
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
@@ -88,6 +90,6 @@ private:
 	FRandomStream random;
 	TSubclassOf<class ABranch> Branch_BP;
 	TSubclassOf<class ALeaf> Leaf_BP;
-	FitnessMode mode = straight_above;
+	int mode = MODE_HEMISPHERE;
 };
 
