@@ -48,7 +48,7 @@ public:
 	FTransform GetRandomPosition();
 
 	UPROPERTY(EditAnywhere, Category = "RayTrace")
-		float zDist = 500;
+		float zDist = 600;
 	UPROPERTY(EditAnywhere, Category = "RayTrace")
 		float maxSpread = 600;
 	UPROPERTY(EditAnywhere, Category = "RayTrace")
@@ -57,16 +57,18 @@ public:
 		bool debugLine = false;
 
 	UPROPERTY(EditAnywhere, Category = "Algorithm")
-		float displacementChance = .01f;
+		float displacementChance = .001f;
 	UPROPERTY(EditAnywhere, Category = "Algorithm")
-		float hitRewardMultiplier = 800;
-	UPROPERTY(EditAnywhere, Category = "Algorithm")
-		float leafChangeBranchChance = 0.01f;
+		float leafChangeBranchChance = 0.002f;
 
 	UPROPERTY(EditAnywhere, Category = "Algorithm")
-		int32 numBranches = 5;
+		int32 numLargeBranches = 5;
 	UPROPERTY(EditAnywhere, Category = "Algorithm")
-		int32 numLeafs = 20;
+		int32 numMediumBranches = 5;
+	UPROPERTY(EditAnywhere, Category = "Algorithm")
+		int32 numSmallBranches = 5;
+	UPROPERTY(EditAnywhere, Category = "Algorithm")
+		int32 numLeafs = 60;
 
 	vector<float> createChildDNA(ATree* otherParent);
 
@@ -74,7 +76,7 @@ public:
 	void init();
 
 	void initRandomLeaf();
-	void initRandomBranch();
+	void initRandomBranch(float scale);
 
 	void addBranch(ABranch* b);
 	void addLeaf(ABranch* b, ALeaf* l);
@@ -90,6 +92,6 @@ private:
 	FRandomStream random;
 	TSubclassOf<class ABranch> Branch_BP;
 	TSubclassOf<class ALeaf> Leaf_BP;
-	int mode = MODE_HEMISPHERE;
+	int mode = MODE_STRAIGHT;
 };
 

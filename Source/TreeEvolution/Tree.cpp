@@ -81,7 +81,7 @@ float ATree::calculateHitsStraightAbove() {
 				currEnd, //end
 				ECC_Pawn, //collision channel
 				RV_TraceParams
-				);
+			);
 			if (debugLine) {
 				DrawDebugLine(
 					GetWorld(),
@@ -90,13 +90,13 @@ float ATree::calculateHitsStraightAbove() {
 					FColor(255, 0, 0),
 					true, -1, 0,
 					1
-					);
+				);
 			}
 
 			if (RV_Hit.bBlockingHit) {
 				ALeaf* leaf = Cast<ALeaf>(RV_Hit.GetActor());
 				if (leaf) {
-					hits ++;
+					hits++;
 				}
 
 			}
@@ -183,19 +183,26 @@ float ATree::hemisphereHits() {
 }
 
 void ATree::init() {
-	for (int i = 0; i < numBranches; ++i) {
-		initRandomBranch();
-		
+	for (int i = 0; i < numSmallBranches; ++i) {
+		initRandomBranch(1);
+	}
+	for (int i = 0; i < numMediumBranches; ++i) {
+		initRandomBranch(1);
+	}
+	for (int i = 0; i < numLargeBranches; ++i) {
+		initRandomBranch(1);
 	}
 	for (int i = 0; i < numLeafs; ++i) {
-		
+
 		initRandomLeaf();
 	}
 }
 
-void ATree::initRandomBranch() {
+void ATree::initRandomBranch(float scale) {
 	FTransform t = GetRandomPosition();
+	//t.SetScale3D(FVector(scale, scale, scale));
 	ABranch* spawnedBranch = GetWorld()->SpawnActor<ABranch>(Branch_BP, t.GetLocation(), t.GetRotation().Rotator(), FActorSpawnParameters());
+	spawnedBranch->SetActorScale3D(FVector(scale, scale, scale));
 	spawnedBranch->AttachRootComponentToActor(this, NAME_None, EAttachLocation::KeepWorldPosition);
 	branches.Add(spawnedBranch);
 }
@@ -209,17 +216,17 @@ void ATree::initRandomLeaf() {
 	float branchOffset = random.FRand();
 	FVector loc = branches[index]->getPositionOnBranch(random.FRand());
 
-	
+
 	FVector location = loc + offset;
-	
+
 	ALeaf* spawnedLeaf = GetWorld()->SpawnActor<ALeaf>(Leaf_BP, location, FRotator(random.FRandRange(-90, 90), random.FRandRange(-90, 90), random.FRandRange(-90, 90)));
-		
+
 	spawnedLeaf->AttachRootComponentToActor(branches[index], NAME_None, EAttachLocation::KeepWorldPosition);
 	spawnedLeaf->attachedToIndex = index;
 	spawnedLeaf->branchOffset = branchOffset;
 	spawnedLeaf->offsetVector = offset;
-		
-		
+
+
 	leafs.Add(spawnedLeaf);
 }
 
@@ -258,7 +265,7 @@ void ATree::mutate() {
 		leafs[index]->branchOffset = newOffset;
 
 		FVector oldVectorOffset = leafs[index]->offsetVector;
-		FVector newVectorOffset = oldVectorOffset + FVector(random.FRand()*5 - 2.5, random.FRand() * 5 - 2.5, random.FRand() * 5 - 2.5);
+		FVector newVectorOffset = oldVectorOffset + FVector(random.FRand() * 5 - 2.5, random.FRand() * 5 - 2.5, random.FRand() * 5 - 2.5);
 		newVectorOffset.X = newVectorOffset.X > 20 ? 20 : newVectorOffset.X;
 		newVectorOffset.X = newVectorOffset.X < -20 ? -20 : newVectorOffset.X;
 		newVectorOffset.Y = newVectorOffset.Y > 20 ? 20 : newVectorOffset.Y;
@@ -287,7 +294,7 @@ void ATree::mutate() {
 }
 
 FTransform ATree::GetRandomPosition() {
-	
+
 	FVector target = GetActorLocation();
 	target.Z += random.FRand() * 400 + 150;
 
@@ -315,16 +322,16 @@ FTransform ATree::GetRandomPosition() {
 			FColor(255, 0, 0),
 			true, -1, 0,
 			1
-			);
+		);
 	}
-	
+
 	GetWorld()->LineTraceSingleByChannel(
 		RV_Hit,        //result
 		beamOrigin,    //start
 		target, //end
 		ECC_Camera, //collision channel
 		RV_TraceParams
-		);
+	);
 
 	ATree* tree = Cast<ATree>(RV_Hit.GetActor());
 	if (!tree) {
@@ -332,7 +339,7 @@ FTransform ATree::GetRandomPosition() {
 	}
 	FVector Direction = target - beamOrigin;
 	FRotator Rot = FRotationMatrix::MakeFromX(Direction).Rotator();
-	FTransform t(FQuat(Rot), RV_Hit.Location,  GetActorScale());
+	FTransform t(FQuat(Rot), RV_Hit.Location, GetActorScale());
 	return t;
 
 }
@@ -411,37 +418,24 @@ vector<float> ATree::createChildDNA(ATree* otherParent) {
 		DNA.push_back(l->GetActorRotation().Pitch);
 		DNA.push_back(l->GetActorRotation().Yaw);
 		DNA.push_back(l->GetActorRotation().Roll);
+
 	}
 
 	return DNA;
-	//for (int i = 0; i < p1->leafs.Num(); ++i) {
-	//	ABranch* b = (random.FRand() < .5) ? branches[i] : otherParent->branches[i];
-	//	if (find(p1Branches.begin(), p1Branches.end(), i) != p1Branches.end()) {
-	//		l = p1->leafs[i];
-	//	}
-	//	else {
-	//		l = p2->leafs[i];
-	//	}
-	//	FVector newLocation = newTree->branches[l->attachedToIndex]->getPositionOnBranch(l->branchOffset) + l->offsetVector;
-	//	ALeaf* spawnedLeaf = newTree->leafs[i];
-	//	spawnedLeaf->SetActorLocation(newLocation);
-	//	spawnedLeaf->SetActorRotation(l->GetActorRotation());
-	//	l->duplicate(spawnedLeaf);
-	//}
 }
 
 void ATree::buildFromDNA(vector<float> DNA) {
 	int currPos = 0;
 	for (int i = 0; i < branches.Num(); ++i) {
-		branches[i]->SetActorLocation(FVector(DNA[currPos] + GetActorLocation().X, DNA[currPos + 1] + GetActorLocation().Y, DNA[currPos+2] + GetActorLocation().Z));
-		branches[i]->SetActorRotation(FRotator(DNA[currPos+3], DNA[currPos+4], DNA[currPos+5]));
+		branches[i]->SetActorLocation(FVector(DNA[currPos] + GetActorLocation().X, DNA[currPos + 1] + GetActorLocation().Y, DNA[currPos + 2] + GetActorLocation().Z));
+		branches[i]->SetActorRotation(FRotator(DNA[currPos + 3], DNA[currPos + 4], DNA[currPos + 5]));
 		currPos += 6;
 	}
 	for (int i = 0; i < leafs.Num(); ++i) {
 		leafs[i]->attachedToIndex = DNA[currPos];
-		leafs[i]->branchOffset = DNA[currPos+1];
-		leafs[i]->offsetVector = FVector(DNA[currPos+2], DNA[currPos+3], DNA[currPos+4]);
-		leafs[i]->SetActorRotation(FRotator(DNA[currPos+5], DNA[currPos+6], DNA[currPos+7]));
+		leafs[i]->branchOffset = DNA[currPos + 1];
+		leafs[i]->offsetVector = FVector(DNA[currPos + 2], DNA[currPos + 3], DNA[currPos + 4]);
+		leafs[i]->SetActorRotation(FRotator(DNA[currPos + 5], DNA[currPos + 6], DNA[currPos + 7]));
 
 		currPos += 8;
 

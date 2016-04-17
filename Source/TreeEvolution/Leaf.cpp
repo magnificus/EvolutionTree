@@ -30,18 +30,18 @@ void ALeaf::Tick(float DeltaTime)
 }
 
 void ALeaf::duplicate(ALeaf* spawnedLeaf) {
-		spawnedLeaf->attachedToIndex = attachedToIndex;
-		spawnedLeaf->branchOffset = branchOffset;
-		spawnedLeaf->offsetVector = offsetVector;
+	spawnedLeaf->attachedToIndex = attachedToIndex;
+	spawnedLeaf->branchOffset = branchOffset;
+	spawnedLeaf->offsetVector = offsetVector;
 
 }
 
 void ALeaf::mutate() {
 	if (random.FRand() < rotationChance) {
-		FRotator f(random.FRand()*20, random.FRand()*20, random.FRand()*20);
+		FRotator f(random.FRand() * 40, random.FRand() * 40, random.FRand() * 40);
 		AddActorWorldRotation(f);
 	}
-	
+
 }
 
 void ALeaf::updateLocation(FVector branchLoc) {

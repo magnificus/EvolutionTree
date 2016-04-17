@@ -168,6 +168,6 @@ void ASimLogic::init() {
 
 void ASimLogic::forceReCalculation() {
 	for (ATree* t : trees) {
-		t->calculateHits();
+		t->currentValue = t->calculateHits();
 	}
 }

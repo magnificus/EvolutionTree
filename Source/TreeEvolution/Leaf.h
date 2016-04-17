@@ -26,7 +26,7 @@ public:
 	void duplicate(ALeaf* spawnedLeaf);
 
 	UPROPERTY(EditAnywhere, Category = "Algorithm")
-		float rotationChance = .1f;
+		float rotationChance = .005f;
 
 	void mutate();
 
