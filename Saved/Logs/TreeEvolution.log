@@ -268,4 +268,120 @@ LogInit: Object subsystem initialized
 [2016.04.17-22.32.16:899][196]PIE: New page: PIE session: Minimal_Default (Apr 18, 2016, 1:32:16 AM)
 [2016.04.17-22.32.16:899][196]LogPlayLevel: Creating play world package: /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default
 [2016.04.17-22.32.16:910][196]LogPlayLevel: PIE: StaticDuplicateObject took: (0.010417s)
-[2016.04.17-22.32.16:9
+[2016.04.17-22.32.16:910][196]LogAIModule: Creating AISystem for world Minimal_Default
+[2016.04.17-22.32.16:910][196]LogPlayLevel: PIE: World Init took: (0.000480s)
+[2016.04.17-22.32.16:911][196]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/StarterContent/Maps/Minimal_Default.Minimal_Default to /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default (0.011110s)
+[2016.04.17-22.32.16:963][196]LogInit: XAudio2 using 'Speakers (Realtek High Definition Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
+[2016.04.17-22.32.16:970][196]LogInit: FAudioDevice initialized.
+[2016.04.17-22.32.16:997][196]LogWorld: Game class is 'simGameMode_C'
+[2016.04.17-22.32.16:999][196]LogWorld: Bringing World /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default up for play (max tick rate 0) at 2016.04.18-00.32.16
+[2016.04.17-22.32.16:999][196]LogWorld: Bringing up level for play took: 0.001048
+[2016.04.17-22.32.17:031][196]PIE: Info Play in editor start time for /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default -0.025
+[2016.04.17-22.32.17:031][196]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.17-22.55.12:885][839]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.17-22.55.13:105][839]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.17-22.57.20:418][615]LogActorComponent: UnregisterComponent: (/Engine/Transient.EditorFloorComp) Not registered. Aborting.
+[2016.04.17-22.57.20:472][615]LogActorComponent: UnregisterComponent: (/Engine/Transient.EditorFloorComp) Not registered. Aborting.
+[2016.04.17-22.57.22:163][615]LogObjectTools:Warning: ForceReplaceReferences replaced references for a transient object 'DEADCLASS_BranchLargeBP_C_0' or package '/Engine/Transient'.
+[2016.04.17-22.57.22:163][615]LogObjectTools:Warning: ForceReplaceReferences replaced references for a transient object 'DEADCLASS_BranchLargeBP_C_1' or package '/Engine/Transient'.
+[2016.04.17-22.57.22:163][615]LogObjectTools:Warning: ForceReplaceReferences replaced references for a transient object 'REINST_SKEL_BranchLargeBP_C_98' or package '/Engine/Transient'.
+[2016.04.17-22.57.22:163][615]LogObjectTools:Warning: ForceReplaceReferences replaced references for a transient object 'REINST_BranchLargeBP_C_97' or package '/Engine/Transient'.
+[2016.04.17-22.59.52:762][714]LogRenderer: Reallocating scene render targets to support 1228x712 (Frame:13836).
+[2016.04.17-23.00.00:390][435]LogEditorTransaction: Undo Modify Component(s)
+[2016.04.17-23.00.04:360][828]BlueprintLog: New page: Compile BranchBP
+[2016.04.17-23.00.04:418][828]BlueprintEditorCompileResults: Info [2136.97] Compile of BranchBP successful! [in 58 ms]
+[2016.04.17-23.11.44:334][939]LogFileHelpers: Editor autosave (incl. sublevels) for '/Game/StarterContent/Maps/Minimal_Default' took 0.014
+[2016.04.17-23.11.44:351][939]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/CompositeBranch] ([1] browsable assets)...
+[2016.04.17-23.11.44:351][939]OBJ SavePackage: Finished generating thumbnails for package [/Game/CompositeBranch]
+[2016.04.17-23.11.44:351][939]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/CompositeBranch" FILE="../../../../../../TreeEvolution/EvolutionTree/Saved/Autosaves/Game/CompositeBranch_Auto1.uasset" SILENT=false AUTOSAVING=true
+[2016.04.17-23.11.44:360][939]LogSavePackage: Save=7.90ms
+[2016.04.17-23.11.44:360][939]LogSavePackage: Moving '../../../../../../TreeEvolution/EvolutionTree/Saved/CompositeBranch_Auto18D514F64400B3890B9F0EE989C830551.tmp' to '../../../../../../TreeEvolution/EvolutionTree/Saved/Autosaves/Game/CompositeBranch_Auto1.uasset'
+[2016.04.17-23.11.44:360][939]LogSavePackage: Total save time: 8.35ms
+[2016.04.17-23.11.44:360][939]LogSavePackage:Display: Finished SavePackage ../../../../../../TreeEvolution/EvolutionTree/Saved/Autosaves/Game/CompositeBranch_Auto1.uasset
+[2016.04.17-23.11.44:360][939]LogFileHelpers: Auto-saving content packages took 0.012
+[2016.04.17-23.26.11:560][351]BlueprintLog: New page: Compile CompositeBranch
+[2016.04.17-23.26.11:688][351]BlueprintEditorCompileResults: Info [3704.22] Compile of CompositeBranch successful! [in 128 ms]
+[2016.04.17-23.26.20:924][ 95]BlueprintLog: New page: Compile CompositeBranch
+[2016.04.17-23.26.21:026][ 95]BlueprintEditorCompileResults: Info [3713.56] Compile of CompositeBranch successful! [in 101 ms]
+[2016.04.17-23.26.21:541][128]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/CompositeBranch" FILE="../../../../../../TreeEvolution/EvolutionTree/Content/CompositeBranch.uasset" SILENT=true
+[2016.04.17-23.26.21:600][128]LogSavePackage: Save=56.51ms
+[2016.04.17-23.26.21:600][128]LogSavePackage: Moving '../../../../../../TreeEvolution/EvolutionTree/Saved/CompositeBranchF8B139BB4690B97A14B2F895E98667ED.tmp' to '../../../../../../TreeEvolution/EvolutionTree/Content/CompositeBranch.uasset'
+[2016.04.17-23.26.21:602][128]LogSavePackage: Total save time: 58.65ms
+[2016.04.17-23.26.21:602][128]LogSavePackage:Display: Finished SavePackage ../../../../../../TreeEvolution/EvolutionTree/Content/CompositeBranch.uasset
+[2016.04.17-23.27.01:908][748]LogFileHelpers: Editor autosave (incl. sublevels) for '/Game/StarterContent/Maps/Minimal_Default' took 0.035
+[2016.04.17-23.27.01:911][748]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/CompositeBranch] ([1] browsable assets)...
+[2016.04.17-23.27.01:921][748]OBJ SavePackage:     Rendered thumbnail for [Blueprint /Game/CompositeBranch.CompositeBranch]
+[2016.04.17-23.27.01:921][748]OBJ SavePackage: Finished generating thumbnails for package [/Game/CompositeBranch]
+[2016.04.17-23.27.01:921][748]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/CompositeBranch" FILE="../../../../../../TreeEvolution/EvolutionTree/Saved/Autosaves/Game/CompositeBranch_Auto2.uasset" SILENT=false AUTOSAVING=true
+[2016.04.17-23.27.01:973][748]LogSavePackage: Save=16.75ms
+[2016.04.17-23.27.01:973][748]LogSavePackage: Moving '../../../../../../TreeEvolution/EvolutionTree/Saved/CompositeBranch_Auto22A1BA04B495E8A6330F04D80AB431775.tmp' to '../../../../../../TreeEvolution/EvolutionTree/Saved/Autosaves/Game/CompositeBranch_Auto2.uasset'
+[2016.04.17-23.27.01:973][748]LogSavePackage: Total save time: 51.24ms
+[2016.04.17-23.27.01:973][748]LogSavePackage:Display: Finished SavePackage ../../../../../../TreeEvolution/EvolutionTree/Saved/Autosaves/Game/CompositeBranch_Auto2.uasset
+[2016.04.17-23.27.01:973][748]LogFileHelpers: Auto-saving content packages took 0.065
+[2016.04.17-23.28.32:988][220]BlueprintLog: New page: Compile CompositeBranch
+[2016.04.17-23.28.33:052][220]BlueprintEditorCompileResults: Info [3845.59] Compile of CompositeBranch successful! [in 63 ms]
+[2016.04.17-23.28.33:634][268]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/CompositeBranch" FILE="../../../../../../TreeEvolution/EvolutionTree/Content/CompositeBranch.uasset" SILENT=true
+[2016.04.17-23.28.33:658][268]LogSavePackage: Save=16.73ms
+[2016.04.17-23.28.33:658][268]LogSavePackage: Moving '../../../../../../TreeEvolution/EvolutionTree/Saved/CompositeBranchB2C0F573411169AB290736AA8A055EF2.tmp' to '../../../../../../TreeEvolution/EvolutionTree/Content/CompositeBranch.uasset'
+[2016.04.17-23.28.33:659][268]LogSavePackage: Total save time: 23.58ms
+[2016.04.17-23.28.33:659][268]LogSavePackage:Display: Finished SavePackage ../../../../../../TreeEvolution/EvolutionTree/Content/CompositeBranch.uasset
+[2016.04.17-23.29.52:517][342]BlueprintLog: New page: Compile CompositeBranch
+[2016.04.17-23.29.52:620][342]BlueprintEditorCompileResults: Info [3925.15] Compile of CompositeBranch successful! [in 103 ms]
+[2016.04.17-23.29.54:592][524]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/CompositeBranch" FILE="../../../../../../TreeEvolution/EvolutionTree/Content/CompositeBranch.uasset" SILENT=true
+[2016.04.17-23.29.54:616][524]LogSavePackage: Save=17.08ms
+[2016.04.17-23.29.54:616][524]LogSavePackage: Moving '../../../../../../TreeEvolution/EvolutionTree/Saved/CompositeBranch04E7424440FD54184940B9BE10545B86.tmp' to '../../../../../../TreeEvolution/EvolutionTree/Content/CompositeBranch.uasset'
+[2016.04.17-23.29.54:617][524]LogSavePackage: Total save time: 23.97ms
+[2016.04.17-23.29.54:617][524]LogSavePackage:Display: Finished SavePackage ../../../../../../TreeEvolution/EvolutionTree/Content/CompositeBranch.uasset
+[2016.04.17-23.36.13:983][254]BlueprintLog: New page: Compile CompositeBranch
+[2016.04.17-23.36.14:080][254]BlueprintEditorCompileResults: Info [4306.61] Compile of CompositeBranch successful! [in 97 ms]
+[2016.04.17-23.36.17:889][616]BlueprintLog: New page: Compile CompositeBranch
+[2016.04.17-23.36.17:991][616]BlueprintEditorCompileResults: Info [4310.52] Compile of CompositeBranch successful! [in 101 ms]
+[2016.04.17-23.36.18:405][647]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/BranchBP" FILE="../../../../../../TreeEvolution/EvolutionTree/Content/BranchBP.uasset" SILENT=true
+[2016.04.17-23.36.18:481][647]LogSavePackage: Save=29.00ms
+[2016.04.17-23.36.18:482][647]LogSavePackage: Moving '../../../../../../TreeEvolution/EvolutionTree/Saved/BranchBPA2A7EAB44AAB7A6F9CD1ADBD54237344.tmp' to '../../../../../../TreeEvolution/EvolutionTree/Content/BranchBP.uasset'
+[2016.04.17-23.36.18:484][647]LogSavePackage: Total save time: 77.44ms
+[2016.04.17-23.36.18:484][647]LogSavePackage:Display: Finished SavePackage ../../../../../../TreeEvolution/EvolutionTree/Content/BranchBP.uasset
+[2016.04.17-23.36.18:498][647]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/CompositeBranch" FILE="../../../../../../TreeEvolution/EvolutionTree/Content/CompositeBranch.uasset" SILENT=true
+[2016.04.17-23.36.18:543][647]LogSavePackage: Save=35.81ms
+[2016.04.17-23.36.18:543][647]LogSavePackage: Moving '../../../../../../TreeEvolution/EvolutionTree/Saved/CompositeBranchB3869C724F8AE482096108B4B0FDAB8C.tmp' to '../../../../../../TreeEvolution/EvolutionTree/Content/CompositeBranch.uasset'
+[2016.04.17-23.36.18:544][647]LogSavePackage: Total save time: 45.26ms
+[2016.04.17-23.36.18:544][647]LogSavePackage:Display: Finished SavePackage ../../../../../../TreeEvolution/EvolutionTree/Content/CompositeBranch.uasset
+[2016.04.17-23.41.40:087][657]BlueprintLog: New page: Compile BranchBP
+[2016.04.17-23.41.40:146][657]BlueprintEditorCompileResults: Info [4632.67] Compile of BranchBP successful! [in 59 ms]
+[2016.04.17-23.41.40:568][688]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/BranchBP" FILE="../../../../../../TreeEvolution/EvolutionTree/Content/BranchBP.uasset" SILENT=true
+[2016.04.17-23.41.40:598][688]LogSavePackage: Save=15.68ms
+[2016.04.17-23.41.40:598][688]LogSavePackage: Moving '../../../../../../TreeEvolution/EvolutionTree/Saved/BranchBPF02CDC9741D122A1F87F7BAACAD47E94.tmp' to '../../../../../../TreeEvolution/EvolutionTree/Content/BranchBP.uasset'
+[2016.04.17-23.41.40:599][688]LogSavePackage: Total save time: 28.41ms
+[2016.04.17-23.41.40:599][688]LogSavePackage:Display: Finished SavePackage ../../../../../../TreeEvolution/EvolutionTree/Content/BranchBP.uasset
+[2016.04.17-23.41.56:130][112]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/CompositeBranch" FILE="../../../../../../TreeEvolution/EvolutionTree/Content/CompositeBranch.uasset" SILENT=true
+[2016.04.17-23.41.56:158][112]LogSavePackage: Save=17.63ms
+[2016.04.17-23.41.56:158][112]LogSavePackage: Moving '../../../../../../TreeEvolution/EvolutionTree/Saved/CompositeBranchE93DD0454B1DF16E46D93C9B19C9E4F4.tmp' to '../../../../../../TreeEvolution/EvolutionTree/Content/CompositeBranch.uasset'
+[2016.04.17-23.41.56:159][112]LogSavePackage: Total save time: 27.83ms
+[2016.04.17-23.41.56:159][112]LogSavePackage:Display: Finished SavePackage ../../../../../../TreeEvolution/EvolutionTree/Content/CompositeBranch.uasset
+[2016.04.17-23.42.18:944][201]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/CompositeBranch" FILE="../../../../../../TreeEvolution/EvolutionTree/Content/CompositeBranch.uasset" SILENT=true
+[2016.04.17-23.42.18:969][201]LogSavePackage: Save=17.39ms
+[2016.04.17-23.42.18:969][201]LogSavePackage: Moving '../../../../../../TreeEvolution/EvolutionTree/Saved/CompositeBranchFBE4F05147FC4A67FA8EE4912BC9081C.tmp' to '../../../../../../TreeEvolution/EvolutionTree/Content/CompositeBranch.uasset'
+[2016.04.17-23.42.18:971][201]LogSavePackage: Total save time: 25.30ms
+[2016.04.17-23.42.18:971][201]LogSavePackage:Display: Finished SavePackage ../../../../../../TreeEvolution/EvolutionTree/Content/CompositeBranch.uasset
+[2016.04.17-23.42.31:999][401]BlueprintLog: New page: Compile CompositeBranch
+[2016.04.17-23.42.32:059][401]BlueprintEditorCompileResults: Info [4684.59] Compile of CompositeBranch successful! [in 59 ms]
+[2016.04.17-23.42.32:382][422]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/CompositeBranch" FILE="../../../../../../TreeEvolution/EvolutionTree/Content/CompositeBranch.uasset" SILENT=true
+[2016.04.17-23.42.32:409][422]LogSavePackage: Save=18.13ms
+[2016.04.17-23.42.32:409][422]LogSavePackage: Moving '../../../../../../TreeEvolution/EvolutionTree/Saved/CompositeBranch36E121D349E7EE8BC2D861AB0D065C22.tmp' to '../../../../../../TreeEvolution/EvolutionTree/Content/CompositeBranch.uasset'
+[2016.04.17-23.42.32:410][422]LogSavePackage: Total save time: 26.65ms
+[2016.04.17-23.42.32:410][422]LogSavePackage:Display: Finished SavePackage ../../../../../../TreeEvolution/EvolutionTree/Content/CompositeBranch.uasset
+[2016.04.17-23.42.47:360][811]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/CompositeBranch" FILE="../../../../../../TreeEvolution/EvolutionTree/Content/CompositeBranch.uasset" SILENT=true
+[2016.04.17-23.42.47:384][811]LogSavePackage: Save=16.71ms
+[2016.04.17-23.42.47:384][811]LogSavePackage: Moving '../../../../../../TreeEvolution/EvolutionTree/Saved/CompositeBranch4D79DA6C4E4E160D79F0949AD71D6035.tmp' to '../../../../../../TreeEvolution/EvolutionTree/Content/CompositeBranch.uasset'
+[2016.04.17-23.42.47:385][811]LogSavePackage: Total save time: 23.92ms
+[2016.04.17-23.42.47:385][811]LogSavePackage:Display: Finished SavePackage ../../../../../../TreeEvolution/EvolutionTree/Content/CompositeBranch.uasset
+[2016.04.17-23.43.00:276][974]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/CompositeBranch" FILE="../../../../../../TreeEvolution/EvolutionTree/Content/CompositeBranch.uasset" SILENT=true
+[2016.04.17-23.43.00:300][974]LogSavePackage: Save=17.00ms
+[2016.04.17-23.43.00:300][974]LogSavePackage: Moving '../../../../../../TreeEvolution/EvolutionTree/Saved/CompositeBranchB15228AD40467D672F3F7D889837F991.tmp' to '../../../../../../TreeEvolution/EvolutionTree/Content/CompositeBranch.uasset'
+[2016.04.17-23.43.00:301][974]LogSavePackage: Total save time: 24.67ms
+[2016.04.17-23.43.00:301][974]LogSavePackage:Display: Finished SavePackage ../../../../../../TreeEvolution/EvolutionTree/Content/CompositeBranch.uasset
+[2016.04.17-23.43.01:052][ 42]BlueprintLog: New page: Compile CompositeBranch
+[2016.04.17-23.43.01:114][ 42]BlueprintEditorCompileResults: Info [4713.64] Compile of CompositeBranch successful! [in 61 ms]
+[2016.04.17-23.44.44:549][377]LogEditorViewport: Clicking on Actor (LMB): InstancedFoliageActor (InstancedFoliageActor)
+[2016.04.17-23.44.47:444][623]LogEditorViewport: Clicking on Actor (LMB): InstancedFoliageActor (InstancedFoliageActor)
+[2016.04.17-23.44.49:

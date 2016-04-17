@@ -92,6 +92,7 @@ private:
 	FRandomStream random;
 	TSubclassOf<class ABranch> Branch_BP;
 	TSubclassOf<class ALeaf> Leaf_BP;
+	TSubclassOf<class ABranch> CompositeBranch_BP;
 	int mode = MODE_STRAIGHT;
 };
 

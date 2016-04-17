@@ -15,6 +15,11 @@ ATree::ATree()
 	if (BranchFinder.Object != NULL)
 		Branch_BP = BranchFinder.Object;
 
+	static ConstructorHelpers::FObjectFinder<UClass> CompositeBranchFinder(TEXT("Class'/Game/CompositeBranch.CompositeBranch_C'"));
+	if (CompositeBranchFinder.Object != NULL)
+		CompositeBranch_BP = CompositeBranchFinder.Object;
+	
+
 	static ConstructorHelpers::FObjectFinder<UClass> LeafFinder(TEXT("Class'/Game/LeafBP.LeafBP_C'"));
 	if (LeafFinder.Object != NULL)
 		Leaf_BP = LeafFinder.Object;
