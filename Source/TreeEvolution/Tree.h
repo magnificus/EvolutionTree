@@ -62,11 +62,7 @@ public:
 		float leafChangeBranchChance = 0.002f;
 
 	UPROPERTY(EditAnywhere, Category = "Algorithm")
-		int32 numLargeBranches = 5;
-	UPROPERTY(EditAnywhere, Category = "Algorithm")
-		int32 numMediumBranches = 5;
-	UPROPERTY(EditAnywhere, Category = "Algorithm")
-		int32 numSmallBranches = 5;
+		int32 numBranches = 15;
 	UPROPERTY(EditAnywhere, Category = "Algorithm")
 		int32 numLeafs = 60;
 

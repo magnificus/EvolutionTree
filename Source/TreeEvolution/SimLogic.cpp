@@ -65,8 +65,6 @@ void ASimLogic::simulationTick()
 		maxFitness = trees[0]->currentValue;
 		totalFitness += trees[0]->currentValue;
 
-		int32 cullingConstant = 4;
-
 		// for all trees except the best, randomly decide if it dies or not, but where better trees (lower in the list) have a higher chance of survival, on average, a portion the size (1 / cullingConstant) will die and be replaced each generation.
 		for (int32 i = 1; i < trees.Num(); ++i) {
 			totalFitness += trees[i]->currentValue;
@@ -90,7 +88,6 @@ void ASimLogic::simulationTick()
 			}
 
 			t->mutate();
-
 		}
 
 		averageFitness = totalFitness / trees.Num();
@@ -100,37 +97,7 @@ void ASimLogic::simulationTick()
 }
 
 void ASimLogic::combine(ATree* newTree, ATree* p1, ATree* p2, FVector location) {
-
 	newTree->buildFromDNA(p1->createChildDNA(p2));
-
-	// right now takes the branchpositions from one tree, and then randomly picks branches from tree 1 and tree 2 and then puts them in that position.
-	//vector<int> p1Branches;
-
-	//for (int i = 0; i < p1->branches.Num(); ++i) {
-	//	if (random.FRand() > .5) {
-	//		p1Branches.push_back(i);
-	//	} 
-	//	FVector diff = p1->branches[i]->GetActorLocation() - p1->GetActorLocation();
-	//	FVector newLocation = location + diff;
-	//	ABranch* spawnedBranch = newTree->branches[i];
-	//	spawnedBranch->SetActorLocation(newLocation);
-	//	spawnedBranch->SetActorRotation(p1->branches[i]->GetActorRotation());
-	//}
-
-	//for (int i = 0; i < p1->leafs.Num(); ++i) {
-	//	ALeaf* l;
-	//	if (find(p1Branches.begin(), p1Branches.end(), i) != p1Branches.end()) {
-	//		l = p1->leafs[i];
-	//	}
-	//	else {
-	//		l = p2->leafs[i];
-	//	}
-	//	FVector newLocation = newTree->branches[l->attachedToIndex]->getPositionOnBranch(l->branchOffset) + l->offsetVector;
-	//	ALeaf* spawnedLeaf = newTree->leafs[i];
-	//	spawnedLeaf->SetActorLocation(newLocation);
-	//	spawnedLeaf->SetActorRotation(l->GetActorRotation());
-	//	l->duplicate(spawnedLeaf);
-	//}
 }
 
 void ASimLogic::init() {
@@ -162,6 +129,25 @@ void ASimLogic::init() {
 
 		}
 
+	}
+}
+
+void ASimLogic::introduceRandomDNA() {
+	trees.Sort([](const ATree& t1, const ATree& t2) { return t1.currentValue > t2.currentValue;});
+
+	TArray<ATree*> winners;
+	TArray<ATree*> losers;
+
+	for (int32 i = 1; i < trees.Num(); ++i) {
+		if (random.FRand() * trees.Num() * cullingConstant > i) {
+			winners.Add(trees[i]);
+		}
+		else {
+			losers.Add(trees[i]);
+		}
+	}
+	for (ATree* t : losers) {
+		t->init();
 	}
 }
 

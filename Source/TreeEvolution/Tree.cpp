@@ -188,17 +188,20 @@ float ATree::hemisphereHits() {
 }
 
 void ATree::init() {
-	for (int i = 0; i < numSmallBranches; ++i) {
-		initRandomBranch(1);
+	for (ABranch* b : branches) {
+		b->Destroy();
 	}
-	for (int i = 0; i < numMediumBranches; ++i) {
-		initRandomBranch(1);
-	}
-	for (int i = 0; i < numLargeBranches; ++i) {
-		initRandomBranch(1);
-	}
-	for (int i = 0; i < numLeafs; ++i) {
 
+	branches.Empty();
+	for (ALeaf* l : leafs) {
+		l->Destroy();
+	}
+	leafs.Empty();
+	for (int i = 0; i < numBranches; ++i) {
+		initRandomBranch(1);
+	}
+
+	for (int i = 0; i < numLeafs; ++i) {
 		initRandomLeaf();
 	}
 }

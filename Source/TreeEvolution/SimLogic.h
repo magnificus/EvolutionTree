@@ -27,6 +27,8 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Gameplay")
 		void simulationTick();
 	UFUNCTION(BlueprintCallable, Category = "Gameplay")
+		void introduceRandomDNA();
+	UFUNCTION(BlueprintCallable, Category = "Gameplay")
 		float GetAverageFitness() { return averageFitness; }
 	UFUNCTION(BlueprintCallable, Category = "Gameplay")
 		float GetMaxFitness() { return maxFitness; }
@@ -54,6 +56,9 @@ public:
 
 	UPROPERTY(EditAnywhere, Category = "Performance")
 		int32 nbrLines = 10;
+
+	UPROPERTY(EditAnywhere, Category = "Algorithm")
+		int32 cullingConstant = 4;
 
 	void combine(ATree* newTree, ATree* p1, ATree* p2, FVector location);
 
