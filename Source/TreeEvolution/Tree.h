@@ -43,7 +43,7 @@ public:
 		float calculateHitsStraightAbove();
 
 	UFUNCTION(BlueprintCallable, Category = "Mutation")
-		void mutate();
+		void mutate(bool reCalc);
 
 	FTransform GetRandomPosition();
 
@@ -89,6 +89,6 @@ private:
 	TSubclassOf<class ABranch> Branch_BP;
 	TSubclassOf<class ALeaf> Leaf_BP;
 	TSubclassOf<class ABranch> CompositeBranch_BP;
-	int mode = MODE_STRAIGHT;
+	int mode = MODE_HEMISPHERE;
 };
 

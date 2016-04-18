@@ -87,7 +87,7 @@ void ASimLogic::simulationTick()
 				parent1->duplicate(t, t->GetActorLocation());
 			}
 
-			t->mutate();
+			t->mutate(true);
 		}
 
 		averageFitness = totalFitness / trees.Num();
@@ -147,7 +147,11 @@ void ASimLogic::introduceRandomDNA() {
 		}
 	}
 	for (ATree* t : losers) {
-		t->init();
+	//	t->init();
+		for (int i = 0; i < 100; ++i) {
+			t->mutate(false);
+		}
+		t->mutate(true);
 	}
 }
 

@@ -117,11 +117,12 @@ float ATree::calculateHitsStraightAbove() {
 float ATree::hemisphereHits() {
 
 	FVector origin = GetActorLocation();
-	origin.Z += 300;
+	origin.Z += 230;
 	//startLocation.Z += zDist + 100;
 
-	int hits = 0;
-	FCollisionQueryParams RV_TraceParams = FCollisionQueryParams(FName(TEXT("RV_Trace")), true);
+	float hits = 0.0;
+	FCollisionQueryParams RV_TraceParams = FCollisionQueryParams(FName(TEXT("RV_Trace")), true, this);
+
 	RV_TraceParams.bTraceComplex = true;
 	RV_TraceParams.bTraceAsyncScene = true;
 	RV_TraceParams.bReturnPhysicalMaterial = false;
@@ -134,7 +135,7 @@ float ATree::hemisphereHits() {
 
 	float goldenAngle = PI * (3.0 - sqrt(5));
 	float theta = 0.0;
-	float scale = 1000.0;
+	float scale = 600;
 	float dz = (2.0 / numberRays); // 0.02
 	float z = (1.0 - dz / 2.0)*scale; //990
 	float r = 0.0;
@@ -143,6 +144,8 @@ float ATree::hemisphereHits() {
 	FVector test = origin;// FVector(-1000.0, -5000.0, 2000.0);
 	FVector coordinate;
 
+	TArray<FVector> list;
+
 	for (int k = 0; k < n - 1; ++k) {
 
 
@@ -150,33 +153,50 @@ float ATree::hemisphereHits() {
 		coordinate = FVector(test.X + cos(theta)*r, test.Y + sin(theta)*r, test.Z + z);
 		z -= (dz*scale);
 		theta += goldenAngle;
-		if (coordinate.Z > test.Z) {
-			//call GetWorld() from within an actor extending class
-			GetWorld()->LineTraceSingleByChannel(
-				RV_Hit,        //result
-				coordinate,    //start
-				origin, //end
-				ECC_Pawn, //collision channel
-				RV_TraceParams
-			);
-
-			if (debugLine) {
-				DrawDebugLine(
-					GetWorld(),
-					coordinate,
-					test,
-					FColor(0, 0, 255),
-					true, -1, 0,
-					5
-				);
-			}
+		if (coordinate.Z > 0.0) {
+			list.Add(coordinate);
 		}
+	}
 
-		if (RV_Hit.bBlockingHit) {
-			ALeaf* leaf = Cast<ALeaf>(RV_Hit.GetActor());
-			if (leaf) {
-				hits++;
+
+	for (int a = 0; a < list.Num(); ++a) {
+		for (int b = 0; b < list.Num(); ++b) {
+			if (a != b) {
+				FVector from = list[a];
+				FVector to = list[b];
+
+				GetWorld()->LineTraceSingleByChannel(
+					RV_Hit,        //result
+					from,    //start
+					to, //end
+					ECC_Pawn, //collision channel
+					RV_TraceParams
+				);
+
+				if (debugLine) {
+
+					DrawDebugLine(
+						GetWorld(),
+						from,
+						to,
+						FColor(0, 0, 255),
+						true, -1, 0,
+						1
+					);
+				}
+
+
+				if (RV_Hit.bBlockingHit) {
+					ALeaf* leaf = Cast<ALeaf>(RV_Hit.GetActor());
+					if (leaf) {
+						FVector dir = leaf->GetActorLocation() - from;
+						float  value = dir.Size();
+						hits += 1.0; //+ (1.0 / value)*scale;
+					}
+				}
+
 			}
+
 
 		}
 
@@ -184,7 +204,109 @@ float ATree::hemisphereHits() {
 
 	}
 
-	return hits / numberRays;
+
+
+	//for (int i = 0; i < list.Num() / 2; ++i) {
+
+
+	// //for (int j = list.Num() / 2; j < list.Num(); ++j) {
+
+	//  FVector from = list[i];
+	//  FVector to = list[list.Num()-1 -i];
+
+	//  GetWorld()->LineTraceSingleByChannel(
+	//   RV_Hit,        //result
+	//   from,    //start
+	//   to, //end
+	//   ECC_Pawn, //collision channel
+	//   RV_TraceParams
+	//  );
+
+	//  if (debugLine) {
+
+	//    DrawDebugLine(
+	//     GetWorld(),
+	//     from,
+	//     to,
+	//     FColor(0, 0, 255),
+	//     true, -1, 0,
+	//     3
+	//    );
+	//  }
+
+
+
+	//}
+
+
+
+
+	//for (ALeaf* leaf : leafs) {
+
+
+	// for (FVector v : list) {
+
+	//  FVector leafPos = leaf->GetActorLocation();
+	//  FVector dir = leafPos - v;
+	//  float dot = FVector::DotProduct(leaf->GetActorForwardVector(), dir);
+
+	//  if ( dot > 0.0) {
+	//    
+	//   //call GetWorld() from within an actor extending class
+	//      GetWorld()->LineTraceSingleByChannel(
+	//       RV_Hit,        //result
+	//       v,    //start
+	//       leafPos, //end
+	//       ECC_Pawn, //collision channel
+	//       RV_TraceParams
+	//      );
+
+	//      if (debugLine) {
+	//       float  value = dir.Size();
+
+	//       if (value < 500) {
+	//        DrawDebugLine(
+	//         GetWorld(),
+	//         v,
+	//         leafPos,
+	//         FColor(0, 0, 255),
+	//         true, 2, 0,
+	//         2
+	//        );
+	//       }
+
+	//       /*else {
+	//        DrawDebugLine(
+	//         GetWorld(),
+	//         v,
+	//         leafPos,
+	//         FColor(255, 0, 0),
+	//         true, -1, 0,
+	//         2
+	//        );
+	//       }*/
+	//      }
+	//   
+
+	//      if (RV_Hit.bBlockingHit) {
+	//       ALeaf* leaf = Cast<ALeaf>(RV_Hit.GetActor());
+	//       if (leaf) {
+	//        float  value = dir.Size();
+	//        hits += 1.0 + (1.0/value)*800.0;
+	//        /*if (value < 500) {
+	//         hits += 1.0 * 0.1*(600.0 - value);
+	//        }
+	//        else {
+	//         hits++;
+	//        }*/
+	//       }
+	//      }
+	//  }
+	// }
+	//}
+
+	return hits / (numberRays*numberRays);
+
 }
 
 void ATree::init() {
@@ -238,7 +360,7 @@ void ATree::initRandomLeaf() {
 	leafs.Add(spawnedLeaf);
 }
 
-void ATree::mutate() {
+void ATree::mutate(bool reCalc) {
 
 	for (int i = 0; i < branches.Num(); ++i) {
 		ABranch* b = branches[i];
@@ -297,7 +419,8 @@ void ATree::mutate() {
 		l->mutate();
 	}
 
-	currentValue = calculateHits();
+	if (reCalc)
+		currentValue = calculateHits();
 
 }
 
@@ -431,6 +554,9 @@ vector<float> ATree::createChildDNA(ATree* otherParent) {
 
 	return DNA;
 }
+
+
+
 
 void ATree::buildFromDNA(vector<float> DNA) {
 	int currPos = 0;

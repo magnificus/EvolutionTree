@@ -541,4 +541,1008 @@ LogInit: Object subsystem initialized
 [2016.04.18-21.15.07:425][772]LogWorld: Bringing up level for play took: 0.001085
 [2016.04.18-21.15.07:427][772]PIE: Info Play in editor start time for /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default -0.287
 [2016.04.18-21.15.07:431][772]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
-[2016.04.18-21.16.35:049][410]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with Generate
+[2016.04.18-21.16.35:049][410]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-21.16.35:153][410]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-21.29.00:789][ 85]LogHotReload: New module detected: UE4Editor-TreeEvolution-5888.dll
+[2016.04.18-21.29.02:803][ 92]LogHotReload: Starting Hot-Reload from IDE
+[2016.04.18-21.29.02:922][ 92]LogContentBrowser: Native class hierarchy updated for 'TreeEvolution' in 0.0008 seconds. Added 5 classes and 2 folders.
+[2016.04.18-21.29.02:924][ 92]Warning: HotReload successful (13 functions remapped  0 scriptstructs remapped)
+[2016.04.18-21.29.03:135][ 92]LogContentBrowser: Native class hierarchy populated in 0.0070 seconds. Added 1987 classes and 351 folders.
+[2016.04.18-21.29.03:151][ 92]Warning: HotReload took 6277438562204192487878988888393020692503707483087375482269988814848.0s.
+[2016.04.18-21.29.09:752][213]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-21.29.09:752][213]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2016.04.18-21.29.09:752][213]PIE: New page: PIE session: Minimal_Default (Apr 19, 2016, 12:29:09 AM)
+[2016.04.18-21.29.09:752][213]LogPlayLevel: Creating play world package: /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default
+[2016.04.18-21.29.09:763][213]LogPlayLevel: PIE: StaticDuplicateObject took: (0.010753s)
+[2016.04.18-21.29.09:763][213]LogAIModule: Creating AISystem for world Minimal_Default
+[2016.04.18-21.29.09:763][213]LogPlayLevel: PIE: World Init took: (0.000479s)
+[2016.04.18-21.29.09:763][213]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/StarterContent/Maps/Minimal_Default.Minimal_Default to /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default (0.011414s)
+[2016.04.18-21.29.09:799][213]LogInit: XAudio2 using 'Speakers (Realtek High Definition Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
+[2016.04.18-21.29.09:805][213]LogInit: FAudioDevice initialized.
+[2016.04.18-21.29.09:833][213]LogWorld: Game class is 'simGameMode_C'
+[2016.04.18-21.29.09:835][213]LogWorld: Bringing World /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default up for play (max tick rate 0) at 2016.04.18-23.29.09
+[2016.04.18-21.29.09:835][213]LogWorld: Bringing up level for play took: 0.001166
+[2016.04.18-21.29.09:837][213]PIE: Info Play in editor start time for /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default 0.113
+[2016.04.18-21.29.09:838][213]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-21.29.46:205][119]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-21.29.46:273][119]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-21.29.49:680][438]BlueprintLog: New page: Compile TreeBP
+[2016.04.18-21.29.49:831][438]BlueprintEditorCompileResults: Info [1510.06] Compile of TreeBP successful! [in 151 ms]
+[2016.04.18-21.29.50:204][466]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/TreeBP" FILE="../../../../../../TreeEvolution/EvolutionTree/Content/TreeBP.uasset" SILENT=true
+[2016.04.18-21.29.50:312][466]LogSavePackage: Save=32.04ms
+[2016.04.18-21.29.50:312][466]LogSavePackage: Moving '../../../../../../TreeEvolution/EvolutionTree/Saved/TreeBP9B8BE3054E5BCA692932059E5EAF61DA.tmp' to '../../../../../../TreeEvolution/EvolutionTree/Content/TreeBP.uasset'
+[2016.04.18-21.29.50:314][466]LogSavePackage: Total save time: 108.59ms
+[2016.04.18-21.29.50:314][466]LogSavePackage:Display: Finished SavePackage ../../../../../../TreeEvolution/EvolutionTree/Content/TreeBP.uasset
+[2016.04.18-21.29.51:756][608]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-21.29.51:756][608]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2016.04.18-21.29.51:756][608]PIE: New page: PIE session: Minimal_Default (Apr 19, 2016, 12:29:51 AM)
+[2016.04.18-21.29.51:756][608]LogPlayLevel: Creating play world package: /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default
+[2016.04.18-21.29.51:769][608]LogPlayLevel: PIE: StaticDuplicateObject took: (0.012767s)
+[2016.04.18-21.29.51:769][608]LogAIModule: Creating AISystem for world Minimal_Default
+[2016.04.18-21.29.51:769][608]LogPlayLevel: PIE: World Init took: (0.000611s)
+[2016.04.18-21.29.51:770][608]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/StarterContent/Maps/Minimal_Default.Minimal_Default to /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default (0.013572s)
+[2016.04.18-21.29.51:795][608]LogInit: XAudio2 using 'Speakers (Realtek High Definition Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
+[2016.04.18-21.29.51:801][608]LogInit: FAudioDevice initialized.
+[2016.04.18-21.29.51:826][608]LogWorld: Game class is 'simGameMode_C'
+[2016.04.18-21.29.51:827][608]LogWorld: Bringing World /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default up for play (max tick rate 0) at 2016.04.18-23.29.51
+[2016.04.18-21.29.51:828][608]LogWorld: Bringing up level for play took: 0.001100
+[2016.04.18-21.29.51:830][608]PIE: Info Play in editor start time for /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default 0.105
+[2016.04.18-21.29.51:830][608]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-21.30.08:204][ 38]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-21.30.08:312][ 38]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-21.31.31:130][124]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-21.31.31:130][124]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2016.04.18-21.31.31:130][124]PIE: New page: PIE session: Minimal_Default (Apr 19, 2016, 12:31:31 AM)
+[2016.04.18-21.31.31:130][124]LogPlayLevel: Creating play world package: /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default
+[2016.04.18-21.31.31:141][124]LogPlayLevel: PIE: StaticDuplicateObject took: (0.010842s)
+[2016.04.18-21.31.31:142][124]LogAIModule: Creating AISystem for world Minimal_Default
+[2016.04.18-21.31.31:142][124]LogPlayLevel: PIE: World Init took: (0.000587s)
+[2016.04.18-21.31.31:142][124]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/StarterContent/Maps/Minimal_Default.Minimal_Default to /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default (0.011610s)
+[2016.04.18-21.31.31:167][124]LogInit: XAudio2 using 'Speakers (Realtek High Definition Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
+[2016.04.18-21.31.31:173][124]LogInit: FAudioDevice initialized.
+[2016.04.18-21.31.31:204][124]LogWorld: Game class is 'simGameMode_C'
+[2016.04.18-21.31.31:206][124]LogWorld: Bringing World /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default up for play (max tick rate 0) at 2016.04.18-23.31.31
+[2016.04.18-21.31.31:206][124]LogWorld: Bringing up level for play took: 0.001078
+[2016.04.18-21.31.31:208][124]PIE: Info Play in editor start time for /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default -0.519
+[2016.04.18-21.31.31:208][124]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-21.31.42:125][355]LogHotReload: New module detected: UE4Editor-TreeEvolution-597.dll
+[2016.04.18-21.31.42:806][358]LogHotReload: Starting Hot-Reload from IDE
+[2016.04.18-21.31.42:868][358]LogContentBrowser: Native class hierarchy updated for 'TreeEvolution' in 0.0007 seconds. Added 5 classes and 2 folders.
+[2016.04.18-21.31.42:872][358]Warning: HotReload successful (13 functions remapped  0 scriptstructs remapped)
+[2016.04.18-21.31.43:116][358]LogContentBrowser: Native class hierarchy populated in 0.0071 seconds. Added 1987 classes and 351 folders.
+[2016.04.18-21.31.43:135][358]Warning: HotReload took 6277438562204192487878988888393020692503707483087375482269988814848.0s.
+[2016.04.18-21.31.46:318][601]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-21.31.46:363][601]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-21.31.46:843][645]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-21.31.46:843][645]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2016.04.18-21.31.46:844][645]PIE: New page: PIE session: Minimal_Default (Apr 19, 2016, 12:31:46 AM)
+[2016.04.18-21.31.46:844][645]LogPlayLevel: Creating play world package: /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default
+[2016.04.18-21.31.46:856][645]LogPlayLevel: PIE: StaticDuplicateObject took: (0.011995s)
+[2016.04.18-21.31.46:856][645]LogAIModule: Creating AISystem for world Minimal_Default
+[2016.04.18-21.31.46:856][645]LogPlayLevel: PIE: World Init took: (0.000576s)
+[2016.04.18-21.31.46:856][645]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/StarterContent/Maps/Minimal_Default.Minimal_Default to /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default (0.012781s)
+[2016.04.18-21.31.46:931][645]LogInit: XAudio2 using 'Speakers (Realtek High Definition Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
+[2016.04.18-21.31.46:938][645]LogInit: FAudioDevice initialized.
+[2016.04.18-21.31.46:969][645]LogWorld: Game class is 'simGameMode_C'
+[2016.04.18-21.31.46:971][645]LogWorld: Bringing World /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default up for play (max tick rate 0) at 2016.04.18-23.31.46
+[2016.04.18-21.31.46:971][645]LogWorld: Bringing up level for play took: 0.001402
+[2016.04.18-21.31.46:974][645]PIE: Info Play in editor start time for /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default -0.752
+[2016.04.18-21.31.46:974][645]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-21.32.42:927][425]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-21.32.43:004][425]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-21.32.51:834][968]BlueprintLog: New page: Compile TreeBP
+[2016.04.18-21.32.52:002][968]BlueprintEditorCompileResults: Info [1692.23] Compile of TreeBP successful! [in 168 ms]
+[2016.04.18-21.32.52:371][989]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/TreeBP" FILE="../../../../../../TreeEvolution/EvolutionTree/Content/TreeBP.uasset" SILENT=true
+[2016.04.18-21.32.52:420][989]LogSavePackage: Save=38.87ms
+[2016.04.18-21.32.52:420][989]LogSavePackage: Moving '../../../../../../TreeEvolution/EvolutionTree/Saved/TreeBP1A4F2F50456A19A0BC143E9C2F3C57EF.tmp' to '../../../../../../TreeEvolution/EvolutionTree/Content/TreeBP.uasset'
+[2016.04.18-21.32.52:422][989]LogSavePackage: Total save time: 48.82ms
+[2016.04.18-21.32.52:422][989]LogSavePackage:Display: Finished SavePackage ../../../../../../TreeEvolution/EvolutionTree/Content/TreeBP.uasset
+[2016.04.18-21.32.53:749][110]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-21.32.53:749][110]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2016.04.18-21.32.53:749][110]PIE: New page: PIE session: Minimal_Default (Apr 19, 2016, 12:32:53 AM)
+[2016.04.18-21.32.53:749][110]LogPlayLevel: Creating play world package: /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default
+[2016.04.18-21.32.53:760][110]LogPlayLevel: PIE: StaticDuplicateObject took: (0.010440s)
+[2016.04.18-21.32.53:760][110]LogAIModule: Creating AISystem for world Minimal_Default
+[2016.04.18-21.32.53:760][110]LogPlayLevel: PIE: World Init took: (0.000585s)
+[2016.04.18-21.32.53:761][110]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/StarterContent/Maps/Minimal_Default.Minimal_Default to /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default (0.011489s)
+[2016.04.18-21.32.53:786][110]LogInit: XAudio2 using 'Speakers (Realtek High Definition Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
+[2016.04.18-21.32.53:791][110]LogInit: FAudioDevice initialized.
+[2016.04.18-21.32.53:818][110]LogWorld: Game class is 'simGameMode_C'
+[2016.04.18-21.32.53:820][110]LogWorld: Bringing World /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default up for play (max tick rate 0) at 2016.04.18-23.32.53
+[2016.04.18-21.32.53:820][110]LogWorld: Bringing up level for play took: 0.001130
+[2016.04.18-21.32.53:822][110]PIE: Info Play in editor start time for /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default 0.095
+[2016.04.18-21.32.53:823][110]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-21.33.51:617][108]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-21.33.51:688][108]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-21.33.56:476][608]BlueprintLog: New page: Compile TreeBP
+[2016.04.18-21.33.56:627][608]BlueprintEditorCompileResults: Info [1756.85] Compile of TreeBP successful! [in 150 ms]
+[2016.04.18-21.33.57:036][642]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/TreeBP" FILE="../../../../../../TreeEvolution/EvolutionTree/Content/TreeBP.uasset" SILENT=true
+[2016.04.18-21.33.57:077][642]LogSavePackage: Save=32.82ms
+[2016.04.18-21.33.57:077][642]LogSavePackage: Moving '../../../../../../TreeEvolution/EvolutionTree/Saved/TreeBP7F41D93147B7DC8E69AB8A9F2D2A2EF3.tmp' to '../../../../../../TreeEvolution/EvolutionTree/Content/TreeBP.uasset'
+[2016.04.18-21.33.57:078][642]LogSavePackage: Total save time: 40.90ms
+[2016.04.18-21.33.57:078][642]LogSavePackage:Display: Finished SavePackage ../../../../../../TreeEvolution/EvolutionTree/Content/TreeBP.uasset
+[2016.04.18-21.35.07:632][ 77]LogHotReload: New module detected: UE4Editor-TreeEvolution-4586.dll
+[2016.04.18-21.35.08:312][ 80]LogHotReload: Starting Hot-Reload from IDE
+[2016.04.18-21.35.08:404][ 80]LogContentBrowser: Native class hierarchy updated for 'TreeEvolution' in 0.0013 seconds. Added 5 classes and 2 folders.
+[2016.04.18-21.35.08:409][ 80]Warning: HotReload successful (13 functions remapped  0 scriptstructs remapped)
+[2016.04.18-21.35.08:644][ 80]LogContentBrowser: Native class hierarchy populated in 0.0071 seconds. Added 1987 classes and 351 folders.
+[2016.04.18-21.35.08:660][ 80]Warning: HotReload took 6277438562204192487878988888393020692503707483087375482269988814848.0s.
+[2016.04.18-21.35.09:879][131]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-21.35.09:879][131]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2016.04.18-21.35.09:880][131]PIE: New page: PIE session: Minimal_Default (Apr 19, 2016, 12:35:09 AM)
+[2016.04.18-21.35.09:880][131]LogPlayLevel: Creating play world package: /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default
+[2016.04.18-21.35.09:892][131]LogPlayLevel: PIE: StaticDuplicateObject took: (0.011923s)
+[2016.04.18-21.35.09:892][131]LogAIModule: Creating AISystem for world Minimal_Default
+[2016.04.18-21.35.09:892][131]LogPlayLevel: PIE: World Init took: (0.000551s)
+[2016.04.18-21.35.09:892][131]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/StarterContent/Maps/Minimal_Default.Minimal_Default to /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default (0.012671s)
+[2016.04.18-21.35.09:951][131]LogInit: XAudio2 using 'Speakers (Realtek High Definition Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
+[2016.04.18-21.35.09:959][131]LogInit: FAudioDevice initialized.
+[2016.04.18-21.35.09:991][131]LogWorld: Game class is 'simGameMode_C'
+[2016.04.18-21.35.09:993][131]LogWorld: Bringing World /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default up for play (max tick rate 0) at 2016.04.18-23.35.09
+[2016.04.18-21.35.09:994][131]LogWorld: Bringing up level for play took: 0.001484
+[2016.04.18-21.35.09:996][131]PIE: Info Play in editor start time for /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default 0.267
+[2016.04.18-21.35.09:997][131]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-21.37.09:663][816]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-21.37.09:858][816]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-21.37.14:445][258]BlueprintLog: New page: Compile TreeBP
+[2016.04.18-21.37.14:594][258]BlueprintEditorCompileResults: Info [1954.82] Compile of TreeBP successful! [in 149 ms]
+[2016.04.18-21.37.14:949][284]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/TreeBP" FILE="../../../../../../TreeEvolution/EvolutionTree/Content/TreeBP.uasset" SILENT=true
+[2016.04.18-21.37.14:993][284]LogSavePackage: Save=32.73ms
+[2016.04.18-21.37.14:993][284]LogSavePackage: Moving '../../../../../../TreeEvolution/EvolutionTree/Saved/TreeBPDFD8752E497ED2AF48475EA11AAC082C.tmp' to '../../../../../../TreeEvolution/EvolutionTree/Content/TreeBP.uasset'
+[2016.04.18-21.37.14:994][284]LogSavePackage: Total save time: 43.21ms
+[2016.04.18-21.37.14:994][284]LogSavePackage:Display: Finished SavePackage ../../../../../../TreeEvolution/EvolutionTree/Content/TreeBP.uasset
+[2016.04.18-21.37.17:003][488]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-21.37.17:003][488]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2016.04.18-21.37.17:003][488]PIE: New page: PIE session: Minimal_Default (Apr 19, 2016, 12:37:17 AM)
+[2016.04.18-21.37.17:003][488]LogPlayLevel: Creating play world package: /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default
+[2016.04.18-21.37.17:014][488]LogPlayLevel: PIE: StaticDuplicateObject took: (0.010945s)
+[2016.04.18-21.37.17:015][488]LogAIModule: Creating AISystem for world Minimal_Default
+[2016.04.18-21.37.17:015][488]LogPlayLevel: PIE: World Init took: (0.000482s)
+[2016.04.18-21.37.17:015][488]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/StarterContent/Maps/Minimal_Default.Minimal_Default to /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default (0.011597s)
+[2016.04.18-21.37.17:040][488]LogInit: XAudio2 using 'Speakers (Realtek High Definition Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
+[2016.04.18-21.37.17:046][488]LogInit: FAudioDevice initialized.
+[2016.04.18-21.37.17:075][488]LogWorld: Game class is 'simGameMode_C'
+[2016.04.18-21.37.17:077][488]LogWorld: Bringing World /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default up for play (max tick rate 0) at 2016.04.18-23.37.17
+[2016.04.18-21.37.17:077][488]LogWorld: Bringing up level for play took: 0.001152
+[2016.04.18-21.37.17:079][488]PIE: Info Play in editor start time for /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default -0.651
+[2016.04.18-21.37.17:080][488]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-21.48.21:688][977]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-21.48.21:892][977]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-21.51.21:488][793]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-21.51.21:488][793]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2016.04.18-21.51.21:488][793]PIE: New page: PIE session: Minimal_Default (Apr 19, 2016, 12:51:21 AM)
+[2016.04.18-21.51.21:488][793]LogPlayLevel: Creating play world package: /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default
+[2016.04.18-21.51.21:499][793]LogPlayLevel: PIE: StaticDuplicateObject took: (0.010662s)
+[2016.04.18-21.51.21:499][793]LogAIModule: Creating AISystem for world Minimal_Default
+[2016.04.18-21.51.21:499][793]LogPlayLevel: PIE: World Init took: (0.000494s)
+[2016.04.18-21.51.21:499][793]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/StarterContent/Maps/Minimal_Default.Minimal_Default to /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default (0.011327s)
+[2016.04.18-21.51.21:523][793]LogInit: XAudio2 using 'Speakers (Realtek High Definition Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
+[2016.04.18-21.51.21:529][793]LogInit: FAudioDevice initialized.
+[2016.04.18-21.51.21:558][793]LogWorld: Game class is 'simGameMode_C'
+[2016.04.18-21.51.21:560][793]LogWorld: Bringing World /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default up for play (max tick rate 0) at 2016.04.18-23.51.21
+[2016.04.18-21.51.21:560][793]LogWorld: Bringing up level for play took: 0.001416
+[2016.04.18-21.51.21:563][793]PIE: Info Play in editor start time for /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default -0.179
+[2016.04.18-21.51.21:563][793]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-21.53.00:701][336]LogHotReload: New module detected: UE4Editor-TreeEvolution-1260.dll
+[2016.04.18-21.53.01:379][339]LogHotReload: Starting Hot-Reload from IDE
+[2016.04.18-21.53.01:476][339]LogContentBrowser: Native class hierarchy updated for 'TreeEvolution' in 0.0007 seconds. Added 5 classes and 2 folders.
+[2016.04.18-21.53.01:482][339]Warning: HotReload successful (13 functions remapped  0 scriptstructs remapped)
+[2016.04.18-21.53.01:771][339]LogContentBrowser: Native class hierarchy populated in 0.0073 seconds. Added 1987 classes and 351 folders.
+[2016.04.18-21.53.01:786][339]Warning: HotReload took 6277438562204192487878988888393020692503707483087375482269988814848.0s.
+[2016.04.18-21.54.21:864][586]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-21.54.22:059][586]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-21.54.23:204][673]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-21.54.23:204][673]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2016.04.18-21.54.23:205][673]PIE: New page: PIE session: Minimal_Default (Apr 19, 2016, 12:54:23 AM)
+[2016.04.18-21.54.23:205][673]LogPlayLevel: Creating play world package: /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default
+[2016.04.18-21.54.23:216][673]LogPlayLevel: PIE: StaticDuplicateObject took: (0.011319s)
+[2016.04.18-21.54.23:216][673]LogAIModule: Creating AISystem for world Minimal_Default
+[2016.04.18-21.54.23:217][673]LogPlayLevel: PIE: World Init took: (0.000463s)
+[2016.04.18-21.54.23:217][673]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/StarterContent/Maps/Minimal_Default.Minimal_Default to /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default (0.012051s)
+[2016.04.18-21.54.23:240][673]LogInit: XAudio2 using 'Speakers (Realtek High Definition Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
+[2016.04.18-21.54.23:246][673]LogInit: FAudioDevice initialized.
+[2016.04.18-21.54.23:274][673]LogWorld: Game class is 'simGameMode_C'
+[2016.04.18-21.54.23:275][673]LogWorld: Bringing World /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default up for play (max tick rate 0) at 2016.04.18-23.54.23
+[2016.04.18-21.54.23:275][673]LogWorld: Bringing up level for play took: 0.001112
+[2016.04.18-21.54.23:278][673]PIE: Info Play in editor start time for /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default -0.466
+[2016.04.18-21.54.23:278][673]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-21.54.54:081][992]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-21.54.54:245][992]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-21.55.08:333][563]BlueprintLog: New page: Compile TreeBP
+[2016.04.18-21.55.08:484][563]BlueprintEditorCompileResults: Info [3028.69] Compile of TreeBP successful! [in 150 ms]
+[2016.04.18-21.55.09:029][609]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/TreeBP" FILE="../../../../../../TreeEvolution/EvolutionTree/Content/TreeBP.uasset" SILENT=true
+[2016.04.18-21.55.09:074][609]LogSavePackage: Save=31.34ms
+[2016.04.18-21.55.09:074][609]LogSavePackage: Moving '../../../../../../TreeEvolution/EvolutionTree/Saved/TreeBP8B52455F42961B6C9505ADAFAACD63B6.tmp' to '../../../../../../TreeEvolution/EvolutionTree/Content/TreeBP.uasset'
+[2016.04.18-21.55.09:076][609]LogSavePackage: Total save time: 45.78ms
+[2016.04.18-21.55.09:076][609]LogSavePackage:Display: Finished SavePackage ../../../../../../TreeEvolution/EvolutionTree/Content/TreeBP.uasset
+[2016.04.18-21.55.11:329][835]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-21.55.11:329][835]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2016.04.18-21.55.11:329][835]PIE: New page: PIE session: Minimal_Default (Apr 19, 2016, 12:55:11 AM)
+[2016.04.18-21.55.11:329][835]LogPlayLevel: Creating play world package: /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default
+[2016.04.18-21.55.11:340][835]LogPlayLevel: PIE: StaticDuplicateObject took: (0.010976s)
+[2016.04.18-21.55.11:340][835]LogAIModule: Creating AISystem for world Minimal_Default
+[2016.04.18-21.55.11:340][835]LogPlayLevel: PIE: World Init took: (0.000479s)
+[2016.04.18-21.55.11:340][835]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/StarterContent/Maps/Minimal_Default.Minimal_Default to /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default (0.011617s)
+[2016.04.18-21.55.11:367][835]LogInit: XAudio2 using 'Speakers (Realtek High Definition Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
+[2016.04.18-21.55.11:373][835]LogInit: FAudioDevice initialized.
+[2016.04.18-21.55.11:404][835]LogWorld: Game class is 'simGameMode_C'
+[2016.04.18-21.55.11:406][835]LogWorld: Bringing World /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default up for play (max tick rate 0) at 2016.04.18-23.55.11
+[2016.04.18-21.55.11:406][835]LogWorld: Bringing up level for play took: 0.001103
+[2016.04.18-21.55.11:408][835]PIE: Info Play in editor start time for /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default -0.336
+[2016.04.18-21.55.11:409][835]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-21.55.18:372][934]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-21.55.18:638][934]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-21.55.32:723][470]BlueprintLog: New page: Compile TreeBP
+[2016.04.18-21.55.32:876][470]BlueprintEditorCompileResults: Info [3053.08] Compile of TreeBP successful! [in 152 ms]
+[2016.04.18-21.55.33:259][499]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/TreeBP" FILE="../../../../../../TreeEvolution/EvolutionTree/Content/TreeBP.uasset" SILENT=true
+[2016.04.18-21.55.33:300][499]LogSavePackage: Save=33.09ms
+[2016.04.18-21.55.33:300][499]LogSavePackage: Moving '../../../../../../TreeEvolution/EvolutionTree/Saved/TreeBP1EC8B2B64907FCB1AC1B9A8C6FF7CD26.tmp' to '../../../../../../TreeEvolution/EvolutionTree/Content/TreeBP.uasset'
+[2016.04.18-21.55.33:301][499]LogSavePackage: Total save time: 41.30ms
+[2016.04.18-21.55.33:301][499]LogSavePackage:Display: Finished SavePackage ../../../../../../TreeEvolution/EvolutionTree/Content/TreeBP.uasset
+[2016.04.18-21.55.34:997][661]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-21.55.34:997][661]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2016.04.18-21.55.34:997][661]PIE: New page: PIE session: Minimal_Default (Apr 19, 2016, 12:55:34 AM)
+[2016.04.18-21.55.34:997][661]LogPlayLevel: Creating play world package: /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default
+[2016.04.18-21.55.35:009][661]LogPlayLevel: PIE: StaticDuplicateObject took: (0.011657s)
+[2016.04.18-21.55.35:009][661]LogAIModule: Creating AISystem for world Minimal_Default
+[2016.04.18-21.55.35:009][661]LogPlayLevel: PIE: World Init took: (0.000499s)
+[2016.04.18-21.55.35:009][661]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/StarterContent/Maps/Minimal_Default.Minimal_Default to /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default (0.012323s)
+[2016.04.18-21.55.35:034][661]LogInit: XAudio2 using 'Speakers (Realtek High Definition Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
+[2016.04.18-21.55.35:041][661]LogInit: FAudioDevice initialized.
+[2016.04.18-21.55.35:072][661]LogWorld: Game class is 'simGameMode_C'
+[2016.04.18-21.55.35:074][661]LogWorld: Bringing World /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default up for play (max tick rate 0) at 2016.04.18-23.55.35
+[2016.04.18-21.55.35:074][661]LogWorld: Bringing up level for play took: 0.001229
+[2016.04.18-21.55.35:076][661]PIE: Info Play in editor start time for /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default -0.668
+[2016.04.18-21.55.35:077][661]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-21.56.39:924][137]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-21.56.39:996][137]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-21.56.44:525][596]BlueprintLog: New page: Compile TreeBP
+[2016.04.18-21.56.44:675][596]BlueprintEditorCompileResults: Info [3124.88] Compile of TreeBP successful! [in 149 ms]
+[2016.04.18-21.56.45:527][673]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/TreeBP" FILE="../../../../../../TreeEvolution/EvolutionTree/Content/TreeBP.uasset" SILENT=true
+[2016.04.18-21.56.45:568][673]LogSavePackage: Save=32.81ms
+[2016.04.18-21.56.45:568][673]LogSavePackage: Moving '../../../../../../TreeEvolution/EvolutionTree/Saved/TreeBPC5A443BF4580611CCA2C32A472227EB8.tmp' to '../../../../../../TreeEvolution/EvolutionTree/Content/TreeBP.uasset'
+[2016.04.18-21.56.45:569][673]LogSavePackage: Total save time: 40.89ms
+[2016.04.18-21.56.45:569][673]LogSavePackage:Display: Finished SavePackage ../../../../../../TreeEvolution/EvolutionTree/Content/TreeBP.uasset
+[2016.04.18-21.56.47:696][882]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-21.56.47:696][882]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2016.04.18-21.56.47:696][882]PIE: New page: PIE session: Minimal_Default (Apr 19, 2016, 12:56:47 AM)
+[2016.04.18-21.56.47:696][882]LogPlayLevel: Creating play world package: /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default
+[2016.04.18-21.56.47:707][882]LogPlayLevel: PIE: StaticDuplicateObject took: (0.010995s)
+[2016.04.18-21.56.47:707][882]LogAIModule: Creating AISystem for world Minimal_Default
+[2016.04.18-21.56.47:708][882]LogPlayLevel: PIE: World Init took: (0.000527s)
+[2016.04.18-21.56.47:708][882]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/StarterContent/Maps/Minimal_Default.Minimal_Default to /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default (0.011704s)
+[2016.04.18-21.56.47:732][882]LogInit: XAudio2 using 'Speakers (Realtek High Definition Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
+[2016.04.18-21.56.47:738][882]LogInit: FAudioDevice initialized.
+[2016.04.18-21.56.47:763][882]LogWorld: Game class is 'simGameMode_C'
+[2016.04.18-21.56.47:764][882]LogWorld: Bringing World /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default up for play (max tick rate 0) at 2016.04.18-23.56.47
+[2016.04.18-21.56.47:765][882]LogWorld: Bringing up level for play took: 0.001093
+[2016.04.18-21.56.47:767][882]PIE: Info Play in editor start time for /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default 0.022
+[2016.04.18-21.56.47:767][882]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-21.59.22:787][759]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-21.59.22:864][759]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-21.59.26:935][142]BlueprintLog: New page: Compile TreeBP
+[2016.04.18-21.59.27:088][142]BlueprintEditorCompileResults: Info [3287.29] Compile of TreeBP successful! [in 153 ms]
+[2016.04.18-21.59.27:673][190]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/TreeBP" FILE="../../../../../../TreeEvolution/EvolutionTree/Content/TreeBP.uasset" SILENT=true
+[2016.04.18-21.59.27:716][190]LogSavePackage: Save=33.06ms
+[2016.04.18-21.59.27:716][190]LogSavePackage: Moving '../../../../../../TreeEvolution/EvolutionTree/Saved/TreeBP94D4E02546100CBAC57C409D1C3336E8.tmp' to '../../../../../../TreeEvolution/EvolutionTree/Content/TreeBP.uasset'
+[2016.04.18-21.59.27:717][190]LogSavePackage: Total save time: 40.88ms
+[2016.04.18-21.59.27:717][190]LogSavePackage:Display: Finished SavePackage ../../../../../../TreeEvolution/EvolutionTree/Content/TreeBP.uasset
+[2016.04.18-21.59.29:498][348]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-21.59.29:498][348]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2016.04.18-21.59.29:498][348]PIE: New page: PIE session: Minimal_Default (Apr 19, 2016, 12:59:29 AM)
+[2016.04.18-21.59.29:498][348]LogPlayLevel: Creating play world package: /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default
+[2016.04.18-21.59.29:510][348]LogPlayLevel: PIE: StaticDuplicateObject took: (0.011926s)
+[2016.04.18-21.59.29:511][348]LogAIModule: Creating AISystem for world Minimal_Default
+[2016.04.18-21.59.29:511][348]LogPlayLevel: PIE: World Init took: (0.000616s)
+[2016.04.18-21.59.29:511][348]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/StarterContent/Maps/Minimal_Default.Minimal_Default to /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default (0.012744s)
+[2016.04.18-21.59.29:539][348]LogInit: XAudio2 using 'Speakers (Realtek High Definition Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
+[2016.04.18-21.59.29:545][348]LogInit: FAudioDevice initialized.
+[2016.04.18-21.59.29:572][348]LogWorld: Game class is 'simGameMode_C'
+[2016.04.18-21.59.29:574][348]LogWorld: Bringing World /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default up for play (max tick rate 0) at 2016.04.18-23.59.29
+[2016.04.18-21.59.29:575][348]LogWorld: Bringing up level for play took: 0.001322
+[2016.04.18-21.59.29:577][348]PIE: Info Play in editor start time for /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default -0.17
+[2016.04.18-21.59.29:577][348]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-21.59.51:227][541]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-21.59.54:704][541]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-21.59.56:283][694]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-21.59.56:283][694]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2016.04.18-21.59.56:283][694]PIE: New page: PIE session: Minimal_Default (Apr 19, 2016, 12:59:56 AM)
+[2016.04.18-21.59.56:284][694]LogPlayLevel: Creating play world package: /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default
+[2016.04.18-21.59.56:295][694]LogPlayLevel: PIE: StaticDuplicateObject took: (0.011163s)
+[2016.04.18-21.59.56:295][694]LogAIModule: Creating AISystem for world Minimal_Default
+[2016.04.18-21.59.56:295][694]LogPlayLevel: PIE: World Init took: (0.000506s)
+[2016.04.18-21.59.56:295][694]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/StarterContent/Maps/Minimal_Default.Minimal_Default to /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default (0.011843s)
+[2016.04.18-21.59.56:322][694]LogInit: XAudio2 using 'Speakers (Realtek High Definition Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
+[2016.04.18-21.59.56:328][694]LogInit: FAudioDevice initialized.
+[2016.04.18-21.59.56:359][694]LogWorld: Game class is 'simGameMode_C'
+[2016.04.18-21.59.56:361][694]LogWorld: Bringing World /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default up for play (max tick rate 0) at 2016.04.18-23.59.56
+[2016.04.18-21.59.56:361][694]LogWorld: Bringing up level for play took: 0.001143
+[2016.04.18-21.59.56:363][694]PIE: Info Play in editor start time for /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default 0.616
+[2016.04.18-21.59.56:363][694]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-22.00.29:188][139]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-22.00.29:379][139]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-22.00.34:195][612]BlueprintLog: New page: Compile TreeBP
+[2016.04.18-22.00.34:353][612]BlueprintEditorCompileResults: Info [3354.56] Compile of TreeBP successful! [in 158 ms]
+[2016.04.18-22.00.34:757][643]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/TreeBP" FILE="../../../../../../TreeEvolution/EvolutionTree/Content/TreeBP.uasset" SILENT=true
+[2016.04.18-22.00.34:800][643]LogSavePackage: Save=33.00ms
+[2016.04.18-22.00.34:800][643]LogSavePackage: Moving '../../../../../../TreeEvolution/EvolutionTree/Saved/TreeBP9B06D5B04C5C6AE43E3830B73CE2A939.tmp' to '../../../../../../TreeEvolution/EvolutionTree/Content/TreeBP.uasset'
+[2016.04.18-22.00.34:801][643]LogSavePackage: Total save time: 43.72ms
+[2016.04.18-22.00.34:801][643]LogSavePackage:Display: Finished SavePackage ../../../../../../TreeEvolution/EvolutionTree/Content/TreeBP.uasset
+[2016.04.18-22.00.36:205][776]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-22.00.36:205][776]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2016.04.18-22.00.36:205][776]PIE: New page: PIE session: Minimal_Default (Apr 19, 2016, 1:00:36 AM)
+[2016.04.18-22.00.36:205][776]LogPlayLevel: Creating play world package: /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default
+[2016.04.18-22.00.36:217][776]LogPlayLevel: PIE: StaticDuplicateObject took: (0.011567s)
+[2016.04.18-22.00.36:217][776]LogAIModule: Creating AISystem for world Minimal_Default
+[2016.04.18-22.00.36:217][776]LogPlayLevel: PIE: World Init took: (0.000483s)
+[2016.04.18-22.00.36:218][776]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/StarterContent/Maps/Minimal_Default.Minimal_Default to /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default (0.012293s)
+[2016.04.18-22.00.36:244][776]LogInit: XAudio2 using 'Speakers (Realtek High Definition Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
+[2016.04.18-22.00.36:250][776]LogInit: FAudioDevice initialized.
+[2016.04.18-22.00.36:279][776]LogWorld: Game class is 'simGameMode_C'
+[2016.04.18-22.00.36:281][776]LogWorld: Bringing World /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default up for play (max tick rate 0) at 2016.04.19-00.00.36
+[2016.04.18-22.00.36:281][776]LogWorld: Bringing up level for play took: 0.001035
+[2016.04.18-22.00.36:283][776]PIE: Info Play in editor start time for /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default 0.535
+[2016.04.18-22.00.36:283][776]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-22.00.58:546][951]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-22.00.59:089][951]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-22.01.02:702][296]BlueprintLog: New page: Compile TreeBP
+[2016.04.18-22.01.02:860][296]BlueprintEditorCompileResults: Info [3383.06] Compile of TreeBP successful! [in 157 ms]
+[2016.04.18-22.01.03:277][328]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/TreeBP" FILE="../../../../../../TreeEvolution/EvolutionTree/Content/TreeBP.uasset" SILENT=true
+[2016.04.18-22.01.03:320][328]LogSavePackage: Save=32.78ms
+[2016.04.18-22.01.03:320][328]LogSavePackage: Moving '../../../../../../TreeEvolution/EvolutionTree/Saved/TreeBP6511E17E442CEE94CB74BBA226937EE0.tmp' to '../../../../../../TreeEvolution/EvolutionTree/Content/TreeBP.uasset'
+[2016.04.18-22.01.03:321][328]LogSavePackage: Total save time: 41.65ms
+[2016.04.18-22.01.03:321][328]LogSavePackage:Display: Finished SavePackage ../../../../../../TreeEvolution/EvolutionTree/Content/TreeBP.uasset
+[2016.04.18-22.01.05:125][499]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-22.01.05:125][499]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2016.04.18-22.01.05:125][499]PIE: New page: PIE session: Minimal_Default (Apr 19, 2016, 1:01:05 AM)
+[2016.04.18-22.01.05:125][499]LogPlayLevel: Creating play world package: /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default
+[2016.04.18-22.01.05:136][499]LogPlayLevel: PIE: StaticDuplicateObject took: (0.010936s)
+[2016.04.18-22.01.05:137][499]LogAIModule: Creating AISystem for world Minimal_Default
+[2016.04.18-22.01.05:137][499]LogPlayLevel: PIE: World Init took: (0.000485s)
+[2016.04.18-22.01.05:137][499]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/StarterContent/Maps/Minimal_Default.Minimal_Default to /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default (0.011603s)
+[2016.04.18-22.01.05:165][499]LogInit: XAudio2 using 'Speakers (Realtek High Definition Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
+[2016.04.18-22.01.05:171][499]LogInit: FAudioDevice initialized.
+[2016.04.18-22.01.05:203][499]LogWorld: Game class is 'simGameMode_C'
+[2016.04.18-22.01.05:204][499]LogWorld: Bringing World /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default up for play (max tick rate 0) at 2016.04.19-00.01.05
+[2016.04.18-22.01.05:205][499]LogWorld: Bringing up level for play took: 0.001399
+[2016.04.18-22.01.05:208][499]PIE: Info Play in editor start time for /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default -0.541
+[2016.04.18-22.01.05:208][499]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-22.03.13:529][486]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-22.03.13:603][486]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-22.04.00:223][770]LogHotReload: New module detected: UE4Editor-TreeEvolution-2354.dll
+[2016.04.18-22.04.01:233][774]LogHotReload: Starting Hot-Reload from IDE
+[2016.04.18-22.04.01:353][774]LogContentBrowser: Native class hierarchy updated for 'TreeEvolution' in 0.0007 seconds. Added 5 classes and 2 folders.
+[2016.04.18-22.04.01:357][774]Warning: HotReload successful (13 functions remapped  0 scriptstructs remapped)
+[2016.04.18-22.04.01:647][774]LogContentBrowser: Native class hierarchy populated in 0.0082 seconds. Added 1987 classes and 351 folders.
+[2016.04.18-22.04.01:661][774]Warning: HotReload took 6277438562204192487878988888393020692503707483087375482269988814848.0s.
+[2016.04.18-22.04.03:517][897]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-22.04.03:517][897]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2016.04.18-22.04.03:517][897]PIE: New page: PIE session: Minimal_Default (Apr 19, 2016, 1:04:03 AM)
+[2016.04.18-22.04.03:517][897]LogPlayLevel: Creating play world package: /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default
+[2016.04.18-22.04.03:529][897]LogPlayLevel: PIE: StaticDuplicateObject took: (0.011314s)
+[2016.04.18-22.04.03:529][897]LogAIModule: Creating AISystem for world Minimal_Default
+[2016.04.18-22.04.03:529][897]LogPlayLevel: PIE: World Init took: (0.000428s)
+[2016.04.18-22.04.03:529][897]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/StarterContent/Maps/Minimal_Default.Minimal_Default to /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default (0.011904s)
+[2016.04.18-22.04.03:587][897]LogInit: XAudio2 using 'Speakers (Realtek High Definition Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
+[2016.04.18-22.04.03:593][897]LogInit: FAudioDevice initialized.
+[2016.04.18-22.04.03:624][897]LogWorld: Game class is 'simGameMode_C'
+[2016.04.18-22.04.03:626][897]LogWorld: Bringing World /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default up for play (max tick rate 0) at 2016.04.19-00.04.03
+[2016.04.18-22.04.03:626][897]LogWorld: Bringing up level for play took: 0.001095
+[2016.04.18-22.04.03:628][897]PIE: Info Play in editor start time for /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default -0.122
+[2016.04.18-22.04.03:628][897]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-22.04.12:593][128]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-22.04.12:680][128]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-22.04.16:587][485]BlueprintLog: New page: Compile TreeBP
+[2016.04.18-22.04.16:751][485]BlueprintEditorCompileResults: Info [3576.95] Compile of TreeBP successful! [in 163 ms]
+[2016.04.18-22.04.17:158][515]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/TreeBP" FILE="../../../../../../TreeEvolution/EvolutionTree/Content/TreeBP.uasset" SILENT=true
+[2016.04.18-22.04.17:201][515]LogSavePackage: Save=33.30ms
+[2016.04.18-22.04.17:201][515]LogSavePackage: Moving '../../../../../../TreeEvolution/EvolutionTree/Saved/TreeBP8E69BAB74BCEC7C2C1EE8DBE86C61C20.tmp' to '../../../../../../TreeEvolution/EvolutionTree/Content/TreeBP.uasset'
+[2016.04.18-22.04.17:202][515]LogSavePackage: Total save time: 41.36ms
+[2016.04.18-22.04.17:202][515]LogSavePackage:Display: Finished SavePackage ../../../../../../TreeEvolution/EvolutionTree/Content/TreeBP.uasset
+[2016.04.18-22.04.19:004][689]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-22.04.19:004][689]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2016.04.18-22.04.19:004][689]PIE: New page: PIE session: Minimal_Default (Apr 19, 2016, 1:04:19 AM)
+[2016.04.18-22.04.19:004][689]LogPlayLevel: Creating play world package: /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default
+[2016.04.18-22.04.19:015][689]LogPlayLevel: PIE: StaticDuplicateObject took: (0.011040s)
+[2016.04.18-22.04.19:015][689]LogAIModule: Creating AISystem for world Minimal_Default
+[2016.04.18-22.04.19:015][689]LogPlayLevel: PIE: World Init took: (0.000493s)
+[2016.04.18-22.04.19:016][689]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/StarterContent/Maps/Minimal_Default.Minimal_Default to /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default (0.011824s)
+[2016.04.18-22.04.19:040][689]LogInit: XAudio2 using 'Speakers (Realtek High Definition Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
+[2016.04.18-22.04.19:046][689]LogInit: FAudioDevice initialized.
+[2016.04.18-22.04.19:075][689]LogWorld: Game class is 'simGameMode_C'
+[2016.04.18-22.04.19:076][689]LogWorld: Bringing World /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default up for play (max tick rate 0) at 2016.04.19-00.04.19
+[2016.04.18-22.04.19:076][689]LogWorld: Bringing up level for play took: 0.001071
+[2016.04.18-22.04.19:079][689]PIE: Info Play in editor start time for /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default -0.672
+[2016.04.18-22.04.19:079][689]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-22.17.28:930][809]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-22.17.29:013][809]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-22.19.30:573][247]LogHotReload: New module detected: UE4Editor-TreeEvolution-5673.dll
+[2016.04.18-22.19.31:245][250]LogHotReload: Starting Hot-Reload from IDE
+[2016.04.18-22.19.31:312][250]LogClass: Could not find existing class Tree in package /Script/TreeEvolution for HotReload, assuming new class
+[2016.04.18-22.19.31:312][250]LogClass: Function calculateHits is new.
+[2016.04.18-22.19.31:312][250]LogClass: Function calculateHitsStraightAbove is new.
+[2016.04.18-22.19.31:312][250]LogClass: Function duplicate is new.
+[2016.04.18-22.19.31:312][250]LogClass: Function hemisphereHits is new.
+[2016.04.18-22.19.31:312][250]LogClass: Function mutate is new.
+[2016.04.18-22.19.31:321][250]LogHotReload: Re-instancing Tree after hot-reload.
+[2016.04.18-22.19.31:539][250]LogContentBrowser: Native class hierarchy updated for 'TreeEvolution' in 0.0007 seconds. Added 5 classes and 2 folders.
+[2016.04.18-22.19.31:542][250]Warning: HotReload successful (8 functions remapped  0 scriptstructs remapped)
+[2016.04.18-22.19.31:758][250]LogContentBrowser: Native class hierarchy populated in 0.0070 seconds. Added 1987 classes and 351 folders.
+[2016.04.18-22.19.31:781][250]Warning: HotReload took 6277438562204192487878988888393020692503707483087375482269988814848.0s.
+[2016.04.18-22.19.35:161][517]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-22.19.35:161][517]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2016.04.18-22.19.35:161][517]PIE: New page: PIE session: Minimal_Default (Apr 19, 2016, 1:19:35 AM)
+[2016.04.18-22.19.35:161][517]LogPlayLevel: Creating play world package: /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default
+[2016.04.18-22.19.35:173][517]LogPlayLevel: PIE: StaticDuplicateObject took: (0.011532s)
+[2016.04.18-22.19.35:173][517]LogAIModule: Creating AISystem for world Minimal_Default
+[2016.04.18-22.19.35:173][517]LogPlayLevel: PIE: World Init took: (0.000482s)
+[2016.04.18-22.19.35:174][517]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/StarterContent/Maps/Minimal_Default.Minimal_Default to /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default (0.012434s)
+[2016.04.18-22.19.35:224][517]LogInit: XAudio2 using 'Speakers (Realtek High Definition Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
+[2016.04.18-22.19.35:230][517]LogInit: FAudioDevice initialized.
+[2016.04.18-22.19.35:260][517]LogWorld: Game class is 'simGameMode_C'
+[2016.04.18-22.19.35:261][517]LogWorld: Bringing World /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default up for play (max tick rate 0) at 2016.04.19-00.19.35
+[2016.04.18-22.19.35:262][517]LogWorld: Bringing up level for play took: 0.001146
+[2016.04.18-22.19.35:264][517]PIE: Info Play in editor start time for /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default -0.497
+[2016.04.18-22.19.35:264][517]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-22.20.32:919][391]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-22.20.33:000][391]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-22.21.24:498][625]LogHotReload: New module detected: UE4Editor-TreeEvolution-3609.dll
+[2016.04.18-22.21.25:174][628]LogHotReload: Starting Hot-Reload from IDE
+[2016.04.18-22.21.25:264][628]LogContentBrowser: Native class hierarchy updated for 'TreeEvolution' in 0.0008 seconds. Added 5 classes and 2 folders.
+[2016.04.18-22.21.25:271][628]Warning: HotReload successful (13 functions remapped  0 scriptstructs remapped)
+[2016.04.18-22.21.25:505][628]LogContentBrowser: Native class hierarchy populated in 0.0064 seconds. Added 1987 classes and 351 folders.
+[2016.04.18-22.21.25:518][628]Warning: HotReload took 6277438562204192487878988888393020692503707483087375482269988814848.0s.
+[2016.04.18-22.21.26:770][714]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-22.21.26:770][714]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2016.04.18-22.21.26:770][714]PIE: New page: PIE session: Minimal_Default (Apr 19, 2016, 1:21:26 AM)
+[2016.04.18-22.21.26:770][714]LogPlayLevel: Creating play world package: /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default
+[2016.04.18-22.21.26:782][714]LogPlayLevel: PIE: StaticDuplicateObject took: (0.012013s)
+[2016.04.18-22.21.26:783][714]LogAIModule: Creating AISystem for world Minimal_Default
+[2016.04.18-22.21.26:783][714]LogPlayLevel: PIE: World Init took: (0.000980s)
+[2016.04.18-22.21.26:784][714]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/StarterContent/Maps/Minimal_Default.Minimal_Default to /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default (0.013228s)
+[2016.04.18-22.21.26:845][714]LogInit: XAudio2 using 'Speakers (Realtek High Definition Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
+[2016.04.18-22.21.26:853][714]LogInit: FAudioDevice initialized.
+[2016.04.18-22.21.26:880][714]LogWorld: Game class is 'simGameMode_C'
+[2016.04.18-22.21.26:882][714]LogWorld: Bringing World /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default up for play (max tick rate 0) at 2016.04.19-00.21.26
+[2016.04.18-22.21.26:883][714]LogWorld: Bringing up level for play took: 0.001372
+[2016.04.18-22.21.26:886][714]PIE: Info Play in editor start time for /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default 1.122
+[2016.04.18-22.21.26:886][714]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-22.27.24:572][258]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-22.27.24:648][258]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-22.27.41:634][466]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/testVectorActor" FILE="../../../../../../TreeEvolution/EvolutionTree/Content/testVectorActor.uasset" SILENT=true
+[2016.04.18-22.27.41:643][466]LogSavePackage: Save=7.78ms
+[2016.04.18-22.27.41:643][466]LogSavePackage: Moving '../../../../../../TreeEvolution/EvolutionTree/Saved/testVectorActor853C958C48182F7B7C96D088D4699776.tmp' to '../../../../../../TreeEvolution/EvolutionTree/Content/testVectorActor.uasset'
+[2016.04.18-22.27.41:644][466]LogSavePackage: Total save time: 8.70ms
+[2016.04.18-22.27.41:644][466]LogSavePackage:Display: Finished SavePackage ../../../../../../TreeEvolution/EvolutionTree/Content/testVectorActor.uasset
+[2016.04.18-22.27.45:635][770]BlueprintLog: New page: Compile testVectorActor
+[2016.04.18-22.27.45:787][770]BlueprintEditorCompileResults: Info [4985.97] Compile of testVectorActor successful! [in 152 ms]
+[2016.04.18-22.27.46:154][791]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/testVectorActor" FILE="../../../../../../TreeEvolution/EvolutionTree/Content/testVectorActor.uasset" SILENT=true
+[2016.04.18-22.27.46:174][791]LogSavePackage: Save=8.66ms
+[2016.04.18-22.27.46:174][791]LogSavePackage: Moving '../../../../../../TreeEvolution/EvolutionTree/Saved/testVectorActorD77E15DB421B2AAD186FB08CB7039599.tmp' to '../../../../../../TreeEvolution/EvolutionTree/Content/testVectorActor.uasset'
+[2016.04.18-22.27.46:175][791]LogSavePackage: Total save time: 20.04ms
+[2016.04.18-22.27.46:175][791]LogSavePackage:Display: Finished SavePackage ../../../../../../TreeEvolution/EvolutionTree/Content/testVectorActor.uasset
+[2016.04.18-22.27.55:464][751]BlueprintLog: New page: Compile testVectorActor
+[2016.04.18-22.27.55:610][751]BlueprintEditorCompileResults: Info [4995.79] Compile of testVectorActor successful! [in 145 ms]
+[2016.04.18-22.27.55:862][769]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/testVectorActor" FILE="../../../../../../TreeEvolution/EvolutionTree/Content/testVectorActor.uasset" SILENT=true
+[2016.04.18-22.27.55:879][769]LogSavePackage: Save=9.14ms
+[2016.04.18-22.27.55:879][769]LogSavePackage: Moving '../../../../../../TreeEvolution/EvolutionTree/Saved/testVectorActor3F2C06084B69AE2E2618F896322B2D46.tmp' to '../../../../../../TreeEvolution/EvolutionTree/Content/testVectorActor.uasset'
+[2016.04.18-22.27.55:880][769]LogSavePackage: Total save time: 17.98ms
+[2016.04.18-22.27.55:880][769]LogSavePackage:Display: Finished SavePackage ../../../../../../TreeEvolution/EvolutionTree/Content/testVectorActor.uasset
+[2016.04.18-22.28.07:514][917]BlueprintLog: New page: Compile testVectorActor
+[2016.04.18-22.28.07:607][917]BlueprintEditorCompileResults: Info [5007.79] Compile of testVectorActor successful! [in 92 ms]
+[2016.04.18-22.28.07:987][941]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/testVectorActor" FILE="../../../../../../TreeEvolution/EvolutionTree/Content/testVectorActor.uasset" SILENT=true
+[2016.04.18-22.28.08:005][941]LogSavePackage: Save=10.04ms
+[2016.04.18-22.28.08:005][941]LogSavePackage: Moving '../../../../../../TreeEvolution/EvolutionTree/Saved/testVectorActor39A15B494CA6206997EF0DB284BBC4E2.tmp' to '../../../../../../TreeEvolution/EvolutionTree/Content/testVectorActor.uasset'
+[2016.04.18-22.28.08:006][941]LogSavePackage: Total save time: 17.87ms
+[2016.04.18-22.28.08:006][941]LogSavePackage:Display: Finished SavePackage ../../../../../../TreeEvolution/EvolutionTree/Content/testVectorActor.uasset
+[2016.04.18-22.28.47:849][ 77]BlueprintLog: New page: Compile testVectorActor
+[2016.04.18-22.28.47:853][ 77]LogBlueprint:Error: [compiler testVectorActor] Error The current value of the ' Object Types ' pin is invalid: Array inputs (like 'Object Types') must have an input wired into them (try connecting a MakeArray node).
+[2016.04.18-22.28.48:084][ 77]LogBlueprint:Warning: [compiler testVectorActor] Warning [5048.27] Compile of testVectorActor failed. 1 Fatal Issue(s) 0 Warning(s) [in 234 ms]
+[2016.04.18-22.28.48:084][ 77]BlueprintEditorCompileResults:Error: Error The current value of the ' Object Types ' pin is invalid: Array inputs (like 'Object Types') must have an input wired into them (try connecting a MakeArray node).
+[2016.04.18-22.28.48:084][ 77]BlueprintEditorCompileResults:Warning: Warning [5048.27] Compile of testVectorActor failed. 1 Fatal Issue(s) 0 Warning(s) [in 234 ms]
+[2016.04.18-22.28.48:320][ 96]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/testVectorActor" FILE="../../../../../../TreeEvolution/EvolutionTree/Content/testVectorActor.uasset" SILENT=true
+[2016.04.18-22.28.48:343][ 96]LogSavePackage: Save=16.02ms
+[2016.04.18-22.28.48:343][ 96]LogSavePackage: Moving '../../../../../../TreeEvolution/EvolutionTree/Saved/testVectorActor9E76E2A140342B0D43E2FEAD6122A7AB.tmp' to '../../../../../../TreeEvolution/EvolutionTree/Content/testVectorActor.uasset'
+[2016.04.18-22.28.48:344][ 96]LogSavePackage: Total save time: 23.68ms
+[2016.04.18-22.28.48:344][ 96]LogSavePackage:Display: Finished SavePackage ../../../../../../TreeEvolution/EvolutionTree/Content/testVectorActor.uasset
+[2016.04.18-22.29.03:858][821]BlueprintLog: New page: Compile testVectorActor
+[2016.04.18-22.29.03:953][821]BlueprintEditorCompileResults: Info [5064.14] Compile of testVectorActor successful! [in 95 ms]
+[2016.04.18-22.29.04:362][859]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/testVectorActor" FILE="../../../../../../TreeEvolution/EvolutionTree/Content/testVectorActor.uasset" SILENT=true
+[2016.04.18-22.29.04:390][859]LogSavePackage: Save=18.58ms
+[2016.04.18-22.29.04:390][859]LogSavePackage: Moving '../../../../../../TreeEvolution/EvolutionTree/Saved/testVectorActor029926BA49D9B5EDEC21A685E9902750.tmp' to '../../../../../../TreeEvolution/EvolutionTree/Content/testVectorActor.uasset'
+[2016.04.18-22.29.04:391][859]LogSavePackage: Total save time: 27.09ms
+[2016.04.18-22.29.04:391][859]LogSavePackage:Display: Finished SavePackage ../../../../../../TreeEvolution/EvolutionTree/Content/testVectorActor.uasset
+[2016.04.18-22.29.09:292][267]LogSavePackage: Save=147.64ms
+[2016.04.18-22.29.09:292][267]LogSavePackage: Moving '../../../../../../TreeEvolution/EvolutionTree/Saved/Minimal_Default95E78682413E2C3054FFCBA8FF3C398D.tmp' to '../../../../../../TreeEvolution/EvolutionTree/Content/StarterContent/Maps/Minimal_Default.umap'
+[2016.04.18-22.29.09:293][267]LogSavePackage: Total save time: 301.31ms
+[2016.04.18-22.29.09:293][267]LogSavePackage:Display: Finished SavePackage ../../../../../../TreeEvolution/EvolutionTree/Content/StarterContent/Maps/Minimal_Default.umap
+[2016.04.18-22.29.09:315][267]LogFileHelpers: Saving map 'Minimal_Default' took 0.687
+[2016.04.18-22.29.10:673][421]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-22.29.10:673][421]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2016.04.18-22.29.10:673][421]PIE: New page: SIE session: Minimal_Default (Apr 19, 2016, 1:29:10 AM)
+[2016.04.18-22.29.10:673][421]LogPlayLevel: Creating play world package: /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default
+[2016.04.18-22.29.10:684][421]LogPlayLevel: PIE: StaticDuplicateObject took: (0.011146s)
+[2016.04.18-22.29.10:684][421]LogAIModule: Creating AISystem for world Minimal_Default
+[2016.04.18-22.29.10:684][421]LogPlayLevel: PIE: World Init took: (0.000502s)
+[2016.04.18-22.29.10:685][421]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/StarterContent/Maps/Minimal_Default.Minimal_Default to /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default (0.011850s)
+[2016.04.18-22.29.10:711][421]LogSelection:Warning: PIE object was selected: "testVectorActor_C /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default:PersistentLevel.testVectorActor_13"
+[2016.04.18-22.29.10:713][421]LogInit: XAudio2 using 'Speakers (Realtek High Definition Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
+[2016.04.18-22.29.10:719][421]LogInit: FAudioDevice initialized.
+[2016.04.18-22.29.10:747][421]LogWorld: Game class is 'simGameMode_C'
+[2016.04.18-22.29.10:749][421]LogWorld: Bringing World /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default up for play (max tick rate 0) at 2016.04.19-00.29.10
+[2016.04.18-22.29.10:749][421]LogWorld: Bringing up level for play took: 0.001117
+[2016.04.18-22.29.10:750][421]LogScript:Warning: Accessed None trying to read property CallFunc_K2_GetPawn_ReturnValue
+	simGameController_C /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default:PersistentLevel.simGameController_C_21
+	Function /Game/simGameController.simGameController_C:toggleControlCharacter:0147
+[2016.04.18-22.29.10:750][421]PIE:Error: Error Blueprint Runtime Error: Accessed None trying to read property CallFunc_K2_GetPawn_ReturnValue from function: 'toggleControlCharacter' from node: Enable Input in graph: toggleControlCharacter in object: simGameController
+[2016.04.18-22.29.10:750][421]LogScript:Warning: Accessed None trying to read property CallFunc_K2_GetPawn_ReturnValue
+	simGameController_C /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default:PersistentLevel.simGameController_C_21
+	Function /Game/simGameController.simGameController_C:toggleControlCharacter:0147
+[2016.04.18-22.29.10:750][421]PIE:Error: Error Blueprint Runtime Error: Accessed None trying to read property CallFunc_K2_GetPawn_ReturnValue from function: 'toggleControlCharacter' from node: Enable Input in graph: toggleControlCharacter in object: simGameController
+[2016.04.18-22.29.10:751][421]PIE: Info Play in editor start time for /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default 0.982
+[2016.04.18-22.29.10:811][421]LogSelection:Warning: PIE object was selected: "testVectorActor_C /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default:PersistentLevel.testVectorActor_13"
+[2016.04.18-22.29.10:812][421]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-22.29.13:954][619]LogEditorViewport: Clicking on Actor (context menu): InstancedFoliageActor (InstancedFoliageActor)
+[2016.04.18-22.29.13:954][619]LogSelection:Warning: PIE object was selected: "InstancedFoliageActor /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default:PersistentLevel.InstancedFoliageActor_0"
+[2016.04.18-22.29.14:498][639]LogEditorViewport: Clicking on Actor (context menu): InstancedFoliageActor (InstancedFoliageActor)
+[2016.04.18-22.29.16:888][815]LogEditorViewport: Clicking on Actor (context menu): InstancedFoliageActor (InstancedFoliageActor)
+[2016.04.18-22.29.20:438][ 77]LogEditorViewport: Clicking on Actor (context menu): InstancedFoliageActor (InstancedFoliageActor)
+[2016.04.18-22.29.21:282][133]LogEditorViewport: Clicking on Actor (context menu): InstancedFoliageActor (InstancedFoliageActor)
+[2016.04.18-22.29.21:803][156]LogEditorViewport: Clicking on Actor (context menu): InstancedFoliageActor (InstancedFoliageActor)
+[2016.04.18-22.29.22:688][216]LogEditorViewport: Clicking on Actor (context menu): InstancedFoliageActor (InstancedFoliageActor)
+[2016.04.18-22.29.33:355][283]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-22.29.33:394][283]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-22.29.37:388][512]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-22.29.37:388][512]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2016.04.18-22.29.37:388][512]PIE: New page: SIE session: Minimal_Default (Apr 19, 2016, 1:29:37 AM)
+[2016.04.18-22.29.37:388][512]LogPlayLevel: Creating play world package: /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default
+[2016.04.18-22.29.37:400][512]LogPlayLevel: PIE: StaticDuplicateObject took: (0.011635s)
+[2016.04.18-22.29.37:401][512]LogAIModule: Creating AISystem for world Minimal_Default
+[2016.04.18-22.29.37:401][512]LogPlayLevel: PIE: World Init took: (0.000582s)
+[2016.04.18-22.29.37:401][512]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/StarterContent/Maps/Minimal_Default.Minimal_Default to /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default (0.012395s)
+[2016.04.18-22.29.37:429][512]LogInit: XAudio2 using 'Speakers (Realtek High Definition Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
+[2016.04.18-22.29.37:435][512]LogInit: FAudioDevice initialized.
+[2016.04.18-22.29.37:465][512]LogWorld: Game class is 'simGameMode_C'
+[2016.04.18-22.29.37:467][512]LogWorld: Bringing World /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default up for play (max tick rate 0) at 2016.04.19-00.29.37
+[2016.04.18-22.29.37:467][512]LogWorld: Bringing up level for play took: 0.001172
+[2016.04.18-22.29.37:468][512]LogScript:Warning: Accessed None trying to read property CallFunc_K2_GetPawn_ReturnValue
+	simGameController_C /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default:PersistentLevel.simGameController_C_22
+	Function /Game/simGameController.simGameController_C:toggleControlCharacter:0147
+[2016.04.18-22.29.37:468][512]PIE:Error: Error Blueprint Runtime Error: Accessed None trying to read property CallFunc_K2_GetPawn_ReturnValue from function: 'toggleControlCharacter' from node: Enable Input in graph: toggleControlCharacter in object: simGameController
+[2016.04.18-22.29.37:468][512]LogScript:Warning: Accessed None trying to read property CallFunc_K2_GetPawn_ReturnValue
+	simGameController_C /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default:PersistentLevel.simGameController_C_22
+	Function /Game/simGameController.simGameController_C:toggleControlCharacter:0147
+[2016.04.18-22.29.37:468][512]PIE:Error: Error Blueprint Runtime Error: Accessed None trying to read property CallFunc_K2_GetPawn_ReturnValue from function: 'toggleControlCharacter' from node: Enable Input in graph: toggleControlCharacter in object: simGameController
+[2016.04.18-22.29.37:469][512]PIE: Info Play in editor start time for /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default -0.3
+[2016.04.18-22.29.37:470][512]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-22.29.39:836][670]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-22.29.39:908][670]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-22.30.34:995][634]BlueprintLog: New page: Compile testVectorActor
+[2016.04.18-22.30.35:095][634]BlueprintEditorCompileResults: Info [5155.28] Compile of testVectorActor successful! [in 100 ms]
+[2016.04.18-22.30.35:705][656]LogSavePackage: Save=148.99ms
+[2016.04.18-22.30.35:705][656]LogSavePackage: Moving '../../../../../../TreeEvolution/EvolutionTree/Saved/Minimal_Default2D44881B4ECC9BF903F691AA6D44D847.tmp' to '../../../../../../TreeEvolution/EvolutionTree/Content/StarterContent/Maps/Minimal_Default.umap'
+[2016.04.18-22.30.35:706][656]LogSavePackage: Total save time: 157.98ms
+[2016.04.18-22.30.35:706][656]LogSavePackage:Display: Finished SavePackage ../../../../../../TreeEvolution/EvolutionTree/Content/StarterContent/Maps/Minimal_Default.umap
+[2016.04.18-22.30.35:726][656]LogFileHelpers: Saving map 'Minimal_Default' took 0.244
+[2016.04.18-22.30.35:731][656]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/testVectorActor" FILE="../../../../../../TreeEvolution/EvolutionTree/Content/testVectorActor.uasset" SILENT=true
+[2016.04.18-22.30.35:759][656]LogSavePackage: Save=20.42ms
+[2016.04.18-22.30.35:759][656]LogSavePackage: Moving '../../../../../../TreeEvolution/EvolutionTree/Saved/testVectorActor37EC693744640AB5FEF47EB0EC93B6E9.tmp' to '../../../../../../TreeEvolution/EvolutionTree/Content/testVectorActor.uasset'
+[2016.04.18-22.30.35:760][656]LogSavePackage: Total save time: 28.25ms
+[2016.04.18-22.30.35:760][656]LogSavePackage:Display: Finished SavePackage ../../../../../../TreeEvolution/EvolutionTree/Content/testVectorActor.uasset
+[2016.04.18-22.30.37:660][771]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-22.30.37:660][771]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2016.04.18-22.30.37:660][771]PIE: New page: SIE session: Minimal_Default (Apr 19, 2016, 1:30:37 AM)
+[2016.04.18-22.30.37:660][771]LogPlayLevel: Creating play world package: /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default
+[2016.04.18-22.30.37:671][771]LogPlayLevel: PIE: StaticDuplicateObject took: (0.011192s)
+[2016.04.18-22.30.37:672][771]LogAIModule: Creating AISystem for world Minimal_Default
+[2016.04.18-22.30.37:672][771]LogPlayLevel: PIE: World Init took: (0.000470s)
+[2016.04.18-22.30.37:672][771]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/StarterContent/Maps/Minimal_Default.Minimal_Default to /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default (0.011842s)
+[2016.04.18-22.30.37:701][771]LogInit: XAudio2 using 'Speakers (Realtek High Definition Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
+[2016.04.18-22.30.37:707][771]LogInit: FAudioDevice initialized.
+[2016.04.18-22.30.37:734][771]LogWorld: Game class is 'simGameMode_C'
+[2016.04.18-22.30.37:735][771]LogWorld: Bringing World /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default up for play (max tick rate 0) at 2016.04.19-00.30.37
+[2016.04.18-22.30.37:736][771]LogWorld: Bringing up level for play took: 0.001089
+[2016.04.18-22.30.37:737][771]LogScript:Warning: Accessed None trying to read property CallFunc_K2_GetPawn_ReturnValue
+	simGameController_C /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default:PersistentLevel.simGameController_C_23
+	Function /Game/simGameController.simGameController_C:toggleControlCharacter:0147
+[2016.04.18-22.30.37:737][771]PIE:Error: Error Blueprint Runtime Error: Accessed None trying to read property CallFunc_K2_GetPawn_ReturnValue from function: 'toggleControlCharacter' from node: Enable Input in graph: toggleControlCharacter in object: simGameController
+[2016.04.18-22.30.37:737][771]LogScript:Warning: Accessed None trying to read property CallFunc_K2_GetPawn_ReturnValue
+	simGameController_C /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default:PersistentLevel.simGameController_C_23
+	Function /Game/simGameController.simGameController_C:toggleControlCharacter:0147
+[2016.04.18-22.30.37:737][771]PIE:Error: Error Blueprint Runtime Error: Accessed None trying to read property CallFunc_K2_GetPawn_ReturnValue from function: 'toggleControlCharacter' from node: Enable Input in graph: toggleControlCharacter in object: simGameController
+[2016.04.18-22.30.37:738][771]PIE: Info Play in editor start time for /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default -0.032
+[2016.04.18-22.30.37:740][771]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-22.30.40:992][987]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-22.30.41:026][987]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-22.30.52:495][566]BlueprintLog: New page: Compile testVectorActor
+[2016.04.18-22.30.52:590][566]BlueprintEditorCompileResults: Info [5172.77] Compile of testVectorActor successful! [in 95 ms]
+[2016.04.18-22.30.53:198][586]LogSavePackage: Save=147.09ms
+[2016.04.18-22.30.53:198][586]LogSavePackage: Moving '../../../../../../TreeEvolution/EvolutionTree/Saved/Minimal_DefaultA90DBF78473F4CBF5C022BA4C93A2D82.tmp' to '../../../../../../TreeEvolution/EvolutionTree/Content/StarterContent/Maps/Minimal_Default.umap'
+[2016.04.18-22.30.53:199][586]LogSavePackage: Total save time: 155.83ms
+[2016.04.18-22.30.53:199][586]LogSavePackage:Display: Finished SavePackage ../../../../../../TreeEvolution/EvolutionTree/Content/StarterContent/Maps/Minimal_Default.umap
+[2016.04.18-22.30.53:219][586]LogFileHelpers: Saving map 'Minimal_Default' took 0.238
+[2016.04.18-22.30.53:225][586]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/testVectorActor" FILE="../../../../../../TreeEvolution/EvolutionTree/Content/testVectorActor.uasset" SILENT=true
+[2016.04.18-22.30.53:254][586]LogSavePackage: Save=21.89ms
+[2016.04.18-22.30.53:254][586]LogSavePackage: Moving '../../../../../../TreeEvolution/EvolutionTree/Saved/testVectorActor28A323194819311408613B9BF64E33FF.tmp' to '../../../../../../TreeEvolution/EvolutionTree/Content/testVectorActor.uasset'
+[2016.04.18-22.30.53:255][586]LogSavePackage: Total save time: 29.24ms
+[2016.04.18-22.30.53:255][586]LogSavePackage:Display: Finished SavePackage ../../../../../../TreeEvolution/EvolutionTree/Content/testVectorActor.uasset
+[2016.04.18-22.30.54:428][653]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-22.30.54:428][653]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2016.04.18-22.30.54:428][653]PIE: New page: SIE session: Minimal_Default (Apr 19, 2016, 1:30:54 AM)
+[2016.04.18-22.30.54:428][653]LogPlayLevel: Creating play world package: /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default
+[2016.04.18-22.30.54:439][653]LogPlayLevel: PIE: StaticDuplicateObject took: (0.010750s)
+[2016.04.18-22.30.54:439][653]LogAIModule: Creating AISystem for world Minimal_Default
+[2016.04.18-22.30.54:440][653]LogPlayLevel: PIE: World Init took: (0.000467s)
+[2016.04.18-22.30.54:440][653]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/StarterContent/Maps/Minimal_Default.Minimal_Default to /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default (0.011390s)
+[2016.04.18-22.30.54:468][653]LogInit: XAudio2 using 'Speakers (Realtek High Definition Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
+[2016.04.18-22.30.54:475][653]LogInit: FAudioDevice initialized.
+[2016.04.18-22.30.54:506][653]LogWorld: Game class is 'simGameMode_C'
+[2016.04.18-22.30.54:508][653]LogWorld: Bringing World /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default up for play (max tick rate 0) at 2016.04.19-00.30.54
+[2016.04.18-22.30.54:508][653]LogWorld: Bringing up level for play took: 0.001161
+[2016.04.18-22.30.54:509][653]LogScript:Warning: Accessed None trying to read property CallFunc_K2_GetPawn_ReturnValue
+	simGameController_C /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default:PersistentLevel.simGameController_C_24
+	Function /Game/simGameController.simGameController_C:toggleControlCharacter:0147
+[2016.04.18-22.30.54:509][653]PIE:Error: Error Blueprint Runtime Error: Accessed None trying to read property CallFunc_K2_GetPawn_ReturnValue from function: 'toggleControlCharacter' from node: Enable Input in graph: toggleControlCharacter in object: simGameController
+[2016.04.18-22.30.54:509][653]LogScript:Warning: Accessed None trying to read property CallFunc_K2_GetPawn_ReturnValue
+	simGameController_C /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default:PersistentLevel.simGameController_C_24
+	Function /Game/simGameController.simGameController_C:toggleControlCharacter:0147
+[2016.04.18-22.30.54:509][653]PIE:Error: Error Blueprint Runtime Error: Accessed None trying to read property CallFunc_K2_GetPawn_ReturnValue from function: 'toggleControlCharacter' from node: Enable Input in graph: toggleControlCharacter in object: simGameController
+[2016.04.18-22.30.54:510][653]PIE: Info Play in editor start time for /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default 0.74
+[2016.04.18-22.30.54:512][653]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-22.30.57:185][835]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-22.30.57:222][835]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-22.31.26:281][153]BlueprintLog: New page: Compile testVectorActor
+[2016.04.18-22.31.26:497][153]BlueprintEditorCompileResults: Info [5206.68] Compile of testVectorActor successful! [in 215 ms]
+[2016.04.18-22.31.27:115][174]LogSavePackage: Save=146.54ms
+[2016.04.18-22.31.27:115][174]LogSavePackage: Moving '../../../../../../TreeEvolution/EvolutionTree/Saved/Minimal_Default214EFDD841834F88A922D38D857D75FE.tmp' to '../../../../../../TreeEvolution/EvolutionTree/Content/StarterContent/Maps/Minimal_Default.umap'
+[2016.04.18-22.31.27:117][174]LogSavePackage: Total save time: 155.54ms
+[2016.04.18-22.31.27:117][174]LogSavePackage:Display: Finished SavePackage ../../../../../../TreeEvolution/EvolutionTree/Content/StarterContent/Maps/Minimal_Default.umap
+[2016.04.18-22.31.27:137][174]LogFileHelpers: Saving map 'Minimal_Default' took 0.237
+[2016.04.18-22.31.27:143][174]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/testVectorActor" FILE="../../../../../../TreeEvolution/EvolutionTree/Content/testVectorActor.uasset" SILENT=true
+[2016.04.18-22.31.27:171][174]LogSavePackage: Save=20.40ms
+[2016.04.18-22.31.27:171][174]LogSavePackage: Moving '../../../../../../TreeEvolution/EvolutionTree/Saved/testVectorActorDB2CCECA41E3A5C62BDD9A89789594E5.tmp' to '../../../../../../TreeEvolution/EvolutionTree/Content/testVectorActor.uasset'
+[2016.04.18-22.31.27:172][174]LogSavePackage: Total save time: 27.91ms
+[2016.04.18-22.31.27:172][174]LogSavePackage:Display: Finished SavePackage ../../../../../../TreeEvolution/EvolutionTree/Content/testVectorActor.uasset
+[2016.04.18-22.31.28:632][264]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-22.31.28:632][264]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2016.04.18-22.31.28:632][264]PIE: New page: SIE session: Minimal_Default (Apr 19, 2016, 1:31:28 AM)
+[2016.04.18-22.31.28:632][264]LogPlayLevel: Creating play world package: /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default
+[2016.04.18-22.31.28:643][264]LogPlayLevel: PIE: StaticDuplicateObject took: (0.011250s)
+[2016.04.18-22.31.28:644][264]LogAIModule: Creating AISystem for world Minimal_Default
+[2016.04.18-22.31.28:644][264]LogPlayLevel: PIE: World Init took: (0.000558s)
+[2016.04.18-22.31.28:644][264]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/StarterContent/Maps/Minimal_Default.Minimal_Default to /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default (0.011978s)
+[2016.04.18-22.31.28:672][264]LogInit: XAudio2 using 'Speakers (Realtek High Definition Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
+[2016.04.18-22.31.28:677][264]LogInit: FAudioDevice initialized.
+[2016.04.18-22.31.28:708][264]LogWorld: Game class is 'simGameMode_C'
+[2016.04.18-22.31.28:710][264]LogWorld: Bringing World /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default up for play (max tick rate 0) at 2016.04.19-00.31.28
+[2016.04.18-22.31.28:710][264]LogWorld: Bringing up level for play took: 0.001106
+[2016.04.18-22.31.28:711][264]LogScript:Warning: Accessed None trying to read property CallFunc_K2_GetPawn_ReturnValue
+	simGameController_C /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default:PersistentLevel.simGameController_C_25
+	Function /Game/simGameController.simGameController_C:toggleControlCharacter:0147
+[2016.04.18-22.31.28:711][264]PIE:Error: Error Blueprint Runtime Error: Accessed None trying to read property CallFunc_K2_GetPawn_ReturnValue from function: 'toggleControlCharacter' from node: Enable Input in graph: toggleControlCharacter in object: simGameController
+[2016.04.18-22.31.28:711][264]LogScript:Warning: Accessed None trying to read property CallFunc_K2_GetPawn_ReturnValue
+	simGameController_C /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default:PersistentLevel.simGameController_C_25
+	Function /Game/simGameController.simGameController_C:toggleControlCharacter:0147
+[2016.04.18-22.31.28:711][264]PIE:Error: Error Blueprint Runtime Error: Accessed None trying to read property CallFunc_K2_GetPawn_ReturnValue from function: 'toggleControlCharacter' from node: Enable Input in graph: toggleControlCharacter in object: simGameController
+[2016.04.18-22.31.28:712][264]PIE: Info Play in editor start time for /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default 0.942
+[2016.04.18-22.31.28:713][264]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-22.31.31:584][458]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-22.31.31:619][458]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-22.31.38:260][753]BlueprintLog: New page: Compile testVectorActor
+[2016.04.18-22.31.38:357][753]BlueprintEditorCompileResults: Info [5218.54] Compile of testVectorActor successful! [in 96 ms]
+[2016.04.18-22.31.38:963][772]LogSavePackage: Save=147.67ms
+[2016.04.18-22.31.38:963][772]LogSavePackage: Moving '../../../../../../TreeEvolution/EvolutionTree/Saved/Minimal_Default1C8CFF354A694F4B8DFA509B4EC8B764.tmp' to '../../../../../../TreeEvolution/EvolutionTree/Content/StarterContent/Maps/Minimal_Default.umap'
+[2016.04.18-22.31.38:965][772]LogSavePackage: Total save time: 156.24ms
+[2016.04.18-22.31.38:965][772]LogSavePackage:Display: Finished SavePackage ../../../../../../TreeEvolution/EvolutionTree/Content/StarterContent/Maps/Minimal_Default.umap
+[2016.04.18-22.31.38:985][772]LogFileHelpers: Saving map 'Minimal_Default' took 0.238
+[2016.04.18-22.31.38:991][772]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/testVectorActor" FILE="../../../../../../TreeEvolution/EvolutionTree/Content/testVectorActor.uasset" SILENT=true
+[2016.04.18-22.31.39:020][772]LogSavePackage: Save=20.50ms
+[2016.04.18-22.31.39:020][772]LogSavePackage: Moving '../../../../../../TreeEvolution/EvolutionTree/Saved/testVectorActor8D8A77C2426AECD645CB449125B33B89.tmp' to '../../../../../../TreeEvolution/EvolutionTree/Content/testVectorActor.uasset'
+[2016.04.18-22.31.39:021][772]LogSavePackage: Total save time: 28.76ms
+[2016.04.18-22.31.39:021][772]LogSavePackage:Display: Finished SavePackage ../../../../../../TreeEvolution/EvolutionTree/Content/testVectorActor.uasset
+[2016.04.18-22.31.40:098][836]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-22.31.40:098][836]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2016.04.18-22.31.40:098][836]PIE: New page: SIE session: Minimal_Default (Apr 19, 2016, 1:31:40 AM)
+[2016.04.18-22.31.40:098][836]LogPlayLevel: Creating play world package: /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default
+[2016.04.18-22.31.40:108][836]LogPlayLevel: PIE: StaticDuplicateObject took: (0.010192s)
+[2016.04.18-22.31.40:109][836]LogAIModule: Creating AISystem for world Minimal_Default
+[2016.04.18-22.31.40:109][836]LogPlayLevel: PIE: World Init took: (0.000528s)
+[2016.04.18-22.31.40:109][836]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/StarterContent/Maps/Minimal_Default.Minimal_Default to /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default (0.010886s)
+[2016.04.18-22.31.40:136][836]LogInit: XAudio2 using 'Speakers (Realtek High Definition Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
+[2016.04.18-22.31.40:142][836]LogInit: FAudioDevice initialized.
+[2016.04.18-22.31.40:172][836]LogWorld: Game class is 'simGameMode_C'
+[2016.04.18-22.31.40:174][836]LogWorld: Bringing World /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default up for play (max tick rate 0) at 2016.04.19-00.31.40
+[2016.04.18-22.31.40:174][836]LogWorld: Bringing up level for play took: 0.001246
+[2016.04.18-22.31.40:175][836]LogScript:Warning: Accessed None trying to read property CallFunc_K2_GetPawn_ReturnValue
+	simGameController_C /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default:PersistentLevel.simGameController_C_26
+	Function /Game/simGameController.simGameController_C:toggleControlCharacter:0147
+[2016.04.18-22.31.40:175][836]PIE:Error: Error Blueprint Runtime Error: Accessed None trying to read property CallFunc_K2_GetPawn_ReturnValue from function: 'toggleControlCharacter' from node: Enable Input in graph: toggleControlCharacter in object: simGameController
+[2016.04.18-22.31.40:175][836]LogScript:Warning: Accessed None trying to read property CallFunc_K2_GetPawn_ReturnValue
+	simGameController_C /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default:PersistentLevel.simGameController_C_26
+	Function /Game/simGameController.simGameController_C:toggleControlCharacter:0147
+[2016.04.18-22.31.40:175][836]PIE:Error: Error Blueprint Runtime Error: Accessed None trying to read property CallFunc_K2_GetPawn_ReturnValue from function: 'toggleControlCharacter' from node: Enable Input in graph: toggleControlCharacter in object: simGameController
+[2016.04.18-22.31.40:177][836]PIE: Info Play in editor start time for /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default 0.406
+[2016.04.18-22.31.40:178][836]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-22.31.44:324][117]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-22.31.44:357][117]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-22.31.52:808][516]BlueprintLog: New page: Compile testVectorActor
+[2016.04.18-22.31.52:907][516]BlueprintEditorCompileResults: Info [5233.09] Compile of testVectorActor successful! [in 98 ms]
+[2016.04.18-22.31.53:618][538]LogSavePackage: Save=147.19ms
+[2016.04.18-22.31.53:618][538]LogSavePackage: Moving '../../../../../../TreeEvolution/EvolutionTree/Saved/Minimal_Default0A6C9A0D49C4BB39A7E9FCA2D5D564D6.tmp' to '../../../../../../TreeEvolution/EvolutionTree/Content/StarterContent/Maps/Minimal_Default.umap'
+[2016.04.18-22.31.53:619][538]LogSavePackage: Total save time: 155.96ms
+[2016.04.18-22.31.53:619][538]LogSavePackage:Display: Finished SavePackage ../../../../../../TreeEvolution/EvolutionTree/Content/StarterContent/Maps/Minimal_Default.umap
+[2016.04.18-22.31.53:639][538]LogFileHelpers: Saving map 'Minimal_Default' took 0.238
+[2016.04.18-22.32.00:124][922]BlueprintLog: New page: Compile testVectorActor
+[2016.04.18-22.32.00:339][922]BlueprintEditorCompileResults: Info [5240.52] Compile of testVectorActor successful! [in 215 ms]
+[2016.04.18-22.32.08:339][410]BlueprintLog: New page: Compile testVectorActor
+[2016.04.18-22.32.08:556][410]BlueprintEditorCompileResults: Info [5248.74] Compile of testVectorActor successful! [in 216 ms]
+[2016.04.18-22.32.09:203][429]LogSavePackage: Save=146.74ms
+[2016.04.18-22.32.09:203][429]LogSavePackage: Moving '../../../../../../TreeEvolution/EvolutionTree/Saved/Minimal_Default92014F9F482509887068E8A1F0886FD2.tmp' to '../../../../../../TreeEvolution/EvolutionTree/Content/StarterContent/Maps/Minimal_Default.umap'
+[2016.04.18-22.32.09:204][429]LogSavePackage: Total save time: 154.80ms
+[2016.04.18-22.32.09:204][429]LogSavePackage:Display: Finished SavePackage ../../../../../../TreeEvolution/EvolutionTree/Content/StarterContent/Maps/Minimal_Default.umap
+[2016.04.18-22.32.09:224][429]LogFileHelpers: Saving map 'Minimal_Default' took 0.238
+[2016.04.18-22.32.09:229][429]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/testVectorActor" FILE="../../../../../../TreeEvolution/EvolutionTree/Content/testVectorActor.uasset" SILENT=true
+[2016.04.18-22.32.09:257][429]LogSavePackage: Save=20.95ms
+[2016.04.18-22.32.09:257][429]LogSavePackage: Moving '../../../../../../TreeEvolution/EvolutionTree/Saved/testVectorActorB9860DDD46F8E799144DB3BA1B700903.tmp' to '../../../../../../TreeEvolution/EvolutionTree/Content/testVectorActor.uasset'
+[2016.04.18-22.32.09:258][429]LogSavePackage: Total save time: 28.37ms
+[2016.04.18-22.32.09:258][429]LogSavePackage:Display: Finished SavePackage ../../../../../../TreeEvolution/EvolutionTree/Content/testVectorActor.uasset
+[2016.04.18-22.32.18:589][967]LogStats: FPlatformStackWalk::StackWalkAndDump -  0.241 s
+[2016.04.18-22.32.18:589][967]LogOutputDevice:Warning: === Handled error: ===
+
+Ensure condition failed: OwnerActor [File:D:\BuildFarm\buildmachine_++UE4+Release-4.11\Engine\Source\Runtime\Engine\Private\AI\Navigation\NavigationSystem.cpp] [Line: 2493]
+
+Stack: 
+UE4Editor-Core.dll
+UE4Editor-Core.dll
+UE4Editor-Core.dll
+UE4Editor-Engine.dll
+UE4Editor-Engine.dll
+UE4Editor-Engine.dll
+UE4Editor-CoreUObject.dll
+UE4Editor-Engine.dll
+UE4Editor-Engine.dll
+UE4Editor-DetailCustomizations.dll
+UE4Editor-DetailCustomizations.dll
+UE4Editor-DetailCustomizations.dll
+UE4Editor-DetailCustomizations.dll
+UE4Editor-Slate.dll
+UE4Editor-Slate.dll
+UE4Editor-Slate.dll
+UE4Editor-Slate.dll
+UE4Editor-Slate.dll
+UE4Editor-Slate.dll
+UE4Editor-Slate.dll
+UE4Editor-Slate.dll
+UE4Editor-Slate.dll
+UE4Editor-Slate.dll
+UE4Editor-Slate.dll
+UE4Editor-Slate.dll
+UE4Editor-Slate.dll
+UE4Editor-Core.dll
+UE4Editor-Core.dll
+UE4Editor-Core.dll
+UE4Editor-Core.dll
+USER32.dll
+USER32.dll
+UE4Editor-Core.dll
+UE4Editor.exe
+UE4Editor.exe
+UE4Editor.exe
+UE4Editor.exe
+UE4Editor.exe
+kernel32.dll
+ntdll.dll
+ntdll.dll
+
+[2016.04.18-22.32.18:598][967]LogStats:                SubmitErrorReport -  0.009 s
+[2016.04.18-22.32.25:296][967]LogStats:                    SendNewReport -  6.697 s
+[2016.04.18-22.32.25:296][967]LogStats:             FDebug::EnsureFailed -  6.947 s
+[2016.04.18-22.32.30:182][121]BlueprintLog: New page: Compile testVectorActor
+[2016.04.18-22.32.30:397][121]BlueprintEditorCompileResults: Info [5270.58] Compile of testVectorActor successful! [in 215 ms]
+[2016.04.18-22.32.31:074][140]LogSavePackage: Save=147.09ms
+[2016.04.18-22.32.31:074][140]LogSavePackage: Moving '../../../../../../TreeEvolution/EvolutionTree/Saved/Minimal_DefaultBF504B614466BCB1CDFFF7AD603F30CE.tmp' to '../../../../../../TreeEvolution/EvolutionTree/Content/StarterContent/Maps/Minimal_Default.umap'
+[2016.04.18-22.32.31:075][140]LogSavePackage: Total save time: 154.85ms
+[2016.04.18-22.32.31:075][140]LogSavePackage:Display: Finished SavePackage ../../../../../../TreeEvolution/EvolutionTree/Content/StarterContent/Maps/Minimal_Default.umap
+[2016.04.18-22.32.31:095][140]LogFileHelpers: Saving map 'Minimal_Default' took 0.238
+[2016.04.18-22.32.31:111][140]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/testVectorActor" FILE="../../../../../../TreeEvolution/EvolutionTree/Content/testVectorActor.uasset" SILENT=true
+[2016.04.18-22.32.31:145][140]LogSavePackage: Save=26.67ms
+[2016.04.18-22.32.31:145][140]LogSavePackage: Moving '../../../../../../TreeEvolution/EvolutionTree/Saved/testVectorActor98E963C647A7F6AFA51613BA1E7E3FD9.tmp' to '../../../../../../TreeEvolution/EvolutionTree/Content/testVectorActor.uasset'
+[2016.04.18-22.32.31:146][140]LogSavePackage: Total save time: 34.75ms
+[2016.04.18-22.32.31:146][140]LogSavePackage:Display: Finished SavePackage ../../../../../../TreeEvolution/EvolutionTree/Content/testVectorActor.uasset
+[2016.04.18-22.32.38:333][620]BlueprintLog: New page: Compile testVectorActor
+[2016.04.18-22.32.38:432][620]BlueprintEditorCompileResults: Info [5278.61] Compile of testVectorActor successful! [in 98 ms]
+[2016.04.18-22.32.39:113][644]LogSavePackage: Save=146.28ms
+[2016.04.18-22.32.39:113][644]LogSavePackage: Moving '../../../../../../TreeEvolution/EvolutionTree/Saved/Minimal_DefaultD56D8A954C558260CECF649BFD7E2206.tmp' to '../../../../../../TreeEvolution/EvolutionTree/Content/StarterContent/Maps/Minimal_Default.umap'
+[2016.04.18-22.32.39:114][644]LogSavePackage: Total save time: 154.76ms
+[2016.04.18-22.32.39:114][644]LogSavePackage:Display: Finished SavePackage ../../../../../../TreeEvolution/EvolutionTree/Content/StarterContent/Maps/Minimal_Default.umap
+[2016.04.18-22.32.39:135][644]LogFileHelpers: Saving map 'Minimal_Default' took 0.237
+[2016.04.18-22.32.39:150][644]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/testVectorActor" FILE="../../../../../../TreeEvolution/EvolutionTree/Content/testVectorActor.uasset" SILENT=true
+[2016.04.18-22.32.39:183][644]LogSavePackage: Save=25.84ms
+[2016.04.18-22.32.39:183][644]LogSavePackage: Moving '../../../../../../TreeEvolution/EvolutionTree/Saved/testVectorActorCAEA45F944AEEBF89A75E48D1D90CCD2.tmp' to '../../../../../../TreeEvolution/EvolutionTree/Content/testVectorActor.uasset'
+[2016.04.18-22.32.39:184][644]LogSavePackage: Total save time: 33.54ms
+[2016.04.18-22.32.39:184][644]LogSavePackage:Display: Finished SavePackage ../../../../../../TreeEvolution/EvolutionTree/Content/testVectorActor.uasset
+[2016.04.18-22.32.41:458][787]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-22.32.41:458][787]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2016.04.18-22.32.41:458][787]PIE: New page: SIE session: Minimal_Default (Apr 19, 2016, 1:32:41 AM)
+[2016.04.18-22.32.41:458][787]LogPlayLevel: Creating play world package: /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default
+[2016.04.18-22.32.41:469][787]LogPlayLevel: PIE: StaticDuplicateObject took: (0.010265s)
+[2016.04.18-22.32.41:469][787]LogAIModule: Creating AISystem for world Minimal_Default
+[2016.04.18-22.32.41:469][787]LogPlayLevel: PIE: World Init took: (0.000437s)
+[2016.04.18-22.32.41:469][787]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/StarterContent/Maps/Minimal_Default.Minimal_Default to /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default (0.010916s)
+[2016.04.18-22.32.41:497][787]LogInit: XAudio2 using 'Speakers (Realtek High Definition Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
+[2016.04.18-22.32.41:503][787]LogInit: FAudioDevice initialized.
+[2016.04.18-22.32.41:532][787]LogWorld: Game class is 'simGameMode_C'
+[2016.04.18-22.32.41:534][787]LogWorld: Bringing World /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default up for play (max tick rate 0) at 2016.04.19-00.32.41
+[2016.04.18-22.32.41:534][787]LogWorld: Bringing up level for play took: 0.001166
+[2016.04.18-22.32.41:535][787]LogScript:Warning: Accessed None trying to read property CallFunc_K2_GetPawn_ReturnValue
+	simGameController_C /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default:PersistentLevel.simGameController_C_27
+	Function /Game/simGameController.simGameController_C:toggleControlCharacter:0147
+[2016.04.18-22.32.41:535][787]PIE:Error: Error Blueprint Runtime Error: Accessed None trying to read property CallFunc_K2_GetPawn_ReturnValue from function: 'toggleControlCharacter' from node: Enable Input in graph: toggleControlCharacter in object: simGameController
+[2016.04.18-22.32.41:535][787]LogScript:Warning: Accessed None trying to read property CallFunc_K2_GetPawn_ReturnValue
+	simGameController_C /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default:PersistentLevel.simGameController_C_27
+	Function /Game/simGameController.simGameController_C:toggleControlCharacter:0147
+[2016.04.18-22.32.41:535][787]PIE:Error: Error Blueprint Runtime Error: Accessed None trying to read property CallFunc_K2_GetPawn_ReturnValue from function: 'toggleControlCharacter' from node: Enable Input in graph: toggleControlCharacter in object: simGameController
+[2016.04.18-22.32.41:536][787]PIE: Info Play in editor start time for /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default -0.235
+[2016.04.18-22.32.41:537][787]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-22.32.48:611][286]LogEditorViewport: Clicking on Actor (context menu): BP_Sky_Sphere_C (BP_Sky_Sphere)
+[2016.04.18-22.32.48:611][286]LogSelection:Warning: PIE object was selected: "BP_Sky_Sphere_C /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default:PersistentLevel.BP_Sky_Sphere_C_2"
+[2016.04.18-22.32.49:332][352]LogEditorViewport: Clicking on Actor (context menu): BP_Sky_Sphere_C (BP_Sky_Sphere)
+[2016.04.18-22.32.52:536][600]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-22.32.52:591][600]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-22.32.59:883][964]BlueprintLog: New page: Compile testVectorActor
+[2016.04.18-22.32.59:981][964]BlueprintEditorCompileResults: Info [5300.16] Compile of testVectorActor successful! [in 98 ms]
+[2016.04.18-22.33.00:704][989]LogSavePackage: Save=146.71ms
+[2016.04.18-22.33.00:704][989]LogSavePackage: Moving '../../../../../../TreeEvolution/EvolutionTree/Saved/Minimal_Default969CD4544C6B6AE3205CA59049DB2BA9.tmp' to '../../../../../../TreeEvolution/EvolutionTree/Content/StarterContent/Maps/Minimal_Default.umap'
+[2016.04.18-22.33.00:706][989]LogSavePackage: Total save time: 155.20ms
+[2016.04.18-22.33.00:706][989]LogSavePackage:Display: Finished SavePackage ../../../../../../TreeEvolution/EvolutionTree/Content/StarterContent/Maps/Minimal_Default.umap
+[2016.04.18-22.33.00:726][989]LogFileHelpers: Saving map 'Minimal_Default' took 0.239
+[2016.04.18-22.33.00:741][989]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/testVectorActor" FILE="../../../../../../TreeEvolution/EvolutionTree/Content/testVectorActor.uasset" SILENT=true
+[2016.04.18-22.33.00:778][989]LogSavePackage: Save=26.69ms
+[2016.04.18-22.33.00:778][989]LogSavePackage: Moving '../../../../../../TreeEvolution/EvolutionTree/Saved/testVectorActor974D114F4D9A092F918EFB89C1E78043.tmp' to '../../../../../../TreeEvolution/EvolutionTree/Content/testVectorActor.uasset'
+[2016.04.18-22.33.00:779][989]LogSavePackage: Total save time: 36.85ms
+[2016.04.18-22.33.00:779][989]LogSavePackage:Display: Finished SavePackage ../../../../../../TreeEvolution/EvolutionTree/Content/testVectorActor.uasset
+[2016.04.18-22.33.09:090][544]BlueprintLog: New page: Compile testVectorActor
+[2016.04.18-22.33.09:189][544]BlueprintEditorCompileResults: Info [5309.37] Compile of testVectorActor successful! [in 98 ms]
+[2016.04.18-22.33.09:824][567]LogSavePackage: Save=149.52ms
+[2016.04.18-22.33.09:824][567]LogSavePackage: Moving '../../../../../../TreeEvolution/EvolutionTree/Saved/Minimal_DefaultE4CD244C4E2DB9AD11AE6BA479044E3A.tmp' to '../../../../../../TreeEvolution/EvolutionTree/Content/StarterContent/Maps/Minimal_Default.umap'
+[2016.04.18-22.33.09:825][567]LogSavePackage: Total save time: 158.21ms
+[2016.04.18-22.33.09:825][567]LogSavePackage:Display: Finished SavePackage ../../../../../../TreeEvolution/EvolutionTree/Content/StarterContent/Maps/Minimal_Default.umap
+[2016.04.18-22.33.09:845][567]LogFileHelpers: Saving map 'Minimal_Default' took 0.238
+[2016.04.18-22.33.09:862][567]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/testVectorActor" FILE="../../../../../../TreeEvolution/EvolutionTree/Content/testVectorActor.uasset" SILENT=true
+[2016.04.18-22.33.09:897][567]LogSavePackage: Save=28.60ms
+[2016.04.18-22.33.09:897][567]LogSavePackage: Moving '../../../../../../TreeEvolution/EvolutionTree/Saved/testVectorActorAC6DDB6B4DECE01A6A3066988077AB9A.tmp' to '../../../../../../TreeEvolution/EvolutionTree/Content/testVectorActor.uasset'
+[2016.04.18-22.33.09:899][567]LogSavePackage: Total save time: 36.26ms
+[2016.04.18-22.33.09:899][567]LogSavePackage:Display: Finished SavePackage ../../../../../../TreeEvolution/EvolutionTree/Content/testVectorActor.uasset
+[2016.04.18-22.33.14:700][878]BlueprintLog: New page: Compile testVectorActor
+[2016.04.18-22.33.14:920][878]BlueprintEditorCompileResults: Info [5315.10] Compile of testVectorActor successful! [in 219 ms]
+[2016.04.18-22.33.18:265][ 65]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-22.33.18:265][ 65]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2016.04.18-22.33.18:266][ 65]PIE: New page: SIE session: Minimal_Default (Apr 19, 2016, 1:33:18 AM)
+[2016.04.18-22.33.18:266][ 65]LogPlayLevel: Creating play world package: /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default
+[2016.04.18-22.33.18:277][ 65]LogPlayLevel: PIE: StaticDuplicateObject took: (0.010970s)
+[2016.04.18-22.33.18:277][ 65]LogAIModule: Creating AISystem for world Minimal_Default
+[2016.04.18-22.33.18:277][ 65]LogPlayLevel: PIE: World Init took: (0.000461s)
+[2016.04.18-22.33.18:277][ 65]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/StarterContent/Maps/Minimal_Default.Minimal_Default to /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default (0.011601s)
+[2016.04.18-22.33.18:314][ 65]LogSelection:Warning: PIE object was selected: "BP_Sky_Sphere_C /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default:PersistentLevel.BP_Sky_Sphere_C_2"
+[2016.04.18-22.33.18:316][ 65]LogInit: XAudio2 using 'Speakers (Realtek High Definition Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
+[2016.04.18-22.33.18:321][ 65]LogInit: FAudioDevice initialized.
+[2016.04.18-22.33.18:349][ 65]LogWorld: Game class is 'simGameMode_C'
+[2016.04.18-22.33.18:351][ 65]LogWorld: Bringing World /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default up for play (max tick rate 0) at 2016.04.19-00.33.18
+[2016.04.18-22.33.18:351][ 65]LogWorld: Bringing up level for play took: 0.001146
+[2016.04.18-22.33.18:352][ 65]LogScript:Warning: Accessed None trying to read property CallFunc_K2_GetPawn_ReturnValue
+	simGameController_C /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default:PersistentLevel.simGameController_C_28
+	Function /Game/simGameController.simGameController_C:toggleControlCharacter:0147
+[2016.04.18-22.33.18:352][ 65]PIE:Error: Error Blueprint Runtime Error: Accessed None trying to read property CallFunc_K2_GetPawn_ReturnValue from function: 'toggleControlCharacter' from node: Enable Input in graph: toggleControlCharacter in object: simGameController
+[2016.04.18-22.33.18:352][ 65]LogScript:Warning: Accessed None trying to read property CallFunc_K2_GetPawn_ReturnValue
+	simGameController_C /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default:PersistentLevel.simGameController_C_28
+	Function /Game/simGameController.simGameController_C:toggleControlCharacter:0147
+[2016.04.18-22.33.18:352][ 65]PIE:Error: Error Blueprint Runtime Error: Accessed None trying to read property CallFunc_K2_GetPawn_ReturnValue from function: 'toggleControlCharacter' from node: Enable Input in graph: toggleControlCharacter in object: simGameController
+[2016.04.18-22.33.18:353][ 65]PIE: Info Play in editor start time for /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default 0.581
+[2016.04.18-22.33.18:359][ 65]LogSelection:Warning: PIE object was selected: "BP_Sky_Sphere_C /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default:PersistentLevel.BP_Sky_Sphere_C_2"
+[2016.04.18-22.33.18:359][ 65]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-22.33.22:995][391]LogEditorViewport: Clicking on Actor (context menu): BP_Sky_Sphere_C (BP_Sky_Sphere)
+[2016.04.18-22.33.25:775][594]Cmd: SELECT NONE
+[2016.04.18-22.33.26:938][651]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-22.33.26:991][651]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-22.33.41:756][317]BlueprintLog: New page: Compile testVectorActor
+[2016.04.18-22.33.41:973][317]BlueprintEditorCompileResults: Info [5342.15] Compile of testVectorActor successful! [in 217 ms]
+[2016.04.18-22.33.48:376][679]BlueprintLog: New page: Compile testVectorActor
+[2016.04.18-22.33.48:595][679]BlueprintEditorCompileResults: Info [5348.78] Compile of testVectorActor successful! [in 218 ms]
+[2016.04.18-22.33.57:699][173]BlueprintLog: New page: Compile testVectorActor
+[2016.04.18-22.33.57:799][173]BlueprintEditorCompileResults: Info [5357.98] Compile of testVectorActor successful! [in 99 ms]
+[2016.04.18-22.33.58:490][194]LogSavePackage: Save=147.25ms
+[2016.04.18-22.33.58:490][194]LogSavePackage: Moving '../../../../../../TreeEvolution/EvolutionTree/Saved/Minimal_DefaultF40BE5284137960758C959B0AA25DF5D.tmp' to '../../../../../../TreeEvolution/EvolutionTree/Content/StarterContent/Maps/Minimal_Default.umap'
+[2016.04.18-22.33.58:492][194]LogSavePackage: Total save time: 155.55ms
+[2016.04.18-22.33.58:492][194]LogSavePackage:Display: Finished SavePackage ../../../../../../TreeEvolution/EvolutionTree/Content/StarterContent/Maps/Minimal_Default.umap
+[2016.04.18-22.33.58:511][194]LogFileHelpers: Saving map 'Minimal_Default' took 0.238
+[2016.04.18-22.33.58:527][194]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/testVectorActor" FILE="../../../../../../TreeEvolution/EvolutionTree/Content/testVectorActor.uasset" SILENT=true
+[2016.04.18-22.33.58:561][194]LogSavePackage: Save=26.70ms
+[2016.04.18-22.33.58:561][194]LogSavePackage: Moving '../../../../../../TreeEvolution/EvolutionTree/Saved/testVectorActor9BBD86E54D41A70E07DBA2A7083F9AEE.tmp' to '../../../../../../TreeEvolution/EvolutionTree/Content/testVectorActor.uasset'
+[2016.04.18-22.33.58:563][194]LogSavePackage: Total save time: 35.21ms
+[2016.04.18-22.33.58:563][194]LogSavePackage:Display: Finished SavePackage ../../../../../../TreeEvolution/EvolutionTree/Content/testVectorActor.uasset
+[2016.04.18-22.34.03:356][470]BlueprintLog: New page: Compile testVectorActor
+[2016.04.18-22.34.03:456][470]BlueprintEditorCompileResults: Info [5363.64] Compile of testVectorActor successful! [in 99 ms]
+[2016.04.18-22.34.04:115][491]LogSavePackage: Save=146.92ms
+[2016.04.18-22.34.04:115][491]LogSavePackage: Moving '../../../../../../TreeEvolution/EvolutionTree/Saved/Minimal_Default1023BBB14BC759E30D1025962D197B46.tmp' to '../../../../../../TreeEvolution/EvolutionTree/Content/StarterContent/Maps/Minimal_Default.umap'
+[2016.04.18-22.34.04:116][491]LogSavePackage: Total save time: 155.82ms
+[2016.04.18-22.34.04:116][491]LogSavePackage:Display: Finished SavePackage ../../../../../../TreeEvolution/EvolutionTree/Content/StarterContent/Maps/Minimal_Default.umap
+[2016.04.18-22.34.04:137][491]LogFileHelpers: Saving map 'Minimal_Default' took 0.238
+[2016.04.18-22.34.04:152][491]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/testVectorActor" FILE="../../../../../../TreeEvolution/EvolutionTree/Content/testVectorActor.uasset" SILENT=true
+[2016.04.18-22.34.04:186][491]LogSavePackage: Save=25.50ms
+[2016.04.18-22.34.04:186][491]LogSavePackage: Moving '../../../../../../TreeEvolution/EvolutionTree/Saved/testVectorActorE24908974ED6B531DB735E9D250ABABD.tmp' to '../../../../../../TreeEvolution/EvolutionTree/Content/testVectorActor.uasset'
+[2016.04.18-22.34.04:187][491]LogSavePackage: Total save time: 33.87ms
+[2016.04.18-22.34.04:187][491]LogSavePackage:Display: Finished SavePackage ../../../../../../TreeEvolution/EvolutionTree/Content/testVectorActor.uasset
+[2016.04.18-22.34.06:913][643]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-22.34.06:913][643]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2016.04.18-22.34.06:913][643]PIE: New page: SIE session: Minimal_Default (Apr 19, 2016, 1:34:06 AM)
+[2016.04.18-22.34.06:913][643]LogPlayLevel: Creating play world package: /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default
+[2016.04.18-22.34.06:924][643]LogPlayLevel: PIE: StaticDuplicateObject took: (0.011371s)
+[2016.04.18-22.34.06:925][643]LogAIModule: Creating AISystem for world Minimal_Default
+[2016.04.18-22.34.06:925][643]LogPlayLevel: PIE: World Init took: (0.000535s)
+[2016.04.18-22.34.06:925][643]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/StarterContent/Maps/Minimal_Default.Minimal_Default to /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default (0.012093s)
+[2016.04.18-22.34.06:951][643]LogSelection:Warning: PIE object was selected: "BP_Sky_Sphere_C /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default:PersistentLevel.BP_Sky_Sphere_C_2"
+[2016.04.18-22.34.06:952][643]LogInit: XAudio2 using 'Speakers (Realtek High Definition Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
+[2016.04.18-22.34.06:958][643]LogInit: FAudioDevice initialized.
+[2016.04.18-22.34.06:990][643]LogWorld: Game class is 'simGameMode_C'
+[2016.04.18-22.34.06:992][643]LogWorld: Bringing World /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default up for play (max tick rate 0) at 2016.04.19-00.34.06
+[2016.04.18-22.34.06:992][643]LogWorld: Bringing up level for play took: 0.001263
+[2016.04.18-22.34.06:993][643]LogScript:Warning: Accessed None trying to read property CallFunc_K2_GetPawn_ReturnValue
+	simGameController_C /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default:PersistentLevel.simGameController_C_29
+	Function /Game/simGameController.simGameController_C:toggleControlCharacter:0147
+[2016.04.18-22.34.06:993][643]PIE:Error: Error Blueprint Runtime Error: Accessed None trying to read property CallFunc_K2_GetPawn_ReturnValue from function: 'toggleControlCharacter' from node: Enable Input in graph: toggleControlCharacter in object: simGameController
+[2016.04.18-22.34.06:993][643]LogScript:Warning: Accessed None trying to read property CallFunc_K2_GetPawn_ReturnValue
+	simGameController_C /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default:PersistentLevel.simGameController_C_29
+	Function /Game/simGameController.simGameController_C:toggleControlCharacter:0147
+[2016.04.18-22.34.06:993][643]PIE:Error: Error Blueprint Runtime Error: Accessed None trying to read property CallFunc_K2_GetPawn_ReturnValue from function: 'toggleControlCharacter' from node: Enable Input in graph: toggleControlCharacter in object: simGameController
+[2016.04.18-22.34.06:995][643]PIE: Info Play in editor start time for /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default -0.778
+[2016.04.18-22.34.07:000][643]LogSelection:Warning: PIE object was selected: "BP_Sky_Sphere_C /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default:PersistentLevel.BP_Sky_Sphere_C_2"
+[2016.04.18-22.34.07:000][643]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-22.34.10:046][844]LogEditorViewport: Clicking on Actor (LMB): BP_Sky_Sphere_C (BP_Sky_Sphere)
+[2016.04.18-22.34.10:046][844]LogSelection:Warning: PIE object was selected: "BP_Sky_Sphere_C /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default:PersistentLevel.BP_Sky_Sphere_C_2"
+[2016.04.18-22.34.10:601][880]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-22.34.10:650][880]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-22.34.24:453][585]BlueprintLog: New page: Compile testVectorActor
+[2016.04.18-22.34.24:550][585]BlueprintEditorCompileResults: Info [5384.73] Compile of testVectorActor successful! [in 96 ms]
+[2016.04.18-22.34.25:593][626]LogSavePackage: Save=163.45ms
+[2016.04.18-22.34.25:593][626]LogSavePackage: Moving '../../../../../../TreeEvolution/EvolutionTree/Saved/Minimal_DefaultC2A4B59248625CF4411623A823D01C97.tmp' to '../../../../../../TreeEvolution/EvolutionTree/Content/StarterContent/Maps/Minimal_Default.umap'
+[2016.04.18-22.34.25:594][626]LogSavePackage: Total save time: 176.97ms
+[2016.04.18-22.34.25:594][626]LogSavePackage:Display: Finished SavePackage ../../../../../../TreeEvolution/EvolutionTree/Content/StarterContent/Maps/Minimal_Default.umap
+[2016.04.18-22.34.25:614][626]LogFileHelpers: Saving map 'Minimal_Default' took 0.258
+[2016.04.18-22.34.25:630][626]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/testVectorActor" FILE="../../../../../../TreeEvolution/EvolutionTree/Content/testVectorActor.uasset" SILENT=true
+[2016.04.18-22.34.25:663][626]LogSavePackage: Save=26.42ms
+[2016.04.18-22.34.25:663][626]LogSavePackage: Moving '../../../../../../TreeEvolution/EvolutionTree/Saved/testVectorActor6CB851824E10F9DCE94B3E9BCE6E9442.tmp' to '../../../../../../TreeEvolution/EvolutionTree/Content/testVectorActor.uasset'
+[2016.04.18-22.34.25:664][626]LogSavePackage: Total save time: 34.10ms
+[2016.04.18-22.34.25:664][626]LogSavePackage:Display: Finished SavePackage ../../../../../../TreeEvolution/EvolutionTree/Content/testVectorActor.uasset
+[2016.04.18-22.34.27:110][704]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-22.34.27:110][704]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2016.04.18-22.34.27:110][704]PIE: New page: SIE session: Minimal_Default (Apr 19, 2016, 1:34:27 AM)
+[2016.04.18-22.34.27:110][704]LogPlayLevel: Creating play world package: /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default
+[2016.04.18-22.34.27:121][704]LogPlayLevel: PIE: StaticDuplicateObject took: (0.010967s)
+[2016.04.18-22.34.27:121][704]LogAIModule: Creating AISystem for world Minimal_Default
+[2016.04.18-22.34.27:121][704]LogPlayLevel: PIE: World Init took: (0.000487s)
+[2016.04.18-22.34.27:122][704]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/StarterContent/Maps/Minimal_Default.Minimal_Default to /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default (0.011643s)
+[2016.04.18-22.34.27:148][704]LogSelection:Warning: PIE object was selected: "BP_Sky_Sphere_C /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default:PersistentLevel.BP_Sky_Sphere_C_2"
+[2016.04.18-22.34.27:150][704]LogInit: XAudio2 using 'Speakers (Realtek High Definition Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
+[2016.04.18-22.34.27:156][704]LogInit: FAudioDevice initialized.
+[2016.04.18-22.34.27:186][704]LogWorld: Game class is 'simGameMode_C'
+[2016.04.18-22.34.27:188][704]LogWorld: Bringing World /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default up for play (max tick rate 0) at 2016.04.19-00.34.27
+[2016.04.18-22.34.27:188][704]LogWorld: Bringing up level for play took: 0.001203
+[2016.04.18-22.34.27:189][704]LogScript:Warning: Accessed None trying to read property CallFunc_K2_GetPawn_ReturnValue
+	simGameController_C /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default:PersistentLevel.simGameController_C_30
+	Function /Game/simGameController.simGameController_C:toggleControlCharacter:0147
+[2016.04.18-22.34.27:189][704]PIE:Error: Error Blueprint Runtime Error: Accessed None trying to read property CallFunc_K2_GetPawn_ReturnValue from function: 'toggleControlCharacter' from node: Enable Input in graph: toggleControlCharacter in object: simGameController
+[2016.04.18-22.34.27:189][704]LogScript:Warning: Accessed None trying to read property CallFunc_K2_GetPawn_ReturnValue
+	simGameController_C /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default:PersistentLevel.simGameController_C_30
+	Function /Game/simGameController.simGameController_C:toggleControlCharacter:0147
+[2016.04.18-22.34.27:189][704]PIE:Error: Error Blueprint Runtime Error: Accessed None trying to read property CallFunc_K2_GetPawn_ReturnValue from function: 'toggleControlCharacter' from node: Enable Input in graph: toggleControlCharacter in object: simGameController
+[2016.04.18-22.34.27:190][704]PIE: Info Play in editor start time for /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default -0.582
+[2016.04.18-22.34.27:195][704]LogSelection:Warning: PIE object was selected: "BP_Sky_Sphere_C /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default:PersistentLevel.BP_Sky_Sphere_C_2"
+[2016.04.18-22.34.27:196][704]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.18-22.34.27:853][740]LogEditorViewport: Clicking on Actor (LMB): BP_Sky_Sphere_C (BP_Sky_Sphere)
+[2016.04.18-22.34.27:853][740]LogSelection:Warning: PIE object was selected: "BP_Sky_Sphere_C /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default:PersistentLevel.BP_Sky_Sphere_C_2"
+[2016.04.18-22.34.28:618][788]LogEditorViewport: Clicking on Actor (context menu): BP_Sky_Sphere_C (BP_Sky_Sphere)
+[2016.04.18-22.34.29:053][828]LogEditorViewport: Clicking on Actor (LMB): BP_Sky_Sphere_C (BP_Sky_Sphere)
+[2016.04.18-22.34.29:053][828]LogSelection:Warning: PIE object was selected: "BP_Sky_Sphere_C /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default:PersistentLevel.BP_Sky_Sphere_C_2"
+[2016.04.18-22.34.31:198][944]LogEditorViewport: Clicking on Actor (context menu): BP_Sky_Sphere_C (BP_Sky_Sphere)
+[2016.04.18-22.34.32:021][  9]LogEditorViewport: Clicking on Actor (context menu): BP_Sky_Sphere_C (BP_Sky_Sphere)
+[2016.04.18-22.34.33:862][223]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.
