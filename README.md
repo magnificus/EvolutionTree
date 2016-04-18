@@ -44,7 +44,6 @@ In our simulation logic class, we have a list of all the current trees, this lis
 ```
 		// for all trees except the best, randomly decide if it dies or not, but where better trees (lower in the list) have a higher chance of survival, on average, a portion the size (1 / cullingConstant) will die and be replaced each generation..
 		for (int32 i = 1; i < trees.Num(); ++i) {
-			totalFitness += trees[i]->currentValue;
 			if (random.FRand() * trees.Num() * cullingConstant > i) {
 				winners.Add(trees[i]);
 			}
