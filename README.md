@@ -26,7 +26,8 @@ This project was undertaked to learn how one could create a program using which 
 
 1. Possibility for customizable complexity of the tree, for example branches on other branches, differently sized branches, different stems etc.
 2. High resolution / Better looking model representating the current best tree.
-3. 2. Make the mutations intelligent, making mutations that are likely to be beneficial more likely to appear.
+3. Make the mutations intelligent, making mutations that are likely to be beneficial more likely to appear.
+4. Disallow overlapping branches/leafs/objects, making things not grow "into" each other.
 
 
 ### Tertiary
