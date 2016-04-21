@@ -6,6 +6,9 @@
 #include "GameFramework/Actor.h"
 #include "Branch.generated.h"
 
+
+const int NOT_PLACED = -1;
+
 UCLASS()
 class TREEEVOLUTION_API ABranch : public AActor
 {
@@ -22,13 +25,12 @@ public:
 	virtual void Tick(float DeltaSeconds) override;
 
 	FVector getPositionOnBranch(float offset);
+	FVector getBegin();
+	FVector getEnd();
+	UPrimitiveComponent* getEndComponent();
 
 	UPROPERTY(EditAnywhere, Category = "Algorithm")
-		float branchMutationChance = .01f;
-	UPROPERTY(EditAnywhere, Category = "Algorithm")
-		float leafMutationChance = .04f;
-	UPROPERTY(EditAnywhere, Category = "Algorithm")
-		float displacementChance = .01f;
+		float rotationChance = .005f;
 	UPROPERTY(EditAnywhere, Category = "Algorithm")
 		float cost = 0.5;
 
@@ -37,6 +39,9 @@ public:
 
 	void displace(FVector loc, FRotator rot);
 
+	void mutate();
+
+	int32 placedOn = NOT_PLACED;
 
 
 private:

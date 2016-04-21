@@ -15,11 +15,6 @@ ATree::ATree()
 	if (BranchFinder.Object != NULL)
 		Branch_BP = BranchFinder.Object;
 
-	static ConstructorHelpers::FObjectFinder<UClass> CompositeBranchFinder(TEXT("Class'/Game/CompositeBranch.CompositeBranch_C'"));
-	if (CompositeBranchFinder.Object != NULL)
-		CompositeBranch_BP = CompositeBranchFinder.Object;
-	
-
 	static ConstructorHelpers::FObjectFinder<UClass> LeafFinder(TEXT("Class'/Game/LeafBP.LeafBP_C'"));
 	if (LeafFinder.Object != NULL)
 		Leaf_BP = LeafFinder.Object;
@@ -52,6 +47,11 @@ float ATree::calculateHits() {
 	return 0;
 }
 
+struct line {
+	FVector start;
+	FVector end;
+};
+
 float ATree::calculateHitsStraightAbove() {
 
 	FVector startLocation = GetActorLocation();
@@ -79,7 +79,6 @@ float ATree::calculateHitsStraightAbove() {
 			currEnd = currStart;
 			currEnd.Z -= zDist;
 
-			//call GetWorld() from within an actor extending class
 			GetWorld()->LineTraceSingleByChannel(
 				RV_Hit,        //result
 				currStart,    //start
@@ -204,107 +203,6 @@ float ATree::hemisphereHits() {
 
 	}
 
-
-
-	//for (int i = 0; i < list.Num() / 2; ++i) {
-
-
-	// //for (int j = list.Num() / 2; j < list.Num(); ++j) {
-
-	//  FVector from = list[i];
-	//  FVector to = list[list.Num()-1 -i];
-
-	//  GetWorld()->LineTraceSingleByChannel(
-	//   RV_Hit,        //result
-	//   from,    //start
-	//   to, //end
-	//   ECC_Pawn, //collision channel
-	//   RV_TraceParams
-	//  );
-
-	//  if (debugLine) {
-
-	//    DrawDebugLine(
-	//     GetWorld(),
-	//     from,
-	//     to,
-	//     FColor(0, 0, 255),
-	//     true, -1, 0,
-	//     3
-	//    );
-	//  }
-
-
-
-	//}
-
-
-
-
-	//for (ALeaf* leaf : leafs) {
-
-
-	// for (FVector v : list) {
-
-	//  FVector leafPos = leaf->GetActorLocation();
-	//  FVector dir = leafPos - v;
-	//  float dot = FVector::DotProduct(leaf->GetActorForwardVector(), dir);
-
-	//  if ( dot > 0.0) {
-	//    
-	//   //call GetWorld() from within an actor extending class
-	//      GetWorld()->LineTraceSingleByChannel(
-	//       RV_Hit,        //result
-	//       v,    //start
-	//       leafPos, //end
-	//       ECC_Pawn, //collision channel
-	//       RV_TraceParams
-	//      );
-
-	//      if (debugLine) {
-	//       float  value = dir.Size();
-
-	//       if (value < 500) {
-	//        DrawDebugLine(
-	//         GetWorld(),
-	//         v,
-	//         leafPos,
-	//         FColor(0, 0, 255),
-	//         true, 2, 0,
-	//         2
-	//        );
-	//       }
-
-	//       /*else {
-	//        DrawDebugLine(
-	//         GetWorld(),
-	//         v,
-	//         leafPos,
-	//         FColor(255, 0, 0),
-	//         true, -1, 0,
-	//         2
-	//        );
-	//       }*/
-	//      }
-	//   
-
-	//      if (RV_Hit.bBlockingHit) {
-	//       ALeaf* leaf = Cast<ALeaf>(RV_Hit.GetActor());
-	//       if (leaf) {
-	//        float  value = dir.Size();
-	//        hits += 1.0 + (1.0/value)*800.0;
-	//        /*if (value < 500) {
-	//         hits += 1.0 * 0.1*(600.0 - value);
-	//        }
-	//        else {
-	//         hits++;
-	//        }*/
-	//       }
-	//      }
-	//  }
-	// }
-	//}
-
 	return hits / (numberRays*numberRays);
 
 }
@@ -320,7 +218,7 @@ void ATree::init() {
 	}
 	leafs.Empty();
 	for (int i = 0; i < numBranches; ++i) {
-		initRandomBranch(1);
+		initRandomBranch();
 	}
 
 	for (int i = 0; i < numLeafs; ++i) {
@@ -328,13 +226,18 @@ void ATree::init() {
 	}
 }
 
-void ATree::initRandomBranch(float scale) {
-	FTransform t = GetRandomPosition();
-	//t.SetScale3D(FVector(scale, scale, scale));
-	ABranch* spawnedBranch = GetWorld()->SpawnActor<ABranch>(Branch_BP, t.GetLocation(), t.GetRotation().Rotator(), FActorSpawnParameters());
-	spawnedBranch->SetActorScale3D(FVector(scale, scale, scale));
-	spawnedBranch->AttachRootComponentToActor(this, NAME_None, EAttachLocation::KeepWorldPosition);
+void ATree::initRandomBranch() {
+	ABranch* spawnedBranch = GetWorld()->SpawnActor<ABranch>(Branch_BP, FVector(), FRotator(), FActorSpawnParameters());
+	branchDependencies.Add(spawnedBranch, TArray<ABranch*>());
+	leafDependencies.Add(spawnedBranch, TArray<ALeaf*>());
 	branches.Add(spawnedBranch);
+
+
+	GetRandomPositionFor(spawnedBranch);
+	//spawnedBranch->AttachRootComponentToActor(this, NAME_None, EAttachLocation::KeepWorldPosition);
+	//allowedToExtend.Add(spawnedBranch);
+
+
 }
 
 void ATree::initRandomLeaf() {
@@ -358,6 +261,42 @@ void ATree::initRandomLeaf() {
 
 
 	leafs.Add(spawnedLeaf);
+	leafDependencies[branches[index]].Add(spawnedLeaf);
+}
+
+void ATree::displaceBranch(ABranch* b) {
+	//allowedToExtend.Remove(b);
+	b->AttachRootComponentTo(nullptr);
+
+	if (b->placedOn != NOT_PLACED) {
+		branchDependencies[branches[b->placedOn]].Remove(b);
+	}
+
+	//for (ABranch* extendingB : branchDependencies[b]) {
+	//	displaceBranch(extendingB);
+	//}
+
+	GetRandomPositionFor(b);
+
+	//allowedToExtend.Add(b);
+}
+
+//void ATree::cascadePositionUpdate(ABranch* b) {
+	//for (ABranch* newB : branchDependencies[b]) {
+	//	newB->setActorLocatio
+	//}
+//
+//}
+
+bool ATree::selfInChain(ABranch* self, TArray<ABranch*> branches) {
+	// can cause infinite loop if branchdependencies is circularly arranged
+	for (ABranch* b : branches) {
+		if (b == self || selfInChain(self, branchDependencies[b])) {
+			return true;
+		}
+	}
+
+	return false;
 }
 
 void ATree::mutate(bool reCalc) {
@@ -366,11 +305,9 @@ void ATree::mutate(bool reCalc) {
 		ABranch* b = branches[i];
 		float f = random.FRand();
 		if (random.FRand() < displacementChance) {
-			FTransform t = GetRandomPosition();
-			FVector prev = b->GetActorLocation();
-			b->displace(t.GetLocation(), t.Rotator());
-
+			displaceBranch(b);
 		}
+		b->mutate();
 	}
 
 	int count1 = 0;
@@ -424,54 +361,75 @@ void ATree::mutate(bool reCalc) {
 
 }
 
-FTransform ATree::GetRandomPosition() {
+FRotator ATree::getR() {
+	return FRotator(random.FRand() * 360, random.FRand() * 360, random.FRand() * 360);
+}
 
-	FVector target = GetActorLocation();
-	target.Z += random.FRand() * 400 + 150;
+void ATree::GetRandomPositionFor(ABranch* b) {
 
-	FVector beamOrigin = target;
+	if (branches.Num() > 0 && random.FRand() > .5) {
+		// 50 % chance to spawn on another branch instead of the stem
+		int32 index = random.RandRange(0, branches.Num() - 1);
+		ABranch* toBuildFrom = branches[index];
+		if (selfInChain(toBuildFrom, branchDependencies[b])) {
+			// abandon
+			GetRandomPositionFor(b);
+			return;
+		}
+		branchDependencies[toBuildFrom].Add(b);
+		b->placedOn = index;
+		FVector pos = toBuildFrom->getEnd();
+		b->displace(pos, toBuildFrom->GetActorRotation() - FRotator(random.FRand() * 90 - 45, random.FRand() * 90 - 45, random.FRand() * 90 - 45));
+		b->AttachRootComponentTo(toBuildFrom->getEndComponent(), NAME_None, EAttachLocation::KeepWorldPosition);
+	}
+	else {
+		FVector target = GetActorLocation();
+		target.Z += random.FRand() * 400 + 150;
 
-	float distX = (random.FRand() - .5) * 500;
-	float distY = (random.FRand() - .5) * 500;
-	beamOrigin.X += distX;
-	beamOrigin.Y += distY;
+		FVector beamOrigin = target;
 
-	FCollisionQueryParams RV_TraceParams = FCollisionQueryParams(FName(TEXT("RV_Trace")), true);
-	RV_TraceParams.bTraceComplex = true;
-	RV_TraceParams.bTraceAsyncScene = true;
-	RV_TraceParams.bReturnPhysicalMaterial = false;
+		float distX = (random.FRand() - .5) * 500;
+		float distY = (random.FRand() - .5) * 500;
+		beamOrigin.X += distX;
+		beamOrigin.Y += distY;
+
+		FCollisionQueryParams RV_TraceParams = FCollisionQueryParams(FName(TEXT("RV_Trace")), true);
+		RV_TraceParams.bTraceComplex = true;
+		RV_TraceParams.bTraceAsyncScene = true;
+		RV_TraceParams.bReturnPhysicalMaterial = false;
 
 
-	//Re-initialize hit info
-	FHitResult RV_Hit(ForceInit);
+		//Re-initialize hit info
+		FHitResult RV_Hit(ForceInit);
 
-	if (debugLine) {
-		DrawDebugLine(
-			GetWorld(),
-			beamOrigin,
-			target,
-			FColor(255, 0, 0),
-			true, -1, 0,
-			1
+		if (debugLine) {
+			DrawDebugLine(
+				GetWorld(),
+				beamOrigin,
+				target,
+				FColor(255, 0, 0),
+				true, -1, 0,
+				1
+			);
+		}
+
+		GetWorld()->LineTraceSingleByChannel(
+			RV_Hit,        //result
+			beamOrigin,    //start
+			target, //end
+			ECC_Camera, //collision channel
+			RV_TraceParams
 		);
+
+		ATree* tree = Cast<ATree>(RV_Hit.GetActor());
+		if (!tree) {
+			GetRandomPositionFor(b);
+		}
+
+		b->displace(RV_Hit.Location, getR());
 	}
 
-	GetWorld()->LineTraceSingleByChannel(
-		RV_Hit,        //result
-		beamOrigin,    //start
-		target, //end
-		ECC_Camera, //collision channel
-		RV_TraceParams
-	);
-
-	ATree* tree = Cast<ATree>(RV_Hit.GetActor());
-	if (!tree) {
-		return GetRandomPosition();
-	}
-	FVector Direction = target - beamOrigin;
-	FRotator Rot = FRotationMatrix::MakeFromX(Direction).Rotator();
-	FTransform t(FQuat(Rot), RV_Hit.Location, GetActorScale());
-	return t;
+	
 
 }
 
@@ -499,6 +457,8 @@ void ATree::duplicate(ATree* otherTree, FVector location) {
 void ATree::addBranch(ABranch* b) {
 	b->AttachRootComponentToActor(this, NAME_None, EAttachLocation::KeepWorldPosition);
 	branches.Add(b);
+//	allowedToExtend.Add(b);
+	branchDependencies[b] = TArray<ABranch*>();
 }
 
 void ATree::addLeaf(ABranch* b, ALeaf* l) {
@@ -523,20 +483,21 @@ vector<float> ATree::createChildDNA(ATree* otherParent) {
 	for (int i = 0; i < branches.Num(); ++i) {
 		ATree* t;
 		ABranch* b;
-		if (random.FRand() < .5) {
-			t = this;
-			b = branches[i];
-		}
-		else {
-			t = otherParent;
-			b = otherParent->branches[i];
-		}
+		//if (random.FRand() < .5) {
+		t = this;
+		b = branches[i];
+		//}
+		//else {
+		//	t = otherParent;
+		//	b = otherParent->branches[i];
+		//}
 		DNA.push_back(b->GetActorLocation().X - t->GetActorLocation().X);
 		DNA.push_back(b->GetActorLocation().Y - t->GetActorLocation().Y);
 		DNA.push_back(b->GetActorLocation().Z - t->GetActorLocation().Z);
 		DNA.push_back(b->GetActorRotation().Pitch);
 		DNA.push_back(b->GetActorRotation().Yaw);
 		DNA.push_back(b->GetActorRotation().Roll);
+		DNA.push_back(b->placedOn);
 
 	}
 	for (int i = 0; i < leafs.Num(); ++i) {
@@ -559,21 +520,50 @@ vector<float> ATree::createChildDNA(ATree* otherParent) {
 
 
 void ATree::buildFromDNA(vector<float> DNA) {
+	for (auto &b : branchDependencies) {
+		b.Value.Empty();
+	}
+	for (auto &l : leafDependencies) {
+		l.Value.Empty();
+	}
+
+	for (ABranch* b : branches) {
+		b->AttachRootComponentTo(nullptr);
+	}
+	for (ALeaf* l : leafs) {
+		l->AttachRootComponentTo(nullptr);
+	}
+
+
 	int currPos = 0;
 	for (int i = 0; i < branches.Num(); ++i) {
-		branches[i]->SetActorLocation(FVector(DNA[currPos] + GetActorLocation().X, DNA[currPos + 1] + GetActorLocation().Y, DNA[currPos + 2] + GetActorLocation().Z));
-		branches[i]->SetActorRotation(FRotator(DNA[currPos + 3], DNA[currPos + 4], DNA[currPos + 5]));
-		currPos += 6;
+		ABranch* b = branches[i];
+		b->SetActorLocation(FVector(DNA[currPos] + GetActorLocation().X, DNA[currPos + 1] + GetActorLocation().Y, DNA[currPos + 2] + GetActorLocation().Z));
+		b->SetActorRotation(FRotator(DNA[currPos + 3], DNA[currPos + 4], DNA[currPos + 5]));
+		b->placedOn = DNA[currPos + 6];
+
+		if (b->placedOn != NOT_PLACED) {
+			b->AttachRootComponentTo(branches[b->placedOn]->getEndComponent(), NAME_None, EAttachLocation::KeepWorldPosition);
+			branchDependencies[branches[b->placedOn]].Add(b);
+
+		}
+		
+
+		currPos += 7;
 	}
 	for (int i = 0; i < leafs.Num(); ++i) {
-		leafs[i]->attachedToIndex = DNA[currPos];
-		leafs[i]->branchOffset = DNA[currPos + 1];
-		leafs[i]->offsetVector = FVector(DNA[currPos + 2], DNA[currPos + 3], DNA[currPos + 4]);
-		leafs[i]->SetActorRotation(FRotator(DNA[currPos + 5], DNA[currPos + 6], DNA[currPos + 7]));
+		ALeaf* l = leafs[i];
+		ABranch* b = branches[l->attachedToIndex];
+		l->attachedToIndex = DNA[currPos];
+		l->branchOffset = DNA[currPos + 1];
+		l->offsetVector = FVector(DNA[currPos + 2], DNA[currPos + 3], DNA[currPos + 4]);
+		l->SetActorRotation(FRotator(DNA[currPos + 5], DNA[currPos + 6], DNA[currPos + 7]));
 
 		currPos += 8;
 
-		leafs[i]->updateLocation(branches[leafs[i]->attachedToIndex]->getPositionOnBranch(leafs[i]->branchOffset));
+		l->AttachRootComponentToActor(b, NAME_None, EAttachLocation::KeepWorldPosition);
+		leafDependencies[branches[l->attachedToIndex]].Add(l);
+		l->updateLocation(b->getPositionOnBranch(l->branchOffset));
 	}
 
 }

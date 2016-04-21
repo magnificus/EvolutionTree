@@ -11,6 +11,7 @@
 
 const int MODE_STRAIGHT = 0;
 const int MODE_HEMISPHERE = 1;
+const int MODE_STRAIGHT_HEMISPHERE = 2;
 
 
 using namespace std;
@@ -42,10 +43,12 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Statistics")
 		float calculateHitsStraightAbove();
 
+
 	UFUNCTION(BlueprintCallable, Category = "Mutation")
 		void mutate(bool reCalc);
 
-	FTransform GetRandomPosition();
+	void GetRandomPositionFor(ABranch* b);
+	FRotator getR();
 
 	UPROPERTY(EditAnywhere, Category = "RayTrace")
 		float zDist = 600;
@@ -72,7 +75,10 @@ public:
 	void init();
 
 	void initRandomLeaf();
-	void initRandomBranch(float scale);
+	void initRandomBranch();
+	void displaceBranch(ABranch* b);
+	//void cascadePositionUpdate(ABranch* b);
+	bool selfInChain(ABranch* b, TArray<ABranch*> branches);
 
 	void addBranch(ABranch* b);
 	void addLeaf(ABranch* b, ALeaf* l);
@@ -82,13 +88,16 @@ public:
 	float currentValue = 0;
 
 	TArray<ABranch*> branches;
+	//TArray<ABranch*> allowedToExtend;
 	TArray<ALeaf*> leafs;
+
+	TMap<ABranch*, TArray<ABranch*>> branchDependencies;
+	TMap<ABranch*, TArray<ALeaf*>> leafDependencies;
 
 private:
 	FRandomStream random;
 	TSubclassOf<class ABranch> Branch_BP;
 	TSubclassOf<class ALeaf> Leaf_BP;
-	TSubclassOf<class ABranch> CompositeBranch_BP;
-	int mode = MODE_HEMISPHERE;
+	int mode = MODE_STRAIGHT;
 };
 

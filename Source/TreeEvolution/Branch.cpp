@@ -8,8 +8,6 @@
 ABranch::ABranch()
 {
 
-
-	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = false;
 
 	random.GenerateNewSeed();
@@ -53,6 +51,47 @@ FVector ABranch::getPositionOnBranch(float offset) {
 	return begin + (end - begin)*offset;
 }
 
+FVector ABranch::getBegin() {
+	TArray<UPrimitiveComponent*> comps;
+	GetComponents(comps);
+	for (auto Itr(comps.CreateIterator()); Itr; ++Itr)
+	{
+		if ((*Itr)->GetName() == "start") 
+			return (*Itr)->GetComponentLocation();
+		
+	}
+
+	throw - 1;
+}
+
+FVector ABranch::getEnd() {
+	TArray<UPrimitiveComponent*> comps;
+	GetComponents(comps);
+	for (auto Itr(comps.CreateIterator()); Itr; ++Itr)
+	{
+		if ((*Itr)->GetName() == "end")
+			return (*Itr)->GetComponentLocation();
+
+	}
+
+	throw - 1;
+}
+
+UPrimitiveComponent* ABranch::getEndComponent() {
+	TArray<UPrimitiveComponent*> comps;
+	GetComponents(comps);
+	for (auto Itr(comps.CreateIterator()); Itr; ++Itr)
+	{
+		if ((*Itr)->GetName() == "end")
+			return (*Itr);
+
+	}
+
+	throw -1;
+
+}
+
+
 
 float ABranch::calculateCost() {
 	return cost;
@@ -62,4 +101,10 @@ float ABranch::calculateCost() {
 void ABranch::displace(FVector loc, FRotator rot) {
 	SetActorLocation(loc);
 	SetActorRotation(rot);
+}
+
+void ABranch::mutate() {
+	if (random.FRand() < rotationChance) {
+		AddActorLocalRotation(FQuat(FRotator(random.FRand() * 30 - 15, random.FRand() * 30 - 15, random.FRand() * 30 - 15)));
+	}
 }
