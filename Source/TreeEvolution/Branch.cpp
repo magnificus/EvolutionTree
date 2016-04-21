@@ -103,8 +103,10 @@ void ABranch::displace(FVector loc, FRotator rot) {
 	SetActorRotation(rot);
 }
 
-void ABranch::mutate() {
+bool ABranch::mutate() {
 	if (random.FRand() < rotationChance) {
 		AddActorLocalRotation(FQuat(FRotator(random.FRand() * 30 - 15, random.FRand() * 30 - 15, random.FRand() * 30 - 15)));
+		return true;
 	}
+	return false;
 }

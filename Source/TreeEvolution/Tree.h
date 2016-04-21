@@ -77,8 +77,8 @@ public:
 	void initRandomLeaf();
 	void initRandomBranch();
 	void displaceBranch(ABranch* b);
-	//void cascadePositionUpdate(ABranch* b);
-	bool selfInChain(ABranch* b, TArray<ABranch*> branches);
+	void cascadePositionUpdate(ABranch* b);
+	bool selfInChain(ABranch* self, ABranch* current);
 
 	void addBranch(ABranch* b);
 	void addLeaf(ABranch* b, ALeaf* l);

@@ -39,7 +39,7 @@ public:
 
 	void displace(FVector loc, FRotator rot);
 
-	void mutate();
+	bool mutate();
 
 	int32 placedOn = NOT_PLACED;
 

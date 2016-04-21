@@ -234,8 +234,6 @@ void ATree::initRandomBranch() {
 
 
 	GetRandomPositionFor(spawnedBranch);
-	//spawnedBranch->AttachRootComponentToActor(this, NAME_None, EAttachLocation::KeepWorldPosition);
-	//allowedToExtend.Add(spawnedBranch);
 
 
 }
@@ -254,7 +252,6 @@ void ATree::initRandomLeaf() {
 
 	ALeaf* spawnedLeaf = GetWorld()->SpawnActor<ALeaf>(Leaf_BP, location, FRotator(random.FRandRange(-90, 90), random.FRandRange(-90, 90), random.FRandRange(-90, 90)));
 
-	spawnedLeaf->AttachRootComponentToActor(branches[index], NAME_None, EAttachLocation::KeepWorldPosition);
 	spawnedLeaf->attachedToIndex = index;
 	spawnedLeaf->branchOffset = branchOffset;
 	spawnedLeaf->offsetVector = offset;
@@ -265,12 +262,12 @@ void ATree::initRandomLeaf() {
 }
 
 void ATree::displaceBranch(ABranch* b) {
-	//allowedToExtend.Remove(b);
-	b->AttachRootComponentTo(nullptr);
-
 	if (b->placedOn != NOT_PLACED) {
 		branchDependencies[branches[b->placedOn]].Remove(b);
 	}
+	b->placedOn = NOT_PLACED;
+
+
 
 	//for (ABranch* extendingB : branchDependencies[b]) {
 	//	displaceBranch(extendingB);
@@ -278,22 +275,31 @@ void ATree::displaceBranch(ABranch* b) {
 
 	GetRandomPositionFor(b);
 
+	cascadePositionUpdate(b);
+
+
+
 	//allowedToExtend.Add(b);
 }
 
-//void ATree::cascadePositionUpdate(ABranch* b) {
-	//for (ABranch* newB : branchDependencies[b]) {
-	//	newB->setActorLocatio
-	//}
-//
-//}
+void ATree::cascadePositionUpdate(ABranch* b) {
+	for (ABranch* newB : branchDependencies[b]) {
+		newB->SetActorLocation(b->getEnd());
+		cascadePositionUpdate(newB);
+	}
+	for (ALeaf* l : leafDependencies[b]) {
+		l->updateLocation(b->getPositionOnBranch(l->branchOffset));
+	}
 
-bool ATree::selfInChain(ABranch* self, TArray<ABranch*> branches) {
+}
+
+bool ATree::selfInChain(ABranch* self, ABranch* current) {
 	// can cause infinite loop if branchdependencies is circularly arranged
-	for (ABranch* b : branches) {
-		if (b == self || selfInChain(self, branchDependencies[b])) {
-			return true;
-		}
+	if (current == self) {
+		return true;
+	}
+	if (current->placedOn != NOT_PLACED) {
+		return selfInChain(self, branches[current->placedOn]);
 	}
 
 	return false;
@@ -307,7 +313,8 @@ void ATree::mutate(bool reCalc) {
 		if (random.FRand() < displacementChance) {
 			displaceBranch(b);
 		}
-		b->mutate();
+		if (b->mutate())
+			cascadePositionUpdate(b);
 	}
 
 	int count1 = 0;
@@ -349,7 +356,6 @@ void ATree::mutate(bool reCalc) {
 		int index = random.RandRange(0, leafs.Num() - 1);
 		leafs[index]->attachedToIndex = random.RandRange(0, branches.Num() - 1);
 		leafs[index]->SetActorLocation(branches[leafs[index]->attachedToIndex]->getPositionOnBranch(leafs[index]->branchOffset) + leafs[index]->offsetVector);
-		leafs[index]->AttachRootComponentToActor(branches[leafs[index]->attachedToIndex], NAME_None, EAttachLocation::KeepWorldPosition);
 	}
 
 	for (ALeaf* l : leafs) {
@@ -371,7 +377,7 @@ void ATree::GetRandomPositionFor(ABranch* b) {
 		// 50 % chance to spawn on another branch instead of the stem
 		int32 index = random.RandRange(0, branches.Num() - 1);
 		ABranch* toBuildFrom = branches[index];
-		if (selfInChain(toBuildFrom, branchDependencies[b])) {
+		if (selfInChain(b, toBuildFrom)) {
 			// abandon
 			GetRandomPositionFor(b);
 			return;
@@ -380,7 +386,6 @@ void ATree::GetRandomPositionFor(ABranch* b) {
 		b->placedOn = index;
 		FVector pos = toBuildFrom->getEnd();
 		b->displace(pos, toBuildFrom->GetActorRotation() - FRotator(random.FRand() * 90 - 45, random.FRand() * 90 - 45, random.FRand() * 90 - 45));
-		b->AttachRootComponentTo(toBuildFrom->getEndComponent(), NAME_None, EAttachLocation::KeepWorldPosition);
 	}
 	else {
 		FVector target = GetActorLocation();
@@ -429,7 +434,7 @@ void ATree::GetRandomPositionFor(ABranch* b) {
 		b->displace(RV_Hit.Location, getR());
 	}
 
-	
+
 
 }
 
@@ -455,14 +460,11 @@ void ATree::duplicate(ATree* otherTree, FVector location) {
 }
 
 void ATree::addBranch(ABranch* b) {
-	b->AttachRootComponentToActor(this, NAME_None, EAttachLocation::KeepWorldPosition);
 	branches.Add(b);
-//	allowedToExtend.Add(b);
 	branchDependencies[b] = TArray<ABranch*>();
 }
 
 void ATree::addLeaf(ABranch* b, ALeaf* l) {
-	l->AttachRootComponentToActor(b, NAME_None, EAttachLocation::KeepWorldPosition);
 	leafs.Add(l);
 }
 
@@ -484,8 +486,8 @@ vector<float> ATree::createChildDNA(ATree* otherParent) {
 		ATree* t;
 		ABranch* b;
 		//if (random.FRand() < .5) {
-		t = this;
-		b = branches[i];
+			t = this;
+			b = branches[i];
 		//}
 		//else {
 		//	t = otherParent;
@@ -527,14 +529,6 @@ void ATree::buildFromDNA(vector<float> DNA) {
 		l.Value.Empty();
 	}
 
-	for (ABranch* b : branches) {
-		b->AttachRootComponentTo(nullptr);
-	}
-	for (ALeaf* l : leafs) {
-		l->AttachRootComponentTo(nullptr);
-	}
-
-
 	int currPos = 0;
 	for (int i = 0; i < branches.Num(); ++i) {
 		ABranch* b = branches[i];
@@ -543,11 +537,10 @@ void ATree::buildFromDNA(vector<float> DNA) {
 		b->placedOn = DNA[currPos + 6];
 
 		if (b->placedOn != NOT_PLACED) {
-			b->AttachRootComponentTo(branches[b->placedOn]->getEndComponent(), NAME_None, EAttachLocation::KeepWorldPosition);
 			branchDependencies[branches[b->placedOn]].Add(b);
 
 		}
-		
+
 
 		currPos += 7;
 	}
@@ -561,7 +554,6 @@ void ATree::buildFromDNA(vector<float> DNA) {
 
 		currPos += 8;
 
-		l->AttachRootComponentToActor(b, NAME_None, EAttachLocation::KeepWorldPosition);
 		leafDependencies[branches[l->attachedToIndex]].Add(l);
 		l->updateLocation(b->getPositionOnBranch(l->branchOffset));
 	}
