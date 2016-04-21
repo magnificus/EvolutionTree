@@ -482,6 +482,7 @@ void ATree::annihilate() {
 vector<float> ATree::createChildDNA(ATree* otherParent) {
 
 	vector<float> DNA;
+
 	for (int i = 0; i < branches.Num(); ++i) {
 		ATree* t;
 		ABranch* b;
