@@ -97,6 +97,21 @@ float ABranch::calculateCost() {
 	return cost;
 }
 
+bool ABranch::overlapsProps() {
+	TArray< AActor * > OverlappingActors;
+	GetOverlappingActors(OverlappingActors);
+
+	for (AActor* a : OverlappingActors) {
+		ABranch* actor = Cast<ABranch>(a);
+		if (!a) {
+			// prop was not a branch, this means there is an overlap
+			return true;
+		}
+	}
+
+	return false;
+}
+
 
 void ABranch::displace(FVector loc, FRotator rot) {
 	SetActorLocation(loc);

@@ -431,9 +431,14 @@ void ATree::GetRandomPositionFor(ABranch* b) {
 			GetRandomPositionFor(b);
 		}
 
+		b->placedOn = NOT_PLACED;
 		b->displace(RV_Hit.Location, getR());
 	}
 
+	if (b->overlapsProps()) {
+		//abandon
+		GetRandomPositionFor(b);
+	}
 
 
 }
@@ -559,4 +564,12 @@ void ATree::buildFromDNA(vector<float> DNA) {
 		l->updateLocation(b->getPositionOnBranch(l->branchOffset));
 	}
 
+}
+
+void ATree::checkCollision() {
+	for (ABranch* b : branches) {
+		if (b->overlapsProps()) {
+			displaceBranch(b);
+		}
+	}
 }

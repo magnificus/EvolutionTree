@@ -78,6 +78,7 @@ public:
 	void initRandomBranch();
 	void displaceBranch(ABranch* b);
 	void cascadePositionUpdate(ABranch* b);
+	void checkCollision();
 	bool selfInChain(ABranch* self, ABranch* current);
 
 	void addBranch(ABranch* b);

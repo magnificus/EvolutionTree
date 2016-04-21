@@ -159,5 +159,7 @@ void ASimLogic::introduceRandomDNA() {
 void ASimLogic::forceReCalculation() {
 	for (ATree* t : trees) {
 		t->currentValue = t->calculateHits();
+		t->checkCollision();
 	}
+	simulationTick();
 }

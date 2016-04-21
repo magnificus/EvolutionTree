@@ -40,6 +40,7 @@ public:
 	void displace(FVector loc, FRotator rot);
 
 	bool mutate();
+	bool overlapsProps();
 
 	int32 placedOn = NOT_PLACED;
 
