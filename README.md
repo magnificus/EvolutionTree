@@ -2,6 +2,9 @@
 
 Evolution of a tree where the environment is customizable by the user. The fitness function is based on how much sunlight a tree is able to catch on its leaves.
 
+
+![Evolved Tree](http://i.imgur.com/Hf8dNUa.jpg)
+
 ## Algorihm
 
 This project was undertaked to learn how one could create a program using which uses the genetic algorithm to grow a tree that adapts to its environment in the best way. To learn the importance of mutation versus inheritance, and how to best represent the DNA.
