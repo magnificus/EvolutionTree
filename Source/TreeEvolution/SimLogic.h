@@ -27,6 +27,8 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Gameplay")
 		void simulationTick();
 	UFUNCTION(BlueprintCallable, Category = "Gameplay")
+		void introduceRandomDNA();
+	UFUNCTION(BlueprintCallable, Category = "Gameplay")
 		float GetAverageFitness() { return averageFitness; }
 	UFUNCTION(BlueprintCallable, Category = "Gameplay")
 		float GetMaxFitness() { return maxFitness; }
@@ -41,16 +43,72 @@ public:
 		return toReturn;
 	}
 
+	UFUNCTION(BlueprintCallable, Category = "Gameplay")
+<<<<<<< HEAD
+<<<<<<< HEAD
+		int32 GetNumTrees() { return nbrTrees; }
+	UFUNCTION(BlueprintCallable, Category = "Gameplay")
+		void SetValues(int32 numT, int32 numB, int32 numL) {
+		nbrTrees = numT; numBranches = numB; numLeafs = numL; init();
+	}
+	UFUNCTION(BlueprintCallable, Category = "Gameplay")
+		int32 GetNumBranches() { return numBranches; }
+	UFUNCTION(BlueprintCallable, Category = "Gameplay")
+		int32 GetNumLeafs() { return numLeafs;  }
+
+
+	UFUNCTION(BlueprintCallable, Category = "Gameplay")
+=======
+>>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
+=======
+>>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
+		void forceReCalculation();
+
 	
 	UPROPERTY(EditAnywhere, Category = "Gameplay")
+<<<<<<< HEAD
+<<<<<<< HEAD
+		int32 distance = 2000;
+=======
 		int32 distance = 1000;
+>>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
+=======
+		int32 distance = 1000;
+>>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
 	UPROPERTY(EditAnywhere, Category = "Gameplay")
 		FVector currentBestLocation;
 	UPROPERTY(EditAnywhere, Category = "Gameplay")
 		bool sexualReproduction = true;
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+	UPROPERTY(EditAnywhere, Category = "Algorithm")
+		int32 numBranches = 30;
+	UPROPERTY(EditAnywhere, Category = "Algorithm")
+		int32 numLeafs = 70;
+	UPROPERTY(EditAnywhere, Category = "Performance")
+		int32 nbrTrees = 100;
+
+	UPROPERTY(EditAnywhere, Category = "Algorithm")
+		int32 cullingConstant = 5;
+
+	UPROPERTY(EditAnywhere, Category = "Algorithm")
+		int32 cullingConstant = 4;
+
+	UPROPERTY(EditAnywhere, Category = "Algorithm")
+		int32 cullingConstant = 4;
+=======
 	UPROPERTY(EditAnywhere, Category = "Performance")
 		int32 nbrLines = 10;
+>>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
+=======
+	UPROPERTY(EditAnywhere, Category = "Performance")
+		int32 nbrLines = 10;
+>>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
+
+	UPROPERTY(EditAnywhere, Category = "Algorithm")
+		int32 cullingConstant = 4;
 
 	void combine(ATree* newTree, ATree* p1, ATree* p2, FVector location);
 

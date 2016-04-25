@@ -26,14 +26,15 @@ public:
 	void duplicate(ALeaf* spawnedLeaf);
 
 	UPROPERTY(EditAnywhere, Category = "Algorithm")
-		float rotationChance = .1f;
+		float rotationChance = .005f;
 
 	void mutate();
 
 	int32 attachedToIndex = 0;
-
 	float branchOffset;
 	FVector offsetVector;
+
+	void updateLocation(FVector branchLoc);
 
 private:
 	FRandomStream random;
