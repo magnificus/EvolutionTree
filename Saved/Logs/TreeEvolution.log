@@ -1,0 +1,641 @@
+﻿Log file open, 04/22/16 00:13:04
+LogInit:Display: Running engine for game: TreeEvolution
+LogPlatformFile: Not using cached read wrapper
+LogInit:Display: RandInit(-902114332) SRandInit(-902114331).
+LogTaskGraph: Started task graph with 4 named threads and 7 total threads.
+LogStats: Stats thread started at 0.059483
+LogInit: Version: 4.11.1-2934540+++UE4+Release-4.11
+LogInit: API Version: 2927265
+LogInit: Compiled (64-bit): Apr  6 2016 02:14:16
+LogInit: Compiled with Visual C++: 19.00.23026.00
+LogInit: Build Configuration: Development
+LogInit: Branch Name: ++UE4+Release-4.11
+LogInit: Command line: 
+LogInit: Base directory: E:/Program Files/Epic Games/4.11/Engine/Binaries/Win64/
+LogInit: Installed Engine Build: 1
+LogInit: Using libcurl 7.41.0
+LogInit:  - built for x86_64-pc-win32
+LogInit:  - supports SSL with WinSSL
+LogInit:  - other features:
+LogInit:      CURL_VERSION_SSL
+LogInit:      CURL_VERSION_IPV6
+LogInit:      CURL_VERSION_ASYNCHDNS
+LogInit:      CURL_VERSION_LARGEFILE
+LogInit:      CURL_VERSION_IDN
+LogInit:  CurlRequestOptions (configurable via config and command line):
+LogInit:  - bVerifyPeer = true  - Libcurl will verify peer certificate
+LogInit:  - bUseHttpProxy = false  - Libcurl will NOT use HTTP proxy
+LogInit:  - bDontReuseConnections = false  - Libcurl will reuse connections
+LogInit:  - CertBundlePath = nullptr  - Libcurl will use whatever was configured at build time.
+LogInit: Presizing for max 16777216 objects, including 0 objects not considered by GC, pre-allocating 0 bytes for permanent pool.
+LogInit: Object subsystem initialized
+[2016.04.21-22.13.04:226][  0]LogInit: Selected Device Profile: [Windows]
+[2016.04.21-22.13.04:226][  0]LogInit: Applying CVar settings loaded from the selected device profile: [Windows]
+[2016.04.21-22.13.04:232][  0]LogInit: Computer: MAGNIFICUS
+[2016.04.21-22.13.04:232][  0]LogInit: User: Tobbe
+[2016.04.21-22.13.04:232][  0]LogInit: CPU Page size=65536, Cores=4
+[2016.04.21-22.13.04:232][  0]LogInit: High frequency timer resolution =3.320341 MHz
+[2016.04.21-22.13.04:232][  0]LogMemory: Memory total: Physical=15.9GB (16GB approx)
+[2016.04.21-22.13.04:232][  0]LogMemory: Platform Memory Stats for Windows
+[2016.04.21-22.13.04:232][  0]LogMemory: Process Physical Memory: 314.04 MB used, 314.04 MB peak
+[2016.04.21-22.13.04:232][  0]LogMemory: Process Virtual Memory: 316.27 MB used, 316.27 MB peak
+[2016.04.21-22.13.04:232][  0]LogMemory: Physical Memory: 13118.86 MB used, 16328.55 MB total
+[2016.04.21-22.13.04:232][  0]LogMemory: Virtual Memory: 619.59 MB used, 8388608.00 MB total
+[2016.04.21-22.13.04:281][  0]LogTextLocalizationManager: No translations for ('sv-SE') exist, falling back to 'en' for localization and internationalization data.
+[2016.04.21-22.13.04:610][  0]LogD3D11RHI: D3D11 adapters:
+[2016.04.21-22.13.04:622][  0]LogD3D11RHI:    0. 'NVIDIA GeForce GTX 780' (Feature Level 11_0)
+[2016.04.21-22.13.04:622][  0]LogD3D11RHI:       3013MB of dedicated video memory, 0MB of dedicated system memory, and 7908MB of shared system memory, 3 output[s]
+[2016.04.21-22.13.04:622][  0]LogD3D11RHI: Chosen D3D11 Adapter: 0
+[2016.04.21-22.13.04:626][  0]LogD3D11RHI: Creating new Direct3DDevice
+[2016.04.21-22.13.04:626][  0]LogD3D11RHI:     Adapter Name: NVIDIA GeForce GTX 780
+[2016.04.21-22.13.04:626][  0]LogD3D11RHI:   Driver Version: 10.18.13.5582 (internal 10.18.13.5582)
+[2016.04.21-22.13.04:626][  0]LogD3D11RHI:      Driver Date: 8-25-2015
+[2016.04.21-22.13.04:626][  0]LogRHI: Texture pool is 1361 MB (70% of 1945 MB)
+[2016.04.21-22.13.04:633][  0]LogD3D11RHI: Async texture creation enabled
+[2016.04.21-22.13.05:034][  0]LogShaderCompilers: Guid format shader working directory is 0 characters bigger than the processId version (../../../../../../TreeEvolution/EvolutionTree/Intermediate/Shaders/WorkingDirectory/10604/).
+[2016.04.21-22.13.05:034][  0]LogShaderCompilers: Cleaned the shader compiler working directory 'C:/Users/Tobbe/AppData/Local/Temp/UnrealShaderWorkingDir/C73918A64ED87E635CAE2B9F097C3056/'.
+[2016.04.21-22.13.05:034][  0]LogShaderCompilers:Display: Using Local Shader Compiler.
+[2016.04.21-22.13.05:757][  0]LogTemp:Display: Loaded TP AllDesktopTargetPlatform
+[2016.04.21-22.13.05:760][  0]LogTemp:Display: Loaded TP WindowsClientTargetPlatform
+[2016.04.21-22.13.05:763][  0]LogTemp:Display: Loaded TP WindowsNoEditorTargetPlatform
+[2016.04.21-22.13.05:767][  0]LogTemp:Display: Loaded TP WindowsServerTargetPlatform
+[2016.04.21-22.13.05:770][  0]LogTemp:Display: Loaded TP WindowsTargetPlatform
+[2016.04.21-22.13.05:773][  0]LogTemp:Display: Loaded TP AndroidTargetPlatform
+[2016.04.21-22.13.05:775][  0]LogTemp:Display: Loaded TP Android_ASTCTargetPlatform
+[2016.04.21-22.13.05:777][  0]LogTemp:Display: Loaded TP Android_ATCTargetPlatform
+[2016.04.21-22.13.05:779][  0]LogTemp:Display: Loaded TP Android_DXTTargetPlatform
+[2016.04.21-22.13.05:781][  0]LogTemp:Display: Loaded TP Android_ETC1TargetPlatform
+[2016.04.21-22.13.05:784][  0]LogTemp:Display: Loaded TP Android_ETC2TargetPlatform
+[2016.04.21-22.13.05:790][  0]LogTemp:Display: Loaded TP Android_MultiTargetPlatform
+[2016.04.21-22.13.05:790][  0]LogTemp:Display: Loaded TP Android_PVRTCTargetPlatform
+[2016.04.21-22.13.05:791][  0]LogTemp:Display: Loaded TP HTML5TargetPlatform
+[2016.04.21-22.13.05:807][  0]LogTemp:Display: Loaded TP IOSTargetPlatform
+[2016.04.21-22.13.05:809][  0]LogTemp:Display: Loaded TP TVOSTargetPlatform
+[2016.04.21-22.13.05:812][  0]LogTemp:Display: Loaded TP LinuxNoEditorTargetPlatform
+[2016.04.21-22.13.05:814][  0]LogTemp:Display: Loaded TP LinuxServerTargetPlatform
+[2016.04.21-22.13.05:817][  0]LogTemp:Display: Loaded TP LinuxTargetPlatform
+[2016.04.21-22.13.05:817][  0]LogTargetPlatformManager:Display: Building Assets For Windows
+[2016.04.21-22.13.05:880][  0]LogDerivedDataCache:Display: Max Cache Size: 512 MB
+[2016.04.21-22.13.05:923][  0]LogDerivedDataCache: Loaded boot cache 0.04s 50MB C:/Users/Tobbe/AppData/Local/UnrealEngine/4.11/DerivedDataCache/Boot.ddc.
+[2016.04.21-22.13.05:923][  0]LogDerivedDataCache:Display: Loaded Boot cache: C:/Users/Tobbe/AppData/Local/UnrealEngine/4.11/DerivedDataCache/Boot.ddc
+[2016.04.21-22.13.05:923][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  Pak pak cache file ../../../../../../TreeEvolution/EvolutionTree/DerivedDataCache/DDC.ddp not found, will not use a pak cache.
+[2016.04.21-22.13.05:923][  0]LogDerivedDataCache: Unable to find inner node Pak for hierarchical cache Hierarchy.
+[2016.04.21-22.13.05:923][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  CompressedPak pak cache file ../../../../../../TreeEvolution/EvolutionTree/DerivedDataCache/Compressed.ddp not found, will not use a pak cache.
+[2016.04.21-22.13.05:923][  0]LogDerivedDataCache: Unable to find inner node CompressedPak for hierarchical cache Hierarchy.
+[2016.04.21-22.13.05:934][  0]LogDerivedDataCache:Display: Pak cache opened for reading ../../../Engine/DerivedDataCache/Compressed.ddp.
+[2016.04.21-22.13.05:945][  0]LogDerivedDataCache: Using Local data cache path C:/Users/Tobbe/AppData/Local/UnrealEngine/Common/DerivedDataCache: Writable
+[2016.04.21-22.13.06:066][  0]LogInit: Selected Device Profile: [Windows]
+[2016.04.21-22.13.06:067][  0]LogContentStreaming: Texture pool size is 0.00 MB
+[2016.04.21-22.13.06:084][  0]LogMaterial: Uniform references updated for custom material expression Custom.
+[2016.04.21-22.13.06:179][  0]LogMeshUtilities: No automatic mesh reduction module available
+[2016.04.21-22.13.06:179][  0]LogMeshUtilities: No automatic mesh merging module available
+[2016.04.21-22.13.06:179][  0]LogMeshUtilities: No distributed automatic mesh merging module available
+[2016.04.21-22.13.06:369][  0]LogUObjectArray: 27678 objects as part of root set at end of initial load.
+[2016.04.21-22.13.06:369][  0]LogUObjectAllocator: 5591384 out of 0 bytes used by permanent object pool.
+[2016.04.21-22.13.06:369][  0]LogUObjectArray: CloseDisregardForGC: 0/0 objects in disregard for GC pool
+[2016.04.21-22.13.06:374][  0]LogInit: WinSock: version 1.1 (2.2), MaxSocks=32767, MaxUdp=65467
+[2016.04.21-22.13.06:437][  0]LogSlate: SlateFontCache - WITH_FREETYPE: 1, WITH_HARFBUZZ: 1
+[2016.04.21-22.13.06:437][  0]LogSlate: SlateFontCache - WITH_FREETYPE: 1, WITH_HARFBUZZ: 1
+[2016.04.21-22.13.06:501][  0]LogStreaming:Warning: Failed to read file '../../../Engine/Content/Editor/Slate/Common/Selection_16x.png' error.
+[2016.04.21-22.13.06:501][  0]LogSlate: Could not find file for Slate resource: ../../../Engine/Content/Editor/Slate/Common/Selection_16x.png
+[2016.04.21-22.13.06:501][  0]LogStreaming:Warning: Failed to read file '../../../Engine/Content/Editor/Slate/Common/Selection_16x.png' error.
+[2016.04.21-22.13.06:501][  0]LogSlate: Could not find file for Slate resource: ../../../Engine/Content/Editor/Slate/Common/Selection_16x.png
+[2016.04.21-22.13.06:501][  0]LogStreaming:Warning: Failed to read file '../../../Engine/Content/Editor/Slate/Common/Selection_16x.png' error.
+[2016.04.21-22.13.06:501][  0]LogSlate: Could not find file for Slate resource: ../../../Engine/Content/Editor/Slate/Common/Selection_16x.png
+[2016.04.21-22.13.06:878][  0]LogUdpMessaging: Initializing bridge on interface 0.0.0.0:0 to multicast group 230.0.0.1:6666.
+[2016.04.21-22.13.07:043][  0]LogAssetRegistry: FAssetRegistry took 0.0194 seconds to start up
+[2016.04.21-22.13.07:156][  0]SourceControl: Info Source control is disabled
+[2016.04.21-22.13.07:177][  0]SourceControl: Info Source control is disabled
+[2016.04.21-22.13.07:183][  0]SourceControl: Info Source control is disabled
+[2016.04.21-22.13.07:189][  0]SourceControl: Info Source control is disabled
+[2016.04.21-22.13.07:350][  0]LogEngine: Initializing Engine...
+[2016.04.21-22.13.07:362][  0]LogHMD: SteamVR failed to initialize.  Err: 108
+[2016.04.21-22.13.07:372][  0]LogHMD: SteamVR failed to initialize.  Err: 108
+[2016.04.21-22.13.07:487][  0]LogAIModule: Creating AISystem for world NewWorld
+[2016.04.21-22.13.07:492][  0]LogInit: XAudio2 using 'Speakers (Realtek High Definition Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
+[2016.04.21-22.13.07:500][  0]LogInit: FAudioDevice initialized.
+[2016.04.21-22.13.07:525][  0]LogDerivedDataCache: Saved boot cache 0.02s 50MB C:/Users/Tobbe/AppData/Local/UnrealEngine/4.11/DerivedDataCache/Boot.ddc.
+[2016.04.21-22.13.07:530][  0]LogInit: Texture streaming: Enabled
+[2016.04.21-22.13.07:553][  0]LogInit: Transaction tracking system initialized
+[2016.04.21-22.13.07:572][  0]BlueprintLog: New page: Editor Load
+[2016.04.21-22.13.07:666][  0]LocalizationService: Info Localization service is disabled
+[2016.04.21-22.13.07:737][  0]LogLinker:Warning: Can't find file '/Game/FirstPersonBP/FirstPersonOverview'
+[2016.04.21-22.13.07:737][  0]LogLinker:Warning: Can't find file '/Game/FirstPersonBP/FirstPersonOverview'
+[2016.04.21-22.13.07:737][  0]LogUObjectGlobals:Warning: Failed to find object 'Class /Game/FirstPersonBP/FirstPersonOverview.FirstPersonOverview_C'
+[2016.04.21-22.13.07:758][  0]LogConsoleResponse:Display: 
+[2016.04.21-22.13.07:835][  0]LogCook:Display: Max memory allowance for cook 8192mb
+[2016.04.21-22.13.07:835][  0]LogCook:Display: Mobile HDR setting 1
+[2016.04.21-22.13.07:835][  0]LogCook:Display: Done creating registry. It took  0.00s.
+[2016.04.21-22.13.07:876][  0]LogFileCache: Scanning file cache for directory 'E:/TreeEvolution/EvolutionTree/Content/' took 0.01s
+[2016.04.21-22.13.07:876][  0]SourceControl: Info Source control is disabled
+[2016.04.21-22.13.07:876][  0]Cmd: MAP LOAD FILE="../../../../../../TreeEvolution/EvolutionTree/Content/StarterContent/Maps/Minimal_Default.umap" TEMPLATE=0 SHOWPROGRESS=1 FEATURELEVEL=3
+[2016.04.21-22.13.07:876][  0]LightingResults: New page: Lighting Build
+[2016.04.21-22.13.07:878][  0]MapCheck: New page: Map Check
+[2016.04.21-22.13.07:878][  0]LightingResults: New page: Lighting Build
+[2016.04.21-22.13.08:208][  0]LogAIModule: Creating AISystem for world Minimal_Default
+[2016.04.21-22.13.08:211][  0]LogEditorServer: Finished looking for orphan Actors (0.000 secs)
+[2016.04.21-22.13.08:212][  0]Cmd: MAP CHECKDEP NOCLEARLOG
+[2016.04.21-22.13.08:234][  0]MapCheck: Info Map check complete: 0 Error(s), 0 Warning(s), took 22.184ms to complete.
+[2016.04.21-22.13.08:234][  0]LogFileHelpers: Loading map 'Minimal_Default' took 0.358
+[2016.04.21-22.13.08:357][  0]LogCollectionManager: Loaded 0 collections in 0.001057 seconds
+[2016.04.21-22.13.08:393][  0]LogFileCache: Scanning file cache for directory 'E:/TreeEvolution/EvolutionTree/Saved/Collections/' took 0.01s
+[2016.04.21-22.13.08:393][  0]LogFileCache: Scanning file cache for directory 'E:/TreeEvolution/EvolutionTree/Content/Developers/Tobbe/Collections/' took 0.01s
+[2016.04.21-22.13.08:393][  0]LogFileCache: Scanning file cache for directory 'E:/TreeEvolution/EvolutionTree/Content/Collections/' took 0.00s
+[2016.04.21-22.13.08:393][  0]LogCollectionManager: Rebuilt the GUID cache for 0 collections in 0.000002 seconds
+[2016.04.21-22.13.08:399][  0]LogContentBrowser: Native class hierarchy populated in 0.0058 seconds. Added 1984 classes and 345 folders.
+[2016.04.21-22.13.08:401][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: Construct from data asset -  0.000 s
+[2016.04.21-22.13.08:401][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: GameplayTagTreeChangedEvent.Broadcast -  0.000 s
+[2016.04.21-22.13.08:402][  0]LogContentBrowser: Native class hierarchy updated for 'GameplayTags' in 0.0007 seconds. Added 12 classes and 0 folders.
+[2016.04.21-22.13.08:405][  0]LogContentBrowser: Native class hierarchy updated for 'WidgetCarousel' in 0.0006 seconds. Added 0 classes and 0 folders.
+[2016.04.21-22.13.08:411][  0]LogContentBrowser: Native class hierarchy updated for 'SuperSearch' in 0.0007 seconds. Added 1 classes and 2 folders.
+[2016.04.21-22.13.08:434][  0]LogContentBrowser: Native class hierarchy updated for 'AddContentDialog' in 0.0006 seconds. Added 0 classes and 0 folders.
+[2016.04.21-22.13.08:438][  0]LogContentBrowser: Native class hierarchy updated for 'SceneOutliner' in 0.0006 seconds. Added 1 classes and 2 folders.
+[2016.04.21-22.13.08:484][  0]LogCrashTracker: Crashtracker disabled due to settings.
+[2016.04.21-22.13.08:489][  0]LogUObjectGlobals:Warning: Failed to find object 'Class None.'
+[2016.04.21-22.13.08:513][  0]LogContentBrowser: Native class hierarchy updated for 'HierarchicalLODOutliner' in 0.0007 seconds. Added 1 classes and 2 folders.
+[2016.04.21-22.13.08:513][  0]LogLoad: Full Startup: 4.86 seconds (BP compile: 0.10 seconds)
+[2016.04.21-22.13.08:513][  0]LogExternalProfiler: Found external profiler: VSPerf
+[2016.04.21-22.13.08:513][  0]LogExternalProfiler: Using external profiler: VSPerf
+[2016.04.21-22.13.08:525][  0]LogOcInput: OculusInput pre-init called
+[2016.04.21-22.13.08:546][  0]LogAssetRegistry: Asset discovery search completed in 1.5226 seconds
+[2016.04.21-22.13.08:546][  0]LogCollectionManager: Rebuilt the object cache for 0 collections in 0.000001 seconds (found 0 objects)
+[2016.04.21-22.13.08:546][  0]LogCollectionManager: Fixed up redirectors for 0 collections in 0.000013 seconds (updated 0 objects)
+[2016.04.21-22.13.08:562][  0]LogContentStreaming: Texture pool size now 1000 MB
+[2016.04.21-22.13.08:662][  0]LogRenderer: Reallocating scene render targets to support 1228x600 (Frame:2).
+[2016.04.21-22.13.09:848][101]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.21-22.13.09:848][101]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2016.04.21-22.13.09:848][101]PIE: New page: PIE session: Minimal_Default (Apr 22, 2016, 1:13:09 AM)
+[2016.04.21-22.13.09:848][101]LogPlayLevel: Creating play world package: /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default
+[2016.04.21-22.13.09:859][101]LogPlayLevel: PIE: StaticDuplicateObject took: (0.010889s)
+[2016.04.21-22.13.09:860][101]LogAIModule: Creating AISystem for world Minimal_Default
+[2016.04.21-22.13.09:860][101]LogPlayLevel: PIE: World Init took: (0.000459s)
+[2016.04.21-22.13.09:860][101]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/StarterContent/Maps/Minimal_Default.Minimal_Default to /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default (0.011532s)
+[2016.04.21-22.13.09:881][101]LogInit: XAudio2 using 'Speakers (Realtek High Definition Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
+[2016.04.21-22.13.09:887][101]LogInit: FAudioDevice initialized.
+[2016.04.21-22.13.09:925][101]LogWorld: Game class is 'simGameMode_C'
+[2016.04.21-22.13.09:926][101]LogWorld: Bringing World /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default up for play (max tick rate 0) at 2016.04.22-00.13.09
+[2016.04.21-22.13.09:926][101]LogWorld: Bringing up level for play took: 0.001033
+[2016.04.21-22.13.09:929][101]LogContentBrowser: Native class hierarchy updated for 'MovieSceneCapture' in 0.0007 seconds. Added 9 classes and 0 folders.
+[2016.04.21-22.13.09:931][101]PIE: Info Play in editor start time for /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default -0.284
+[2016.04.21-22.13.09:931][101]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.21-22.14.38:113][545]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.21-22.14.38:238][545]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.21-22.14.54:735][249]LogContentBrowser: Native class hierarchy updated for 'BlueprintGraph' in 0.0009 seconds. Added 108 classes and 0 folders.
+[2016.04.21-22.15.18:420][937]Recompiling TreeEvolution...
+[2016.04.21-22.15.18:420][937]Launching UnrealBuildTool... [E:/Program Files/Epic Games/4.11/Engine/Binaries/DotNET/UnrealBuildTool.exe TreeEvolution -ModuleWithSuffix TreeEvolution 1930 Win64 Development -editorrecompile -canskiplink "E:/TreeEvolution/EvolutionTree/TreeEvolution.uproject"  -2015]
+[2016.04.21-22.15.18:421][937]Warning: Starting HotReload took  0.0s.
+[2016.04.21-22.15.19:764][ 64]MapCheck: New page: Map Check
+[2016.04.21-22.15.19:810][ 64]Cmd: MAP REBUILD ALLVISIBLE
+[2016.04.21-22.15.19:810][ 64]LogEditorServer: Rebuildmap Clear paths rebuilt
+[2016.04.21-22.15.19:880][ 64]LightingResults: New page: Lighting Build - Apr 22, 2016, 1:15:19 AM
+[2016.04.21-22.15.19:945][ 64]LogSwarmInterface: [OpenConnection] Registering TCP channel ...
+[2016.04.21-22.15.19:992][ 64]LogSwarmInterface: [OpenConnection] Connecting to agent ...
+[2016.04.21-22.15.20:005][ 64]LogSwarmInterface: [TryOpenConnection] Testing the Agent
+[2016.04.21-22.15.20:516][ 64]LogSwarmInterface: [TryOpenConnection] Opening Connection to Agent
+[2016.04.21-22.15.20:516][ 64]LogSwarmInterface: [TryOpenConnection] Local Process ID is 10604
+[2016.04.21-22.15.24:286][ 64]LightingResults:Warning: Performance Warning No importance volume found and the scene is so large that the automatically synthesized volume will not yield good results.  Please add a tightly bounding lightmass importance volume to optimize your scene's quality and lighting build times.
+[2016.04.21-22.15.24:287][ 64]LogStaticLightingSystem: Running Lightmass w/ ImmediateImport mode ENABLED
+[2016.04.21-22.15.24:287][ 64]LogStaticLightingSystem: Running Lightmass w/ ImmediateProcess mode ENABLED
+[2016.04.21-22.15.24:287][ 64]LogStaticLightingSystem: Running Lightmass w/ Sorting mode ENABLED
+[2016.04.21-22.15.24:287][ 64]LogStaticLightingSystem: Running Lightmass w/ Mapping paddings ENABLED
+[2016.04.21-22.15.24:287][ 64]LogStaticLightingSystem: Running Lightmass w/ Mapping debug paddings DISABLED
+[2016.04.21-22.15.24:394][ 64]Cmd: MAP CHECK DONTDISPLAYDIALOG
+[2016.04.21-22.15.24:394][ 64]MapCheck: New page: Minimal_Default - Apr 22, 2016, 1:15:24 AM
+[2016.04.21-22.15.24:419][ 64]MapCheck: Info Map check complete: 0 Error(s), 0 Warning(s), took 25.56ms to complete.
+[2016.04.21-22.15.24:440][ 64]LogEditorBuildUtils: Build time 0:00:04
+[2016.04.21-22.15.31:769][716]CompilerResultsLog: New page: Compilation - Apr 22, 2016, 1:15:31 AM
+[2016.04.21-22.15.31:782][716]CompilerResultsLog: Info Creating makefile for hot reloading TreeEvolution (working set of source files changed)
+[2016.04.21-22.15.31:782][716]CompilerResultsLog: Info Compiling game modules for hot reload
+[2016.04.21-22.15.31:782][716]CompilerResultsLog: Info Parsing headers for TreeEvolutionEditor
+[2016.04.21-22.15.31:782][716]CompilerResultsLog: Info   Running UnrealHeaderTool "E:\TreeEvolution\EvolutionTree\TreeEvolution.uproject" "E:\TreeEvolution\EvolutionTree\Intermediate\Build\Win64\TreeEvolutionEditor\Development\UnrealHeaderTool.manifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -installed
+[2016.04.21-22.15.31:782][716]CompilerResultsLog: Info Reflection code generated for TreeEvolutionEditor in 2,2254762 seconds
+[2016.04.21-22.15.31:782][716]CompilerResultsLog: Info Performing 5 actions (4 in parallel)
+[2016.04.21-22.15.31:782][716]CompilerResultsLog: Info Tree.cpp
+[2016.04.21-22.15.31:782][716]CompilerResultsLog: Info SimLogic.cpp
+[2016.04.21-22.15.31:782][716]CompilerResultsLog: Info Branch.cpp
+[2016.04.21-22.15.31:782][716]CompilerResultsLog: Info TreeEvolution.generated.cpp
+[2016.04.21-22.15.31:782][716]CompilerResultsLog:Error: Error E:\TreeEvolution\EvolutionTree\Source\TreeEvolution\Branch.cpp(101) : error C2530: 'OverlappingActors': references must be initialized
+[2016.04.21-22.15.31:782][716]CompilerResultsLog: Info -------- End Detailed Actions Stats -----------------------------------------------------------
+[2016.04.21-22.15.31:782][716]CompilerResultsLog: Info ERROR: UBT ERROR: Failed to produce item: E:\TreeEvolution\EvolutionTree\Binaries\Win64\UE4Editor-TreeEvolution-1930.dll
+[2016.04.21-22.15.31:782][716]CompilerResultsLog: Info Total build time: 13,20 seconds
+[2016.04.21-22.15.31:782][716]LogMainFrame: MainFrame: Module compiling took 13.375 seconds
+[2016.04.21-22.15.31:782][716]Warning: HotReload failed, recompile failed
+[2016.04.21-22.15.57:457][402]Recompiling TreeEvolution...
+[2016.04.21-22.15.57:458][402]Launching UnrealBuildTool... [E:/Program Files/Epic Games/4.11/Engine/Binaries/DotNET/UnrealBuildTool.exe TreeEvolution -ModuleWithSuffix TreeEvolution 3793 Win64 Development -editorrecompile -canskiplink "E:/TreeEvolution/EvolutionTree/TreeEvolution.uproject"  -2015]
+[2016.04.21-22.15.57:472][402]Warning: Starting HotReload took  0.1s.
+[2016.04.21-22.16.10:039][ 76]CompilerResultsLog: New page: Compilation - Apr 22, 2016, 1:16:10 AM
+[2016.04.21-22.16.10:039][ 76]CompilerResultsLog: Info Creating makefile for hot reloading TreeEvolution (working set of source files changed)
+[2016.04.21-22.16.10:039][ 76]CompilerResultsLog: Info Compiling game modules for hot reload
+[2016.04.21-22.16.10:040][ 76]CompilerResultsLog: Info Parsing headers for TreeEvolutionEditor
+[2016.04.21-22.16.10:040][ 76]CompilerResultsLog: Info   Running UnrealHeaderTool "E:\TreeEvolution\EvolutionTree\TreeEvolution.uproject" "E:\TreeEvolution\EvolutionTree\Intermediate\Build\Win64\TreeEvolutionEditor\Development\UnrealHeaderTool.manifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -installed
+[2016.04.21-22.16.10:040][ 76]CompilerResultsLog: Info Reflection code generated for TreeEvolutionEditor in 4,0967939 seconds
+[2016.04.21-22.16.10:040][ 76]CompilerResultsLog: Info Performing 2 actions (4 in parallel)
+[2016.04.21-22.16.10:040][ 76]CompilerResultsLog: Info Branch.cpp
+[2016.04.21-22.16.10:040][ 76]CompilerResultsLog: Info [2/2] Link UE4Editor-TreeEvolution-3793.dll
+[2016.04.21-22.16.10:040][ 76]CompilerResultsLog: Info    Creating library E:\TreeEvolution\EvolutionTree\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-TreeEvolution-3793.lib and object E:\TreeEvolution\EvolutionTree\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-TreeEvolution-3793.exp
+[2016.04.21-22.16.10:040][ 76]CompilerResultsLog: Info -------- End Detailed Actions Stats -----------------------------------------------------------
+[2016.04.21-22.16.10:040][ 76]CompilerResultsLog: Info Total build time: 12,20 seconds
+[2016.04.21-22.16.10:040][ 76]LogMainFrame: MainFrame: Module compiling took 12.629 seconds
+[2016.04.21-22.16.10:088][ 76]LogContentBrowser: Native class hierarchy updated for 'TreeEvolution' in 0.0011 seconds. Added 5 classes and 2 folders.
+[2016.04.21-22.16.10:091][ 76]Warning: HotReload successful (13 functions remapped  0 scriptstructs remapped)
+[2016.04.21-22.16.10:390][ 76]LogContentBrowser: Native class hierarchy populated in 0.0096 seconds. Added 1987 classes and 351 folders.
+[2016.04.21-22.16.10:390][ 76]Warning: HotReload took 13.0s.
+[2016.04.21-22.17.53:147][ 83]BlueprintLog: New page: Compile mainGUI
+[2016.04.21-22.17.53:531][ 83]BlueprintEditorCompileResults: Info [0289.86] Compile of mainGUI successful! [in 369 ms]
+[2016.04.21-22.18.09:574][502]LogSavePackage: Save=335.85ms
+[2016.04.21-22.18.09:575][502]LogSavePackage: Moving '../../../../../../TreeEvolution/EvolutionTree/Saved/Minimal_Default163172824F60100096CC92AADEFCD148.tmp' to '../../../../../../TreeEvolution/EvolutionTree/Content/StarterContent/Maps/Minimal_Default.umap'
+[2016.04.21-22.18.09:582][502]LogSavePackage: Total save time: 1241.67ms
+[2016.04.21-22.18.09:582][502]LogSavePackage:Display: Finished SavePackage ../../../../../../TreeEvolution/EvolutionTree/Content/StarterContent/Maps/Minimal_Default.umap
+[2016.04.21-22.18.09:675][502]LogFileHelpers: Saving map 'Minimal_Default' took 1.581
+[2016.04.21-22.18.09:684][502]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/mainGUI" FILE="../../../../../../TreeEvolution/EvolutionTree/Content/mainGUI.uasset" SILENT=true
+[2016.04.21-22.18.09:908][502]LogSavePackage: Save=193.90ms
+[2016.04.21-22.18.09:908][502]LogSavePackage: Moving '../../../../../../TreeEvolution/EvolutionTree/Saved/mainGUI30CB6AA347048AEDEF96DC8B36C71127.tmp' to '../../../../../../TreeEvolution/EvolutionTree/Content/mainGUI.uasset'
+[2016.04.21-22.18.09:915][502]LogSavePackage: Total save time: 229.29ms
+[2016.04.21-22.18.09:915][502]LogSavePackage:Display: Finished SavePackage ../../../../../../TreeEvolution/EvolutionTree/Content/mainGUI.uasset
+[2016.04.21-22.19.01:965][423]LogUObjectHash:Warning: Ambiguous search, could be HorizontalBox /Game/mainGUI.mainGUI:WidgetTree.HorizontalBox_80 or HorizontalBox /Engine/Transient.World_6:mainGUI_C_3.WidgetTree_17.HorizontalBox_80
+[2016.04.21-22.19.01:965][423]LogUObjectHash:Warning: Ambiguous search, could be HorizontalBox /Game/mainGUI.mainGUI:WidgetTree.HorizontalBox_80 or HorizontalBox /Game/mainGUI.mainGUI_C:WidgetTree_17.HorizontalBox_80
+[2016.04.21-22.19.01:965][423]LogUObjectHash:Warning: Ambiguous search, could be HorizontalBox /Game/mainGUI.mainGUI:WidgetTree.HorizontalBox_80 or HorizontalBox /Game/mainGUI.mainGUI_C:WidgetTree_18.HorizontalBox_80
+[2016.04.21-22.19.01:965][423]LogUObjectHash:Warning: Ambiguous search, could be HorizontalBox /Game/mainGUI.mainGUI:WidgetTree.HorizontalBox_80 or HorizontalBox /Engine/Transient.World_6:mainGUI_C_5.WidgetTree_18.HorizontalBox_80
+[2016.04.21-22.19.01:965][423]LogUObjectHash:Warning: Ambiguous search, could be HorizontalBox /Game/mainGUI.mainGUI:WidgetTree.HorizontalBox_80 or HorizontalBox /Game/mainGUI.mainGUI_C:WidgetTree_19.HorizontalBox_80
+[2016.04.21-22.19.01:965][423]LogUObjectHash:Warning: Ambiguous search, could be HorizontalBox /Game/mainGUI.mainGUI:WidgetTree.HorizontalBox_80 or HorizontalBox /Engine/Transient.World_6:mainGUI_C_6.WidgetTree_19.HorizontalBox_80
+[2016.04.21-22.19.01:965][423]LogProperty:Warning: Illegal TEXT reference to a private object in external package (HorizontalBoxSlot /Game/mainGUI.mainGUI:WidgetTree.HorizontalBox_80.HorizontalBoxSlot_31) from referencer (CheckBox /Engine/UMG/Editor/Transient.CheckBox_95).  Import failed...
+[2016.04.21-22.19.01:965][423]LogProperty:Warning: ObjectProperty /Script/UMG.Widget:Slot: unresolved reference to 'HorizontalBoxSlot'HorizontalBox_80.HorizontalBoxSlot_31''
+[2016.04.21-22.19.04:050][506]LogUObjectHash:Warning: Ambiguous search, could be HorizontalBox /Game/mainGUI.mainGUI:WidgetTree.HorizontalBox_80 or HorizontalBox /Engine/Transient.World_6:mainGUI_C_3.WidgetTree_17.HorizontalBox_80
+[2016.04.21-22.19.04:050][506]LogUObjectHash:Warning: Ambiguous search, could be HorizontalBox /Game/mainGUI.mainGUI:WidgetTree.HorizontalBox_80 or HorizontalBox /Game/mainGUI.mainGUI_C:WidgetTree_17.HorizontalBox_80
+[2016.04.21-22.19.04:050][506]LogUObjectHash:Warning: Ambiguous search, could be HorizontalBox /Game/mainGUI.mainGUI:WidgetTree.HorizontalBox_80 or HorizontalBox /Game/mainGUI.mainGUI_C:WidgetTree_18.HorizontalBox_80
+[2016.04.21-22.19.04:050][506]LogUObjectHash:Warning: Ambiguous search, could be HorizontalBox /Game/mainGUI.mainGUI:WidgetTree.HorizontalBox_80 or HorizontalBox /Engine/Transient.World_6:mainGUI_C_5.WidgetTree_18.HorizontalBox_80
+[2016.04.21-22.19.04:050][506]LogUObjectHash:Warning: Ambiguous search, could be HorizontalBox /Game/mainGUI.mainGUI:WidgetTree.HorizontalBox_80 or HorizontalBox /Game/mainGUI.mainGUI_C:WidgetTree_19.HorizontalBox_80
+[2016.04.21-22.19.04:050][506]LogUObjectHash:Warning: Ambiguous search, could be HorizontalBox /Game/mainGUI.mainGUI:WidgetTree.HorizontalBox_80 or HorizontalBox /Engine/Transient.World_6:mainGUI_C_6.WidgetTree_19.HorizontalBox_80
+[2016.04.21-22.19.04:050][506]LogUObjectHash:Warning: Ambiguous search, could be HorizontalBox /Game/mainGUI.mainGUI:WidgetTree.HorizontalBox_80 or HorizontalBox /Game/mainGUI.mainGUI_C:WidgetTree_20.HorizontalBox_80
+[2016.04.21-22.19.04:050][506]LogUObjectHash:Warning: Ambiguous search, could be HorizontalBox /Game/mainGUI.mainGUI:WidgetTree.HorizontalBox_80 or HorizontalBox /Engine/Transient.World_6:mainGUI_C_7.WidgetTree_20.HorizontalBox_80
+[2016.04.21-22.19.04:050][506]LogProperty:Warning: Illegal TEXT reference to a private object in external package (HorizontalBoxSlot /Game/mainGUI.mainGUI:WidgetTree.HorizontalBox_80.HorizontalBoxSlot_31) from referencer (CheckBox /Engine/UMG/Editor/Transient.CheckBox_95).  Import failed...
+[2016.04.21-22.19.04:050][506]LogProperty:Warning: ObjectProperty /Script/UMG.Widget:Slot: unresolved reference to 'HorizontalBoxSlot'HorizontalBox_80.HorizontalBoxSlot_31''
+[2016.04.21-22.19.06:079][573]LogUObjectHash:Warning: Ambiguous search, could be HorizontalBox /Game/mainGUI.mainGUI:WidgetTree.HorizontalBox_80 or HorizontalBox /Engine/Transient.World_6:mainGUI_C_3.WidgetTree_17.HorizontalBox_80
+[2016.04.21-22.19.06:079][573]LogUObjectHash:Warning: Ambiguous search, could be HorizontalBox /Game/mainGUI.mainGUI:WidgetTree.HorizontalBox_80 or HorizontalBox /Game/mainGUI.mainGUI_C:WidgetTree_17.HorizontalBox_80
+[2016.04.21-22.19.06:079][573]LogUObjectHash:Warning: Ambiguous search, could be HorizontalBox /Game/mainGUI.mainGUI:WidgetTree.HorizontalBox_80 or HorizontalBox /Game/mainGUI.mainGUI_C:WidgetTree_18.HorizontalBox_80
+[2016.04.21-22.19.06:079][573]LogUObjectHash:Warning: Ambiguous search, could be HorizontalBox /Game/mainGUI.mainGUI:WidgetTree.HorizontalBox_80 or HorizontalBox /Engine/Transient.World_6:mainGUI_C_5.WidgetTree_18.HorizontalBox_80
+[2016.04.21-22.19.06:079][573]LogUObjectHash:Warning: Ambiguous search, could be HorizontalBox /Game/mainGUI.mainGUI:WidgetTree.HorizontalBox_80 or HorizontalBox /Game/mainGUI.mainGUI_C:WidgetTree_19.HorizontalBox_80
+[2016.04.21-22.19.06:079][573]LogUObjectHash:Warning: Ambiguous search, could be HorizontalBox /Game/mainGUI.mainGUI:WidgetTree.HorizontalBox_80 or HorizontalBox /Engine/Transient.World_6:mainGUI_C_6.WidgetTree_19.HorizontalBox_80
+[2016.04.21-22.19.06:079][573]LogUObjectHash:Warning: Ambiguous search, could be HorizontalBox /Game/mainGUI.mainGUI:WidgetTree.HorizontalBox_80 or HorizontalBox /Game/mainGUI.mainGUI_C:WidgetTree_20.HorizontalBox_80
+[2016.04.21-22.19.06:079][573]LogUObjectHash:Warning: Ambiguous search, could be HorizontalBox /Game/mainGUI.mainGUI:WidgetTree.HorizontalBox_80 or HorizontalBox /Engine/Transient.World_6:mainGUI_C_7.WidgetTree_20.HorizontalBox_80
+[2016.04.21-22.19.06:079][573]LogProperty:Warning: Illegal TEXT reference to a private object in external package (HorizontalBoxSlot /Game/mainGUI.mainGUI:WidgetTree.HorizontalBox_80.HorizontalBoxSlot_31) from referencer (CheckBox /Engine/UMG/Editor/Transient.CheckBox_95).  Import failed...
+[2016.04.21-22.19.06:079][573]LogProperty:Warning: ObjectProperty /Script/UMG.Widget:Slot: unresolved reference to 'HorizontalBoxSlot'HorizontalBox_80.HorizontalBoxSlot_31''
+[2016.04.21-22.19.09:918][707]LogUObjectHash:Warning: Ambiguous search, could be CheckBox /Game/mainGUI.mainGUI:WidgetTree.CheckBox_95 or ObjectProperty /Game/mainGUI.SKEL_mainGUI_C:CheckBox_95
+[2016.04.21-22.19.09:918][707]LogUObjectHash:Warning: Ambiguous search, could be CheckBox /Game/mainGUI.mainGUI:WidgetTree.CheckBox_95 or CheckBox /Game/mainGUI.mainGUI_C:WidgetTree_16.CheckBox_95
+[2016.04.21-22.19.09:918][707]LogUObjectHash:Warning: Ambiguous search, could be CheckBox /Game/mainGUI.mainGUI:WidgetTree.CheckBox_95 or CheckBox /Engine/Transient.World_6:mainGUI_C_1.WidgetTree_16.CheckBox_95
+[2016.04.21-22.19.09:918][707]LogUObjectHash:Warning: Ambiguous search, could be CheckBox /Game/mainGUI.mainGUI:WidgetTree.CheckBox_95 or ObjectProperty /Engine/Transient.REINST_SKEL_mainGUI_C_8:CheckBox_95
+[2016.04.21-22.19.09:918][707]LogUObjectHash:Warning: Ambiguous search, could be CheckBox /Game/mainGUI.mainGUI:WidgetTree.CheckBox_95 or CheckBox /Game/mainGUI.mainGUI_C:WidgetTree_17.CheckBox_95
+[2016.04.21-22.19.09:918][707]LogUObjectHash:Warning: Ambiguous search, could be CheckBox /Game/mainGUI.mainGUI:WidgetTree.CheckBox_95 or CheckBox /Engine/Transient.World_6:mainGUI_C_3.WidgetTree_17.CheckBox_95
+[2016.04.21-22.19.09:918][707]LogUObjectHash:Warning: Ambiguous search, could be CheckBox /Game/mainGUI.mainGUI:WidgetTree.CheckBox_95 or ObjectProperty /Engine/Transient.REINST_SKEL_mainGUI_C_9:CheckBox_95
+[2016.04.21-22.19.09:918][707]LogUObjectHash:Warning: Ambiguous search, could be CheckBox /Game/mainGUI.mainGUI:WidgetTree.CheckBox_95 or CheckBox /Game/mainGUI.mainGUI_C:WidgetTree_18.CheckBox_95
+[2016.04.21-22.19.09:918][707]LogUObjectHash:Warning: Ambiguous search, could be CheckBox /Game/mainGUI.mainGUI:WidgetTree.CheckBox_95 or CheckBox /Engine/Transient.World_6:mainGUI_C_5.WidgetTree_18.CheckBox_95
+[2016.04.21-22.19.09:918][707]LogUObjectHash:Warning: Ambiguous search, could be CheckBox /Game/mainGUI.mainGUI:WidgetTree.CheckBox_95 or ObjectProperty /Engine/Transient.REINST_SKEL_mainGUI_C_10:CheckBox_95
+[2016.04.21-22.19.09:918][707]LogUObjectHash:Warning: Ambiguous search, could be CheckBox /Game/mainGUI.mainGUI:WidgetTree.CheckBox_95 or CheckBox /Game/mainGUI.mainGUI_C:WidgetTree_19.CheckBox_95
+[2016.04.21-22.19.09:918][707]LogUObjectHash:Warning: Ambiguous search, could be CheckBox /Game/mainGUI.mainGUI:WidgetTree.CheckBox_95 or CheckBox /Engine/Transient.World_6:mainGUI_C_6.WidgetTree_19.CheckBox_95
+[2016.04.21-22.19.09:918][707]LogUObjectHash:Warning: Ambiguous search, could be CheckBox /Game/mainGUI.mainGUI:WidgetTree.CheckBox_95 or ObjectProperty /Engine/Transient.REINST_SKEL_mainGUI_C_11:CheckBox_95
+[2016.04.21-22.19.09:918][707]LogUObjectHash:Warning: Ambiguous search, could be CheckBox /Game/mainGUI.mainGUI:WidgetTree.CheckBox_95 or CheckBox /Game/mainGUI.mainGUI_C:WidgetTree_20.CheckBox_95
+[2016.04.21-22.19.09:918][707]LogUObjectHash:Warning: Ambiguous search, could be CheckBox /Game/mainGUI.mainGUI:WidgetTree.CheckBox_95 or CheckBox /Engine/Transient.World_6:mainGUI_C_7.WidgetTree_20.CheckBox_95
+[2016.04.21-22.19.09:918][707]LogProperty:Warning: Illegal TEXT reference to a private object in external package (PanelSlot /Game/mainGUI.mainGUI:WidgetTree.CheckBox_95.PanelSlot_7) from referencer (CheckBox /Engine/UMG/Editor/Transient.CheckBox_96).  Import failed...
+[2016.04.21-22.19.09:918][707]LogProperty:Warning: ObjectProperty /Script/UMG.Widget:Slot: unresolved reference to 'PanelSlot'CheckBox_95.PanelSlot_7''
+[2016.04.21-22.19.57:141][418]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/mainGUI" FILE="../../../../../../TreeEvolution/EvolutionTree/Content/mainGUI.uasset" SILENT=true
+[2016.04.21-22.19.57:321][418]LogSavePackage: Save=164.26ms
+[2016.04.21-22.19.57:321][418]LogSavePackage: Moving '../../../../../../TreeEvolution/EvolutionTree/Saved/mainGUI48BC721B4063556FFED513AE7B1C8E88.tmp' to '../../../../../../TreeEvolution/EvolutionTree/Content/mainGUI.uasset'
+[2016.04.21-22.19.57:324][418]LogSavePackage: Total save time: 177.75ms
+[2016.04.21-22.19.57:324][418]LogSavePackage:Display: Finished SavePackage ../../../../../../TreeEvolution/EvolutionTree/Content/mainGUI.uasset
+[2016.04.21-22.19.58:459][463]BlueprintLog: New page: Compile mainGUI
+[2016.04.21-22.19.58:642][463]BlueprintEditorCompileResults: Info [0414.98] Compile of mainGUI successful! [in 182 ms]
+[2016.04.21-22.20.55:422][442]LogUObjectHash:Warning: Ambiguous search, could be K2Node_CallFunction /Game/simGameController.simGameController:EventGraph.K2Node_CallFunction_2951 or K2Node_CallFunction /Engine/Transient.PROTO_BP_Blueprint_0:UserConstructionScript.K2Node_CallFunction_2951
+[2016.04.21-22.20.55:422][442]LogProperty:Warning: ObjectProperty /Script/Engine.EdGraphPin:LinkedTo.LinkedTo: unresolved reference to 'EdGraphPin'K2Node_CallFunction_2951.EdGraphPin_7607''
+[2016.04.21-22.22.23:810][861]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/simGameController" FILE="../../../../../../TreeEvolution/EvolutionTree/Content/simGameController.uasset" SILENT=true
+[2016.04.21-22.22.24:190][861]LogSavePackage: Save=331.51ms
+[2016.04.21-22.22.24:190][861]LogSavePackage: Moving '../../../../../../TreeEvolution/EvolutionTree/Saved/simGameController74A0C8B346B2AA5B189CC1B1A6CCDB70.tmp' to '../../../../../../TreeEvolution/EvolutionTree/Content/simGameController.uasset'
+[2016.04.21-22.22.24:228][861]LogSavePackage: Total save time: 416.88ms
+[2016.04.21-22.22.24:228][861]LogSavePackage:Display: Finished SavePackage ../../../../../../TreeEvolution/EvolutionTree/Content/simGameController.uasset
+[2016.04.21-22.22.32:803][296]BlueprintLog: New page: Compile simGameController
+[2016.04.21-22.22.33:142][296]BlueprintEditorCompileResults: Info [0569.48] Compile of simGameController successful! [in 339 ms]
+[2016.04.21-22.22.36:347][432]LogRenderer: Reallocating scene render targets to support 1228x712 (Frame:17603).
+[2016.04.21-22.23.08:847][929]BlueprintLog: New page: Compile simHud
+[2016.04.21-22.23.09:127][929]BlueprintEditorCompileResults: Info [0605.47] Compile of simHud successful! [in 280 ms]
+[2016.04.21-22.23.09:787][962]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Blueprints/simHud" FILE="../../../../../../TreeEvolution/EvolutionTree/Content/Blueprints/simHud.uasset" SILENT=true
+[2016.04.21-22.23.09:877][962]LogSavePackage: Save=50.70ms
+[2016.04.21-22.23.09:877][962]LogSavePackage: Moving '../../../../../../TreeEvolution/EvolutionTree/Saved/simHudEFA1F122439FB161E86DC18419861428.tmp' to '../../../../../../TreeEvolution/EvolutionTree/Content/Blueprints/simHud.uasset'
+[2016.04.21-22.23.10:006][962]LogSavePackage: Total save time: 217.88ms
+[2016.04.21-22.23.10:006][962]LogSavePackage:Display: Finished SavePackage ../../../../../../TreeEvolution/EvolutionTree/Content/Blueprints/simHud.uasset
+[2016.04.21-22.23.24:608][757]Job is a success!
+[2016.04.21-22.23.27:292][758]LogTexture:Display: Building textures: SkyOcclusion0_1 (AutoDXT)
+[2016.04.21-22.23.27:292][758]LogTexture:Display: Building textures: HQ_Lightmap0_1 (AutoDXT)
+[2016.04.21-22.23.27:292][758]LogTexture:Display: Building textures: LQ_Lightmap_0_1 (DXT1)
+[2016.04.21-22.23.27:292][758]LogTexture:Display: Building textures: SkyOcclusion0_2 (AutoDXT)
+[2016.04.21-22.23.27:292][758]LogTexture:Display: Building textures: HQ_Lightmap0_2 (AutoDXT)
+[2016.04.21-22.23.27:292][758]LogTexture:Display: Building textures: LQ_Lightmap_0_2 (DXT1)
+[2016.04.21-22.23.27:292][758]LogTexture:Display: Building textures: SkyOcclusion0_3 (AutoDXT)
+[2016.04.21-22.23.27:292][758]LogTexture:Display: Building textures: HQ_Lightmap0_3 (AutoDXT)
+[2016.04.21-22.23.27:292][758]LogTexture:Display: Building textures: LQ_Lightmap_0_3 (DXT1)
+[2016.04.21-22.23.27:292][758]LogTexture:Display: Building textures: SkyOcclusion1_4 (AutoDXT)
+[2016.04.21-22.23.27:292][758]LogTexture:Display: Building textures: HQ_Lightmap1_4 (AutoDXT)
+[2016.04.21-22.23.27:292][758]LogTexture:Display: Building textures: LQ_Lightmap_1_4 (DXT1)
+[2016.04.21-22.23.27:978][758]LogTexture:Display: Building textures: ShadowMapTexture2D_0 (G8)
+[2016.04.21-22.23.27:978][758]LogTexture:Display: Building textures: ShadowMapTexture2D_1 (G8)
+[2016.04.21-22.23.27:978][758]LogTexture:Display: Building textures: ShadowMapTexture2D_3 (G8)
+[2016.04.21-22.23.27:978][758]LogTexture:Display: Building textures: ShadowMapTexture2D_4 (G8)
+[2016.04.21-22.23.28:061][758]Lightmass on MAGNIFICUS: 8:02 min total, 142 ms importing, 23 ms setup, 2:17 min photons, 5:45 min processing, 0 ms extra exporting [9/9 mappings]. Threads: 23:01 min total, 8:59 min processing.
+[2016.04.21-22.23.28:093][758]LogStaticLightingSystem: Illumination: 8:08 min (1.90 sec encoding lightmaps, 740 ms encoding shadowmaps)
+[2016.04.21-22.23.28:093][758]LogStaticLightingSystem: Lightmap texture memory:  21.4 MB (0.1 MB streaming, 21.3 MB non-streaming), 8 textures
+[2016.04.21-22.23.28:093][758]LogStaticLightingSystem: Shadowmap texture memory: 5.3 MB (0.0 MB streaming, 5.3 MB non-streaming), 4 textures
+[2016.04.21-22.23.28:973][759]Cmd: MAP CHECK NOTIFYRESULTS
+[2016.04.21-22.23.28:973][759]MapCheck: New page: Minimal_Default - Apr 22, 2016, 1:23:28 AM
+[2016.04.21-22.23.29:003][759]MapCheck: Info Map check complete: 0 Error(s), 0 Warning(s), took 30.634ms to complete.
+[2016.04.21-22.23.35:385][482]BlueprintLog: New page: Compile simHud
+[2016.04.21-22.23.35:463][482]BlueprintEditorCompileResults: Info [0631.80] Compile of simHud successful! [in 78 ms]
+[2016.04.21-22.23.36:389][526]LogSavePackage: Save=416.47ms
+[2016.04.21-22.23.36:389][526]LogSavePackage: Moving '../../../../../../TreeEvolution/EvolutionTree/Saved/Minimal_Default234696604794B4E9934529BC241D2E04.tmp' to '../../../../../../TreeEvolution/EvolutionTree/Content/StarterContent/Maps/Minimal_Default.umap'
+[2016.04.21-22.23.36:390][526]LogSavePackage: Total save time: 437.03ms
+[2016.04.21-22.23.36:390][526]LogSavePackage:Display: Finished SavePackage ../../../../../../TreeEvolution/EvolutionTree/Content/StarterContent/Maps/Minimal_Default.umap
+[2016.04.21-22.23.36:410][526]LogFileHelpers: Saving map 'Minimal_Default' took 0.505
+[2016.04.21-22.23.36:415][526]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Blueprints/simHud" FILE="../../../../../../TreeEvolution/EvolutionTree/Content/Blueprints/simHud.uasset" SILENT=true
+[2016.04.21-22.23.36:438][526]LogSavePackage: Save=15.53ms
+[2016.04.21-22.23.36:438][526]LogSavePackage: Moving '../../../../../../TreeEvolution/EvolutionTree/Saved/simHud256FCC2D482F8F58D9513C8BE0009163.tmp' to '../../../../../../TreeEvolution/EvolutionTree/Content/Blueprints/simHud.uasset'
+[2016.04.21-22.23.36:439][526]LogSavePackage: Total save time: 23.16ms
+[2016.04.21-22.23.36:439][526]LogSavePackage:Display: Finished SavePackage ../../../../../../TreeEvolution/EvolutionTree/Content/Blueprints/simHud.uasset
+[2016.04.21-22.24.00:914][155]BlueprintLog: New page: Compile simGameController
+[2016.04.21-22.24.01:056][155]BlueprintEditorCompileResults: Info [0657.40] Compile of simGameController successful! [in 142 ms]
+[2016.04.21-22.24.18:941][189]BlueprintLog: New page: Compile mainGUI
+[2016.04.21-22.24.19:055][189]BlueprintEditorCompileResults: Info [0675.39] Compile of mainGUI successful! [in 113 ms]
+[2016.04.21-22.24.19:374][219]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/simGameController" FILE="../../../../../../TreeEvolution/EvolutionTree/Content/simGameController.uasset" SILENT=true
+[2016.04.21-22.24.19:534][219]LogSavePackage: Save=151.39ms
+[2016.04.21-22.24.19:534][219]LogSavePackage: Moving '../../../../../../TreeEvolution/EvolutionTree/Saved/simGameController6CE4A2F94D4EC58E7CD0328186AB5E20.tmp' to '../../../../../../TreeEvolution/EvolutionTree/Content/simGameController.uasset'
+[2016.04.21-22.24.19:535][219]LogSavePackage: Total save time: 159.69ms
+[2016.04.21-22.24.19:535][219]LogSavePackage:Display: Finished SavePackage ../../../../../../TreeEvolution/EvolutionTree/Content/simGameController.uasset
+[2016.04.21-22.24.19:540][219]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/mainGUI" FILE="../../../../../../TreeEvolution/EvolutionTree/Content/mainGUI.uasset" SILENT=true
+[2016.04.21-22.24.19:659][219]LogSavePackage: Save=93.62ms
+[2016.04.21-22.24.19:659][219]LogSavePackage: Moving '../../../../../../TreeEvolution/EvolutionTree/Saved/mainGUI7B5F2CFB4A482005E68026B7FDE542E3.tmp' to '../../../../../../TreeEvolution/EvolutionTree/Content/mainGUI.uasset'
+[2016.04.21-22.24.19:661][219]LogSavePackage: Total save time: 120.07ms
+[2016.04.21-22.24.19:661][219]LogSavePackage:Display: Finished SavePackage ../../../../../../TreeEvolution/EvolutionTree/Content/mainGUI.uasset
+[2016.04.21-22.25.26:406][257]BlueprintLog: New page: Compile mainGUI
+[2016.04.21-22.25.26:531][257]BlueprintEditorCompileResults: Info [0742.87] Compile of mainGUI successful! [in 125 ms]
+[2016.04.21-22.25.26:867][281]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/mainGUI" FILE="../../../../../../TreeEvolution/EvolutionTree/Content/mainGUI.uasset" SILENT=true
+[2016.04.21-22.25.26:981][281]LogSavePackage: Save=104.64ms
+[2016.04.21-22.25.26:981][281]LogSavePackage: Moving '../../../../../../TreeEvolution/EvolutionTree/Saved/mainGUI029CA6D4477D4E16E07A3490E6822984.tmp' to '../../../../../../TreeEvolution/EvolutionTree/Content/mainGUI.uasset'
+[2016.04.21-22.25.26:982][281]LogSavePackage: Total save time: 113.93ms
+[2016.04.21-22.25.26:982][281]LogSavePackage:Display: Finished SavePackage ../../../../../../TreeEvolution/EvolutionTree/Content/mainGUI.uasset
+[2016.04.21-22.25.35:133][ 77]LogRenderer: Reallocating scene render targets to support 1268x712 (Frame:18952).
+[2016.04.21-22.26.56:576][118]BlueprintLog: New page: Compile mainGUI
+[2016.04.21-22.26.56:828][118]BlueprintEditorCompileResults: Info [0833.17] Compile of mainGUI successful! [in 251 ms]
+[2016.04.21-22.26.57:120][141]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/simGameController" FILE="../../../../../../TreeEvolution/EvolutionTree/Content/simGameController.uasset" SILENT=true
+[2016.04.21-22.26.57:285][141]LogSavePackage: Save=156.79ms
+[2016.04.21-22.26.57:285][141]LogSavePackage: Moving '../../../../../../TreeEvolution/EvolutionTree/Saved/simGameControllerDBAF836D416C61E676D833827C89777D.tmp' to '../../../../../../TreeEvolution/EvolutionTree/Content/simGameController.uasset'
+[2016.04.21-22.26.57:286][141]LogSavePackage: Total save time: 165.37ms
+[2016.04.21-22.26.57:286][141]LogSavePackage:Display: Finished SavePackage ../../../../../../TreeEvolution/EvolutionTree/Content/simGameController.uasset
+[2016.04.21-22.26.57:292][141]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/mainGUI" FILE="../../../../../../TreeEvolution/EvolutionTree/Content/mainGUI.uasset" SILENT=true
+[2016.04.21-22.26.57:399][141]LogSavePackage: Save=99.62ms
+[2016.04.21-22.26.57:399][141]LogSavePackage: Moving '../../../../../../TreeEvolution/EvolutionTree/Saved/mainGUIA7EFB54C4AC5B3F2EB980598A578D900.tmp' to '../../../../../../TreeEvolution/EvolutionTree/Content/mainGUI.uasset'
+[2016.04.21-22.26.57:401][141]LogSavePackage: Total save time: 107.73ms
+[2016.04.21-22.26.57:401][141]LogSavePackage:Display: Finished SavePackage ../../../../../../TreeEvolution/EvolutionTree/Content/mainGUI.uasset
+[2016.04.21-22.27.28:307][743]BlueprintLog: New page: Compile mainGUI
+[2016.04.21-22.27.28:428][743]BlueprintEditorCompileResults: Info [0864.77] Compile of mainGUI successful! [in 121 ms]
+[2016.04.21-22.27.28:744][770]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/mainGUI" FILE="../../../../../../TreeEvolution/EvolutionTree/Content/mainGUI.uasset" SILENT=true
+[2016.04.21-22.27.28:857][770]LogSavePackage: Save=105.15ms
+[2016.04.21-22.27.28:857][770]LogSavePackage: Moving '../../../../../../TreeEvolution/EvolutionTree/Saved/mainGUI23BAC96046E681AE0E6E8BB35ED9E4FC.tmp' to '../../../../../../TreeEvolution/EvolutionTree/Content/mainGUI.uasset'
+[2016.04.21-22.27.28:859][770]LogSavePackage: Total save time: 112.91ms
+[2016.04.21-22.27.28:859][770]LogSavePackage:Display: Finished SavePackage ../../../../../../TreeEvolution/EvolutionTree/Content/mainGUI.uasset
+[2016.04.21-22.27.54:032][612]BlueprintLog: New page: Compile mainGUI
+[2016.04.21-22.27.54:151][612]BlueprintEditorCompileResults: Info The execution path doesn't end with a return node.  False 
+[2016.04.21-22.27.54:151][612]BlueprintEditorCompileResults: Info [0890.49] Compile of mainGUI successful! [in 118 ms]
+[2016.04.21-22.27.54:485][639]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/mainGUI" FILE="../../../../../../TreeEvolution/EvolutionTree/Content/mainGUI.uasset" SILENT=true
+[2016.04.21-22.27.54:603][639]LogSavePackage: Save=109.36ms
+[2016.04.21-22.27.54:603][639]LogSavePackage: Moving '../../../../../../TreeEvolution/EvolutionTree/Saved/mainGUI98470ABA45389B6C074583A775BC029C.tmp' to '../../../../../../TreeEvolution/EvolutionTree/Content/mainGUI.uasset'
+[2016.04.21-22.27.54:604][639]LogSavePackage: Total save time: 117.82ms
+[2016.04.21-22.27.54:604][639]LogSavePackage:Display: Finished SavePackage ../../../../../../TreeEvolution/EvolutionTree/Content/mainGUI.uasset
+[2016.04.21-22.28.11:416][554]BlueprintLog: New page: Compile mainGUI
+[2016.04.21-22.28.11:440][554]LogBlueprint:Warning: [compiler mainGUI] Warning ReturnNode Exec pin has no connections on  EdGraphPin_53707 
+[2016.04.21-22.28.11:571][554]LogBlueprint:Warning: [compiler mainGUI] Warning [0907.91] Compile of mainGUI successful, but with 1 Warning(s) [in 154 ms]
+[2016.04.21-22.28.11:571][554]BlueprintEditorCompileResults:Warning: Warning ReturnNode Exec pin has no connections on  EdGraphPin_53707 
+[2016.04.21-22.28.11:571][554]BlueprintEditorCompileResults:Warning: Warning [0907.91] Compile of mainGUI successful, but with 1 Warning(s) [in 154 ms]
+[2016.04.21-22.29.09:788][ 64]BlueprintLog: New page: Compile mainGUI
+[2016.04.21-22.29.09:946][ 64]BlueprintEditorCompileResults: Info [0966.28] Compile of mainGUI successful! [in 158 ms]
+[2016.04.21-22.29.10:303][ 88]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/mainGUI" FILE="../../../../../../TreeEvolution/EvolutionTree/Content/mainGUI.uasset" SILENT=true
+[2016.04.21-22.29.10:434][ 88]LogSavePackage: Save=120.30ms
+[2016.04.21-22.29.10:434][ 88]LogSavePackage: Moving '../../../../../../TreeEvolution/EvolutionTree/Saved/mainGUID46A6DA64DC602E1CC66C69868F56535.tmp' to '../../../../../../TreeEvolution/EvolutionTree/Content/mainGUI.uasset'
+[2016.04.21-22.29.10:435][ 88]LogSavePackage: Total save time: 129.50ms
+[2016.04.21-22.29.10:435][ 88]LogSavePackage:Display: Finished SavePackage ../../../../../../TreeEvolution/EvolutionTree/Content/mainGUI.uasset
+[2016.04.21-22.30.00:801][388]BlueprintLog: New page: Compile simGameController
+[2016.04.21-22.30.00:970][388]BlueprintEditorCompileResults: Info [1017.31] Compile of simGameController successful! [in 168 ms]
+[2016.04.21-22.30.14:139][814]BlueprintLog: New page: Compile simGameController
+[2016.04.21-22.30.14:305][814]BlueprintEditorCompileResults: Info [1030.64] Compile of simGameController successful! [in 166 ms]
+[2016.04.21-22.30.14:729][858]BlueprintLog: New page: Compile simGameController
+[2016.04.21-22.30.14:892][858]BlueprintEditorCompileResults: Info [1031.23] Compile of simGameController successful! [in 163 ms]
+[2016.04.21-22.30.15:206][882]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/simGameController" FILE="../../../../../../TreeEvolution/EvolutionTree/Content/simGameController.uasset" SILENT=true
+[2016.04.21-22.30.15:376][882]LogSavePackage: Save=157.98ms
+[2016.04.21-22.30.15:376][882]LogSavePackage: Moving '../../../../../../TreeEvolution/EvolutionTree/Saved/simGameControllerE8FFECE847C8A2CD0A3DFE94509EC842.tmp' to '../../../../../../TreeEvolution/EvolutionTree/Content/simGameController.uasset'
+[2016.04.21-22.30.15:377][882]LogSavePackage: Total save time: 169.31ms
+[2016.04.21-22.30.15:377][882]LogSavePackage:Display: Finished SavePackage ../../../../../../TreeEvolution/EvolutionTree/Content/simGameController.uasset
+[2016.04.21-22.30.18:367][167]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.21-22.30.18:367][167]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2016.04.21-22.30.18:368][167]PIE: New page: PIE session: Minimal_Default (Apr 22, 2016, 1:30:18 AM)
+[2016.04.21-22.30.18:368][167]LogPlayLevel: Creating play world package: /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default
+[2016.04.21-22.30.18:383][167]LogPlayLevel: PIE: StaticDuplicateObject took: (0.015223s)
+[2016.04.21-22.30.18:383][167]LogAIModule: Creating AISystem for world Minimal_Default
+[2016.04.21-22.30.18:383][167]LogPlayLevel: PIE: World Init took: (0.000534s)
+[2016.04.21-22.30.18:384][167]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/StarterContent/Maps/Minimal_Default.Minimal_Default to /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default (0.015956s)
+[2016.04.21-22.30.18:405][167]LogInit: XAudio2 using 'Speakers (Realtek High Definition Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
+[2016.04.21-22.30.18:412][167]LogInit: FAudioDevice initialized.
+[2016.04.21-22.30.18:438][167]LogWorld: Game class is 'simGameMode_C'
+[2016.04.21-22.30.18:440][167]LogWorld: Bringing World /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default up for play (max tick rate 0) at 2016.04.22-00.30.18
+[2016.04.21-22.30.18:440][167]LogWorld: Bringing up level for play took: 0.001109
+[2016.04.21-22.30.18:442][167]PIE: Info Play in editor start time for /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default 0.217
+[2016.04.21-22.30.18:442][167]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.21-22.30.30:038][532]Cmd: SELECT NONE
+[2016.04.21-22.30.31:487][669]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.21-22.30.31:519][669]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.21-22.30.39:084][247]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.21-22.30.39:084][247]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2016.04.21-22.30.39:084][247]PIE: New page: PIE session: Minimal_Default (Apr 22, 2016, 1:30:39 AM)
+[2016.04.21-22.30.39:084][247]LogPlayLevel: Creating play world package: /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default
+[2016.04.21-22.30.39:097][247]LogPlayLevel: PIE: StaticDuplicateObject took: (0.013025s)
+[2016.04.21-22.30.39:098][247]LogAIModule: Creating AISystem for world Minimal_Default
+[2016.04.21-22.30.39:098][247]LogPlayLevel: PIE: World Init took: (0.000569s)
+[2016.04.21-22.30.39:098][247]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/StarterContent/Maps/Minimal_Default.Minimal_Default to /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default (0.013781s)
+[2016.04.21-22.30.39:118][247]LogInit: XAudio2 using 'Speakers (Realtek High Definition Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
+[2016.04.21-22.30.39:125][247]LogInit: FAudioDevice initialized.
+[2016.04.21-22.30.39:150][247]LogWorld: Game class is 'simGameMode_C'
+[2016.04.21-22.30.39:151][247]LogWorld: Bringing World /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default up for play (max tick rate 0) at 2016.04.22-00.30.39
+[2016.04.21-22.30.39:152][247]LogWorld: Bringing up level for play took: 0.001038
+[2016.04.21-22.30.39:171][247]PIE: Info Play in editor start time for /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default 0.946
+[2016.04.21-22.30.39:171][247]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.21-22.30.41:482][521]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.21-22.30.41:514][521]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.21-22.30.50:615][413]BlueprintLog: New page: Compile simGameController
+[2016.04.21-22.30.50:780][413]BlueprintEditorCompileResults: Info [1067.12] Compile of simGameController successful! [in 165 ms]
+[2016.04.21-22.30.51:117][437]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/simGameController" FILE="../../../../../../TreeEvolution/EvolutionTree/Content/simGameController.uasset" SILENT=true
+[2016.04.21-22.30.51:290][437]LogSavePackage: Save=164.86ms
+[2016.04.21-22.30.51:291][437]LogSavePackage: Moving '../../../../../../TreeEvolution/EvolutionTree/Saved/simGameControllerC44BA6ED4F129FE53F22BF99036693FA.tmp' to '../../../../../../TreeEvolution/EvolutionTree/Content/simGameController.uasset'
+[2016.04.21-22.30.51:292][437]LogSavePackage: Total save time: 173.97ms
+[2016.04.21-22.30.51:292][437]LogSavePackage:Display: Finished SavePackage ../../../../../../TreeEvolution/EvolutionTree/Content/simGameController.uasset
+[2016.04.21-22.30.56:746][ 56]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.21-22.30.56:746][ 56]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2016.04.21-22.30.56:746][ 56]PIE: New page: PIE session: Minimal_Default (Apr 22, 2016, 1:30:56 AM)
+[2016.04.21-22.30.56:746][ 56]LogPlayLevel: Creating play world package: /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default
+[2016.04.21-22.30.56:759][ 56]LogPlayLevel: PIE: StaticDuplicateObject took: (0.012943s)
+[2016.04.21-22.30.56:760][ 56]LogAIModule: Creating AISystem for world Minimal_Default
+[2016.04.21-22.30.56:760][ 56]LogPlayLevel: PIE: World Init took: (0.000440s)
+[2016.04.21-22.30.56:760][ 56]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/StarterContent/Maps/Minimal_Default.Minimal_Default to /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default (0.013529s)
+[2016.04.21-22.30.56:781][ 56]LogInit: XAudio2 using 'Speakers (Realtek High Definition Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
+[2016.04.21-22.30.56:791][ 56]LogInit: FAudioDevice initialized.
+[2016.04.21-22.30.56:822][ 56]LogWorld: Game class is 'simGameMode_C'
+[2016.04.21-22.30.56:823][ 56]LogWorld: Bringing World /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default up for play (max tick rate 0) at 2016.04.22-00.30.56
+[2016.04.21-22.30.56:823][ 56]LogWorld: Bringing up level for play took: 0.001225
+[2016.04.21-22.30.56:826][ 56]PIE: Info Play in editor start time for /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default 0.601
+[2016.04.21-22.30.56:826][ 56]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.21-22.31.14:602][169]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.21-22.31.14:633][169]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.21-22.31.53:620][902]BlueprintLog: New page: Compile mainGUI
+[2016.04.21-22.31.53:762][902]BlueprintEditorCompileResults: Info [1130.10] Compile of mainGUI successful! [in 141 ms]
+[2016.04.21-22.31.54:114][920]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/mainGUI" FILE="../../../../../../TreeEvolution/EvolutionTree/Content/mainGUI.uasset" SILENT=true
+[2016.04.21-22.31.54:272][920]LogSavePackage: Save=124.98ms
+[2016.04.21-22.31.54:272][920]LogSavePackage: Moving '../../../../../../TreeEvolution/EvolutionTree/Saved/mainGUI02E7CA8441BD27287C7C63A7175A2059.tmp' to '../../../../../../TreeEvolution/EvolutionTree/Content/mainGUI.uasset'
+[2016.04.21-22.31.54:273][920]LogSavePackage: Total save time: 158.08ms
+[2016.04.21-22.31.54:273][920]LogSavePackage:Display: Finished SavePackage ../../../../../../TreeEvolution/EvolutionTree/Content/mainGUI.uasset
+[2016.04.21-22.32.10:234][334]BlueprintLog: New page: Compile simGameController
+[2016.04.21-22.32.10:425][334]BlueprintEditorCompileResults: Info [1146.76] Compile of simGameController successful! [in 190 ms]
+[2016.04.21-22.32.10:857][372]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/simGameController" FILE="../../../../../../TreeEvolution/EvolutionTree/Content/simGameController.uasset" SILENT=true
+[2016.04.21-22.32.11:041][372]LogSavePackage: Save=176.34ms
+[2016.04.21-22.32.11:041][372]LogSavePackage: Moving '../../../../../../TreeEvolution/EvolutionTree/Saved/simGameController0D22E54647D3BA07E519B7B4963B6257.tmp' to '../../../../../../TreeEvolution/EvolutionTree/Content/simGameController.uasset'
+[2016.04.21-22.32.11:042][372]LogSavePackage: Total save time: 184.13ms
+[2016.04.21-22.32.11:042][372]LogSavePackage:Display: Finished SavePackage ../../../../../../TreeEvolution/EvolutionTree/Content/simGameController.uasset
+[2016.04.21-22.32.16:101][937]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.21-22.32.16:101][937]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2016.04.21-22.32.16:101][937]PIE: New page: PIE session: Minimal_Default (Apr 22, 2016, 1:32:16 AM)
+[2016.04.21-22.32.16:101][937]LogPlayLevel: Creating play world package: /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default
+[2016.04.21-22.32.16:113][937]LogPlayLevel: PIE: StaticDuplicateObject took: (0.012257s)
+[2016.04.21-22.32.16:113][937]LogAIModule: Creating AISystem for world Minimal_Default
+[2016.04.21-22.32.16:114][937]LogPlayLevel: PIE: World Init took: (0.000481s)
+[2016.04.21-22.32.16:114][937]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/StarterContent/Maps/Minimal_Default.Minimal_Default to /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default (0.012894s)
+[2016.04.21-22.32.16:141][937]LogInit: XAudio2 using 'Speakers (Realtek High Definition Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
+[2016.04.21-22.32.16:151][937]LogInit: FAudioDevice initialized.
+[2016.04.21-22.32.16:179][937]LogWorld: Game class is 'simGameMode_C'
+[2016.04.21-22.32.16:181][937]LogWorld: Bringing World /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default up for play (max tick rate 0) at 2016.04.22-00.32.16
+[2016.04.21-22.32.16:182][937]LogWorld: Bringing up level for play took: 0.001029
+[2016.04.21-22.32.16:184][937]PIE: Info Play in editor start time for /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default -0.043
+[2016.04.21-22.32.16:184][937]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.21-22.32.48:956][465]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.21-22.32.49:052][465]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.21-22.33.23:780][125]BlueprintLog: New page: Compile SimLogic_BP
+[2016.04.21-22.33.23:948][125]BlueprintEditorCompileResults: Info [1220.28] Compile of SimLogic_BP successful! [in 167 ms]
+[2016.04.21-22.33.26:897][450]BlueprintLog: New page: Compile SimLogic_BP
+[2016.04.21-22.33.27:062][450]BlueprintEditorCompileResults: Info [1223.40] Compile of SimLogic_BP successful! [in 165 ms]
+[2016.04.21-22.33.28:044][484]LogSavePackage: Save=427.06ms
+[2016.04.21-22.33.28:044][484]LogSavePackage: Moving '../../../../../../TreeEvolution/EvolutionTree/Saved/Minimal_Default77BEDF904DDB52280A3CCEB2C0841F34.tmp' to '../../../../../../TreeEvolution/EvolutionTree/Content/StarterContent/Maps/Minimal_Default.umap'
+[2016.04.21-22.33.28:046][484]LogSavePackage: Total save time: 506.06ms
+[2016.04.21-22.33.28:046][484]LogSavePackage:Display: Finished SavePackage ../../../../../../TreeEvolution/EvolutionTree/Content/StarterContent/Maps/Minimal_Default.umap
+[2016.04.21-22.33.28:072][484]LogFileHelpers: Saving map 'Minimal_Default' took 0.586
+[2016.04.21-22.33.28:077][484]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/simGameController" FILE="../../../../../../TreeEvolution/EvolutionTree/Content/simGameController.uasset" SILENT=true
+[2016.04.21-22.33.28:243][484]LogSavePackage: Save=159.78ms
+[2016.04.21-22.33.28:243][484]LogSavePackage: Moving '../../../../../../TreeEvolution/EvolutionTree/Saved/simGameController029785D94BB478B13FEB3B936D1C3A5C.tmp' to '../../../../../../TreeEvolution/EvolutionTree/Content/simGameController.uasset'
+[2016.04.21-22.33.28:246][484]LogSavePackage: Total save time: 168.37ms
+[2016.04.21-22.33.28:246][484]LogSavePackage:Display: Finished SavePackage ../../../../../../TreeEvolution/EvolutionTree/Content/simGameController.uasset
+[2016.04.21-22.33.28:252][484]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/SimLogic_BP" FILE="../../../../../../TreeEvolution/EvolutionTree/Content/SimLogic_BP.uasset" SILENT=true
+[2016.04.21-22.33.28:493][484]LogSavePackage: Save=57.06ms
+[2016.04.21-22.33.28:493][484]LogSavePackage: Moving '../../../../../../TreeEvolution/EvolutionTree/Saved/SimLogic_BPB87E676844B548181C8636B9216F0C7C.tmp' to '../../../../../../TreeEvolution/EvolutionTree/Content/SimLogic_BP.uasset'
+[2016.04.21-22.33.28:494][484]LogSavePackage: Total save time: 241.88ms
+[2016.04.21-22.33.28:494][484]LogSavePackage:Display: Finished SavePackage ../../../../../../TreeEvolution/EvolutionTree/Content/SimLogic_BP.uasset
+[2016.04.21-22.33.34:750][117]BlueprintLog: New page: Compile SimLogic_BP
+[2016.04.21-22.33.34:884][117]BlueprintEditorCompileResults: Info [1231.22] Compile of SimLogic_BP successful! [in 133 ms]
+[2016.04.21-22.33.36:104][187]LogSavePackage: Save=415.48ms
+[2016.04.21-22.33.36:104][187]LogSavePackage: Moving '../../../../../../TreeEvolution/EvolutionTree/Saved/Minimal_Default49BE54F7407E294BC64D9EB9C9D98AA1.tmp' to '../../../../../../TreeEvolution/EvolutionTree/Content/StarterContent/Maps/Minimal_Default.umap'
+[2016.04.21-22.33.36:106][187]LogSavePackage: Total save time: 423.18ms
+[2016.04.21-22.33.36:106][187]LogSavePackage:Display: Finished SavePackage ../../../../../../TreeEvolution/EvolutionTree/Content/StarterContent/Maps/Minimal_Default.umap
+[2016.04.21-22.33.36:141][187]LogFileHelpers: Saving map 'Minimal_Default' took 0.510
+[2016.04.21-22.33.36:146][187]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/SimLogic_BP" FILE="../../../../../../TreeEvolution/EvolutionTree/Content/SimLogic_BP.uasset" SILENT=true
+[2016.04.21-22.33.36:209][187]LogSavePackage: Save=54.74ms
+[2016.04.21-22.33.36:209][187]LogSavePackage: Moving '../../../../../../TreeEvolution/EvolutionTree/Saved/SimLogic_BP8F1F32504B74DFAAA7881FAF362E7B91.tmp' to '../../../../../../TreeEvolution/EvolutionTree/Content/SimLogic_BP.uasset'
+[2016.04.21-22.33.36:210][187]LogSavePackage: Total save time: 62.69ms
+[2016.04.21-22.33.36:210][187]LogSavePackage:Display: Finished SavePackage ../../../../../../TreeEvolution/EvolutionTree/Content/SimLogic_BP.uasset
+[2016.04.21-22.33.56:109][323]BlueprintLog: New page: Compile simGameController
+[2016.04.21-22.33.56:283][323]BlueprintEditorCompileResults: Info [1252.62] Compile of simGameController successful! [in 173 ms]
+[2016.04.21-22.33.56:722][361]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/simGameController" FILE="../../../../../../TreeEvolution/EvolutionTree/Content/simGameController.uasset" SILENT=true
+[2016.04.21-22.33.56:891][361]LogSavePackage: Save=161.17ms
+[2016.04.21-22.33.56:891][361]LogSavePackage: Moving '../../../../../../TreeEvolution/EvolutionTree/Saved/simGameController5E426DE842B0C339AB83BBB1CB338286.tmp' to '../../../../../../TreeEvolution/EvolutionTree/Content/simGameController.uasset'
+[2016.04.21-22.33.56:892][361]LogSavePackage: Total save time: 168.92ms
+[2016.04.21-22.33.56:892][361]LogSavePackage:Display: Finished SavePackage ../../../../../../TreeEvolution/EvolutionTree/Content/simGameController.uasset
+[2016.04.21-22.33.58:494][527]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.21-22.33.58:494][527]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2016.04.21-22.33.58:494][527]PIE: New page: PIE session: Minimal_Default (Apr 22, 2016, 1:33:58 AM)
+[2016.04.21-22.33.58:494][527]LogPlayLevel: Creating play world package: /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default
+[2016.04.21-22.33.58:506][527]LogPlayLevel: PIE: StaticDuplicateObject took: (0.012259s)
+[2016.04.21-22.33.58:507][527]LogAIModule: Creating AISystem for world Minimal_Default
+[2016.04.21-22.33.58:507][527]LogPlayLevel: PIE: World Init took: (0.000436s)
+[2016.04.21-22.33.58:507][527]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/StarterContent/Maps/Minimal_Default.Minimal_Default to /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default (0.012884s)
+[2016.04.21-22.33.58:528][527]LogInit: XAudio2 using 'Speakers (Realtek High Definition Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
+[2016.04.21-22.33.58:535][527]LogInit: FAudioDevice initialized.
+[2016.04.21-22.33.58:563][527]LogWorld: Game class is 'simGameMode_C'
+[2016.04.21-22.33.58:565][527]LogWorld: Bringing World /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default up for play (max tick rate 0) at 2016.04.22-00.33.58
+[2016.04.21-22.33.58:565][527]LogWorld: Bringing up level for play took: 0.001270
+[2016.04.21-22.33.58:568][527]PIE: Info Play in editor start time for /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default 0.341
+[2016.04.21-22.33.58:568][527]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.21-22.34.23:498][107]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.21-22.34.23:600][107]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.21-22.34.33:866][155]BlueprintLog: New page: Compile simGameController
+[2016.04.21-22.34.34:023][155]BlueprintEditorCompileResults: Info [1290.36] Compile of simGameController successful! [in 157 ms]
+[2016.04.21-22.34.34:427][187]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/simGameController" FILE="../../../../../../TreeEvolution/EvolutionTree/Content/simGameController.uasset" SILENT=true
+[2016.04.21-22.34.34:595][187]LogSavePackage: Save=160.41ms
+[2016.04.21-22.34.34:595][187]LogSavePackage: Moving '../../../../../../TreeEvolution/EvolutionTree/Saved/simGameControllerC91F23684258040B6FFC6AB2C363E0B7.tmp' to '../../../../../../TreeEvolution/EvolutionTree/Content/simGameController.uasset'
+[2016.04.21-22.34.34:596][187]LogSavePackage: Total save time: 168.49ms
+[2016.04.21-22.34.34:596][187]LogSavePackage:Display: Finished SavePackage ../../../../../../TreeEvolution/EvolutionTree/Content/simGameController.uasset
+[2016.04.21-22.34.36:211][356]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.21-22.34.36:211][356]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2016.04.21-22.34.36:211][356]PIE: New page: PIE session: Minimal_Default (Apr 22, 2016, 1:34:36 AM)
+[2016.04.21-22.34.36:211][356]LogPlayLevel: Creating play world package: /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default
+[2016.04.21-22.34.36:223][356]LogPlayLevel: PIE: StaticDuplicateObject took: (0.011988s)
+[2016.04.21-22.34.36:224][356]LogAIModule: Creating AISystem for world Minimal_Default
+[2016.04.21-22.34.36:224][356]LogPlayLevel: PIE: World Init took: (0.000410s)
+[2016.04.21-22.34.36:224][356]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/StarterContent/Maps/Minimal_Default.Minimal_Default to /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default (0.012546s)
+[2016.04.21-22.34.36:245][356]LogInit: XAudio2 using 'Speakers (Realtek High Definition Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
+[2016.04.21-22.34.36:251][356]LogInit: FAudioDevice initialized.
+[2016.04.21-22.34.36:278][356]LogWorld: Game class is 'simGameMode_C'
+[2016.04.21-22.34.36:280][356]LogWorld: Bringing World /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default up for play (max tick rate 0) at 2016.04.22-00.34.36
+[2016.04.21-22.34.36:280][356]LogWorld: Bringing up level for play took: 0.001014
+[2016.04.21-22.34.36:282][356]PIE: Info Play in editor start time for /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default 0.054
+[2016.04.21-22.34.36:283][356]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.21-22.37.31:491][180]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.21-22.37.31:584][180]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.21-22.38.01:467][161]BlueprintLog: New page: Compile blockingRock
+[2016.04.21-22.38.01:549][161]BlueprintEditorCompileResults: Info [1497.88] Compile of blockingRock successful! [in 81 ms]
+[2016.04.21-22.38.02:459][245]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/blocking/blockingRock" FILE="../../../../../../TreeEvolution/EvolutionTree/Content/blocking/blockingRock.uasset" SILENT=true
+[2016.04.21-22.38.02:527][245]LogSavePackage: Save=57.69ms
+[2016.04.21-22.38.02:527][245]LogSavePackage: Moving '../../../../../../TreeEvolution/EvolutionTree/Saved/blockingRockBAD177D746198D14779B7698AA9FF583.tmp' to '../../../../../../TreeEvolution/EvolutionTree/Content/blocking/blockingRock.uasset'
+[2016.04.21-22.38.02:528][245]LogSavePackage: Total save time: 69.06ms
+[2016.04.21-22.38.02:528][245]LogSavePackage:Display: Finished SavePackage ../../../../../../TreeEvolution/EvolutionTree/Content/blocking/blockingRock.uasset
+[2016.04.21-22.38.04:053][399]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.21-22.38.04:053][399]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2016.04.21-22.38.04:053][399]PIE: New page: PIE session: Minimal_Default (Apr 22, 2016, 1:38:04 AM)
+[2016.04.21-22.38.04:053][399]LogPlayLevel: Creating play world package: /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default
+[2016.04.21-22.38.04:065][399]LogPlayLevel: PIE: StaticDuplicateObject took: (0.011762s)
+[2016.04.21-22.38.04:065][399]LogAIModule: Creating AISystem for world Minimal_Default
+[2016.04.21-22.38.04:066][399]LogPlayLevel: PIE: World Init took: (0.000437s)
+[2016.04.21-22.38.04:066][399]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/StarterContent/Maps/Minimal_Default.Minimal_Default to /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default (0.012359s)
+[2016.04.21-22.38.04:103][399]LogInit: XAudio2 using 'Speakers (Realtek High Definition Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
+[2016.04.21-22.38.04:109][399]LogInit: FAudioDevice initialized.
+[2016.04.21-22.38.04:135][399]LogWorld: Game class is 'simGameMode_C'
+[2016.04.21-22.38.04:137][399]LogWorld: Bringing World /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default up for play (max tick rate 0) at 2016.04.22-00.38.04
+[2016.04.21-22.38.04:137][399]LogWorld: Bringing up level for play took: 0.001002
+[2016.04.21-22.38.04:139][399]PIE: Info Play in editor start time for /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default -0.09
+[2016.04.21-22.38.04:139][399]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.21-23.05.34:659][231]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.21-23.05.34:759][231]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.21-23.05.40:025][744]BlueprintLog: New page: Compile TreeBP
+[2016.04.21-23.05.40:164][744]BlueprintEditorCompileResults: Info [3156.48] Compile of TreeBP successful! [in 138 ms]
+[2016.04.21-23.05.41:786][906]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.04.21-23.05.41:786][906]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2016.04.21-23.05.41:786][906]PIE: New page: PIE session: Minimal_Default (Apr 22, 2016, 2:05:41 AM)
+[2016.04.21-23.05.41:786][906]LogPlayLevel: Creating play world package: /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default
+[2016.04.21-23.05.41:809][906]LogPlayLevel: PIE: StaticDuplicateObject took: (0.023429s)
+[2016.04.21-23.05.41:810][906]LogAIModule: Creating AISystem for world Minimal_Default
+[2016.04.21-23.05.41:810][906]LogPlayLevel: PIE: World Init took: (0.000415s)
+[2016.04.21-23.05.41:810][906]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/StarterContent/Maps/Minimal_Default.Minimal_Default to /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default (0.024009s)
+[2016.04.21-23.05.41:833][906]LogInit: XAudio2 using 'Speakers (Realtek High Definition Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
+[2016.04.21-23.05.41:841][906]LogInit: FAudioDevice initialized.
+[2016.04.21-23.05.41:867][906]LogWorld: Game class is 'simGameMode_C'
+[2016.04.21-23.05.41:869][906]LogWorld: Bringing World /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default up for play (max tick rate 0) at 2016.04.22-01.05.41
+[2016.04.21-23.05.41:869][906]LogWorld: Bringing up level for play took: 0.001440
+[2016.04.21-23.05.41:872][906]PIE: Info Play in editor start time for /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default -0.373
+[2016.04.21-23.05.41:872][906]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Defaul

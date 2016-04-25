@@ -115,6 +115,7 @@ void ASimLogic::init() {
 	if (currentBest)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 		currentBest->init(numBranches, numLeafs);
 
 	int placed = 0;
@@ -210,6 +211,8 @@ void ASimLogic::introduceRandomDNA() {
 =======
 =======
 >>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
+=======
+>>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
 		currentBest->init();
 
 	for (int32 i = 0; i < nbrLines; ++i) {
@@ -227,6 +230,9 @@ void ASimLogic::introduceRandomDNA() {
 		}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
+=======
 >>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
 =======
 >>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
@@ -261,6 +267,7 @@ void ASimLogic::forceReCalculation() {
 	for (ATree* t : trees) {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 		t->checkCollision();
 		t->currentValue = t->calculateHits();
 		t->checkCollision();
@@ -279,6 +286,13 @@ void ASimLogic::forceReCalculation() {
 }
 >>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
 =======
+	simulationTick();
+}
+>>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
+=======
+		t->currentValue = t->calculateHits();
+		t->checkCollision();
+	}
 	simulationTick();
 }
 >>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9

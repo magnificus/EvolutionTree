@@ -210,6 +210,7 @@ float ATree::hemisphereHits() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 void ATree::init(int numB, int numL) {
 =======
 void ATree::init() {
@@ -219,6 +220,9 @@ void ATree::init() {
 =======
 >>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
 =======
+>>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
+=======
+void ATree::init() {
 >>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
 =======
 void ATree::init() {
@@ -240,12 +244,15 @@ void ATree::init() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 	for (int i = 0; i < numB; ++i) {
 		initRandomBranch();
 	}
 
 	for (int i = 0; i < numL; ++i) {
 =======
+=======
+>>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
 =======
 >>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
 =======
@@ -263,6 +270,9 @@ void ATree::init() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
+=======
 >>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
 =======
 >>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
@@ -314,6 +324,7 @@ void ATree::initRandomLeaf() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 
 void ATree::displaceBranch(ABranch* b) {
@@ -355,6 +366,8 @@ bool ATree::selfInChain(ABranch* self, ABranch* current) {
 }
 
 =======
+=======
+>>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
 }
 
 void ATree::displaceBranch(ABranch* b) {
@@ -378,6 +391,7 @@ void ATree::displaceBranch(ABranch* b) {
 	//allowedToExtend.Add(b);
 }
 
+<<<<<<< HEAD
 =======
 }
 
@@ -402,6 +416,8 @@ void ATree::displaceBranch(ABranch* b) {
 	//allowedToExtend.Add(b);
 }
 
+>>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
+=======
 >>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
 void ATree::cascadePositionUpdate(ABranch* b) {
 	for (ABranch* newB : branchDependencies[b]) {
@@ -427,6 +443,7 @@ bool ATree::selfInChain(ABranch* self, ABranch* current) {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
 =======
 >>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
@@ -483,6 +500,8 @@ bool ATree::selfInChain(ABranch* self, ABranch* current) {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+>>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
+=======
 >>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
 =======
 >>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
@@ -531,6 +550,10 @@ void ATree::mutate(bool reCalc) {
 		newVectorOffset.Z = newVectorOffset.Z < -10 ? -10 : newVectorOffset.Z;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+		//leafs[index]->offsetVector += (random.FRand() / 2) - 1 / 4;
+>>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
 =======
 		//leafs[index]->offsetVector += (random.FRand() / 2) - 1 / 4;
 >>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
@@ -543,6 +566,7 @@ void ATree::mutate(bool reCalc) {
 	}
 
 	for (int i = 0; i < count2; ++i) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 		// change branch
@@ -562,6 +586,11 @@ void ATree::mutate(bool reCalc) {
 =======
 >>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
 =======
+>>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
+=======
+		int index = random.RandRange(0, leafs.Num() - 1);
+		leafs[index]->attachedToIndex = random.RandRange(0, branches.Num() - 1);
+		leafs[index]->SetActorLocation(branches[leafs[index]->attachedToIndex]->getPositionOnBranch(leafs[index]->branchOffset) + leafs[index]->offsetVector);
 >>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
 =======
 		int index = random.RandRange(0, leafs.Num() - 1);
@@ -651,7 +680,10 @@ void ATree::GetRandomPositionFor(ABranch* b) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 			return;
+=======
+>>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
 =======
 >>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
 =======
@@ -676,7 +708,10 @@ void ATree::GetRandomPositionFor(ABranch* b) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 		return;
+=======
+>>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
 =======
 >>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
 =======
@@ -742,6 +777,7 @@ vector<float> ATree::createChildDNA(ATree* otherParent) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 	//int32 index = random.RandRange(0, branches.Num() - 1);
 	//vector<int> singleChain = getChain(branches[index]);
 	//singleChain.push_back(index);
@@ -759,6 +795,8 @@ vector<float> ATree::createChildDNA(ATree* otherParent) {
 >>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
 =======
 >>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
+=======
+>>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
 	for (int i = 0; i < branches.Num(); ++i) {
 		ATree* t;
 		ABranch* b;
@@ -767,6 +805,9 @@ vector<float> ATree::createChildDNA(ATree* otherParent) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
+=======
 >>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
 =======
 >>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
@@ -850,6 +891,7 @@ void ATree::buildFromDNA(vector<float> DNA) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 	}
 
 }
@@ -899,6 +941,10 @@ void ATree::SetNumLeafs(int32 num) {
 	}
 
 >>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
+=======
+	}
+
+>>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
 }
 
 void ATree::checkCollision() {
@@ -910,6 +956,9 @@ void ATree::checkCollision() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
+=======
 >>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
 =======
 >>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9

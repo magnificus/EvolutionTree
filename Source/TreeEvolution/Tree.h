@@ -62,11 +62,16 @@ public:
 	UPROPERTY(EditAnywhere, Category = "Algorithm")
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 		float displacementChance = .005f;
 	UPROPERTY(EditAnywhere, Category = "Algorithm")
 <<<<<<< HEAD
 		float leafChangeBranchChance = 0.005f;
 =======
+=======
+		float displacementChance = .001f;
+	UPROPERTY(EditAnywhere, Category = "Algorithm")
+>>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
 =======
 		float displacementChance = .001f;
 	UPROPERTY(EditAnywhere, Category = "Algorithm")
@@ -83,6 +88,9 @@ public:
 		int32 numLeafs = 60;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
+=======
 >>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
 =======
 >>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
@@ -94,6 +102,7 @@ public:
 	void buildFromDNA(vector<float>);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 	void init(int32 numB, int32 numL);
 
 	void SetNumBranches(int32 num);
@@ -101,6 +110,9 @@ public:
 
 	int32 getNumBranches() { return branches.Num(); }
 	int32 getNumLeafs() { return leafs.Num(); }
+=======
+	void init();
+>>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
 =======
 	void init();
 >>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
@@ -119,7 +131,10 @@ public:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 	vector<int> getChain(ABranch* b);
+=======
+>>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
 =======
 >>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
 =======
