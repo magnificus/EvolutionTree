@@ -207,29 +207,8 @@ float ATree::hemisphereHits() {
 
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 void ATree::init(int numB, int numL) {
-=======
-void ATree::init() {
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
-=======
->>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
-=======
->>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
-=======
-void ATree::init() {
->>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
-=======
-void ATree::init() {
->>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
-=======
-void ATree::init() {
->>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
+
 	for (ABranch* b : branches) {
 		b->Destroy();
 	}
@@ -239,49 +218,12 @@ void ATree::init() {
 		l->Destroy();
 	}
 	leafs.Empty();
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 	for (int i = 0; i < numB; ++i) {
 		initRandomBranch();
 	}
 
 	for (int i = 0; i < numL; ++i) {
-=======
-=======
->>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
-=======
->>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
-=======
->>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
-=======
->>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
-=======
->>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
-	for (int i = 0; i < numBranches; ++i) {
-		initRandomBranch();
-	}
-
-	for (int i = 0; i < numLeafs; ++i) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
-=======
->>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
-=======
->>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
-=======
->>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
-=======
->>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
-=======
->>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
 		initRandomLeaf();
 	}
 }
@@ -319,12 +261,6 @@ void ATree::initRandomLeaf() {
 
 	leafs.Add(spawnedLeaf);
 	leafDependencies[branches[index]].Add(spawnedLeaf);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
 
 void ATree::displaceBranch(ABranch* b) {
@@ -341,9 +277,10 @@ void ATree::cascadePositionUpdate(ABranch* b) {
 	for (ABranch* newB : branchDependencies[b]) {
 		newB->SetActorLocation(b->getEnd());
 		if (newB->overlapsProps()) {
-		//	// new position was not good, overlapped with other actors, so displace the branch
+			//	// new position was not good, overlapped with other actors, so displace the branch
 			displaceBranch(newB);
-		} else{
+		}
+		else {
 			cascadePositionUpdate(newB);
 		}
 	}
@@ -365,148 +302,7 @@ bool ATree::selfInChain(ABranch* self, ABranch* current) {
 	return false;
 }
 
-=======
-=======
->>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
-}
 
-void ATree::displaceBranch(ABranch* b) {
-	if (b->placedOn != NOT_PLACED) {
-		branchDependencies[branches[b->placedOn]].Remove(b);
-	}
-	b->placedOn = NOT_PLACED;
-
-
-
-	//for (ABranch* extendingB : branchDependencies[b]) {
-	//	displaceBranch(extendingB);
-	//}
-
-	GetRandomPositionFor(b);
-
-	cascadePositionUpdate(b);
-
-
-
-	//allowedToExtend.Add(b);
-}
-
-<<<<<<< HEAD
-=======
-}
-
-void ATree::displaceBranch(ABranch* b) {
-	if (b->placedOn != NOT_PLACED) {
-		branchDependencies[branches[b->placedOn]].Remove(b);
-	}
-	b->placedOn = NOT_PLACED;
-
-
-
-	//for (ABranch* extendingB : branchDependencies[b]) {
-	//	displaceBranch(extendingB);
-	//}
-
-	GetRandomPositionFor(b);
-
-	cascadePositionUpdate(b);
-
-
-
-	//allowedToExtend.Add(b);
-}
-
->>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
-=======
->>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
-void ATree::cascadePositionUpdate(ABranch* b) {
-	for (ABranch* newB : branchDependencies[b]) {
-		newB->SetActorLocation(b->getEnd());
-		cascadePositionUpdate(newB);
-	}
-	for (ALeaf* l : leafDependencies[b]) {
-		l->updateLocation(b->getPositionOnBranch(l->branchOffset));
-	}
-
-}
-
-bool ATree::selfInChain(ABranch* self, ABranch* current) {
-	// can cause infinite loop if branchdependencies is circularly arranged
-	if (current == self) {
-		return true;
-	}
-	if (current->placedOn != NOT_PLACED) {
-		return selfInChain(self, branches[current->placedOn]);
-	}
-
-	return false;
-}
-
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
-=======
->>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
-=======
-=======
->>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
-=======
->>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
-}
-
-void ATree::displaceBranch(ABranch* b) {
-	if (b->placedOn != NOT_PLACED) {
-		branchDependencies[branches[b->placedOn]].Remove(b);
-	}
-	b->placedOn = NOT_PLACED;
-
-
-
-	//for (ABranch* extendingB : branchDependencies[b]) {
-	//	displaceBranch(extendingB);
-	//}
-
-	GetRandomPositionFor(b);
-
-	cascadePositionUpdate(b);
-
-
-
-	//allowedToExtend.Add(b);
-}
-
-void ATree::cascadePositionUpdate(ABranch* b) {
-	for (ABranch* newB : branchDependencies[b]) {
-		newB->SetActorLocation(b->getEnd());
-		cascadePositionUpdate(newB);
-	}
-	for (ALeaf* l : leafDependencies[b]) {
-		l->updateLocation(b->getPositionOnBranch(l->branchOffset));
-	}
-
-}
-
-bool ATree::selfInChain(ABranch* self, ABranch* current) {
-	// can cause infinite loop if branchdependencies is circularly arranged
-	if (current == self) {
-		return true;
-	}
-	if (current->placedOn != NOT_PLACED) {
-		return selfInChain(self, branches[current->placedOn]);
-	}
-
-	return false;
-}
-
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
-=======
->>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
-=======
->>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
-=======
->>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
 void ATree::mutate(bool reCalc) {
 
 	for (int i = 0; i < branches.Num(); ++i) {
@@ -548,60 +344,17 @@ void ATree::mutate(bool reCalc) {
 		newVectorOffset.Y = newVectorOffset.Y < -20 ? -20 : newVectorOffset.Y;
 		newVectorOffset.Z = newVectorOffset.Z > 10 ? 10 : newVectorOffset.Z;
 		newVectorOffset.Z = newVectorOffset.Z < -10 ? -10 : newVectorOffset.Z;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-		//leafs[index]->offsetVector += (random.FRand() / 2) - 1 / 4;
->>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
-=======
-		//leafs[index]->offsetVector += (random.FRand() / 2) - 1 / 4;
->>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
-=======
-		//leafs[index]->offsetVector += (random.FRand() / 2) - 1 / 4;
->>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
-
 		leafs[index]->offsetVector = newVectorOffset;
 		leafs[index]->SetActorLocation(branches[leafs[index]->attachedToIndex]->getPositionOnBranch(newOffset) + newVectorOffset);
 	}
 
 	for (int i = 0; i < count2; ++i) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-		// change branch
 		int index = random.RandRange(0, leafs.Num() - 1);
-<<<<<<< HEAD
 		ALeaf* l = leafs[index];
 		leafDependencies[branches[l->attachedToIndex]].Remove(l);
 		l->attachedToIndex = random.RandRange(0, branches.Num() - 1);
 		leafDependencies[branches[l->attachedToIndex]].Add(l);
 		l->SetActorLocation(branches[l->attachedToIndex]->getPositionOnBranch(l->branchOffset) + l->offsetVector);
-=======
-		leafs[index]->attachedToIndex = random.RandRange(0, branches.Num() - 1);
-		leafs[index]->SetActorLocation(branches[leafs[index]->attachedToIndex]->getPositionOnBranch(leafs[index]->branchOffset) + leafs[index]->offsetVector);
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
-=======
->>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
-=======
->>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
-=======
-		int index = random.RandRange(0, leafs.Num() - 1);
-		leafs[index]->attachedToIndex = random.RandRange(0, branches.Num() - 1);
-		leafs[index]->SetActorLocation(branches[leafs[index]->attachedToIndex]->getPositionOnBranch(leafs[index]->branchOffset) + leafs[index]->offsetVector);
->>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
-=======
-		int index = random.RandRange(0, leafs.Num() - 1);
-		leafs[index]->attachedToIndex = random.RandRange(0, branches.Num() - 1);
-		leafs[index]->SetActorLocation(branches[leafs[index]->attachedToIndex]->getPositionOnBranch(leafs[index]->branchOffset) + leafs[index]->offsetVector);
->>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
-=======
-		int index = random.RandRange(0, leafs.Num() - 1);
-		leafs[index]->attachedToIndex = random.RandRange(0, branches.Num() - 1);
-		leafs[index]->SetActorLocation(branches[leafs[index]->attachedToIndex]->getPositionOnBranch(leafs[index]->branchOffset) + leafs[index]->offsetVector);
->>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
 	}
 
 	for (ALeaf* l : leafs) {
@@ -675,25 +428,7 @@ void ATree::GetRandomPositionFor(ABranch* b) {
 		ATree* tree = Cast<ATree>(RV_Hit.GetActor());
 		if (!tree) {
 			GetRandomPositionFor(b);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 			return;
-=======
->>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
-=======
->>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
-=======
->>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
-=======
->>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
-=======
->>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
-=======
->>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
 		}
 
 		b->placedOn = NOT_PLACED;
@@ -703,25 +438,7 @@ void ATree::GetRandomPositionFor(ABranch* b) {
 	if (b->overlapsProps()) {
 		//abandon
 		GetRandomPositionFor(b);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 		return;
-=======
->>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
-=======
->>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
-=======
->>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
-=======
->>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
-=======
->>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
-=======
->>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
 	}
 
 
@@ -772,53 +489,12 @@ vector<float> ATree::createChildDNA(ATree* otherParent) {
 
 	vector<float> DNA;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-	//int32 index = random.RandRange(0, branches.Num() - 1);
-	//vector<int> singleChain = getChain(branches[index]);
-	//singleChain.push_back(index);
-
-	for (int i = 0; i < branches.Num(); ++i) {
-		ATree* t;
-		ABranch* b;
-		//if (find(singleChain.begin(), singleChain.end(), i) != singleChain.end()) {
-=======
-=======
->>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
-=======
->>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
-=======
->>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
-=======
->>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
-=======
->>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
 	for (int i = 0; i < branches.Num(); ++i) {
 		ATree* t;
 		ABranch* b;
 		//if (random.FRand() < .5) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
-=======
->>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
-=======
->>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
-=======
->>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
-=======
->>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
-=======
->>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
-			t = this;
-			b = branches[i];
+		t = this;
+		b = branches[i];
 		//}
 		//else {
 		//	t = otherParent;
@@ -848,7 +524,6 @@ vector<float> ATree::createChildDNA(ATree* otherParent) {
 
 	return DNA;
 }
-
 
 
 
@@ -887,11 +562,6 @@ void ATree::buildFromDNA(vector<float> DNA) {
 
 		leafDependencies[branches[l->attachedToIndex]].Add(l);
 		l->updateLocation(b->getPositionOnBranch(l->branchOffset));
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 	}
 
 }
@@ -901,69 +571,25 @@ void ATree::checkCollision() {
 		if (b->overlapsProps()) {
 			displaceBranch(b);
 		}
-=======
->>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
 	}
-<<<<<<< HEAD
 }
 
-<<<<<<< HEAD
 vector<int> ATree::getChain(ABranch* b) {
 	if (b->placedOn == NOT_PLACED) {
 		return vector<int>();
-	} else{
+	}
+	else {
 		vector<int> prev = getChain(branches[b->placedOn]);
 		prev.push_back(b->placedOn);
 		return prev;
-=======
->>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
 	}
-	
+
 }
 
 void ATree::SetNumBranches(int32 num) {
 	init(num, leafs.Num());
 }
 
-<<<<<<< HEAD
 void ATree::SetNumLeafs(int32 num) {
 	init(branches.Num(), num);
-=======
->>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
-=======
-=======
->>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
-=======
-	}
-
->>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
-=======
-	}
-
->>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
-=======
-	}
-
->>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
-}
-
-void ATree::checkCollision() {
-	for (ABranch* b : branches) {
-		if (b->overlapsProps()) {
-			displaceBranch(b);
-		}
-	}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
-=======
->>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
-=======
->>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
-=======
->>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
-=======
->>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
 }

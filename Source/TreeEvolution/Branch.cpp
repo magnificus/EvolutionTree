@@ -2,16 +2,8 @@
 
 #include "TreeEvolution.h"
 #include "Branch.h"
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 #include "Tree.h"
-=======
->>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
-=======
->>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
-=======
->>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
+
 
 
 // Sets default values
@@ -111,49 +103,12 @@ bool ABranch::overlapsProps() {
 	TArray< AActor * > OverlappingActors;
 	GetOverlappingActors(OverlappingActors);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 	for (auto a : OverlappingActors) {
 		ABranch* branch = Cast<ABranch>(a);
 		ALeaf* leaf = Cast<ALeaf>(a);
 		ATree* tree = Cast<ATree>(a);
 		if (!branch && !leaf && !tree) {
 			// prop was not a branch or a leaf or a tree, this means there is an overlap with another actor
-=======
-=======
->>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
-=======
->>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
-=======
->>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
-=======
->>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
-=======
->>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
-	for (AActor* a : OverlappingActors) {
-		ABranch* actor = Cast<ABranch>(a);
-		if (!a) {
-			// prop was not a branch, this means there is an overlap
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
-=======
->>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
-=======
->>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
-=======
->>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
-=======
->>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
-=======
->>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
 			return true;
 		}
 	}

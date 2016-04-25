@@ -113,9 +113,6 @@ void ASimLogic::init() {
 	int yPos = 0;
 	currentBest = GetWorld()->SpawnActor<ATree>(Tree_BP, currentBestLocation, FRotator(0,0,0));
 	if (currentBest)
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 		currentBest->init(numBranches, numLeafs);
 
 	int placed = 0;
@@ -165,148 +162,10 @@ void ASimLogic::introduceRandomDNA() {
 	}
 }
 
-void ASimLogic::introduceRandomDNA() {
-	trees.Sort([](const ATree& t1, const ATree& t2) { return t1.currentValue > t2.currentValue;});
-
-	TArray<ATree*> winners;
-	TArray<ATree*> losers;
-
-	for (int32 i = 1; i < trees.Num(); ++i) {
-		if (random.FRand() * trees.Num() * cullingConstant > i) {
-			winners.Add(trees[i]);
-		}
-		else {
-			losers.Add(trees[i]);
-		}
-	}
-	for (ATree* t : losers) {
-	//	t->init();
-		for (int i = 0; i < 100; ++i) {
-			t->mutate(false);
-		}
-		t->mutate(true);
-	}
-}
-
-void ASimLogic::introduceRandomDNA() {
-	trees.Sort([](const ATree& t1, const ATree& t2) { return t1.currentValue > t2.currentValue;});
-
-	TArray<ATree*> winners;
-	TArray<ATree*> losers;
-
-	for (int32 i = 1; i < trees.Num(); ++i) {
-		if (random.FRand() * trees.Num() * cullingConstant > i) {
-			winners.Add(trees[i]);
-		}
-		else {
-			losers.Add(trees[i]);
-		}
-	}
-	for (ATree* t : losers) {
-	//	t->init();
-		for (int i = 0; i < 100; ++i) {
-			t->mutate(false);
-		}
-		t->mutate(true);
-=======
-=======
->>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
-=======
->>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
-		currentBest->init();
-
-	for (int32 i = 0; i < nbrLines; ++i) {
-		xPos = i * distance;
-		for (int32 j = 0; j < nbrLines; ++j) {
-			yPos = j * distance;
-			FVector spawnVector(xPos, yPos, 0);
-
-			ATree* spawnedTree = GetWorld()->SpawnActor<ATree>(Tree_BP, spawnVector, FRotator(0, 0, 0));
-			if (spawnedTree)
-				spawnedTree->init();
-			
-			trees.Add(spawnedTree);
-
-		}
-
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
-=======
->>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
-=======
->>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
-	}
-}
-
-void ASimLogic::introduceRandomDNA() {
-	trees.Sort([](const ATree& t1, const ATree& t2) { return t1.currentValue > t2.currentValue;});
-
-	TArray<ATree*> winners;
-	TArray<ATree*> losers;
-
-	for (int32 i = 1; i < trees.Num(); ++i) {
-		if (random.FRand() * trees.Num() * cullingConstant > i) {
-			winners.Add(trees[i]);
-		}
-		else {
-			losers.Add(trees[i]);
-		}
-	}
-	for (ATree* t : losers) {
-	//	t->init();
-		for (int i = 0; i < 100; ++i) {
-			t->mutate(false);
-		}
-		t->mutate(true);
-	}
-}
-
-
 void ASimLogic::forceReCalculation() {
 	for (ATree* t : trees) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 		t->checkCollision();
 		t->currentValue = t->calculateHits();
-		t->checkCollision();
 	}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 	//simulationTick();
 }
-=======
-	simulationTick();
-}
->>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
-=======
-	simulationTick();
-}
->>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
-=======
-	simulationTick();
-}
->>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
-=======
-		t->currentValue = t->calculateHits();
-		t->checkCollision();
-	}
-	simulationTick();
-}
->>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
-=======
-		t->currentValue = t->calculateHits();
-		t->checkCollision();
-	}
-	simulationTick();
-}
->>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
-=======
-		t->currentValue = t->calculateHits();
-		t->checkCollision();
-	}
-	simulationTick();
-}
->>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9

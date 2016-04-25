@@ -60,49 +60,18 @@ public:
 		bool debugLine = false;
 
 	UPROPERTY(EditAnywhere, Category = "Algorithm")
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 		float displacementChance = .005f;
 	UPROPERTY(EditAnywhere, Category = "Algorithm")
-<<<<<<< HEAD
 		float leafChangeBranchChance = 0.005f;
-=======
-=======
-		float displacementChance = .001f;
-	UPROPERTY(EditAnywhere, Category = "Algorithm")
->>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
-=======
-		float displacementChance = .001f;
-	UPROPERTY(EditAnywhere, Category = "Algorithm")
->>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
-=======
-		float displacementChance = .001f;
-	UPROPERTY(EditAnywhere, Category = "Algorithm")
->>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
-		float leafChangeBranchChance = 0.002f;
 
 	UPROPERTY(EditAnywhere, Category = "Algorithm")
 		int32 numBranches = 15;
 	UPROPERTY(EditAnywhere, Category = "Algorithm")
 		int32 numLeafs = 60;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
-=======
->>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
-=======
->>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
-=======
->>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
 
 	vector<float> createChildDNA(ATree* otherParent);
 
 	void buildFromDNA(vector<float>);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 	void init(int32 numB, int32 numL);
 
 	void SetNumBranches(int32 num);
@@ -110,15 +79,6 @@ public:
 
 	int32 getNumBranches() { return branches.Num(); }
 	int32 getNumLeafs() { return leafs.Num(); }
-=======
-	void init();
->>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
-=======
-	void init();
->>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
-=======
-	void init();
->>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
 
 	void initRandomLeaf();
 	void initRandomBranch();
@@ -126,25 +86,7 @@ public:
 	void cascadePositionUpdate(ABranch* b);
 	void checkCollision();
 	bool selfInChain(ABranch* self, ABranch* current);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 	vector<int> getChain(ABranch* b);
-=======
->>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
-=======
->>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
-=======
->>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
-=======
->>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
-=======
->>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
-=======
->>>>>>> 19c91a8a182e4b300fe1335206e74c12d8c7a1e9
 
 	void addBranch(ABranch* b);
 	void addLeaf(ABranch* b, ALeaf* l);
