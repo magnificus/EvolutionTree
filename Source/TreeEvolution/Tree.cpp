@@ -40,6 +40,9 @@ void ATree::Tick(float DeltaTime)
 
 
 float ATree::calculateHits() {
+	
+
+
 	switch (mode) {
 	case MODE_STRAIGHT: return calculateHitsStraightAbove();
 	case MODE_HEMISPHERE: return hemisphereHits();
@@ -112,99 +115,197 @@ float ATree::calculateHitsStraightAbove() {
 }
 
 
+void ATree::setAngles(float inTheta, float inPhi) {
+	float r = 1000;
+	theta = FMath::DegreesToRadians(inTheta);
+	phi = FMath::DegreesToRadians(inPhi);
+	FVector origin = GetActorLocation();
+	origin.Z += 400;
+	sunPos = FVector(origin.X + sin(theta) *cos(phi)*r, origin.Y + sin(theta)*sin(phi)*r, origin.Z + cos(theta)*r);
+}
+
+void ATree::illustrateSun() {
+	FlushPersistentDebugLines(GetWorld());
+	DrawDebugSphere(
+		GetWorld(),
+		sunPos,
+		100,
+		16,
+		FColor(255, 255, 0),
+		true,
+		-1,
+		0
+	);
+}
+
+
 // Dome-like sunshine
 float ATree::hemisphereHits() {
 
-	FVector origin = GetActorLocation();
-	origin.Z += 230;
-	//startLocation.Z += zDist + 100;
 
-	float hits = 0.0;
-	FCollisionQueryParams RV_TraceParams = FCollisionQueryParams(FName(TEXT("RV_Trace")), true, this);
+	int size = 1000;
 
-	RV_TraceParams.bTraceComplex = true;
-	RV_TraceParams.bTraceAsyncScene = true;
-	RV_TraceParams.bReturnPhysicalMaterial = false;
+
+
+
+	//float theta = PI / 6.0; // 0 - pi , latitute where 0 = north pole
+	//float phi = 1.5*PI; // 0 - 2pi , longitude coordinates
+	FRotator ActorRotation = GetActorRotation();
+	ActorRotation.Pitch -= FMath::RadiansToDegrees(theta);
+	ActorRotation.Yaw += FMath::RadiansToDegrees(phi);
+	SetActorRotation(ActorRotation);
+
+	float offset = size / numberRays;
+	FVector  forward = GetActorForwardVector();
+	FVector right = GetActorRightVector();
+	FVector sunDir = -GetActorUpVector();
+	float sunDist = 1800;
+
 
 
 	//Re-initialize hit info
 	FHitResult RV_Hit(ForceInit);
 
-	int n = int(numberRays);
-
-	float goldenAngle = PI * (3.0 - sqrt(5));
-	float theta = 0.0;
-	float scale = 600;
-	float dz = (2.0 / numberRays); // 0.02
-	float z = (1.0 - dz / 2.0)*scale; //990
-	float r = 0.0;
+	float hits = 0.0;
+	FCollisionQueryParams RV_TraceParams = FCollisionQueryParams(FName(TEXT("RV_Trace")), true, this);
+	RV_TraceParams.bTraceComplex = true;
+	RV_TraceParams.bTraceAsyncScene = true;
+	RV_TraceParams.bReturnPhysicalMaterial = false;
 
 
-	FVector test = origin;// FVector(-1000.0, -5000.0, 2000.0);
-	FVector coordinate;
 
-	TArray<FVector> list;
+	for (int x = -numberRays / 2; x < numberRays / 2; ++x) {
 
-	for (int k = 0; k < n - 1; ++k) {
+		FVector offsetRight = (right *x*offset);
 
+		for (int y = -numberRays / 2; y < numberRays / 2; ++y) {
 
-		r = sqrt((scale*scale) - z*z);
-		coordinate = FVector(test.X + cos(theta)*r, test.Y + sin(theta)*r, test.Z + z);
-		z -= (dz*scale);
-		theta += goldenAngle;
-		if (coordinate.Z > 0.0) {
-			list.Add(coordinate);
-		}
-	}
+			FVector offsetForward = (forward *y*offset);
+			FVector planePointDirection = (offsetRight)+(offsetForward);
+			FVector planePoint = sunPos + planePointDirection;
+			FVector endPoint = planePoint + (sunDir*sunDist);
 
 
-	for (int a = 0; a < list.Num(); ++a) {
-		for (int b = 0; b < list.Num(); ++b) {
-			if (a != b) {
-				FVector from = list[a];
-				FVector to = list[b];
 
-				GetWorld()->LineTraceSingleByChannel(
-					RV_Hit,        //result
-					from,    //start
-					to, //end
-					ECC_Pawn, //collision channel
-					RV_TraceParams
+			GetWorld()->LineTraceSingleByChannel(
+				RV_Hit,        //result
+				planePoint,    //start
+				endPoint, //end
+				ECC_Pawn, //collision channel
+				RV_TraceParams
+			);
+
+			if (debugLine) {
+
+				DrawDebugLine(
+					GetWorld(),
+					planePoint,
+					endPoint,
+					FColor(0, 0, 255),
+					true, -1, 0,
+					1
 				);
-
-				if (debugLine) {
-
-					DrawDebugLine(
-						GetWorld(),
-						from,
-						to,
-						FColor(0, 0, 255),
-						true, -1, 0,
-						1
-					);
+			}
+			if (RV_Hit.bBlockingHit) {
+				ALeaf* leaf = Cast<ALeaf>(RV_Hit.GetActor());
+				if (leaf) {
+					hits++;
 				}
-
-
-				if (RV_Hit.bBlockingHit) {
-					ALeaf* leaf = Cast<ALeaf>(RV_Hit.GetActor());
-					if (leaf) {
-						FVector dir = leaf->GetActorLocation() - from;
-						float  value = dir.Size();
-						hits += 1.0; //+ (1.0 / value)*scale;
-					}
-				}
-
 			}
 
 
 		}
-
-
-
 	}
 
-	return hits / (numberRays*numberRays);
 
+
+
+
+
+
+
+
+	//int n = int(numberRays);
+
+	//float goldenAngle = PI * (3.0 - sqrt(5));
+	//float theta = 0.0;
+	//float scale = 375.0;
+	//float dz = (2.0 / numberRays); // 0.02
+	//float z = (1.0 - dz / 2.0)*scale; //990
+	//float r = 0.0;
+
+	//// 
+
+	//FVector test = origin;// FVector(-1000.0, -5000.0, 2000.0);
+	//FVector coordinate;
+
+	//TArray<FVector> list;
+
+	//for (int k = 0; k < n - 1; ++k) {
+
+
+	//	r = sqrt((scale*scale) - z*z);
+	//	coordinate = FVector(test.X + cos(theta)*r, test.Y + sin(theta)*r, test.Z + z);
+	//	z -= (dz*scale);
+	//	theta += goldenAngle;
+	//	if (coordinate.Z > 0.0) {
+	//		list.Add(coordinate);
+	//	}
+	//}
+
+
+	//for (int a = 0; a < list.Num(); ++a) {
+
+
+	//	for (int b = 0; b < list.Num(); ++b) {
+	//		if (a != b) {
+	//			FVector from = list[a];
+	//			FVector to = list[b];
+
+	//			GetWorld()->LineTraceSingleByChannel(
+	//				RV_Hit,        //result
+	//				from,    //start
+	//				to, //end
+	//				ECC_Pawn, //collision channel
+	//				RV_TraceParams
+	//			);
+
+	//			if (debugLine) {
+
+	//				DrawDebugLine(
+	//					GetWorld(),
+	//					from,
+	//					to,
+	//					FColor(0, 0, 255),
+	//					true, -1, 0,
+	//					1
+	//				);
+	//			}
+
+
+	//			if (RV_Hit.bBlockingHit) {
+	//				ALeaf* leaf = Cast<ALeaf>(RV_Hit.GetActor());	
+	//				if (leaf) {
+	//					FVector dir = leaf->GetActorLocation() - from;
+	//					float  value = dir.Size();
+	//					hits += 1.0 + (1.0/value)*scale;
+	//				}
+	//			}
+
+	//		}
+
+
+	//	}
+
+
+
+	//}
+	ActorRotation.Pitch += FMath::RadiansToDegrees(theta);
+	ActorRotation.Yaw -= FMath::RadiansToDegrees(phi);
+	SetActorRotation(ActorRotation);
+
+
+	return hits / (numberRays*numberRays);
 }
 
 void ATree::init(int numB, int numL) {

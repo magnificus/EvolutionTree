@@ -55,6 +55,8 @@ public:
 		int32 GetNumLeafs() { return numLeafs;  }
 	UFUNCTION(BlueprintCallable, Category = "Gameplay")
 		void forceReCalculation();
+	UFUNCTION(BlueprintCallable, Category = "Gameplay")
+		void setSun(float theta, float phi);
 
 	
 	UPROPERTY(EditAnywhere, Category = "Gameplay")

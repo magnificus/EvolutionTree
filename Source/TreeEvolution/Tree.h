@@ -90,6 +90,9 @@ public:
 
 	void addBranch(ABranch* b);
 	void addLeaf(ABranch* b, ALeaf* l);
+	void setAngles(float inTheta, float inPhi);
+
+	void illustrateSun();
 
 	void annihilate();
 
@@ -106,6 +109,9 @@ private:
 	FRandomStream random;
 	TSubclassOf<class ABranch> Branch_BP;
 	TSubclassOf<class ALeaf> Leaf_BP;
-	int mode = MODE_STRAIGHT;
+	int mode = MODE_HEMISPHERE;
+	float theta = 0.0;
+	float phi = 0.0;
+	FVector sunPos;
 };
 

@@ -162,6 +162,16 @@ void ASimLogic::introduceRandomDNA() {
 	}
 }
 
+void ASimLogic::setSun(float theta, float phi) {
+
+	for (ATree* t : trees) {
+		t->setAngles(theta, phi);	
+	}
+	currentBest->setAngles(theta, phi);
+	currentBest->illustrateSun();
+
+}
+
 void ASimLogic::forceReCalculation() {
 	for (ATree* t : trees) {
 		t->checkCollision();
