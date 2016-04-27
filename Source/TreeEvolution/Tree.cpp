@@ -19,6 +19,10 @@ ATree::ATree()
 	if (LeafFinder.Object != NULL)
 		Leaf_BP = LeafFinder.Object;
 
+	static ConstructorHelpers::FObjectFinder<UClass> SunFinder(TEXT("Class'/Game/sunActor.sunActor_C'"));
+	if (SunFinder.Object != NULL)
+		Sun_BP = SunFinder.Object;
+
 	PrimaryActorTick.bCanEverTick = true;
 	random.GenerateNewSeed();
 
@@ -116,7 +120,7 @@ float ATree::calculateHitsStraightAbove() {
 
 
 void ATree::setAngles(float inTheta, float inPhi) {
-	float r = 1000;
+	float r = 1500;
 	theta = FMath::DegreesToRadians(inTheta);
 	phi = FMath::DegreesToRadians(inPhi);
 	FVector origin = GetActorLocation();
@@ -125,17 +129,22 @@ void ATree::setAngles(float inTheta, float inPhi) {
 }
 
 void ATree::illustrateSun() {
-	FlushPersistentDebugLines(GetWorld());
-	DrawDebugSphere(
-		GetWorld(),
-		sunPos,
-		100,
-		16,
-		FColor(255, 255, 0),
-		true,
-		-1,
-		0
-	);
+	if (!sunActor) {
+		sunActor = (AActor*) GetWorld()->SpawnActor(Sun_BP);
+	}
+
+	sunActor->SetActorLocation(sunPos);
+	//FlushPersistentDebugLines(GetWorld());
+	//DrawDebugSphere(
+	//	GetWorld(),
+	//	sunPos,
+	//	100,
+	//	16,
+	//	FColor(255, 255, 0),
+	//	true,
+	//	-1,
+	//	0
+	//);
 }
 
 

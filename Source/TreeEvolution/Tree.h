@@ -109,9 +109,12 @@ private:
 	FRandomStream random;
 	TSubclassOf<class ABranch> Branch_BP;
 	TSubclassOf<class ALeaf> Leaf_BP;
+	TSubclassOf<class AActor> Sun_BP;
 	int mode = MODE_HEMISPHERE;
 	float theta = 0.0;
 	float phi = 0.0;
 	FVector sunPos;
+
+	AActor* sunActor;
 };
 
