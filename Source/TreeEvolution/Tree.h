@@ -47,7 +47,7 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Mutation")
 		void mutate(bool reCalc);
 
-	void GetRandomPositionFor(ABranch* b);
+	void GetRandomPositionFor(ABranch* b, int recursiveLimit);
 	FRotator getR();
 
 	UPROPERTY(EditAnywhere, Category = "RayTrace")
@@ -74,7 +74,7 @@ public:
 	void buildFromDNA(vector<float>);
 	void init(int32 numB, int32 numL);
 
-	void SetNumBranches(int32 num);
+	//void SetNumBranches(int32 num);
 	void SetNumLeafs(int32 num);
 
 	int32 getNumBranches() { return branches.Num(); }
@@ -88,8 +88,6 @@ public:
 	bool selfInChain(ABranch* self, ABranch* current);
 	vector<int> getChain(ABranch* b);
 
-	void addBranch(ABranch* b);
-	void addLeaf(ABranch* b, ALeaf* l);
 	void setAngles(float inTheta, float inPhi);
 
 	void illustrateSun();

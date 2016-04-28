@@ -100,6 +100,10 @@ float ABranch::calculateCost() {
 }
 
 bool ABranch::overlapsProps() {
+	//sometimes crashes so just return false for now fuck all
+	//return false;
+
+
 	TArray< AActor * > OverlappingActors;
 	GetOverlappingActors(OverlappingActors);
 
@@ -124,7 +128,7 @@ void ABranch::displace(FVector loc, FRotator rot) {
 
 bool ABranch::mutate() {
 	if (random.FRand() < rotationChance) {
-		AddActorLocalRotation(FQuat(FRotator(random.FRand() * 30 - 15, random.FRand() * 30 - 15, random.FRand() * 30 - 15)));
+		AddActorLocalRotation(FQuat(FRotator(random.FRand() * 60 - 30, random.FRand() * 60 - 30, random.FRand() * 60 - 30)));
 		return true;
 	}
 	return false;

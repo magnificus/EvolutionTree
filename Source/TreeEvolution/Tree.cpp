@@ -6,6 +6,7 @@
 
 using namespace std;
 
+const int RECURSIVE_DEPTH_LIMIT = 100;
 
 // Sets default values
 ATree::ATree()
@@ -225,90 +226,6 @@ float ATree::hemisphereHits() {
 
 		}
 	}
-
-
-
-
-
-
-
-
-
-	//int n = int(numberRays);
-
-	//float goldenAngle = PI * (3.0 - sqrt(5));
-	//float theta = 0.0;
-	//float scale = 375.0;
-	//float dz = (2.0 / numberRays); // 0.02
-	//float z = (1.0 - dz / 2.0)*scale; //990
-	//float r = 0.0;
-
-	//// 
-
-	//FVector test = origin;// FVector(-1000.0, -5000.0, 2000.0);
-	//FVector coordinate;
-
-	//TArray<FVector> list;
-
-	//for (int k = 0; k < n - 1; ++k) {
-
-
-	//	r = sqrt((scale*scale) - z*z);
-	//	coordinate = FVector(test.X + cos(theta)*r, test.Y + sin(theta)*r, test.Z + z);
-	//	z -= (dz*scale);
-	//	theta += goldenAngle;
-	//	if (coordinate.Z > 0.0) {
-	//		list.Add(coordinate);
-	//	}
-	//}
-
-
-	//for (int a = 0; a < list.Num(); ++a) {
-
-
-	//	for (int b = 0; b < list.Num(); ++b) {
-	//		if (a != b) {
-	//			FVector from = list[a];
-	//			FVector to = list[b];
-
-	//			GetWorld()->LineTraceSingleByChannel(
-	//				RV_Hit,        //result
-	//				from,    //start
-	//				to, //end
-	//				ECC_Pawn, //collision channel
-	//				RV_TraceParams
-	//			);
-
-	//			if (debugLine) {
-
-	//				DrawDebugLine(
-	//					GetWorld(),
-	//					from,
-	//					to,
-	//					FColor(0, 0, 255),
-	//					true, -1, 0,
-	//					1
-	//				);
-	//			}
-
-
-	//			if (RV_Hit.bBlockingHit) {
-	//				ALeaf* leaf = Cast<ALeaf>(RV_Hit.GetActor());	
-	//				if (leaf) {
-	//					FVector dir = leaf->GetActorLocation() - from;
-	//					float  value = dir.Size();
-	//					hits += 1.0 + (1.0/value)*scale;
-	//				}
-	//			}
-
-	//		}
-
-
-	//	}
-
-
-
-	//}
 	ActorRotation.Pitch += FMath::RadiansToDegrees(theta);
 	ActorRotation.Yaw -= FMath::RadiansToDegrees(phi);
 	SetActorRotation(ActorRotation);
@@ -345,7 +262,7 @@ void ATree::initRandomBranch() {
 	branches.Add(spawnedBranch);
 
 
-	GetRandomPositionFor(spawnedBranch);
+	GetRandomPositionFor(spawnedBranch, RECURSIVE_DEPTH_LIMIT);
 
 
 }
@@ -379,7 +296,7 @@ void ATree::displaceBranch(ABranch* b) {
 		b->placedOn = NOT_PLACED;
 	}
 
-	GetRandomPositionFor(b);
+	GetRandomPositionFor(b, RECURSIVE_DEPTH_LIMIT);
 	cascadePositionUpdate(b);
 }
 
@@ -480,21 +397,30 @@ FRotator ATree::getR() {
 	return FRotator(random.FRand() * 360, random.FRand() * 360, random.FRand() * 360);
 }
 
-void ATree::GetRandomPositionFor(ABranch* b) {
+
+
+void ATree::GetRandomPositionFor(ABranch* b, int recursiveLimit) {
+
+	--recursiveLimit;
+
+	if (recursiveLimit == 0) {
+		// not finding anywhere to place the branch
+		throw "No valid positions for branch";
+	}
 
 	if (branches.Num() > 0 && random.FRand() > .5) {
-		// 50 % chance to spawn on another branch instead of the stem
+		// X % chance to spawn on another branch instead of the stem
 		int32 index = random.RandRange(0, branches.Num() - 1);
 		ABranch* toBuildFrom = branches[index];
 		if (selfInChain(b, toBuildFrom)) {
 			// abandon
-			GetRandomPositionFor(b);
+			GetRandomPositionFor(b, recursiveLimit);
 			return;
 		}
 		branchDependencies[toBuildFrom].Add(b);
 		b->placedOn = index;
 		FVector pos = toBuildFrom->getEnd();
-		b->displace(pos, toBuildFrom->GetActorRotation() - FRotator(random.FRand() * 90 - 45, random.FRand() * 90 - 45, random.FRand() * 90 - 45));
+		b->displace(pos, toBuildFrom->GetActorRotation() - FRotator(random.FRand() * 150 - 75, random.FRand() * 150 - 75, random.FRand() * 150 - 75));
 	}
 	else {
 		FVector target = GetActorLocation();
@@ -537,7 +463,7 @@ void ATree::GetRandomPositionFor(ABranch* b) {
 
 		ATree* tree = Cast<ATree>(RV_Hit.GetActor());
 		if (!tree) {
-			GetRandomPositionFor(b);
+			GetRandomPositionFor(b, recursiveLimit);
 			return;
 		}
 
@@ -547,7 +473,7 @@ void ATree::GetRandomPositionFor(ABranch* b) {
 
 	if (b->overlapsProps()) {
 		//abandon
-		GetRandomPositionFor(b);
+		GetRandomPositionFor(b, recursiveLimit);
 		return;
 	}
 
@@ -575,14 +501,7 @@ void ATree::duplicate(ATree* otherTree, FVector location) {
 
 }
 
-void ATree::addBranch(ABranch* b) {
-	branches.Add(b);
-	branchDependencies[b] = TArray<ABranch*>();
-}
 
-void ATree::addLeaf(ABranch* b, ALeaf* l) {
-	leafs.Add(l);
-}
 
 void ATree::annihilate() {
 	for (ABranch* b : branches) {
@@ -694,12 +613,4 @@ vector<int> ATree::getChain(ABranch* b) {
 		return prev;
 	}
 
-}
-
-void ATree::SetNumBranches(int32 num) {
-	init(num, leafs.Num());
-}
-
-void ATree::SetNumLeafs(int32 num) {
-	init(branches.Num(), num);
 }

@@ -26,7 +26,7 @@ ASimLogic::ASimLogic()
 		Leaf_BP = LeafFinder.Object;
 
 	random.GenerateNewSeed();
-	currentBestLocation.X = -1000;
+	//currentBestLocation.X = -1000;
 }
 
 void ASimLogic::BeginPlay()
