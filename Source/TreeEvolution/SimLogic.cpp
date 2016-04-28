@@ -105,13 +105,24 @@ void ASimLogic::init() {
 		t->annihilate();
 	}
 		trees.Empty();
+	
+		
+	AActor* sun = nullptr;
+
 	if (currentBest != nullptr) {
+		sun = currentBest->sunActor;
 		currentBest->annihilate();
+	}
+
+	currentBest = GetWorld()->SpawnActor<ATree>(Tree_BP, currentBestLocation, FRotator(0, 0, 0));
+	if (sun) {
+		// transfer same displayed sun so it isn't duplicated if it already exists
+		currentBest->sunActor = sun;
 	}
 
 	int xPos = 0;
 	int yPos = 0;
-	currentBest = GetWorld()->SpawnActor<ATree>(Tree_BP, currentBestLocation, FRotator(0,0,0));
+
 	if (currentBest)
 		currentBest->init(numBranches, numLeafs);
 
@@ -123,7 +134,7 @@ void ASimLogic::init() {
 		xPos = currX * distance;
 		for (currY = 0; currY < 10; ++currY) {
 			if (placed == nbrTrees) {
-				return;
+				goto outOfLoop;
 			}
 			yPos = currY * distance;
 			FVector spawnVector(xPos, yPos, 0);
@@ -136,6 +147,11 @@ void ASimLogic::init() {
 		}
 		++currX;
 	}
+	outOfLoop:
+
+	setSun(0, 0);
+
+	
 
 }
 
@@ -154,7 +170,6 @@ void ASimLogic::introduceRandomDNA() {
 		}
 	}
 	for (ATree* t : losers) {
-	//	t->init();
 		for (int i = 0; i < 100; ++i) {
 			t->mutate(false);
 		}
@@ -167,8 +182,12 @@ void ASimLogic::setSun(float theta, float phi) {
 	for (ATree* t : trees) {
 		t->setAngles(theta, phi);	
 	}
-	currentBest->setAngles(theta, phi);
-	currentBest->illustrateSun();
+
+	if (currentBest) {
+		currentBest->setAngles(theta, phi);
+		currentBest->illustrateSun();
+	}
+
 
 }
 

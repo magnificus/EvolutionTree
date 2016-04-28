@@ -99,8 +99,9 @@ public:
 	float currentValue = 0;
 
 	TArray<ABranch*> branches;
-	//TArray<ABranch*> allowedToExtend;
 	TArray<ALeaf*> leafs;
+	AActor* sunActor;
+
 
 	TMap<ABranch*, TArray<ABranch*>> branchDependencies;
 	TMap<ABranch*, TArray<ALeaf*>> leafDependencies;
@@ -115,6 +116,5 @@ private:
 	float phi = 0.0;
 	FVector sunPos;
 
-	AActor* sunActor;
 };
 

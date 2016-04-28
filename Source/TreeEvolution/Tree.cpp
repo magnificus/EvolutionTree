@@ -120,7 +120,7 @@ float ATree::calculateHitsStraightAbove() {
 
 
 void ATree::setAngles(float inTheta, float inPhi) {
-	float r = 1500;
+	float r = 2000;
 	theta = FMath::DegreesToRadians(inTheta);
 	phi = FMath::DegreesToRadians(inPhi);
 	FVector origin = GetActorLocation();
@@ -152,7 +152,7 @@ void ATree::illustrateSun() {
 float ATree::hemisphereHits() {
 
 
-	int size = 1000;
+	int size = maxSpread;
 
 
 
