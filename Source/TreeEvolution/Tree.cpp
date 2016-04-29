@@ -47,18 +47,36 @@ void ATree::Tick(float DeltaTime)
 float ATree::calculateHits() {
 
 
-
+	float cost = calculateCost();
 	switch (mode) {
-	case MODE_STRAIGHT: return calculateHitsStraightAbove();
-	case MODE_HEMISPHERE: return hemisphereHits();
+	case MODE_STRAIGHT: return calculateHitsStraightAbove() - cost;
+	case MODE_HEMISPHERE: return hemisphereHits() - cost;
 	}
 	return 0;
 }
 
-struct line {
-	FVector start;
-	FVector end;
-};
+
+float ATree::calculateCost() {
+	float costConstant = 0.001;
+
+	float total = 0;
+	for (ABranch* b : branches) {
+		total += lengthOfChain(b);
+	}
+	total *= costConstant;
+
+	return total;
+}
+
+int ATree::lengthOfChain(ABranch* b) {
+	int len = 0;
+	ABranch* current = b;
+	while (current->placedOn != NOT_PLACED) {
+		current = branches[current->placedOn];
+		++len;
+	}
+	return len;
+}
 
 float ATree::calculateHitsStraightAbove() {
 
@@ -282,7 +300,7 @@ void ATree::displaceBranch(ABranch* b) {
 
 
 	GetRandomPositionFor(b, RECURSIVE_DEPTH_LIMIT);
-	cascadePositionUpdate(b, RECURSIVE_DEPTH_LIMIT*300);
+	cascadePositionUpdate(b, RECURSIVE_DEPTH_LIMIT * 300);
 }
 
 void ATree::cascadePositionUpdate(ABranch* b, int limit) {

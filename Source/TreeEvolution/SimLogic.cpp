@@ -10,7 +10,7 @@ using namespace std;
 // Sets default values
 ASimLogic::ASimLogic()
 {
- 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
+	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
 	static ConstructorHelpers::FObjectFinder<UClass> TreeFinder(TEXT("Class'/Game/TreeBP.TreeBP_C'"));
@@ -31,13 +31,13 @@ ASimLogic::ASimLogic()
 
 void ASimLogic::BeginPlay()
 {
-	Super::BeginPlay();	
+	Super::BeginPlay();
 }
 
 // Called every frame
-void ASimLogic::Tick( float DeltaTime )
+void ASimLogic::Tick(float DeltaTime)
 {
-	Super::Tick( DeltaTime );
+	Super::Tick(DeltaTime);
 
 }
 
@@ -56,44 +56,47 @@ void ASimLogic::simulationTick()
 
 	float totalFitness = 0;
 
-	if (trees.Num() == 0) 
+	if (trees.Num() == 0)
 		return;
-	
-		trees[0]->duplicate(currentBest, currentBestLocation);
 
-		winners.Add(trees[0]);
-		maxFitness = trees[0]->currentValue;
-		totalFitness += trees[0]->currentValue;
+	trees[0]->duplicate(currentBest, currentBestLocation);
 
-		// for all trees except the best, randomly decide if it dies or not, but where better trees (lower in the list) have a higher chance of survival, on average, a portion the size (1 / cullingConstant) will die and be replaced each generation.
-		for (int32 i = 1; i < trees.Num(); ++i) {
-			totalFitness += trees[i]->currentValue;
-			if (random.FRand() * trees.Num() * cullingConstant > i) {
-				winners.Add(trees[i]);
-			}
-			else {
-				losers.Add(trees[i]);
-			}
+	winners.Add(trees[0]);
+	maxFitness = trees[0]->currentValue;
+	totalFitness += trees[0]->currentValue;
+
+	// for all trees except the best, randomly decide if it dies or not, but where better trees (lower in the list) have a higher chance of survival, on average, a portion the size (1 / cullingConstant) will die and be replaced each generation.
+	for (int32 i = 1; i < trees.Num(); ++i) {
+		totalFitness += trees[i]->currentValue;
+		if (random.FRand() * trees.Num() * cullingConstant > i) {
+			winners.Add(trees[i]);
 		}
-		for (ATree* t : losers) {
-			// replace all losing trees with new trees that are either clones of old trees or children of two of them depending on the boolean "sexualReproduction"
-			ATree* parent1 = winners[random.RandRange(0, winners.Num() - 1)];
+		else {
+			losers.Add(trees[i]);
+		}
+	}
+	for (ATree* t : losers) {
+		// replace all losing trees with new trees that are either clones of old trees or children of two of them depending on the boolean "sexualReproduction"
+		ATree* parent1 = winners[random.RandRange(0, winners.Num() - 1)];
 
-			if (sexualReproduction) {
-				ATree* parent2 = winners[random.RandRange(0, winners.Num() - 1)];
-				combine(t, parent1, parent2, t->GetActorLocation());
-			}
-			else {
-				parent1->duplicate(t, t->GetActorLocation());
-			}
-
-			t->mutate(true);
+		if (sexualReproduction) {
+			ATree* parent2 = winners[random.RandRange(0, winners.Num() - 1)];
+			combine(t, parent1, parent2, t->GetActorLocation());
+		}
+		else {
+			parent1->duplicate(t, t->GetActorLocation());
 		}
 
-		averageFitness = totalFitness / trees.Num();
+		t->mutate(true);
+	}
+
+	averageFitness = totalFitness / trees.Num();
+
+	averageHistory.Add(averageFitness);
+	bestHistory.Add(maxFitness);
 
 
-	
+
 }
 
 void ASimLogic::combine(ATree* newTree, ATree* p1, ATree* p2, FVector location) {
@@ -104,9 +107,9 @@ void ASimLogic::init() {
 	for (ATree* t : trees) {
 		t->annihilate();
 	}
-		trees.Empty();
-	
-		
+	trees.Empty();
+
+
 	AActor* sun = nullptr;
 
 	if (currentBest != nullptr) {
@@ -147,11 +150,11 @@ void ASimLogic::init() {
 		}
 		++currX;
 	}
-	outOfLoop:
+outOfLoop:
 
 	setSun(0, 0);
 
-	
+
 
 }
 
@@ -180,7 +183,7 @@ void ASimLogic::introduceRandomDNA() {
 void ASimLogic::setSun(float theta, float phi) {
 
 	for (ATree* t : trees) {
-		t->setAngles(theta, phi);	
+		t->setAngles(theta, phi);
 	}
 
 	if (currentBest) {
@@ -197,4 +200,31 @@ void ASimLogic::forceReCalculation() {
 		t->currentValue = t->calculateHits();
 	}
 	//simulationTick();
+}
+
+
+void ASimLogic::writeHistoryToFile() {
+	FString SaveDirectory = FPaths::GameDir();
+	FString FileName = FString("data.txt");
+	FString TextToSave;
+
+	TextToSave.Append("Average \t Best \n");
+	for (int i = 0; i < averageHistory.Num(); ++i) {
+		float average = averageHistory[i];
+		float best = bestHistory[i];
+		TextToSave.Append(FString::SanitizeFloat(average) + "\t" + FString::SanitizeFloat(best) + "\n");
+	}
+
+	IPlatformFile& PlatformFile = FPlatformFileManager::Get().GetPlatformFile();
+
+	if (PlatformFile.CreateDirectoryTree(*SaveDirectory))
+	{
+		// Get absolute file path
+		FString AbsoluteFilePath = SaveDirectory + "/" + FileName;
+
+		FFileHelper::SaveStringToFile(TextToSave, *AbsoluteFilePath);
+		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, TEXT("** Successfully exported data **"));
+
+	}
+
 }

@@ -58,6 +58,9 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Gameplay")
 		void setSun(float theta, float phi);
 
+	UFUNCTION(BlueprintCallable, Category = "DATA")
+		void writeHistoryToFile();
+
 	
 	UPROPERTY(EditAnywhere, Category = "Gameplay")
 
@@ -94,5 +97,8 @@ private:
 	TArray<ATree*> trees;
 	FRandomStream random;
 	ATree* currentBest;
+
+	TArray<float> averageHistory;
+	TArray<float> bestHistory;
 	
 };

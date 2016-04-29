@@ -48,6 +48,9 @@ public:
 		void mutate(bool reCalc);
 
 	void GetRandomPositionFor(ABranch* b, int recursiveLimit);
+
+	float calculateCost();
+	int lengthOfChain(ABranch* b);
 	FRotator getR();
 
 	UPROPERTY(EditAnywhere, Category = "RayTrace")
@@ -74,8 +77,6 @@ public:
 	void buildFromDNA(vector<float>);
 	void init(int32 numB, int32 numL);
 
-	//void SetNumBranches(int32 num);
-	void SetNumLeafs(int32 num);
 
 	int32 getNumBranches() { return branches.Num(); }
 	int32 getNumLeafs() { return leafs.Num(); }
