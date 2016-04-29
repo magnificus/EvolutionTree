@@ -83,7 +83,7 @@ public:
 	void initRandomLeaf();
 	void initRandomBranch();
 	void displaceBranch(ABranch* b);
-	void cascadePositionUpdate(ABranch* b);
+	void cascadePositionUpdate(ABranch* b, int limit);
 	void checkCollision();
 	bool selfInChain(ABranch* self, ABranch* current);
 	vector<int> getChain(ABranch* b);

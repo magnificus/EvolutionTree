@@ -45,7 +45,7 @@ void ATree::Tick(float DeltaTime)
 
 
 float ATree::calculateHits() {
-	
+
 
 
 	switch (mode) {
@@ -131,21 +131,10 @@ void ATree::setAngles(float inTheta, float inPhi) {
 
 void ATree::illustrateSun() {
 	if (!sunActor) {
-		sunActor = (AActor*) GetWorld()->SpawnActor(Sun_BP);
+		sunActor = (AActor*)GetWorld()->SpawnActor(Sun_BP);
 	}
 
 	sunActor->SetActorLocation(sunPos);
-	//FlushPersistentDebugLines(GetWorld());
-	//DrawDebugSphere(
-	//	GetWorld(),
-	//	sunPos,
-	//	100,
-	//	16,
-	//	FColor(255, 255, 0),
-	//	true,
-	//	-1,
-	//	0
-	//);
 }
 
 
@@ -261,7 +250,6 @@ void ATree::initRandomBranch() {
 	leafDependencies.Add(spawnedBranch, TArray<ALeaf*>());
 	branches.Add(spawnedBranch);
 
-
 	GetRandomPositionFor(spawnedBranch, RECURSIVE_DEPTH_LIMIT);
 
 
@@ -291,25 +279,35 @@ void ATree::initRandomLeaf() {
 }
 
 void ATree::displaceBranch(ABranch* b) {
-	if (b->placedOn != NOT_PLACED) {
-		branchDependencies[branches[b->placedOn]].Remove(b);
-		b->placedOn = NOT_PLACED;
-	}
+
 
 	GetRandomPositionFor(b, RECURSIVE_DEPTH_LIMIT);
-	cascadePositionUpdate(b);
+	cascadePositionUpdate(b, RECURSIVE_DEPTH_LIMIT*300);
 }
 
-void ATree::cascadePositionUpdate(ABranch* b) {
+void ATree::cascadePositionUpdate(ABranch* b, int limit) {
+	if (limit == 0) {
+		throw "Recursive depth limit reached, aborting...";
+	}
+	--limit;
+	TArray<ABranch*> toRemove;
 	for (ABranch* newB : branchDependencies[b]) {
+		if (!newB)
+			continue;
+
 		newB->SetActorLocation(b->getEnd());
 		if (newB->overlapsProps()) {
 			//	// new position was not good, overlapped with other actors, so displace the branch
 			displaceBranch(newB);
+			toRemove.Add(newB);
 		}
 		else {
-			cascadePositionUpdate(newB);
+			cascadePositionUpdate(newB, limit);
 		}
+	}
+
+	for (ABranch* newB : toRemove) {
+		branchDependencies[b].Remove(newB);
 	}
 	for (ALeaf* l : leafDependencies[b]) {
 		l->updateLocation(b->getPositionOnBranch(l->branchOffset));
@@ -336,10 +334,14 @@ void ATree::mutate(bool reCalc) {
 		ABranch* b = branches[i];
 		float f = random.FRand();
 		if (random.FRand() < displacementChance) {
+			if (b->placedOn != NOT_PLACED) {
+				branchDependencies[branches[b->placedOn]].Remove(b);
+			}
+
 			displaceBranch(b);
 		}
 		if (b->mutate())
-			cascadePositionUpdate(b);
+			cascadePositionUpdate(b, RECURSIVE_DEPTH_LIMIT);
 	}
 
 	int count1 = 0;
@@ -413,7 +415,7 @@ void ATree::GetRandomPositionFor(ABranch* b, int recursiveLimit) {
 		int32 index = random.RandRange(0, branches.Num() - 1);
 		ABranch* toBuildFrom = branches[index];
 		if (selfInChain(b, toBuildFrom)) {
-			// abandon
+			// abandon because this branch was parent to the branch it attempted to extend
 			GetRandomPositionFor(b, recursiveLimit);
 			return;
 		}
@@ -423,6 +425,7 @@ void ATree::GetRandomPositionFor(ABranch* b, int recursiveLimit) {
 		b->displace(pos, toBuildFrom->GetActorRotation() - FRotator(random.FRand() * 150 - 75, random.FRand() * 150 - 75, random.FRand() * 150 - 75));
 	}
 	else {
+		// spawn on stem
 		FVector target = GetActorLocation();
 		target.Z += random.FRand() * 400 + 150;
 
@@ -473,6 +476,9 @@ void ATree::GetRandomPositionFor(ABranch* b, int recursiveLimit) {
 
 	if (b->overlapsProps()) {
 		//abandon
+		if (b->placedOn != NOT_PLACED) {
+			branchDependencies[branches[b->placedOn]].Remove(b);
+		}
 		GetRandomPositionFor(b, recursiveLimit);
 		return;
 	}
@@ -598,10 +604,15 @@ void ATree::buildFromDNA(vector<float> DNA) {
 void ATree::checkCollision() {
 	for (ABranch* b : branches) {
 		if (b->overlapsProps()) {
+			if (b->placedOn != NOT_PLACED) {
+				branchDependencies[branches[b->placedOn]].Remove(b);
+			}
+
 			displaceBranch(b);
 		}
 	}
 }
+
 
 vector<int> ATree::getChain(ABranch* b) {
 	if (b->placedOn == NOT_PLACED) {

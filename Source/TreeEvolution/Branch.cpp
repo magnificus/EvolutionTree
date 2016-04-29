@@ -100,8 +100,9 @@ float ABranch::calculateCost() {
 }
 
 bool ABranch::overlapsProps() {
-	//sometimes crashes so just return false for now fuck all
-	//return false;
+
+	if (!useOverlap)
+		return false;
 
 
 	TArray< AActor * > OverlappingActors;

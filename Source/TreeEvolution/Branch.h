@@ -33,6 +33,8 @@ public:
 		float rotationChance = .005f;
 	UPROPERTY(EditAnywhere, Category = "Algorithm")
 		float cost = 0.5;
+	UPROPERTY(EditAnywhere, Category = "Algorithm")
+		bool useOverlap = true;
 
 
 	float calculateCost();
