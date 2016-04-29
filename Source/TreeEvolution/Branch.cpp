@@ -130,6 +130,9 @@ void ABranch::displace(FVector loc, FRotator rot) {
 bool ABranch::mutate() {
 	if (random.FRand() < rotationChance) {
 		AddActorLocalRotation(FQuat(FRotator(random.FRand() * 60 - 30, random.FRand() * 60 - 30, random.FRand() * 60 - 30)));
+		while (overlapsProps()) {
+			AddActorLocalRotation(FQuat(FRotator(random.FRand() * 60 - 30, random.FRand() * 60 - 30, random.FRand() * 60 - 30)));
+		}
 		return true;
 	}
 	return false;
