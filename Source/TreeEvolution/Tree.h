@@ -88,6 +88,7 @@ public:
 	void checkCollision();
 	bool selfInChain(ABranch* self, ABranch* current);
 	vector<int> getChain(ABranch* b);
+	vector<int> getDependencies(ABranch* b);
 
 	void setAngles(float inTheta, float inPhi);
 

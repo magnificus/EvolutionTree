@@ -34,6 +34,9 @@ public:
 	float branchOffset;
 	FVector offsetVector;
 
+	UPrimitiveComponent* getComponentWithName(FString name);
+	FVector getCenter();
+
 	void updateLocation(FVector branchLoc);
 
 private:

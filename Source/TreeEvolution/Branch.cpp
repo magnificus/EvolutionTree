@@ -54,43 +54,32 @@ FVector ABranch::getPositionOnBranch(float offset) {
 }
 
 FVector ABranch::getBegin() {
-	TArray<UPrimitiveComponent*> comps;
-	GetComponents(comps);
-	for (auto Itr(comps.CreateIterator()); Itr; ++Itr)
-	{
-		if ((*Itr)->GetName() == "start") 
-			return (*Itr)->GetComponentLocation();
-		
-	}
-
-	throw - 1;
+	return getComponentWithName("start")->GetComponentLocation();
 }
 
 FVector ABranch::getEnd() {
-	TArray<UPrimitiveComponent*> comps;
-	GetComponents(comps);
-	for (auto Itr(comps.CreateIterator()); Itr; ++Itr)
-	{
-		if ((*Itr)->GetName() == "end")
-			return (*Itr)->GetComponentLocation();
+	return getEndComponent()->GetComponentLocation();
+}
 
-	}
-
-	throw - 1;
+FVector ABranch::getCenter() {
+	return getComponentWithName("Cylinder")->GetComponentLocation();
 }
 
 UPrimitiveComponent* ABranch::getEndComponent() {
+	return getComponentWithName("end");
+}
+
+UPrimitiveComponent* ABranch::getComponentWithName(FString name) {
 	TArray<UPrimitiveComponent*> comps;
 	GetComponents(comps);
 	for (auto Itr(comps.CreateIterator()); Itr; ++Itr)
 	{
-		if ((*Itr)->GetName() == "end")
+		if ((*Itr)->GetName() == name)
 			return (*Itr);
 
 	}
 
-	throw -1;
-
+	throw - 1;
 }
 
 

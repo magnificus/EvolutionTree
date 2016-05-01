@@ -25,8 +25,11 @@ public:
 	virtual void Tick(float DeltaSeconds) override;
 
 	FVector getPositionOnBranch(float offset);
+	UPrimitiveComponent* getComponentWithName(FString name);
 	FVector getBegin();
 	FVector getEnd();
+	FVector getCenter();
+
 	UPrimitiveComponent* getEndComponent();
 
 	UPROPERTY(EditAnywhere, Category = "Algorithm")

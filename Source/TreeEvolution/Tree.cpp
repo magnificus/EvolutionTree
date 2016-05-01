@@ -310,12 +310,11 @@ void ATree::cascadePositionUpdate(ABranch* b, int limit) {
 	--limit;
 	TArray<ABranch*> toRemove;
 	for (ABranch* newB : branchDependencies[b]) {
-		if (!newB)
-			continue;
 
 		newB->SetActorLocation(b->getEnd());
 		if (newB->overlapsProps()) {
-			//	// new position was not good, overlapped with other actors, so displace the branch
+
+			// new position was not good, overlapped with other actors, so displace the branch
 			displaceBranch(newB);
 			toRemove.Add(newB);
 		}
@@ -493,7 +492,7 @@ void ATree::GetRandomPositionFor(ABranch* b, int recursiveLimit) {
 	}
 
 	if (b->overlapsProps()) {
-		//abandon
+		//abandon if the branch overlaps 
 		if (b->placedOn != NOT_PLACED) {
 			branchDependencies[branches[b->placedOn]].Remove(b);
 		}
@@ -543,23 +542,15 @@ vector<float> ATree::createChildDNA(ATree* otherParent) {
 	vector<float> DNA;
 
 	for (int i = 0; i < branches.Num(); ++i) {
-		ATree* t;
-		ABranch* b;
-		//if (random.FRand() < .5) {
-		t = this;
-		b = branches[i];
-		//}
-		//else {
-		//	t = otherParent;
-		//	b = otherParent->branches[i];
-		//}
-		DNA.push_back(b->GetActorLocation().X - t->GetActorLocation().X);
-		DNA.push_back(b->GetActorLocation().Y - t->GetActorLocation().Y);
-		DNA.push_back(b->GetActorLocation().Z - t->GetActorLocation().Z);
+		ABranch* b(branches[i]);
+		DNA.push_back(b->GetActorLocation().X - GetActorLocation().X);
+		DNA.push_back(b->GetActorLocation().Y - GetActorLocation().Y);
+		DNA.push_back(b->GetActorLocation().Z - GetActorLocation().Z);
 		DNA.push_back(b->GetActorRotation().Pitch);
 		DNA.push_back(b->GetActorRotation().Yaw);
 		DNA.push_back(b->GetActorRotation().Roll);
 		DNA.push_back(b->placedOn);
+
 
 	}
 	for (int i = 0; i < leafs.Num(); ++i) {
@@ -597,9 +588,7 @@ void ATree::buildFromDNA(vector<float> DNA) {
 
 		if (b->placedOn != NOT_PLACED) {
 			branchDependencies[branches[b->placedOn]].Add(b);
-
 		}
-
 
 		currPos += 7;
 	}
@@ -625,7 +614,6 @@ void ATree::checkCollision() {
 			if (b->placedOn != NOT_PLACED) {
 				branchDependencies[branches[b->placedOn]].Remove(b);
 			}
-
 			displaceBranch(b);
 		}
 	}
@@ -642,4 +630,15 @@ vector<int> ATree::getChain(ABranch* b) {
 		return prev;
 	}
 
+}
+
+vector<int> ATree::getDependencies(ABranch* b) {
+	vector<int> total;
+
+	for (ABranch* newB : branchDependencies[b]) {
+		vector<int> newV = getDependencies(newB);
+		newV.push_back(branches.Find(newB));
+		total.insert(total.end(), newV.begin(), newV.end());
+	}
+	return total;
 }

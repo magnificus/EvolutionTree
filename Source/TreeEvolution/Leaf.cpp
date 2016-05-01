@@ -47,3 +47,20 @@ void ALeaf::mutate() {
 void ALeaf::updateLocation(FVector branchLoc) {
 	SetActorLocation(branchLoc + offsetVector);
 }
+
+UPrimitiveComponent* ALeaf::getComponentWithName(FString name) {
+	TArray<UPrimitiveComponent*> comps;
+	GetComponents(comps);
+	for (auto Itr(comps.CreateIterator()); Itr; ++Itr)
+	{
+		if ((*Itr)->GetName() == name)
+			return (*Itr);
+
+	}
+
+	throw - 1;
+}
+
+FVector ALeaf::getCenter() {
+	return getComponentWithName("Sphere")->GetComponentLocation();
+}
