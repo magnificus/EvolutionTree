@@ -43,14 +43,20 @@ void ATree::Tick(float DeltaTime)
 
 }
 
+void ATree::setMode(int m) {
+	mode = m;
+}
+
 
 float ATree::calculateHits() {
 
 
 	float cost = calculateCost();
 	switch (mode) {
-	case MODE_STRAIGHT: return calculateHitsStraightAbove() - cost;
-	case MODE_HEMISPHERE: return hemisphereHits() - cost;
+		case MODE_STRAIGHT: return calculateHitsStraightAbove() - cost;
+		case MODE_MANUAL_DIRECTION: return manualDirectionHits() - cost;
+		case MODE_SWEEP: return sweepHits() - cost;
+		case MODE_HEMISPHERE: return hemisphereHits() - cost;
 	}
 	return 0;
 }
@@ -117,7 +123,7 @@ float ATree::calculateHitsStraightAbove() {
 					GetWorld(),
 					currStart,
 					currEnd,
-					FColor(255, 0, 0),
+					FColor(175, 0, 175),
 					true, -1, 0,
 					1
 				);
@@ -156,14 +162,10 @@ void ATree::illustrateSun() {
 }
 
 
-// Dome-like sunshine
-float ATree::hemisphereHits() {
+float ATree::manualDirectionHits() {
 
 
-	int size = maxSpread;
-
-
-
+	int size = maxSpread*2;
 
 	//float theta = PI / 6.0; // 0 - pi , latitute where 0 = north pole
 	//float phi = 1.5*PI; // 0 - 2pi , longitude coordinates
@@ -176,7 +178,7 @@ float ATree::hemisphereHits() {
 	FVector  forward = GetActorForwardVector();
 	FVector right = GetActorRightVector();
 	FVector sunDir = -GetActorUpVector();
-	float sunDist = 1800;
+	float sunDist = 2800;
 
 
 
@@ -240,6 +242,214 @@ float ATree::hemisphereHits() {
 
 	return hits / (numberRays*numberRays);
 }
+
+float ATree::sweepHits() {
+
+
+	int size = maxSpread * 2;
+	float offset = size / numberRays;
+	float sunDist = 2800;
+	float hits = 0.0;
+	float ang = 90.0;
+
+
+	FRotator ActorRotation = GetActorRotation();
+	setAngles(ang, 0.0);
+	float angleDiff = 180.0 / 4.0;
+
+	//Re-initialize hit info
+	FHitResult RV_Hit(ForceInit);
+
+	FCollisionQueryParams RV_TraceParams = FCollisionQueryParams(FName(TEXT("RV_Trace")), true, this);
+	RV_TraceParams.bTraceComplex = true;
+	RV_TraceParams.bTraceAsyncScene = true;
+	RV_TraceParams.bReturnPhysicalMaterial = false;
+
+
+
+	for (int k = 0; k < 5; ++k) {
+		ActorRotation.Pitch -= FMath::RadiansToDegrees(theta);
+		ActorRotation.Yaw += FMath::RadiansToDegrees(phi);
+		SetActorRotation(ActorRotation);
+
+		FVector  forward = GetActorForwardVector();
+		FVector right = GetActorRightVector();
+		FVector sunDir = -GetActorUpVector();
+
+		for (int x = -numberRays / 2; x < numberRays / 2; ++x) {
+
+			FVector offsetRight = (right *x*offset);
+
+			for (int y = -numberRays / 2; y < numberRays / 2; ++y) {
+
+				FVector offsetForward = (forward *y*offset);
+				FVector planePointDirection = (offsetRight)+(offsetForward);
+				FVector planePoint = sunPos + planePointDirection;
+				FVector endPoint = planePoint + (sunDir*sunDist);
+
+
+
+				GetWorld()->LineTraceSingleByChannel(
+					RV_Hit,        //result
+					planePoint,    //start
+					endPoint, //end
+					ECC_Pawn, //collision channel
+					RV_TraceParams
+				);
+
+				if (debugLine) {
+
+					DrawDebugLine(
+						GetWorld(),
+						planePoint,
+						endPoint,
+						FColor(255, 165, 10),
+						true, -1, 0,
+						1
+					);
+				}
+				if (RV_Hit.bBlockingHit) {
+					ALeaf* leaf = Cast<ALeaf>(RV_Hit.GetActor());
+					if (leaf) {
+						hits++;
+					}
+				}
+
+
+			}
+		}
+		ActorRotation.Pitch += FMath::RadiansToDegrees(theta);
+		ActorRotation.Yaw -= FMath::RadiansToDegrees(phi);
+		SetActorRotation(ActorRotation);
+
+		ang = ang - angleDiff;
+		if (ang < 0.0) {
+			setAngles(-ang, 180.0);
+		}
+		else {
+			setAngles(ang, 0.0);
+		}
+
+	}
+
+	return hits / ((numberRays*numberRays)*5.0);
+}
+
+
+
+float ATree::hemisphereHits() {
+
+
+	int size = maxSpread *2.0;
+	float offset = size / numberRays;
+	float sunDist = 2800;
+	float hits = 0.0;
+	float ang = 90.0;
+	
+
+	FRotator ActorRotation = GetActorRotation();
+	setAngles(ang, 0.0);
+	float angleDiff = 180.0 / 4.0;
+	float twistDiff = 360.0 / 3.0;
+
+	//Re-initialize hit info
+	FHitResult RV_Hit(ForceInit);
+
+	FCollisionQueryParams RV_TraceParams = FCollisionQueryParams(FName(TEXT("RV_Trace")), true, this);
+	RV_TraceParams.bTraceComplex = true;
+	RV_TraceParams.bTraceAsyncScene = true;
+	RV_TraceParams.bReturnPhysicalMaterial = false;
+
+
+	for (int s = 0; s < 3; ++s) {
+	
+		for (int k = 0; k < 5; ++k) {
+
+			ang = 90.0 - angleDiff*k;
+			if (ang < 0.0) {
+				float newTwistAngle = 180.0 + twistDiff*s;
+				if (newTwistAngle > 360.0) newTwistAngle -= 360.0;
+				setAngles(-ang, newTwistAngle);
+			}
+			else {
+				setAngles(ang, twistDiff*s);
+			}
+
+			if (s > 0 && k != 2 || s == 0) {
+				ActorRotation.Pitch -= FMath::RadiansToDegrees(theta);
+				ActorRotation.Yaw += FMath::RadiansToDegrees(phi);
+				SetActorRotation(ActorRotation);
+
+				FVector  forward = GetActorForwardVector();
+				FVector right = GetActorRightVector();
+				FVector sunDir = -GetActorUpVector();
+
+				for (int x = -numberRays / 2; x < numberRays / 2; ++x) {
+
+					FVector offsetRight = (right *x*offset);
+
+					for (int y = -numberRays / 2; y < numberRays / 2; ++y) {
+
+						FVector offsetForward = (forward *y*offset);
+						FVector planePointDirection = (offsetRight)+(offsetForward);
+						FVector planePoint = sunPos + planePointDirection;
+						FVector endPoint = planePoint + (sunDir*sunDist);
+
+
+
+						GetWorld()->LineTraceSingleByChannel(
+							RV_Hit,        //result
+							planePoint,    //start
+							endPoint, //end
+							ECC_Pawn, //collision channel
+							RV_TraceParams
+						);
+						FColor color = FColor(75, 120, 100);
+						if (s == 0) color = FColor(255, 0, 0);
+						else if (s == 1) color = FColor(0, 255, 0);
+						else color = FColor(140, 140, 140);
+						if (debugLine) {
+
+							DrawDebugLine(
+								GetWorld(),
+								planePoint,
+								endPoint,
+								color,
+								true, -1, 0,
+								1
+							);
+						}
+						if (RV_Hit.bBlockingHit) {
+							ALeaf* leaf = Cast<ALeaf>(RV_Hit.GetActor());
+							if (leaf) {
+								hits++;
+							}
+						}
+
+
+					}
+				}
+				ActorRotation.Pitch += FMath::RadiansToDegrees(theta);
+				ActorRotation.Yaw -= FMath::RadiansToDegrees(phi);
+				SetActorRotation(ActorRotation);
+
+				
+
+			}
+		}
+	}
+
+	return hits / ((numberRays*numberRays)*13.0);
+
+
+
+}
+
+
+
+
+
+
 
 void ATree::init(int numB, int numL) {
 

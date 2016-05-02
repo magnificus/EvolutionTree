@@ -61,6 +61,9 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Gameplay")
 		void setSun(float theta, float phi);
 
+	UFUNCTION(BlueprintCallable, Category = "Gameplay")
+		void setMode(int m);
+
 	UFUNCTION(BlueprintCallable, Category = "DATA")
 		void writeHistoryToFile();
 

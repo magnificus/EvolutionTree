@@ -1,17 +1,18 @@
-﻿Log file open, 05/02/16 12:17:00
+﻿Log file open, 05/02/16 21:28:15
 LogInit:Display: Running engine for game: TreeEvolution
 LogPlatformFile: Not using cached read wrapper
-LogInit:Display: RandInit(761691157) SRandInit(761691158).
+LogInit:Display: RandInit(1145531480) SRandInit(1145531481).
 LogTaskGraph: Started task graph with 4 named threads and 7 total threads.
-LogStats: Stats thread started at 0.066050
-LogInit: Version: 4.11.1-2934540+++UE4+Release-4.11
+LogStats: Stats thread started at 0.062860
+LogHMD: Can't find Oculus library dev build: is proper Runtime installed? Version: 0.8.0.0
+LogInit: Version: 4.11.0-2927265+++UE4+Release-4.11
 LogInit: API Version: 2927265
-LogInit: Compiled (64-bit): Apr  6 2016 02:14:16
+LogInit: Compiled (64-bit): Mar 30 2016 02:13:55
 LogInit: Compiled with Visual C++: 19.00.23026.00
 LogInit: Build Configuration: Development
 LogInit: Branch Name: ++UE4+Release-4.11
 LogInit: Command line:  
-LogInit: Base directory: E:/Program Files/Epic Games/4.11/Engine/Binaries/Win64/
+LogInit: Base directory: C:/Program Files (x86)/Epic Games/4.11/Engine/Binaries/Win64/
 LogInit: Installed Engine Build: 1
 LogInit: Using libcurl 7.41.0
 LogInit:  - built for x86_64-pc-win32
@@ -29,620 +30,503 @@ LogInit:  - bDontReuseConnections = false  - Libcurl will reuse connections
 LogInit:  - CertBundlePath = nullptr  - Libcurl will use whatever was configured at build time.
 LogInit: Presizing for max 16777216 objects, including 0 objects not considered by GC, pre-allocating 0 bytes for permanent pool.
 LogInit: Object subsystem initialized
-[2016.05.02-10.17.00:898][  0]LogInit: Selected Device Profile: [Windows]
-[2016.05.02-10.17.00:898][  0]LogInit: Applying CVar settings loaded from the selected device profile: [Windows]
-[2016.05.02-10.17.00:904][  0]LogInit: Computer: MAGNIFICUS
-[2016.05.02-10.17.00:904][  0]LogInit: User: Tobbe
-[2016.05.02-10.17.00:904][  0]LogInit: CPU Page size=65536, Cores=4
-[2016.05.02-10.17.00:904][  0]LogInit: High frequency timer resolution =3.320371 MHz
-[2016.05.02-10.17.00:904][  0]LogMemory: Memory total: Physical=15.9GB (16GB approx)
-[2016.05.02-10.17.00:904][  0]LogMemory: Platform Memory Stats for Windows
-[2016.05.02-10.17.00:904][  0]LogMemory: Process Physical Memory: 313.78 MB used, 313.78 MB peak
-[2016.05.02-10.17.00:905][  0]LogMemory: Process Virtual Memory: 316.05 MB used, 316.05 MB peak
-[2016.05.02-10.17.00:905][  0]LogMemory: Physical Memory: 9071.89 MB used, 16328.55 MB total
-[2016.05.02-10.17.00:905][  0]LogMemory: Virtual Memory: 622.97 MB used, 8388608.00 MB total
-[2016.05.02-10.17.00:955][  0]LogTextLocalizationManager: No translations for ('sv-SE') exist, falling back to 'en' for localization and internationalization data.
-[2016.05.02-10.17.01:295][  0]LogD3D11RHI: D3D11 adapters:
-[2016.05.02-10.17.01:330][  0]LogD3D11RHI:    0. 'NVIDIA GeForce GTX 780' (Feature Level 11_0)
-[2016.05.02-10.17.01:330][  0]LogD3D11RHI:       3013MB of dedicated video memory, 0MB of dedicated system memory, and 7908MB of shared system memory, 3 output[s]
-[2016.05.02-10.17.01:330][  0]LogD3D11RHI: Chosen D3D11 Adapter: 0
-[2016.05.02-10.17.01:335][  0]LogD3D11RHI: Creating new Direct3DDevice
-[2016.05.02-10.17.01:335][  0]LogD3D11RHI:     Adapter Name: NVIDIA GeForce GTX 780
-[2016.05.02-10.17.01:335][  0]LogD3D11RHI:   Driver Version: 10.18.13.5582 (internal 10.18.13.5582)
-[2016.05.02-10.17.01:335][  0]LogD3D11RHI:      Driver Date: 8-25-2015
-[2016.05.02-10.17.01:335][  0]LogRHI: Texture pool is 1361 MB (70% of 1945 MB)
-[2016.05.02-10.17.01:386][  0]LogD3D11RHI: Async texture creation enabled
-[2016.05.02-10.17.01:834][  0]LogShaderCompilers: Guid format shader working directory is 0 characters bigger than the processId version (../../../../../../TreeEvolution/EvolutionTree/Intermediate/Shaders/WorkingDirectory/10352/).
-[2016.05.02-10.17.01:834][  0]LogShaderCompilers: Cleaned the shader compiler working directory 'C:/Users/Tobbe/AppData/Local/Temp/UnrealShaderWorkingDir/F2E6AA314365869A6FB8F69BF33E9EA4/'.
-[2016.05.02-10.17.01:834][  0]LogShaderCompilers:Display: Using Local Shader Compiler.
-[2016.05.02-10.17.02:596][  0]LogTemp:Display: Loaded TP AllDesktopTargetPlatform
-[2016.05.02-10.17.02:600][  0]LogTemp:Display: Loaded TP WindowsClientTargetPlatform
-[2016.05.02-10.17.02:603][  0]LogTemp:Display: Loaded TP WindowsNoEditorTargetPlatform
-[2016.05.02-10.17.02:607][  0]LogTemp:Display: Loaded TP WindowsServerTargetPlatform
-[2016.05.02-10.17.02:611][  0]LogTemp:Display: Loaded TP WindowsTargetPlatform
-[2016.05.02-10.17.02:613][  0]LogTemp:Display: Loaded TP AndroidTargetPlatform
-[2016.05.02-10.17.02:616][  0]LogTemp:Display: Loaded TP Android_ASTCTargetPlatform
-[2016.05.02-10.17.02:618][  0]LogTemp:Display: Loaded TP Android_ATCTargetPlatform
-[2016.05.02-10.17.02:621][  0]LogTemp:Display: Loaded TP Android_DXTTargetPlatform
-[2016.05.02-10.17.02:623][  0]LogTemp:Display: Loaded TP Android_ETC1TargetPlatform
-[2016.05.02-10.17.02:626][  0]LogTemp:Display: Loaded TP Android_ETC2TargetPlatform
-[2016.05.02-10.17.02:632][  0]LogTemp:Display: Loaded TP Android_MultiTargetPlatform
-[2016.05.02-10.17.02:632][  0]LogTemp:Display: Loaded TP Android_PVRTCTargetPlatform
-[2016.05.02-10.17.02:633][  0]LogTemp:Display: Loaded TP HTML5TargetPlatform
-[2016.05.02-10.17.02:648][  0]LogTemp:Display: Loaded TP IOSTargetPlatform
-[2016.05.02-10.17.02:650][  0]LogTemp:Display: Loaded TP TVOSTargetPlatform
-[2016.05.02-10.17.02:653][  0]LogTemp:Display: Loaded TP LinuxNoEditorTargetPlatform
-[2016.05.02-10.17.02:656][  0]LogTemp:Display: Loaded TP LinuxServerTargetPlatform
-[2016.05.02-10.17.02:659][  0]LogTemp:Display: Loaded TP LinuxTargetPlatform
-[2016.05.02-10.17.02:659][  0]LogTargetPlatformManager:Display: Building Assets For Windows
-[2016.05.02-10.17.02:723][  0]LogDerivedDataCache:Display: Max Cache Size: 512 MB
-[2016.05.02-10.17.02:773][  0]LogDerivedDataCache: Loaded boot cache 0.05s 50MB C:/Users/Tobbe/AppData/Local/UnrealEngine/4.11/DerivedDataCache/Boot.ddc.
-[2016.05.02-10.17.02:773][  0]LogDerivedDataCache:Display: Loaded Boot cache: C:/Users/Tobbe/AppData/Local/UnrealEngine/4.11/DerivedDataCache/Boot.ddc
-[2016.05.02-10.17.02:773][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  Pak pak cache file ../../../../../../TreeEvolution/EvolutionTree/DerivedDataCache/DDC.ddp not found, will not use a pak cache.
-[2016.05.02-10.17.02:773][  0]LogDerivedDataCache: Unable to find inner node Pak for hierarchical cache Hierarchy.
-[2016.05.02-10.17.02:773][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  CompressedPak pak cache file ../../../../../../TreeEvolution/EvolutionTree/DerivedDataCache/Compressed.ddp not found, will not use a pak cache.
-[2016.05.02-10.17.02:773][  0]LogDerivedDataCache: Unable to find inner node CompressedPak for hierarchical cache Hierarchy.
-[2016.05.02-10.17.02:784][  0]LogDerivedDataCache:Display: Pak cache opened for reading ../../../Engine/DerivedDataCache/Compressed.ddp.
-[2016.05.02-10.17.02:796][  0]LogDerivedDataCache: Using Local data cache path C:/Users/Tobbe/AppData/Local/UnrealEngine/Common/DerivedDataCache: Writable
-[2016.05.02-10.17.02:923][  0]LogInit: Selected Device Profile: [Windows]
-[2016.05.02-10.17.02:924][  0]LogContentStreaming: Texture pool size is 0.00 MB
-[2016.05.02-10.17.02:944][  0]LogMaterial: Uniform references updated for custom material expression Custom.
-[2016.05.02-10.17.03:046][  0]LogMeshUtilities: No automatic mesh reduction module available
-[2016.05.02-10.17.03:046][  0]LogMeshUtilities: No automatic mesh merging module available
-[2016.05.02-10.17.03:046][  0]LogMeshUtilities: No distributed automatic mesh merging module available
-[2016.05.02-10.17.03:254][  0]LogUObjectArray: 27678 objects as part of root set at end of initial load.
-[2016.05.02-10.17.03:254][  0]LogUObjectAllocator: 5591384 out of 0 bytes used by permanent object pool.
-[2016.05.02-10.17.03:254][  0]LogUObjectArray: CloseDisregardForGC: 0/0 objects in disregard for GC pool
-[2016.05.02-10.17.03:259][  0]LogInit: WinSock: version 1.1 (2.2), MaxSocks=32767, MaxUdp=65467
-[2016.05.02-10.17.03:328][  0]LogSlate: SlateFontCache - WITH_FREETYPE: 1, WITH_HARFBUZZ: 1
-[2016.05.02-10.17.03:328][  0]LogSlate: SlateFontCache - WITH_FREETYPE: 1, WITH_HARFBUZZ: 1
-[2016.05.02-10.17.03:392][  0]LogStreaming:Warning: Failed to read file '../../../Engine/Content/Editor/Slate/Common/Selection_16x.png' error.
-[2016.05.02-10.17.03:392][  0]LogSlate: Could not find file for Slate resource: ../../../Engine/Content/Editor/Slate/Common/Selection_16x.png
-[2016.05.02-10.17.03:392][  0]LogStreaming:Warning: Failed to read file '../../../Engine/Content/Editor/Slate/Common/Selection_16x.png' error.
-[2016.05.02-10.17.03:392][  0]LogSlate: Could not find file for Slate resource: ../../../Engine/Content/Editor/Slate/Common/Selection_16x.png
-[2016.05.02-10.17.03:392][  0]LogStreaming:Warning: Failed to read file '../../../Engine/Content/Editor/Slate/Common/Selection_16x.png' error.
-[2016.05.02-10.17.03:392][  0]LogSlate: Could not find file for Slate resource: ../../../Engine/Content/Editor/Slate/Common/Selection_16x.png
-[2016.05.02-10.17.03:831][  0]LogUdpMessaging: Initializing bridge on interface 0.0.0.0:0 to multicast group 230.0.0.1:6666.
-[2016.05.02-10.17.04:046][  0]LogAssetRegistry: FAssetRegistry took 0.0243 seconds to start up
-[2016.05.02-10.17.04:176][  0]SourceControl: Info Source control is disabled
-[2016.05.02-10.17.04:280][  0]SourceControl: Info Source control is disabled
-[2016.05.02-10.17.04:288][  0]SourceControl: Info Source control is disabled
-[2016.05.02-10.17.04:298][  0]SourceControl: Info Source control is disabled
-[2016.05.02-10.17.04:494][  0]LogEngine: Initializing Engine...
-[2016.05.02-10.17.04:516][  0]LogHMD: SteamVR failed to initialize.  Err: 108
-[2016.05.02-10.17.04:529][  0]LogHMD: SteamVR failed to initialize.  Err: 108
-[2016.05.02-10.17.04:656][  0]LogAIModule: Creating AISystem for world NewWorld
-[2016.05.02-10.17.04:661][  0]LogInit: XAudio2 using 'Speakers (Realtek High Definition Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
-[2016.05.02-10.17.04:673][  0]LogInit: FAudioDevice initialized.
-[2016.05.02-10.17.04:705][  0]LogDerivedDataCache: Saved boot cache 0.03s 50MB C:/Users/Tobbe/AppData/Local/UnrealEngine/4.11/DerivedDataCache/Boot.ddc.
-[2016.05.02-10.17.04:711][  0]LogInit: Texture streaming: Enabled
-[2016.05.02-10.17.04:736][  0]LogInit: Transaction tracking system initialized
-[2016.05.02-10.17.04:761][  0]BlueprintLog: New page: Editor Load
-[2016.05.02-10.17.04:872][  0]LocalizationService: Info Localization service is disabled
-[2016.05.02-10.17.04:952][  0]LogLinker:Warning: Can't find file '/Game/FirstPersonBP/FirstPersonOverview'
-[2016.05.02-10.17.04:952][  0]LogLinker:Warning: Can't find file '/Game/FirstPersonBP/FirstPersonOverview'
-[2016.05.02-10.17.04:952][  0]LogUObjectGlobals:Warning: Failed to find object 'Class /Game/FirstPersonBP/FirstPersonOverview.FirstPersonOverview_C'
-[2016.05.02-10.17.04:987][  0]LogConsoleResponse:Display: 
-[2016.05.02-10.17.05:081][  0]LogCook:Display: Max memory allowance for cook 8192mb
-[2016.05.02-10.17.05:081][  0]LogCook:Display: Mobile HDR setting 1
-[2016.05.02-10.17.05:081][  0]LogCook:Display: Done creating registry. It took  0.00s.
-[2016.05.02-10.17.05:122][  0]LogFileCache: Scanning file cache for directory 'E:/TreeEvolution/EvolutionTree/Content/' took 0.02s
-[2016.05.02-10.17.05:122][  0]SourceControl: Info Source control is disabled
-[2016.05.02-10.17.05:122][  0]Cmd: MAP LOAD FILE="../../../../../../TreeEvolution/EvolutionTree/Content/StarterContent/Maps/Minimal_Default.umap" TEMPLATE=0 SHOWPROGRESS=1 FEATURELEVEL=3
-[2016.05.02-10.17.05:122][  0]LightingResults: New page: Lighting Build
-[2016.05.02-10.17.05:124][  0]MapCheck: New page: Map Check
-[2016.05.02-10.17.05:124][  0]LightingResults: New page: Lighting Build
-[2016.05.02-10.17.05:642][  0]LogAIModule: Creating AISystem for world Minimal_Default
-[2016.05.02-10.17.05:661][  0]LogEditorServer: Finished looking for orphan Actors (0.000 secs)
-[2016.05.02-10.17.05:661][  0]Cmd: MAP CHECKDEP NOCLEARLOG
-[2016.05.02-10.17.05:688][  0]MapCheck: Info Map check complete: 0 Error(s), 0 Warning(s), took 27.087ms to complete.
-[2016.05.02-10.17.05:688][  0]LogFileHelpers: Loading map 'Minimal_Default' took 0.567
-[2016.05.02-10.17.05:813][  0]LogCollectionManager: Loaded 1 collections in 0.001305 seconds
-[2016.05.02-10.17.05:850][  0]LogFileCache: Scanning file cache for directory 'E:/TreeEvolution/EvolutionTree/Saved/Collections/' took 0.01s
-[2016.05.02-10.17.05:850][  0]LogFileCache: Scanning file cache for directory 'E:/TreeEvolution/EvolutionTree/Content/Developers/Tobbe/Collections/' took 0.01s
-[2016.05.02-10.17.05:850][  0]LogFileCache: Scanning file cache for directory 'E:/TreeEvolution/EvolutionTree/Content/Collections/' took 0.00s
-[2016.05.02-10.17.05:850][  0]LogCollectionManager: Rebuilt the GUID cache for 1 collections in 0.000005 seconds
-[2016.05.02-10.17.05:850][  0]LogCollectionManager: Rebuilt the hierarchy cache for 1 collections in 0.000000 seconds
-[2016.05.02-10.17.05:856][  0]LogContentBrowser: Native class hierarchy populated in 0.0064 seconds. Added 1984 classes and 345 folders.
-[2016.05.02-10.17.05:859][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: Construct from data asset -  0.000 s
-[2016.05.02-10.17.05:859][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: GameplayTagTreeChangedEvent.Broadcast -  0.000 s
-[2016.05.02-10.17.05:860][  0]LogContentBrowser: Native class hierarchy updated for 'GameplayTags' in 0.0007 seconds. Added 12 classes and 0 folders.
-[2016.05.02-10.17.05:867][  0]LogContentBrowser: Native class hierarchy updated for 'WidgetCarousel' in 0.0006 seconds. Added 0 classes and 0 folders.
-[2016.05.02-10.17.05:873][  0]LogContentBrowser: Native class hierarchy updated for 'SuperSearch' in 0.0007 seconds. Added 1 classes and 2 folders.
-[2016.05.02-10.17.05:897][  0]LogContentBrowser: Native class hierarchy updated for 'AddContentDialog' in 0.0007 seconds. Added 0 classes and 0 folders.
-[2016.05.02-10.17.05:904][  0]LogContentBrowser: Native class hierarchy updated for 'SceneOutliner' in 0.0006 seconds. Added 1 classes and 2 folders.
-[2016.05.02-10.17.05:959][  0]LogCrashTracker: Crashtracker disabled due to settings.
-[2016.05.02-10.17.05:970][  0]LogUObjectGlobals:Warning: Failed to find object 'Class None.'
-[2016.05.02-10.17.05:997][  0]LogContentBrowser: Native class hierarchy updated for 'HierarchicalLODOutliner' in 0.0007 seconds. Added 1 classes and 2 folders.
-[2016.05.02-10.17.05:998][  0]LogLoad: Full Startup: 5.66 seconds (BP compile: 0.15 seconds)
-[2016.05.02-10.17.05:998][  0]LogExternalProfiler: Found external profiler: VSPerf
-[2016.05.02-10.17.05:998][  0]LogExternalProfiler: Using external profiler: VSPerf
-[2016.05.02-10.17.06:337][  0]LogOcInput: OculusInput pre-init called
-[2016.05.02-10.17.06:352][  0]LogAssetRegistry: Asset discovery search completed in 2.3298 seconds
-[2016.05.02-10.17.06:352][  0]LogCollectionManager: Rebuilt the object cache for 1 collections in 0.000001 seconds (found 0 objects)
-[2016.05.02-10.17.06:352][  0]LogCollectionManager: Fixed up redirectors for 1 collections in 0.000014 seconds (updated 0 objects)
-[2016.05.02-10.17.06:367][  0]LogContentStreaming: Texture pool size now 1000 MB
-[2016.05.02-10.17.06:472][  0]LogRenderer: Reallocating scene render targets to support 1228x600 (Frame:2).
-[2016.05.02-10.17.44:726][115]Recompiling TreeEvolution...
-[2016.05.02-10.17.44:726][115]Launching UnrealBuildTool... [E:/Program Files/Epic Games/4.11/Engine/Binaries/DotNET/UnrealBuildTool.exe TreeEvolution -ModuleWithSuffix TreeEvolution 6990 Win64 Development -editorrecompile -canskiplink "E:/TreeEvolution/EvolutionTree/TreeEvolution.uproject"  -2015]
-[2016.05.02-10.17.44:727][115]Warning: Starting HotReload took  0.0s.
-[2016.05.02-10.17.51:454][320]CompilerResultsLog: New page: Compilation - May 2, 2016, 1:17:51 PM
-[2016.05.02-10.17.51:454][320]CompilerResultsLog: Info Creating makefile for hot reloading TreeEvolution (working set of source files changed)
-[2016.05.02-10.17.51:454][320]CompilerResultsLog: Info Compiling game modules for hot reload
-[2016.05.02-10.17.51:454][320]CompilerResultsLog: Info Parsing headers for TreeEvolutionEditor
-[2016.05.02-10.17.51:454][320]CompilerResultsLog: Info   Running UnrealHeaderTool "E:\TreeEvolution\EvolutionTree\TreeEvolution.uproject" "E:\TreeEvolution\EvolutionTree\Intermediate\Build\Win64\TreeEvolutionEditor\Development\UnrealHeaderTool.manifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -installed
-[2016.05.02-10.17.51:454][320]CompilerResultsLog: Info Reflection code generated for TreeEvolutionEditor in 2,159021 seconds
-[2016.05.02-10.17.51:454][320]CompilerResultsLog: Info Performing 2 actions (4 in parallel)
-[2016.05.02-10.17.51:454][320]CompilerResultsLog: Info Tree.cpp
-[2016.05.02-10.17.51:454][320]CompilerResultsLog: Info [2/2] Link UE4Editor-TreeEvolution-6990.dll
-[2016.05.02-10.17.51:454][320]CompilerResultsLog: Info    Creating library E:\TreeEvolution\EvolutionTree\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-TreeEvolution-6990.lib and object E:\TreeEvolution\EvolutionTree\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-TreeEvolution-6990.exp
-[2016.05.02-10.17.51:454][320]CompilerResultsLog: Info -------- End Detailed Actions Stats -----------------------------------------------------------
-[2016.05.02-10.17.51:454][320]CompilerResultsLog: Info Total build time: 6,38 seconds
-[2016.05.02-10.17.51:454][320]LogMainFrame: MainFrame: Module compiling took 6.740 seconds
-[2016.05.02-10.17.51:493][320]LogContentBrowser: Native class hierarchy updated for 'TreeEvolution' in 0.0008 seconds. Added 5 classes and 2 folders.
-[2016.05.02-10.17.51:495][320]Warning: HotReload successful (22 functions remapped  0 scriptstructs remapped)
-[2016.05.02-10.17.51:551][320]LogContentBrowser: Native class hierarchy populated in 0.0059 seconds. Added 1987 classes and 351 folders.
-[2016.05.02-10.17.51:551][320]Warning: HotReload took  6.8s.
-[2016.05.02-10.17.55:793][333]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
-[2016.05.02-10.17.55:793][333]LogPlayLevel: PlayLevel: No blueprints needed recompiling
-[2016.05.02-10.17.55:793][333]PIE: New page: PIE session: Minimal_Default (May 2, 2016, 1:17:55 PM)
-[2016.05.02-10.17.55:793][333]LogPlayLevel: Creating play world package: /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default
-[2016.05.02-10.17.55:817][333]LogPlayLevel: PIE: StaticDuplicateObject took: (0.023154s)
-[2016.05.02-10.17.55:817][333]LogAIModule: Creating AISystem for world Minimal_Default
-[2016.05.02-10.17.55:817][333]LogPlayLevel: PIE: World Init took: (0.000442s)
-[2016.05.02-10.17.55:817][333]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/StarterContent/Maps/Minimal_Default.Minimal_Default to /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default (0.023752s)
-[2016.05.02-10.17.55:829][333]LogInit: XAudio2 using 'Speakers (Realtek High Definition Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
-[2016.05.02-10.17.55:837][333]LogInit: FAudioDevice initialized.
-[2016.05.02-10.17.55:874][333]LogWorld: Game class is 'simGameMode_C'
-[2016.05.02-10.17.55:875][333]LogWorld: Bringing World /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default up for play (max tick rate 0) at 2016.05.02-12.17.55
-[2016.05.02-10.17.55:876][333]LogWorld: Bringing up level for play took: 0.001253
-[2016.05.02-10.17.55:883][333]LogContentBrowser: Native class hierarchy updated for 'MovieSceneCapture' in 0.0006 seconds. Added 9 classes and 0 folders.
-[2016.05.02-10.17.55:886][333]PIE: Info Play in editor start time for /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default 1.005
-[2016.05.02-10.17.55:886][333]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
-[2016.05.02-10.18.34:437][949]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
-[2016.05.02-10.18.34:561][949]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
-[2016.05.02-10.23.39:778][921]Recompiling TreeEvolution...
-[2016.05.02-10.23.39:779][921]Launching UnrealBuildTool... [E:/Program Files/Epic Games/4.11/Engine/Binaries/DotNET/UnrealBuildTool.exe TreeEvolution -ModuleWithSuffix TreeEvolution 2933 Win64 Development -editorrecompile -canskiplink "E:/TreeEvolution/EvolutionTree/TreeEvolution.uproject"  -2015]
-[2016.05.02-10.23.39:779][921]Warning: Starting HotReload took  0.0s.
-[2016.05.02-10.23.51:117][ 40]CompilerResultsLog: New page: Compilation - May 2, 2016, 1:23:51 PM
-[2016.05.02-10.23.51:117][ 40]CompilerResultsLog: Info Creating makefile for hot reloading TreeEvolution (working set of source files changed)
-[2016.05.02-10.23.51:117][ 40]CompilerResultsLog: Info Compiling game modules for hot reload
-[2016.05.02-10.23.51:117][ 40]CompilerResultsLog: Info Parsing headers for TreeEvolutionEditor
-[2016.05.02-10.23.51:117][ 40]CompilerResultsLog: Info   Running UnrealHeaderTool "E:\TreeEvolution\EvolutionTree\TreeEvolution.uproject" "E:\TreeEvolution\EvolutionTree\Intermediate\Build\Win64\TreeEvolutionEditor\Development\UnrealHeaderTool.manifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -installed
-[2016.05.02-10.23.51:117][ 40]CompilerResultsLog: Info Reflection code generated for TreeEvolutionEditor in 2,3165832 seconds
-[2016.05.02-10.23.51:117][ 40]CompilerResultsLog: Info Performing 5 actions (4 in parallel)
-[2016.05.02-10.23.51:117][ 40]CompilerResultsLog: Info TreeEvolution.generated.cpp
-[2016.05.02-10.23.51:117][ 40]CompilerResultsLog: Info Tree.cpp
-[2016.05.02-10.23.51:117][ 40]CompilerResultsLog: Info SimLogic.cpp
-[2016.05.02-10.23.51:117][ 40]CompilerResultsLog: Info Branch.cpp
-[2016.05.02-10.23.51:117][ 40]CompilerResultsLog:Error: Error E:\TreeEvolution\EvolutionTree\Source\TreeEvolution\Tree.cpp(724) : warning C4996: 'FRotator::operator -': The unary negation operator has been deprecated as componentwise negation is not meaningful for a Rotator. To get the inverse, please use FRotator::GetInverse() Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
-[2016.05.02-10.23.51:117][ 40]CompilerResultsLog:Error: Error e:\program files\epic games\4.11\engine\source\runtime\core\public\math\Rotator.h(473) : note: see declaration of 'FRotator::operator -'
-[2016.05.02-10.23.51:117][ 40]CompilerResultsLog: Info [5/5] Link UE4Editor-TreeEvolution-2933.dll
-[2016.05.02-10.23.51:117][ 40]CompilerResultsLog: Info    Creating library E:\TreeEvolution\EvolutionTree\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-TreeEvolution-2933.lib and object E:\TreeEvolution\EvolutionTree\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-TreeEvolution-2933.exp
-[2016.05.02-10.23.51:117][ 40]CompilerResultsLog: Info -------- End Detailed Actions Stats -----------------------------------------------------------
-[2016.05.02-10.23.51:117][ 40]CompilerResultsLog: Info Total build time: 10,92 seconds
-[2016.05.02-10.23.51:117][ 40]LogMainFrame: MainFrame: Module compiling took 11.352 seconds
-[2016.05.02-10.23.51:155][ 40]LogContentBrowser: Native class hierarchy updated for 'TreeEvolution' in 0.0008 seconds. Added 5 classes and 2 folders.
-[2016.05.02-10.23.51:157][ 40]Warning: HotReload successful (22 functions remapped  0 scriptstructs remapped)
-[2016.05.02-10.23.51:194][ 40]LogContentBrowser: Native class hierarchy populated in 0.0065 seconds. Added 1987 classes and 351 folders.
-[2016.05.02-10.23.51:195][ 40]Warning: HotReload took 11.4s.
-[2016.05.02-10.24.08:127][ 91]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
-[2016.05.02-10.24.08:127][ 91]LogPlayLevel: PlayLevel: No blueprints needed recompiling
-[2016.05.02-10.24.08:127][ 91]PIE: New page: PIE session: Minimal_Default (May 2, 2016, 1:24:08 PM)
-[2016.05.02-10.24.08:127][ 91]LogPlayLevel: Creating play world package: /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default
-[2016.05.02-10.24.08:152][ 91]LogPlayLevel: PIE: StaticDuplicateObject took: (0.024438s)
-[2016.05.02-10.24.08:153][ 91]LogAIModule: Creating AISystem for world Minimal_Default
-[2016.05.02-10.24.08:153][ 91]LogPlayLevel: PIE: World Init took: (0.001227s)
-[2016.05.02-10.24.08:153][ 91]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/StarterContent/Maps/Minimal_Default.Minimal_Default to /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default (0.025829s)
-[2016.05.02-10.24.08:170][ 91]LogInit: XAudio2 using 'Speakers (Realtek High Definition Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
-[2016.05.02-10.24.08:183][ 91]LogInit: FAudioDevice initialized.
-[2016.05.02-10.24.08:212][ 91]LogWorld: Game class is 'simGameMode_C'
-[2016.05.02-10.24.08:214][ 91]LogWorld: Bringing World /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default up for play (max tick rate 0) at 2016.05.02-12.24.08
-[2016.05.02-10.24.08:214][ 91]LogWorld: Bringing up level for play took: 0.001463
-[2016.05.02-10.24.08:218][ 91]PIE: Info Play in editor start time for /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default -0.671
-[2016.05.02-10.24.08:218][ 91]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
-[2016.05.02-10.24.17:278][456]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
-[2016.05.02-10.24.17:400][456]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
-[2016.05.02-10.24.18:807][599]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
-[2016.05.02-10.24.18:807][599]LogPlayLevel: PlayLevel: No blueprints needed recompiling
-[2016.05.02-10.24.18:808][599]PIE: New page: PIE session: Minimal_Default (May 2, 2016, 1:24:18 PM)
-[2016.05.02-10.24.18:808][599]LogPlayLevel: Creating play world package: /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default
-[2016.05.02-10.24.18:834][599]LogPlayLevel: PIE: StaticDuplicateObject took: (0.026243s)
-[2016.05.02-10.24.18:835][599]LogAIModule: Creating AISystem for world Minimal_Default
-[2016.05.02-10.24.18:835][599]LogPlayLevel: PIE: World Init took: (0.001270s)
-[2016.05.02-10.24.18:835][599]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/StarterContent/Maps/Minimal_Default.Minimal_Default to /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default (0.027681s)
-[2016.05.02-10.24.18:854][599]LogInit: XAudio2 using 'Speakers (Realtek High Definition Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
-[2016.05.02-10.24.18:861][599]LogInit: FAudioDevice initialized.
-[2016.05.02-10.24.18:888][599]LogWorld: Game class is 'simGameMode_C'
-[2016.05.02-10.24.18:890][599]LogWorld: Bringing World /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default up for play (max tick rate 0) at 2016.05.02-12.24.18
-[2016.05.02-10.24.18:890][599]LogWorld: Bringing up level for play took: 0.001300
-[2016.05.02-10.24.18:894][599]PIE: Info Play in editor start time for /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default 0.006
-[2016.05.02-10.24.18:894][599]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
-[2016.05.02-10.24.56:365][373]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
-[2016.05.02-10.24.56:463][373]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
-[2016.05.02-10.26.58:286][810]Recompiling TreeEvolution...
-[2016.05.02-10.26.58:286][810]Launching UnrealBuildTool... [E:/Program Files/Epic Games/4.11/Engine/Binaries/DotNET/UnrealBuildTool.exe TreeEvolution -ModuleWithSuffix TreeEvolution 1480 Win64 Development -editorrecompile -canskiplink "E:/TreeEvolution/EvolutionTree/TreeEvolution.uproject"  -2015]
-[2016.05.02-10.26.58:287][810]Warning: Starting HotReload took  0.0s.
-[2016.05.02-10.27.09:836][ 61]CompilerResultsLog: New page: Compilation - May 2, 2016, 1:27:09 PM
-[2016.05.02-10.27.09:836][ 61]CompilerResultsLog: Info Creating makefile for hot reloading TreeEvolution (working set of source files changed)
-[2016.05.02-10.27.09:836][ 61]CompilerResultsLog: Info Compiling game modules for hot reload
-[2016.05.02-10.27.09:836][ 61]CompilerResultsLog: Info Parsing headers for TreeEvolutionEditor
-[2016.05.02-10.27.09:836][ 61]CompilerResultsLog: Info   Running UnrealHeaderTool "E:\TreeEvolution\EvolutionTree\TreeEvolution.uproject" "E:\TreeEvolution\EvolutionTree\Intermediate\Build\Win64\TreeEvolutionEditor\Development\UnrealHeaderTool.manifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -installed
-[2016.05.02-10.27.09:836][ 61]CompilerResultsLog: Info Reflection code generated for TreeEvolutionEditor in 2,8494532 seconds
-[2016.05.02-10.27.09:836][ 61]CompilerResultsLog: Info Performing 5 actions (4 in parallel)
-[2016.05.02-10.27.09:836][ 61]CompilerResultsLog: Info Branch.cpp
-[2016.05.02-10.27.09:836][ 61]CompilerResultsLog: Info SimLogic.cpp
-[2016.05.02-10.27.09:836][ 61]CompilerResultsLog: Info TreeEvolution.generated.cpp
-[2016.05.02-10.27.09:836][ 61]CompilerResultsLog: Info Tree.cpp
-[2016.05.02-10.27.09:836][ 61]CompilerResultsLog:Error: Error E:\TreeEvolution\EvolutionTree\Source\TreeEvolution\Tree.cpp(701) : warning C4996: 'FRotator::operator -': The unary negation operator has been deprecated as componentwise negation is not meaningful for a Rotator. To get the inverse, please use FRotator::GetInverse() Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
-[2016.05.02-10.27.09:836][ 61]CompilerResultsLog:Error: Error e:\program files\epic games\4.11\engine\source\runtime\core\public\math\Rotator.h(473) : note: see declaration of 'FRotator::operator -'
-[2016.05.02-10.27.09:836][ 61]CompilerResultsLog:Error: Error E:\TreeEvolution\EvolutionTree\Source\TreeEvolution\Tree.cpp(715) : warning C4996: 'FRotator::operator -': The unary negation operator has been deprecated as componentwise negation is not meaningful for a Rotator. To get the inverse, please use FRotator::GetInverse() Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
-[2016.05.02-10.27.09:836][ 61]CompilerResultsLog:Error: Error e:\program files\epic games\4.11\engine\source\runtime\core\public\math\Rotator.h(473) : note: see declaration of 'FRotator::operator -'
-[2016.05.02-10.27.09:836][ 61]CompilerResultsLog: Info [5/5] Link UE4Editor-TreeEvolution-1480.dll
-[2016.05.02-10.27.09:836][ 61]CompilerResultsLog: Info    Creating library E:\TreeEvolution\EvolutionTree\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-TreeEvolution-1480.lib and object E:\TreeEvolution\EvolutionTree\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-TreeEvolution-1480.exp
-[2016.05.02-10.27.09:836][ 61]CompilerResultsLog: Info -------- End Detailed Actions Stats -----------------------------------------------------------
-[2016.05.02-10.27.09:836][ 61]CompilerResultsLog: Info Total build time: 11,39 seconds
-[2016.05.02-10.27.09:836][ 61]LogMainFrame: MainFrame: Module compiling took 11.563 seconds
-[2016.05.02-10.27.09:869][ 61]LogContentBrowser: Native class hierarchy updated for 'TreeEvolution' in 0.0007 seconds. Added 5 classes and 2 folders.
-[2016.05.02-10.27.09:871][ 61]Warning: HotReload successful (22 functions remapped  0 scriptstructs remapped)
-[2016.05.02-10.27.09:901][ 61]LogContentBrowser: Native class hierarchy populated in 0.0069 seconds. Added 1987 classes and 351 folders.
-[2016.05.02-10.27.09:901][ 61]Warning: HotReload took 11.6s.
-[2016.05.02-10.27.11:669][272]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
-[2016.05.02-10.27.11:669][272]LogPlayLevel: PlayLevel: No blueprints needed recompiling
-[2016.05.02-10.27.11:669][272]PIE: New page: PIE session: Minimal_Default (May 2, 2016, 1:27:11 PM)
-[2016.05.02-10.27.11:669][272]LogPlayLevel: Creating play world package: /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default
-[2016.05.02-10.27.11:692][272]LogPlayLevel: PIE: StaticDuplicateObject took: (0.023527s)
-[2016.05.02-10.27.11:693][272]LogAIModule: Creating AISystem for world Minimal_Default
-[2016.05.02-10.27.11:693][272]LogPlayLevel: PIE: World Init took: (0.000810s)
-[2016.05.02-10.27.11:693][272]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/StarterContent/Maps/Minimal_Default.Minimal_Default to /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default (0.024506s)
-[2016.05.02-10.27.11:728][272]LogInit: XAudio2 using 'Speakers (Realtek High Definition Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
-[2016.05.02-10.27.11:738][272]LogInit: FAudioDevice initialized.
-[2016.05.02-10.27.11:765][272]LogWorld: Game class is 'simGameMode_C'
-[2016.05.02-10.27.11:767][272]LogWorld: Bringing World /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default up for play (max tick rate 0) at 2016.05.02-12.27.11
-[2016.05.02-10.27.11:767][272]LogWorld: Bringing up level for play took: 0.001204
-[2016.05.02-10.27.11:771][272]PIE: Info Play in editor start time for /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default 0.879
-[2016.05.02-10.27.11:771][272]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
-[2016.05.02-10.38.20:393][551]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
-[2016.05.02-10.38.20:496][551]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
-[2016.05.02-10.48.30:956][436]Recompiling TreeEvolution...
-[2016.05.02-10.48.30:956][436]Launching UnrealBuildTool... [E:/Program Files/Epic Games/4.11/Engine/Binaries/DotNET/UnrealBuildTool.exe TreeEvolution -ModuleWithSuffix TreeEvolution 8521 Win64 Development -editorrecompile -canskiplink "E:/TreeEvolution/EvolutionTree/TreeEvolution.uproject"  -2015]
-[2016.05.02-10.48.30:958][436]Warning: Starting HotReload took  0.0s.
-[2016.05.02-10.48.40:839][239]CompilerResultsLog: New page: Compilation - May 2, 2016, 1:48:40 PM
-[2016.05.02-10.48.40:839][239]CompilerResultsLog: Info Creating makefile for hot reloading TreeEvolution (working set of source files changed)
-[2016.05.02-10.48.40:839][239]CompilerResultsLog: Info Compiling game modules for hot reload
-[2016.05.02-10.48.40:839][239]CompilerResultsLog: Info Parsing headers for TreeEvolutionEditor
-[2016.05.02-10.48.40:839][239]CompilerResultsLog: Info   Running UnrealHeaderTool "E:\TreeEvolution\EvolutionTree\TreeEvolution.uproject" "E:\TreeEvolution\EvolutionTree\Intermediate\Build\Win64\TreeEvolutionEditor\Development\UnrealHeaderTool.manifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -installed
-[2016.05.02-10.48.40:839][239]CompilerResultsLog: Info Reflection code generated for TreeEvolutionEditor in 2,8481967 seconds
-[2016.05.02-10.48.40:839][239]CompilerResultsLog: Info Performing 5 actions (4 in parallel)
-[2016.05.02-10.48.40:839][239]CompilerResultsLog: Info Branch.cpp
-[2016.05.02-10.48.40:839][239]CompilerResultsLog: Info SimLogic.cpp
-[2016.05.02-10.48.40:839][239]CompilerResultsLog: Info Tree.cpp
-[2016.05.02-10.48.40:839][239]CompilerResultsLog: Info TreeEvolution.generated.cpp
-[2016.05.02-10.48.40:839][239]CompilerResultsLog:Error: Error E:\TreeEvolution\EvolutionTree\Source\TreeEvolution\Tree.cpp(709) : warning C4996: 'FRotator::operator -': The unary negation operator has been deprecated as componentwise negation is not meaningful for a Rotator. To get the inverse, please use FRotator::GetInverse() Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
-[2016.05.02-10.48.40:839][239]CompilerResultsLog:Error: Error e:\program files\epic games\4.11\engine\source\runtime\core\public\math\Rotator.h(473) : note: see declaration of 'FRotator::operator -'
-[2016.05.02-10.48.40:839][239]CompilerResultsLog:Error: Error E:\TreeEvolution\EvolutionTree\Source\TreeEvolution\Tree.cpp(727) : warning C4996: 'FRotator::operator -': The unary negation operator has been deprecated as componentwise negation is not meaningful for a Rotator. To get the inverse, please use FRotator::GetInverse() Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
-[2016.05.02-10.48.40:839][239]CompilerResultsLog:Error: Error e:\program files\epic games\4.11\engine\source\runtime\core\public\math\Rotator.h(473) : note: see declaration of 'FRotator::operator -'
-[2016.05.02-10.48.40:839][239]CompilerResultsLog: Info [5/5] Link UE4Editor-TreeEvolution-8521.dll
-[2016.05.02-10.48.40:839][239]CompilerResultsLog: Info    Creating library E:\TreeEvolution\EvolutionTree\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-TreeEvolution-8521.lib and object E:\TreeEvolution\EvolutionTree\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-TreeEvolution-8521.exp
-[2016.05.02-10.48.40:839][239]CompilerResultsLog: Info -------- End Detailed Actions Stats -----------------------------------------------------------
-[2016.05.02-10.48.40:839][239]CompilerResultsLog: Info Total build time: 9,68 seconds
-[2016.05.02-10.48.40:839][239]LogMainFrame: MainFrame: Module compiling took 9.899 seconds
-[2016.05.02-10.48.40:869][239]LogContentBrowser: Native class hierarchy updated for 'TreeEvolution' in 0.0007 seconds. Added 5 classes and 2 folders.
-[2016.05.02-10.48.40:871][239]Warning: HotReload successful (22 functions remapped  0 scriptstructs remapped)
-[2016.05.02-10.48.40:900][239]LogContentBrowser: Native class hierarchy populated in 0.0071 seconds. Added 1987 classes and 351 folders.
-[2016.05.02-10.48.40:900][239]Warning: HotReload took 10.0s.
-[2016.05.02-10.48.54:570][286]Recompiling TreeEvolution...
-[2016.05.02-10.48.54:571][286]Launching UnrealBuildTool... [E:/Program Files/Epic Games/4.11/Engine/Binaries/DotNET/UnrealBuildTool.exe TreeEvolution -ModuleWithSuffix TreeEvolution 8931 Win64 Development -editorrecompile -canskiplink "E:/TreeEvolution/EvolutionTree/TreeEvolution.uproject"  -2015]
-[2016.05.02-10.48.54:572][286]Warning: Starting HotReload took  0.0s.
-[2016.05.02-10.49.02:242][423]CompilerResultsLog: New page: Compilation - May 2, 2016, 1:49:02 PM
-[2016.05.02-10.49.02:242][423]CompilerResultsLog: Info Creating makefile for hot reloading TreeEvolution (working set of source files changed)
-[2016.05.02-10.49.02:242][423]CompilerResultsLog: Info Compiling game modules for hot reload
-[2016.05.02-10.49.02:242][423]CompilerResultsLog: Info Parsing headers for TreeEvolutionEditor
-[2016.05.02-10.49.02:242][423]CompilerResultsLog: Info   Running UnrealHeaderTool "E:\TreeEvolution\EvolutionTree\TreeEvolution.uproject" "E:\TreeEvolution\EvolutionTree\Intermediate\Build\Win64\TreeEvolutionEditor\Development\UnrealHeaderTool.manifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -installed
-[2016.05.02-10.49.02:242][423]CompilerResultsLog: Info Reflection code generated for TreeEvolutionEditor in 2,1187797 seconds
-[2016.05.02-10.49.02:242][423]CompilerResultsLog: Info Performing 2 actions (4 in parallel)
-[2016.05.02-10.49.02:242][423]CompilerResultsLog: Info Tree.cpp
-[2016.05.02-10.49.02:242][423]CompilerResultsLog:Error: Error E:\TreeEvolution\EvolutionTree\Source\TreeEvolution\Tree.cpp(704) : warning C4996: 'FRotator::operator -': The unary negation operator has been deprecated as componentwise negation is not meaningful for a Rotator. To get the inverse, please use FRotator::GetInverse() Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
-[2016.05.02-10.49.02:242][423]CompilerResultsLog:Error: Error e:\program files\epic games\4.11\engine\source\runtime\core\public\math\Rotator.h(473) : note: see declaration of 'FRotator::operator -'
-[2016.05.02-10.49.02:242][423]CompilerResultsLog:Error: Error E:\TreeEvolution\EvolutionTree\Source\TreeEvolution\Tree.cpp(722) : warning C4996: 'FRotator::operator -': The unary negation operator has been deprecated as componentwise negation is not meaningful for a Rotator. To get the inverse, please use FRotator::GetInverse() Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
-[2016.05.02-10.49.02:242][423]CompilerResultsLog:Error: Error e:\program files\epic games\4.11\engine\source\runtime\core\public\math\Rotator.h(473) : note: see declaration of 'FRotator::operator -'
-[2016.05.02-10.49.02:242][423]CompilerResultsLog: Info [2/2] Link UE4Editor-TreeEvolution-8931.dll
-[2016.05.02-10.49.02:242][423]CompilerResultsLog: Info    Creating library E:\TreeEvolution\EvolutionTree\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-TreeEvolution-8931.lib and object E:\TreeEvolution\EvolutionTree\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-TreeEvolution-8931.exp
-[2016.05.02-10.49.02:242][423]CompilerResultsLog: Info -------- End Detailed Actions Stats -----------------------------------------------------------
-[2016.05.02-10.49.02:242][423]CompilerResultsLog: Info Total build time: 7,24 seconds
-[2016.05.02-10.49.02:242][423]LogMainFrame: MainFrame: Module compiling took 7.686 seconds
-[2016.05.02-10.49.02:273][423]LogContentBrowser: Native class hierarchy updated for 'TreeEvolution' in 0.0007 seconds. Added 5 classes and 2 folders.
-[2016.05.02-10.49.02:275][423]Warning: HotReload successful (22 functions remapped  0 scriptstructs remapped)
-[2016.05.02-10.49.02:305][423]LogContentBrowser: Native class hierarchy populated in 0.0078 seconds. Added 1987 classes and 351 folders.
-[2016.05.02-10.49.02:305][423]Warning: HotReload took  7.8s.
-[2016.05.02-10.49.04:920][431]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
-[2016.05.02-10.49.04:920][431]LogPlayLevel: PlayLevel: No blueprints needed recompiling
-[2016.05.02-10.49.04:920][431]PIE: New page: PIE session: Minimal_Default (May 2, 2016, 1:49:04 PM)
-[2016.05.02-10.49.04:920][431]LogPlayLevel: Creating play world package: /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default
-[2016.05.02-10.49.04:953][431]LogPlayLevel: PIE: StaticDuplicateObject took: (0.032174s)
-[2016.05.02-10.49.04:953][431]LogAIModule: Creating AISystem for world Minimal_Default
-[2016.05.02-10.49.04:953][431]LogPlayLevel: PIE: World Init took: (0.000638s)
-[2016.05.02-10.49.04:953][431]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/StarterContent/Maps/Minimal_Default.Minimal_Default to /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default (0.033003s)
-[2016.05.02-10.49.04:966][431]LogInit: XAudio2 using 'Speakers (Realtek High Definition Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
-[2016.05.02-10.49.04:982][431]LogInit: FAudioDevice initialized.
-[2016.05.02-10.49.05:009][431]LogWorld: Game class is 'simGameMode_C'
-[2016.05.02-10.49.05:011][431]LogWorld: Bringing World /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default up for play (max tick rate 0) at 2016.05.02-12.49.05
-[2016.05.02-10.49.05:011][431]LogWorld: Bringing up level for play took: 0.001350
-[2016.05.02-10.49.05:015][431]PIE: Info Play in editor start time for /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default 0.099
-[2016.05.02-10.49.05:015][431]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
-[2016.05.02-10.51.51:101][461]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
-[2016.05.02-10.51.51:240][461]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
-[2016.05.02-10.53.11:990][748]Recompiling TreeEvolution...
-[2016.05.02-10.53.11:990][748]Launching UnrealBuildTool... [E:/Program Files/Epic Games/4.11/Engine/Binaries/DotNET/UnrealBuildTool.exe TreeEvolution -ModuleWithSuffix TreeEvolution 2094 Win64 Development -editorrecompile -canskiplink "E:/TreeEvolution/EvolutionTree/TreeEvolution.uproject"  -2015]
-[2016.05.02-10.53.11:993][748]Warning: Starting HotReload took  0.0s.
-[2016.05.02-10.53.19:464][870]CompilerResultsLog: New page: Compilation - May 2, 2016, 1:53:19 PM
-[2016.05.02-10.53.19:464][870]CompilerResultsLog: Info Creating makefile for hot reloading TreeEvolution (working set of source files changed)
-[2016.05.02-10.53.19:464][870]CompilerResultsLog: Info Compiling game modules for hot reload
-[2016.05.02-10.53.19:464][870]CompilerResultsLog: Info Parsing headers for TreeEvolutionEditor
-[2016.05.02-10.53.19:464][870]CompilerResultsLog: Info   Running UnrealHeaderTool "E:\TreeEvolution\EvolutionTree\TreeEvolution.uproject" "E:\TreeEvolution\EvolutionTree\Intermediate\Build\Win64\TreeEvolutionEditor\Development\UnrealHeaderTool.manifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -installed
-[2016.05.02-10.53.19:464][870]CompilerResultsLog: Info Reflection code generated for TreeEvolutionEditor in 2,317023 seconds
-[2016.05.02-10.53.19:464][870]CompilerResultsLog: Info Performing 2 actions (4 in parallel)
-[2016.05.02-10.53.19:464][870]CompilerResultsLog: Info Tree.cpp
-[2016.05.02-10.53.19:464][870]CompilerResultsLog:Error: Error E:\TreeEvolution\EvolutionTree\Source\TreeEvolution\Tree.cpp(704) : warning C4996: 'FRotator::operator -': The unary negation operator has been deprecated as componentwise negation is not meaningful for a Rotator. To get the inverse, please use FRotator::GetInverse() Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
-[2016.05.02-10.53.19:464][870]CompilerResultsLog:Error: Error e:\program files\epic games\4.11\engine\source\runtime\core\public\math\Rotator.h(473) : note: see declaration of 'FRotator::operator -'
-[2016.05.02-10.53.19:464][870]CompilerResultsLog:Error: Error E:\TreeEvolution\EvolutionTree\Source\TreeEvolution\Tree.cpp(722) : warning C4996: 'FRotator::operator -': The unary negation operator has been deprecated as componentwise negation is not meaningful for a Rotator. To get the inverse, please use FRotator::GetInverse() Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
-[2016.05.02-10.53.19:464][870]CompilerResultsLog:Error: Error e:\program files\epic games\4.11\engine\source\runtime\core\public\math\Rotator.h(473) : note: see declaration of 'FRotator::operator -'
-[2016.05.02-10.53.19:464][870]CompilerResultsLog: Info [2/2] Link UE4Editor-TreeEvolution-2094.dll
-[2016.05.02-10.53.19:464][870]CompilerResultsLog: Info    Creating library E:\TreeEvolution\EvolutionTree\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-TreeEvolution-2094.lib and object E:\TreeEvolution\EvolutionTree\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-TreeEvolution-2094.exp
-[2016.05.02-10.53.19:464][870]CompilerResultsLog: Info -------- End Detailed Actions Stats -----------------------------------------------------------
-[2016.05.02-10.53.19:464][870]CompilerResultsLog: Info Total build time: 7,12 seconds
-[2016.05.02-10.53.19:464][870]LogMainFrame: MainFrame: Module compiling took 7.488 seconds
-[2016.05.02-10.53.19:490][870]LogContentBrowser: Native class hierarchy updated for 'TreeEvolution' in 0.0007 seconds. Added 5 classes and 2 folders.
-[2016.05.02-10.53.19:492][870]Warning: HotReload successful (22 functions remapped  0 scriptstructs remapped)
-[2016.05.02-10.53.19:520][870]LogContentBrowser: Native class hierarchy populated in 0.0074 seconds. Added 1987 classes and 351 folders.
-[2016.05.02-10.53.19:520][870]Warning: HotReload took  7.6s.
-[2016.05.02-10.53.22:848][961]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
-[2016.05.02-10.53.22:849][961]LogPlayLevel: PlayLevel: No blueprints needed recompiling
-[2016.05.02-10.53.22:849][961]PIE: New page: PIE session: Minimal_Default (May 2, 2016, 1:53:22 PM)
-[2016.05.02-10.53.22:849][961]LogPlayLevel: Creating play world package: /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default
-[2016.05.02-10.53.22:873][961]LogPlayLevel: PIE: StaticDuplicateObject took: (0.024051s)
-[2016.05.02-10.53.22:873][961]LogAIModule: Creating AISystem for world Minimal_Default
-[2016.05.02-10.53.22:873][961]LogPlayLevel: PIE: World Init took: (0.000427s)
-[2016.05.02-10.53.22:873][961]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/StarterContent/Maps/Minimal_Default.Minimal_Default to /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default (0.024633s)
-[2016.05.02-10.53.22:885][961]LogInit: XAudio2 using 'Speakers (Realtek High Definition Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
-[2016.05.02-10.53.22:891][961]LogInit: FAudioDevice initialized.
-[2016.05.02-10.53.22:918][961]LogWorld: Game class is 'simGameMode_C'
-[2016.05.02-10.53.22:919][961]LogWorld: Bringing World /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default up for play (max tick rate 0) at 2016.05.02-12.53.22
-[2016.05.02-10.53.22:919][961]LogWorld: Bringing up level for play took: 0.001144
-[2016.05.02-10.53.22:923][961]PIE: Info Play in editor start time for /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default 0.002
-[2016.05.02-10.53.22:923][961]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
-[2016.05.02-10.55.45:109][478]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
-[2016.05.02-10.55.45:212][478]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
-[2016.05.02-10.55.52:658][724]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
-[2016.05.02-10.55.52:658][724]LogPlayLevel: PlayLevel: No blueprints needed recompiling
-[2016.05.02-10.55.52:658][724]PIE: New page: PIE session: Minimal_Default (May 2, 2016, 1:55:52 PM)
-[2016.05.02-10.55.52:658][724]LogPlayLevel: Creating play world package: /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default
-[2016.05.02-10.55.52:691][724]LogPlayLevel: PIE: StaticDuplicateObject took: (0.032707s)
-[2016.05.02-10.55.52:691][724]LogAIModule: Creating AISystem for world Minimal_Default
-[2016.05.02-10.55.52:691][724]LogPlayLevel: PIE: World Init took: (0.000456s)
-[2016.05.02-10.55.52:691][724]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/StarterContent/Maps/Minimal_Default.Minimal_Default to /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default (0.033339s)
-[2016.05.02-10.55.52:705][724]LogInit: XAudio2 using 'Speakers (Realtek High Definition Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
-[2016.05.02-10.55.52:712][724]LogInit: FAudioDevice initialized.
-[2016.05.02-10.55.52:742][724]LogWorld: Game class is 'simGameMode_C'
-[2016.05.02-10.55.52:744][724]LogWorld: Bringing World /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default up for play (max tick rate 0) at 2016.05.02-12.55.52
-[2016.05.02-10.55.52:744][724]LogWorld: Bringing up level for play took: 0.001253
-[2016.05.02-10.55.52:747][724]PIE: Info Play in editor start time for /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default -0.177
-[2016.05.02-10.55.52:748][724]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
-[2016.05.02-11.06.06:248][160]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
-[2016.05.02-11.06.06:362][160]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
-[2016.05.02-11.06.12:734][535]Cmd: QUIT_EDITOR
-[2016.05.02-11.06.12:962][535]LogExit: Preparing to exit.
-[2016.05.02-11.06.14:282][535]LogExit: Editor shut down
-[2016.05.02-11.06.14:282][535]LogExit: Transaction tracking system shut down
-[2016.05.02-11.06.14:800][535]LogObj: Freed 0b from 0 cluster array pools.
-[2016.05.02-11.06.14:800][535]LogExit: Object subsystem successfully closed.
-[2016.05.02-11.06.14:925][535]LogD3D11RHI: Shutdown
-[2016.05.02-11.06.14:925][535]LogD3D11RHI: CleanupD3DDevice
-[2016.05.02-11.06.15:080][535]LogD3D11RHI: ~FD3D11DynamicRHI
-[2016.05.02-11.06.15:138][535]LogDerivedDataCache: Shutdown
-[2016.05.02-11.06.15:584][535]LogModuleManager: Shutting down and abandoning module MovieSceneCapture (205)
-[2016.05.02-11.06.15:584][535]LogModuleManager: Shutting down and abandoning module HierarchicalLODOutliner (204)
-[2016.05.02-11.06.15:596][535]LogModuleManager: Shutting down and abandoning module CrashTracker (203)
-[2016.05.02-11.06.15:596][535]LogModuleManager: Shutting down and abandoning module SceneOutliner (202)
-[2016.05.02-11.06.15:596][535]LogModuleManager: Shutting down and abandoning module SuperSearch (201)
-[2016.05.02-11.06.15:596][535]LogModuleManager: Shutting down and abandoning module WidgetCarousel (200)
-[2016.05.02-11.06.15:596][535]LogModuleManager: Shutting down and abandoning module AddContentDialog (199)
-[2016.05.02-11.06.15:597][535]LogModuleManager: Shutting down and abandoning module GameplayTags (198)
-[2016.05.02-11.06.15:597][535]LogModuleManager: Shutting down and abandoning module EditorWidgets (197)
-[2016.05.02-11.06.15:597][535]LogModuleManager: Shutting down and abandoning module CollectionManager (196)
-[2016.05.02-11.06.15:597][535]LogModuleManager: Shutting down and abandoning module StatsViewer (195)
-[2016.05.02-11.06.15:623][535]LogModuleManager: Shutting down and abandoning module FoliageEdit (194)
-[2016.05.02-11.06.15:623][535]LogModuleManager: Shutting down and abandoning module LandscapeEditor (193)
-[2016.05.02-11.06.15:634][535]LogModuleManager: Shutting down and abandoning module ActorPickerMode (192)
-[2016.05.02-11.06.15:634][535]LogModuleManager: Shutting down and abandoning module GeometryMode (191)
-[2016.05.02-11.06.15:634][535]LogModuleManager: Shutting down and abandoning module TextureAlignMode (190)
-[2016.05.02-11.06.15:634][535]LogModuleManager: Shutting down and abandoning module BspMode (189)
-[2016.05.02-11.06.15:634][535]LogModuleManager: Shutting down and abandoning module PlacementMode (188)
-[2016.05.02-11.06.15:634][535]LogModuleManager: Shutting down and abandoning module AutomationWorker (187)
-[2016.05.02-11.06.15:634][535]LogModuleManager: Shutting down and abandoning module CharacterAI (186)
-[2016.05.02-11.06.15:634][535]LogModuleManager: Shutting down and abandoning module SmartSnapping (185)
-[2016.05.02-11.06.15:634][535]LogModuleManager: Shutting down and abandoning module ViewportSnapping (184)
-[2016.05.02-11.06.15:634][535]LogModuleManager: Shutting down and abandoning module LogVisualizer (183)
-[2016.05.02-11.06.15:709][535]LogModuleManager: Shutting down and abandoning module GameProjectGeneration (182)
-[2016.05.02-11.06.15:737][535]LogModuleManager: Shutting down and abandoning module IntroTutorials (181)
-[2016.05.02-11.06.15:756][535]LogModuleManager: Shutting down and abandoning module EditorLiveStreaming (180)
-[2016.05.02-11.06.15:756][535]LogModuleManager: Shutting down and abandoning module IOSPlatformEditor (179)
-[2016.05.02-11.06.15:756][535]LogModuleManager: Shutting down and abandoning module HTML5PlatformEditor (178)
-[2016.05.02-11.06.15:756][535]LogModuleManager: Shutting down and abandoning module AndroidDeviceDetection (177)
-[2016.05.02-11.06.16:127][535]LogModuleManager: Shutting down and abandoning module AndroidPlatformEditor (176)
-[2016.05.02-11.06.16:127][535]LogModuleManager: Shutting down and abandoning module IOSRuntimeSettings (175)
-[2016.05.02-11.06.16:127][535]LogModuleManager: Shutting down and abandoning module AndroidRuntimeSettings (174)
-[2016.05.02-11.06.16:127][535]LogModuleManager: Shutting down and abandoning module MergeActors (173)
-[2016.05.02-11.06.16:141][535]LogModuleManager: Shutting down and abandoning module SizeMap (172)
-[2016.05.02-11.06.16:141][535]LogModuleManager: Shutting down and abandoning module TreeMap (171)
-[2016.05.02-11.06.16:156][535]LogModuleManager: Shutting down and abandoning module ReferenceViewer (170)
-[2016.05.02-11.06.16:156][535]LogModuleManager: Shutting down and abandoning module LocalizationService (169)
-[2016.05.02-11.06.16:175][535]LogModuleManager: Shutting down and abandoning module LocalizationDashboard (168)
-[2016.05.02-11.06.16:185][535]LogModuleManager: Shutting down and abandoning module HardwareTargeting (167)
-[2016.05.02-11.06.16:197][535]LogModuleManager: Shutting down and abandoning module DeviceProfileEditor (166)
-[2016.05.02-11.06.16:211][535]LogModuleManager: Shutting down and abandoning module UndoHistory (165)
-[2016.05.02-11.06.16:224][535]LogModuleManager: Shutting down and abandoning module UserFeedback (164)
-[2016.05.02-11.06.16:224][535]LogModuleManager: Shutting down and abandoning module XmlParser (163)
-[2016.05.02-11.06.16:225][535]LogModuleManager: Shutting down and abandoning module Blutility (162)
-[2016.05.02-11.06.16:225][535]LogModuleManager: Shutting down and abandoning module ProjectTargetPlatformEditor (161)
-[2016.05.02-11.06.16:225][535]LogModuleManager: Shutting down and abandoning module ProjectSettingsViewer (160)
-[2016.05.02-11.06.16:225][535]LogModuleManager: Shutting down and abandoning module InputBindingEditor (159)
-[2016.05.02-11.06.16:225][535]LogModuleManager: Shutting down and abandoning module EditorSettingsViewer (158)
-[2016.05.02-11.06.16:225][535]LogModuleManager: Shutting down and abandoning module SettingsEditor (157)
-[2016.05.02-11.06.16:241][535]LogModuleManager: Shutting down and abandoning module ProjectLauncher (156)
-[2016.05.02-11.06.16:265][535]LogModuleManager: Shutting down and abandoning module SessionFrontend (155)
-[2016.05.02-11.06.16:277][535]LogModuleManager: Shutting down and abandoning module ProfilerClient (154)
-[2016.05.02-11.06.16:301][535]LogModuleManager: Shutting down and abandoning module TargetDeviceServices (153)
-[2016.05.02-11.06.16:301][535]LogModuleManager: Shutting down and abandoning module DeviceManager (152)
-[2016.05.02-11.06.16:355][535]LogModuleManager: Shutting down and abandoning module AutomationController (151)
-[2016.05.02-11.06.16:380][535]LogModuleManager: Shutting down and abandoning module AutomationWindow (150)
-[2016.05.02-11.06.16:388][535]LogModuleManager: Shutting down and abandoning module Layers (149)
-[2016.05.02-11.06.16:415][535]LogModuleManager: Shutting down and abandoning module ComponentVisualizers (148)
-[2016.05.02-11.06.16:415][535]LogModuleManager: Shutting down and abandoning module DetailCustomizations (147)
-[2016.05.02-11.06.16:433][535]LogModuleManager: Shutting down and abandoning module PackagesDialog (146)
-[2016.05.02-11.06.16:433][535]LogModuleManager: Shutting down and abandoning module Persona (145)
-[2016.05.02-11.06.16:451][535]LogModuleManager: Shutting down and abandoning module Kismet (144)
-[2016.05.02-11.06.16:451][535]LogModuleManager: Shutting down and abandoning module GraphEditor (143)
-[2016.05.02-11.06.16:451][535]LogModuleManager: Shutting down and abandoning module ClassViewer (142)
-[2016.05.02-11.06.16:470][535]LogModuleManager: Shutting down and abandoning module Toolbox (141)
-[2016.05.02-11.06.16:493][535]LogModuleManager: Shutting down and abandoning module ModuleUI (140)
-[2016.05.02-11.06.16:516][535]LogModuleManager: Shutting down and abandoning module MovieSceneTools (139)
-[2016.05.02-11.06.16:516][535]LogModuleManager: Shutting down and abandoning module OutputLog (138)
-[2016.05.02-11.06.16:516][535]LogModuleManager: Shutting down and abandoning module GammaUI (137)
-[2016.05.02-11.06.16:543][535]LogModuleManager: Shutting down and abandoning module Documentation (136)
-[2016.05.02-11.06.16:543][535]LogModuleManager: Shutting down and abandoning module StreamingPauseRendering (135)
-[2016.05.02-11.06.16:543][535]LogModuleManager: Shutting down and abandoning module AnalyticsET (134)
-[2016.05.02-11.06.16:543][535]LogModuleManager: Shutting down and abandoning module Analytics (133)
-[2016.05.02-11.06.16:543][535]LogModuleManager: Shutting down and abandoning module PortalServices (132)
-[2016.05.02-11.06.16:543][535]LogModuleManager: Shutting down and abandoning module PortalRpc (131)
-[2016.05.02-11.06.16:543][535]LogModuleManager: Shutting down and abandoning module MessagingRpc (130)
-[2016.05.02-11.06.16:543][535]LogModuleManager: Shutting down and abandoning module AITestSuite (129)
-[2016.05.02-11.06.16:543][535]LogModuleManager: Shutting down and abandoning module GameplayDebugger (128)
-[2016.05.02-11.06.16:543][535]LogModuleManager: Shutting down and abandoning module AIModule (127)
-[2016.05.02-11.06.16:543][535]LogModuleManager: Shutting down and abandoning module ProfilerService (126)
-[2016.05.02-11.06.16:745][535]LogModuleManager: Shutting down and abandoning module TaskGraph (125)
-[2016.05.02-11.06.16:765][535]LogModuleManager: Shutting down and abandoning module SlateRemote (124)
-[2016.05.02-11.06.16:765][535]LogModuleManager: Shutting down and abandoning module SteamVRController (123)
-[2016.05.02-11.06.16:765][535]LogModuleManager: Shutting down and abandoning module SteamVR (122)
-[2016.05.02-11.06.16:765][535]LogModuleManager: Shutting down and abandoning module ProceduralMeshComponent (121)
-[2016.05.02-11.06.16:765][535]LogModuleManager: Shutting down and abandoning module OculusLibrary (120)
-[2016.05.02-11.06.16:765][535]LogModuleManager: Shutting down and abandoning module OculusInput (119)
-[2016.05.02-11.06.16:765][535]LogModuleManager: Shutting down and abandoning module CustomMeshComponent (118)
-[2016.05.02-11.06.16:765][535]LogModuleManager: Shutting down and abandoning module CableComponent (117)
-[2016.05.02-11.06.16:765][535]LogModuleManager: Shutting down and abandoning module ArchVisCharacter (116)
-[2016.05.02-11.06.16:765][535]LogModuleManager: Shutting down and abandoning module MediaPlayerEditor (115)
-[2016.05.02-11.06.16:782][535]LogModuleManager: Shutting down and abandoning module HTML5Networking (114)
-[2016.05.02-11.06.16:782][535]LogModuleManager: Shutting down and abandoning module SpeedTreeImporter (113)
-[2016.05.02-11.06.16:782][535]LogModuleManager: Shutting down and abandoning module PluginBrowser (112)
-[2016.05.02-11.06.16:782][535]LogModuleManager: Shutting down and abandoning module EpicSurvey (111)
-[2016.05.02-11.06.16:782][535]LogModuleManager: Shutting down and abandoning module DesktopPlatform (110)
-[2016.05.02-11.06.16:782][535]LogModuleManager: Shutting down and abandoning module VisualStudioSourceCodeAccess (109)
-[2016.05.02-11.06.16:782][535]LogModuleManager: Shutting down and abandoning module UObjectPlugin (108)
-[2016.05.02-11.06.16:782][535]LogModuleManager: Shutting down and abandoning module SubversionSourceControl (107)
-[2016.05.02-11.06.16:782][535]LogModuleManager: Shutting down and abandoning module PerforceSourceControl (106)
-[2016.05.02-11.06.16:782][535]LogModuleManager: Shutting down and abandoning module SourceControl (105)
-[2016.05.02-11.06.16:782][535]LogModuleManager: Shutting down and abandoning module GitSourceControl (104)
-[2016.05.02-11.06.16:782][535]LogModuleManager: Shutting down and abandoning module LightPropagationVolumeEditor (103)
-[2016.05.02-11.06.16:782][535]LogModuleManager: Shutting down and abandoning module PaperTiledImporter (102)
-[2016.05.02-11.06.16:782][535]LogModuleManager: Shutting down and abandoning module PaperSpriteSheetImporter (101)
-[2016.05.02-11.06.16:782][535]LogModuleManager: Shutting down and abandoning module MeshPaint (100)
-[2016.05.02-11.06.16:782][535]LogModuleManager: Shutting down and abandoning module HotReload (99)
-[2016.05.02-11.06.16:782][535]LogModuleManager: Shutting down and abandoning module MainFrame (98)
-[2016.05.02-11.06.16:782][535]LogModuleManager: Shutting down and abandoning module LevelEditor (97)
-[2016.05.02-11.06.16:783][535]LogModuleManager: Shutting down and abandoning module DirectoryWatcher (96)
-[2016.05.02-11.06.16:783][535]LogModuleManager: Shutting down and abandoning module AssetRegistry (95)
-[2016.05.02-11.06.16:976][535]LogModuleManager: Shutting down and abandoning module ContentBrowser (94)
-[2016.05.02-11.06.16:977][535]LogModuleManager: Shutting down and abandoning module Paper2DEditor (93)
-[2016.05.02-11.06.16:993][535]LogModuleManager: Shutting down and abandoning module TreeEvolution (92)
-[2016.05.02-11.06.16:993][535]LogModuleManager: Shutting down and abandoning module UdpMessaging (91)
-[2016.05.02-11.06.17:093][535]LogModuleManager: Shutting down and abandoning module LightPropagationVolumeRuntime (90)
-[2016.05.02-11.06.17:093][535]LogModuleManager: Shutting down and abandoning module Paper2D (89)
-[2016.05.02-11.06.17:093][535]LogModuleManager: Shutting down and abandoning module WindowsMoviePlayer (88)
-[2016.05.02-11.06.17:107][535]LogModuleManager: Shutting down and abandoning module Media (87)
-[2016.05.02-11.06.17:107][535]LogModuleManager: Shutting down and abandoning module WmfMedia (86)
-[2016.05.02-11.06.17:108][535]LogModuleManager: Shutting down and abandoning module GameLiveStreaming (85)
-[2016.05.02-11.06.17:108][535]LogModuleManager: Shutting down and abandoning module GameplayTagsEditor (84)
-[2016.05.02-11.06.17:108][535]LogModuleManager: Shutting down and abandoning module OnlineBlueprintSupport (83)
-[2016.05.02-11.06.17:108][535]LogModuleManager: Shutting down and abandoning module GameplayTasksEditor (82)
-[2016.05.02-11.06.17:108][535]LogModuleManager: Shutting down and abandoning module PropertyEditor (81)
-[2016.05.02-11.06.17:108][535]LogModuleManager: Shutting down and abandoning module BehaviorTreeEditor (80)
-[2016.05.02-11.06.17:129][535]LogModuleManager: Shutting down and abandoning module FunctionalTesting (79)
-[2016.05.02-11.06.17:129][535]LogModuleManager: Shutting down and abandoning module CollisionAnalyzer (78)
-[2016.05.02-11.06.17:149][535]LogModuleManager: Shutting down and abandoning module WorkspaceMenuStructure (77)
-[2016.05.02-11.06.17:149][535]LogModuleManager: Shutting down and abandoning module MessageLog (76)
-[2016.05.02-11.06.17:149][535]LogModuleManager: Shutting down and abandoning module Sequencer (75)
-[2016.05.02-11.06.17:162][535]LogModuleManager: Shutting down and abandoning module AssetTools (74)
-[2016.05.02-11.06.17:199][535]LogModuleManager: Shutting down and abandoning module UMGEditor (73)
-[2016.05.02-11.06.17:214][535]LogModuleManager: Shutting down and abandoning module UMG (72)
-[2016.05.02-11.06.17:214][535]LogModuleManager: Shutting down and abandoning module SlateReflector (71)
-[2016.05.02-11.06.17:251][535]LogModuleManager: Shutting down and abandoning module Slate (70)
-[2016.05.02-11.06.17:251][535]LogModuleManager: Shutting down and abandoning module EditorStyle (69)
-[2016.05.02-11.06.17:252][535]LogModuleManager: Shutting down and abandoning module SessionServices (68)
-[2016.05.02-11.06.17:252][535]LogModuleManager: Shutting down and abandoning module SourceCodeAccess (67)
-[2016.05.02-11.06.17:253][535]LogModuleManager: Shutting down and abandoning module HeadMountedDisplay (66)
-[2016.05.02-11.06.17:253][535]LogModuleManager: Shutting down and abandoning module XAudio2 (65)
-[2016.05.02-11.06.17:253][535]LogModuleManager: Shutting down and abandoning module Networking (63)
-[2016.05.02-11.06.17:253][535]LogModuleManager: Shutting down and abandoning module Core (62)
-[2016.05.02-11.06.17:253][535]LogModuleManager: Shutting down and abandoning module KismetCompiler (61)
-[2016.05.02-11.06.17:253][535]LogModuleManager: Shutting down and abandoning module PhysXFormats (60)
-[2016.05.02-11.06.17:253][535]LogModuleManager: Shutting down and abandoning module MeshUtilities (59)
-[2016.05.02-11.06.17:269][535]LogModuleManager: Shutting down and abandoning module CookingStats (58)
-[2016.05.02-11.06.17:269][535]LogModuleManager: Shutting down and abandoning module DerivedDataCache (57)
-[2016.05.02-11.06.17:269][535]LogDerivedDataCache: Shutdown
-[2016.05.02-11.06.17:269][535]LogModuleManager: Shutting down and abandoning module ShaderFormatOpenGL (56)
-[2016.05.02-11.06.17:289][535]LogModuleManager: Shutting down and abandoning module ShaderFormatD3D (55)
-[2016.05.02-11.06.17:289][535]LogModuleManager: Shutting down and abandoning module MetalShaderFormat (54)
-[2016.05.02-11.06.17:311][535]LogModuleManager: Shutting down and abandoning module TextureFormatUncompressed (53)
-[2016.05.02-11.06.17:311][535]LogModuleManager: Shutting down and abandoning module TextureFormatPVR (52)
-[2016.05.02-11.06.17:311][535]LogModuleManager: Shutting down and abandoning module TextureFormatIntelISPCTexComp (51)
-[2016.05.02-11.06.17:311][535]LogModuleManager: Shutting down and abandoning module TextureFormatDXT (50)
-[2016.05.02-11.06.17:311][535]LogModuleManager: Shutting down and abandoning module ImageWrapper (49)
-[2016.05.02-11.06.17:311][535]LogModuleManager: Shutting down and abandoning module TextureFormatASTC (48)
-[2016.05.02-11.06.17:311][535]LogModuleManager: Shutting down and abandoning module TextureFormatAndroid (47)
-[2016.05.02-11.06.17:311][535]LogModuleManager: Shutting down and abandoning module AudioFormatOpus (46)
-[2016.05.02-11.06.17:311][535]LogModuleManager: Shutting down and abandoning module AudioFormatOgg (45)
-[2016.05.02-11.06.17:311][535]LogModuleManager: Shutting down and abandoning module AudioFormatADPCM (44)
-[2016.05.02-11.06.17:311][535]LogModuleManager: Shutting down and abandoning module LinuxTargetPlatform (43)
-[2016.05.02-11.06.17:311][535]LogModuleManager: Shutting down and abandoning module LinuxServerTargetPlatform (42)
-[2016.05.02-11.06.17:311][535]LogModuleManager: Shutting down and abandoning module LinuxNoEditorTargetPlatform (41)
-[2016.05.02-11.06.17:311][535]LogModuleManager: Shutting down and abandoning module TVOSTargetPlatform (40)
-[2016.05.02-11.06.17:311][535]LogModuleManager: Shutting down and abandoning module Messaging (39)
-[2016.05.02-11.06.17:311][535]LogModuleManager: Shutting down and abandoning module IOSTargetPlatform (38)
-[2016.05.02-11.06.17:311][535]LogModuleManager: Shutting down and abandoning module HTML5TargetPlatform (37)
-[2016.05.02-11.06.17:311][535]LogModuleManager: Shutting down and abandoning module Android_PVRTCTargetPlatform (36)
-[2016.05.02-11.06.17:311][535]LogModuleManager: Shutting down and abandoning module Android_MultiTargetPlatform (35)
-[2016.05.02-11.06.17:311][535]LogModuleManager: Shutting down and abandoning module Android_ETC2TargetPlatform (34)
-[2016.05.02-11.06.17:311][535]LogModuleManager: Shutting down and abandoning module Android_ETC1TargetPlatform (33)
-[2016.05.02-11.06.17:311][535]LogModuleManager: Shutting down and abandoning module Android_DXTTargetPlatform (32)
-[2016.05.02-11.06.17:311][535]LogModuleManager: Shutting down and abandoning module Android_ATCTargetPlatform (31)
-[2016.05.02-11.06.17:311][535]LogModuleManager: Shutting down and abandoning module Android_ASTCTargetPlatform (30)
-[2016.05.02-11.06.17:311][535]LogModuleManager: Shutting down and abandoning module AndroidTargetPlatform (29)
-[2016.05.02-11.06.17:311][535]LogModuleManager: Shutting down and abandoning module WindowsTargetPlatform (28)
-[2016.05.02-11.06.17:311][535]LogModuleManager: Shutting down and abandoning module WindowsServerTargetPlatform (27)
-[2016.05.02-11.06.17:311][535]LogModuleManager: Shutting down and abandoning module WindowsNoEditorTargetPlatform (26)
-[2016.05.02-11.06.17:311][535]LogModuleManager: Shutting down and abandoning module WindowsClientTargetPlatform (25)
-[2016.05.02-11.06.17:311][535]LogModuleManager: Shutting down and abandoning module AllDesktopTargetPlatform (24)
-[2016.05.02-11.06.17:311][535]LogModuleManager: Shutting down and abandoning module TargetPlatform (23)
-[2016.05.02-11.06.17:311][535]LogModuleManager: Shutting down and abandoning module InputCore (22)
-[2016.05.02-11.06.17:311][535]LogModuleManager: Shutting down and abandoning module Settings (21)
-[2016.05.02-11.06.17:311][535]LogModuleManager: Shutting down and abandoning module OnlineSubsystem (19)
-[2016.05.02-11.06.17:311][535]LogModuleManager: Shutting down and abandoning module HTTP (18)
-[2016.05.02-11.06.19:313][535]LogModuleManager: Shutting down and abandoning module XMPP (17)
-[2016.05.02-11.06.19:335][535]LogModuleManager: Shutting down and abandoning module OculusRift (16)
-[2016.05.02-11.06.19:358][535]LogModuleManager: Shutting down and abandoning module ExampleDeviceProfileSelector (15)
-[2016.05.02-11.06.19:358][535]LogModuleManager: Shutting down and abandoning module TextureCompressor (14)
-[2016.05.02-11.06.19:358][535]LogModuleManager: Shutting down and abandoning module ShaderCore (13)
-[2016.05.02-11.06.19:358][535]LogModuleManager: Shutting down and abandoning module Landscape (12)
-[2016.05.02-11.06.19:358][535]LogModuleManager: Shutting down and abandoning module SlateRHIRenderer (11)
-[2016.05.02-11.06.19:359][535]LogModuleManager: Shutting down and abandoning module OpenGLDrv (10)
-[2016.05.02-11.06.19:377][535]LogModuleManager: Shutting down and abandoning module D3D11RHI (9)
-[2016.05.02-11.06.19:377][535]LogModuleManager: Shutting down and abandoning module AnimGraphRuntime (8)
-[2016.05.02-11.06.19:377][535]LogModuleManager: Shutting down and abandoning module Renderer (7)
-[2016.05.02-11.06.19:377][535]LogModuleManager: Shutting down and abandoning module Engine (6)
-[2016.05.02-11.06.19:377][535]LogModuleManager: Shutting down and abandoning module CoreUObject (5)
-[2016.05.02-11.06.19:377][535]LogModuleManager: Shutting down and abandoning module NetworkFile (4)
-[2016.05.02-11.06.19:390][535]LogModuleManager: Shutting down and abandoning module StreamingFile (3)
-[2016.05.02-11.06.19:390][535]LogModuleManager: Shutting down and abandoning module SandboxFile (2)
-[2016.05.02-11.06.19:409][535]LogModuleManager: Shutting down and abandoning module PakFile (1)
-[2016.05.02-11.06.19:410][535]LogExit: Exiting.
-[2016.05.02-11.06.19:411][535]Log file closed, 05/02/16 13:06:19
+[2016.05.02-19.28.15:239][  0]LogInit: Selected Device Profile: [Windows]
+[2016.05.02-19.28.15:239][  0]LogInit: Applying CVar settings loaded from the selected device profile: [Windows]
+[2016.05.02-19.28.15:246][  0]LogInit: Computer: TOTHEMA-DATOR
+[2016.05.02-19.28.15:246][  0]LogInit: User: Tothema
+[2016.05.02-19.28.15:246][  0]LogInit: CPU Page size=65536, Cores=4
+[2016.05.02-19.28.15:246][  0]LogInit: High frequency timer resolution =3.043261 MHz
+[2016.05.02-19.28.15:246][  0]LogMemory: Memory total: Physical=16.0GB (16GB approx)
+[2016.05.02-19.28.15:246][  0]LogMemory: Platform Memory Stats for Windows
+[2016.05.02-19.28.15:246][  0]LogMemory: Process Physical Memory: 313.38 MB used, 313.38 MB peak
+[2016.05.02-19.28.15:246][  0]LogMemory: Process Virtual Memory: 317.02 MB used, 317.02 MB peak
+[2016.05.02-19.28.15:246][  0]LogMemory: Physical Memory: 9909.41 MB used, 16336.52 MB total
+[2016.05.02-19.28.15:246][  0]LogMemory: Virtual Memory: 621.75 MB used, 8388608.00 MB total
+[2016.05.02-19.28.15:302][  0]LogTextLocalizationManager: No translations for ('sv-SE') exist, falling back to 'en' for localization and internationalization data.
+[2016.05.02-19.28.15:690][  0]LogD3D11RHI: D3D11 adapters:
+[2016.05.02-19.28.15:798][  0]LogD3D11RHI:    0. 'NVIDIA GeForce GTX 660  ' (Feature Level 11_0)
+[2016.05.02-19.28.15:798][  0]LogD3D11RHI:       1989MB of dedicated video memory, 0MB of dedicated system memory, and 2048MB of shared system memory, 2 output[s]
+[2016.05.02-19.28.15:809][  0]LogD3D11RHI: Chosen D3D11 Adapter: 0
+[2016.05.02-19.28.15:870][  0]LogD3D11RHI: Creating new Direct3DDevice
+[2016.05.02-19.28.15:881][  0]LogD3D11RHI:     Adapter Name: NVIDIA GeForce GTX 660  
+[2016.05.02-19.28.15:881][  0]LogD3D11RHI:   Driver Version: 353.06 (internal 9.18.13.5306)
+[2016.05.02-19.28.15:881][  0]LogD3D11RHI:      Driver Date: 5-27-2015
+[2016.05.02-19.28.15:881][  0]LogRHI: Texture pool is 1361 MB (70% of 1945 MB)
+[2016.05.02-19.28.15:906][  0]LogD3D11RHI: Async texture creation enabled
+[2016.05.02-19.28.16:691][  0]LogShaderCompilers: Guid format shader working directory is -24 characters bigger than the processId version (../../../../../../Users/Tothema/Desktop/TreeEvolution/EvolutionTree 4.11/Intermediate/Shaders/WorkingDirectory/6472/).
+[2016.05.02-19.28.16:691][  0]LogShaderCompilers: Cleaned the shader compiler working directory 'C:/Users/Tothema/AppData/Local/Temp/UnrealShaderWorkingDir/C0E209DB462C30FEC6AD8582364CD65D/'.
+[2016.05.02-19.28.16:706][  0]LogShaderCompilers:Display: Using Local Shader Compiler.
+[2016.05.02-19.28.23:010][  0]LogTemp:Display: Loaded TP AllDesktopTargetPlatform
+[2016.05.02-19.28.23:039][  0]LogTemp:Display: Loaded TP WindowsClientTargetPlatform
+[2016.05.02-19.28.23:051][  0]LogTemp:Display: Loaded TP WindowsNoEditorTargetPlatform
+[2016.05.02-19.28.23:059][  0]LogTemp:Display: Loaded TP WindowsServerTargetPlatform
+[2016.05.02-19.28.23:075][  0]LogTemp:Display: Loaded TP WindowsTargetPlatform
+[2016.05.02-19.28.23:086][  0]LogTemp:Display: Loaded TP AndroidTargetPlatform
+[2016.05.02-19.28.23:096][  0]LogTemp:Display: Loaded TP Android_ASTCTargetPlatform
+[2016.05.02-19.28.23:106][  0]LogTemp:Display: Loaded TP Android_ATCTargetPlatform
+[2016.05.02-19.28.23:121][  0]LogTemp:Display: Loaded TP Android_DXTTargetPlatform
+[2016.05.02-19.28.23:133][  0]LogTemp:Display: Loaded TP Android_ETC1TargetPlatform
+[2016.05.02-19.28.23:153][  0]LogTemp:Display: Loaded TP Android_ETC2TargetPlatform
+[2016.05.02-19.28.23:176][  0]LogTemp:Display: Loaded TP Android_MultiTargetPlatform
+[2016.05.02-19.28.23:176][  0]LogTemp:Display: Loaded TP Android_PVRTCTargetPlatform
+[2016.05.02-19.28.23:189][  0]LogTemp:Display: Loaded TP HTML5TargetPlatform
+[2016.05.02-19.28.23:256][  0]LogTemp:Display: Loaded TP IOSTargetPlatform
+[2016.05.02-19.28.23:259][  0]LogTemp:Display: Loaded TP TVOSTargetPlatform
+[2016.05.02-19.28.23:277][  0]LogTemp:Display: Loaded TP LinuxNoEditorTargetPlatform
+[2016.05.02-19.28.23:292][  0]LogTemp:Display: Loaded TP LinuxServerTargetPlatform
+[2016.05.02-19.28.23:315][  0]LogTemp:Display: Loaded TP LinuxTargetPlatform
+[2016.05.02-19.28.23:328][  0]LogTargetPlatformManager:Display: Building Assets For Windows
+[2016.05.02-19.28.24:128][  0]LogDerivedDataCache:Display: Max Cache Size: 512 MB
+[2016.05.02-19.28.25:484][  0]LogDerivedDataCache: Loaded boot cache 1.36s 50MB C:/Users/Tothema/AppData/Local/UnrealEngine/4.11/DerivedDataCache/Boot.ddc.
+[2016.05.02-19.28.25:484][  0]LogDerivedDataCache:Display: Loaded Boot cache: C:/Users/Tothema/AppData/Local/UnrealEngine/4.11/DerivedDataCache/Boot.ddc
+[2016.05.02-19.28.25:484][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  Pak pak cache file ../../../../../../Users/Tothema/Desktop/TreeEvolution/EvolutionTree 4.11/DerivedDataCache/DDC.ddp not found, will not use a pak cache.
+[2016.05.02-19.28.25:484][  0]LogDerivedDataCache: Unable to find inner node Pak for hierarchical cache Hierarchy.
+[2016.05.02-19.28.25:484][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  CompressedPak pak cache file ../../../../../../Users/Tothema/Desktop/TreeEvolution/EvolutionTree 4.11/DerivedDataCache/Compressed.ddp not found, will not use a pak cache.
+[2016.05.02-19.28.25:484][  0]LogDerivedDataCache: Unable to find inner node CompressedPak for hierarchical cache Hierarchy.
+[2016.05.02-19.28.25:530][  0]LogDerivedDataCache:Display: Pak cache opened for reading ../../../Engine/DerivedDataCache/Compressed.ddp.
+[2016.05.02-19.28.25:541][  0]LogDerivedDataCache: Using Local data cache path C:/Users/Tothema/AppData/Local/UnrealEngine/Common/DerivedDataCache: Writable
+[2016.05.02-19.28.35:925][  0]LogInit: Selected Device Profile: [Windows]
+[2016.05.02-19.28.36:017][  0]LogContentStreaming: Texture pool size is 0.00 MB
+[2016.05.02-19.28.37:274][  0]LogMaterial: Uniform references updated for custom material expression Custom.
+[2016.05.02-19.28.39:308][  0]LogMeshUtilities: No automatic mesh reduction module available
+[2016.05.02-19.28.39:308][  0]LogMeshUtilities: No automatic mesh merging module available
+[2016.05.02-19.28.39:308][  0]LogMeshUtilities: No distributed automatic mesh merging module available
+[2016.05.02-19.28.44:149][  0]LogUObjectArray: 27672 objects as part of root set at end of initial load.
+[2016.05.02-19.28.44:149][  0]LogUObjectAllocator: 5589896 out of 0 bytes used by permanent object pool.
+[2016.05.02-19.28.44:171][  0]LogUObjectArray: CloseDisregardForGC: 0/0 objects in disregard for GC pool
+[2016.05.02-19.28.44:195][  0]LogInit: WinSock: version 1.1 (2.2), MaxSocks=32767, MaxUdp=65467
+[2016.05.02-19.28.46:628][  0]LogSlate: SlateFontCache - WITH_FREETYPE: 1, WITH_HARFBUZZ: 1
+[2016.05.02-19.28.46:636][  0]LogSlate: SlateFontCache - WITH_FREETYPE: 1, WITH_HARFBUZZ: 1
+[2016.05.02-19.28.50:014][  0]LogStreaming:Warning: Failed to read file '../../../Engine/Content/Editor/Slate/Common/Selection_16x.png' error.
+[2016.05.02-19.28.50:014][  0]LogSlate: Could not find file for Slate resource: ../../../Engine/Content/Editor/Slate/Common/Selection_16x.png
+[2016.05.02-19.28.50:014][  0]LogStreaming:Warning: Failed to read file '../../../Engine/Content/Editor/Slate/Common/Selection_16x.png' error.
+[2016.05.02-19.28.50:014][  0]LogSlate: Could not find file for Slate resource: ../../../Engine/Content/Editor/Slate/Common/Selection_16x.png
+[2016.05.02-19.28.50:014][  0]LogStreaming:Warning: Failed to read file '../../../Engine/Content/Editor/Slate/Common/Selection_16x.png' error.
+[2016.05.02-19.28.50:014][  0]LogSlate: Could not find file for Slate resource: ../../../Engine/Content/Editor/Slate/Common/Selection_16x.png
+[2016.05.02-19.29.01:990][  0]LogUdpMessaging: Initializing bridge on interface 0.0.0.0:0 to multicast group 230.0.0.1:6666.
+[2016.05.02-19.29.04:275][  0]LogAssetRegistry: FAssetRegistry took 0.0311 seconds to start up
+[2016.05.02-19.29.07:709][  0]SourceControl: Info Source control is disabled
+[2016.05.02-19.29.08:526][  0]SourceControl: Info Source control is disabled
+[2016.05.02-19.29.08:649][  0]SourceControl: Info Source control is disabled
+[2016.05.02-19.29.08:783][  0]SourceControl: Info Source control is disabled
+[2016.05.02-19.29.11:489][  0]LogEngine: Initializing Engine...
+[2016.05.02-19.29.11:548][  0]LogHMD: SteamVR failed to initialize.  Err: 110
+[2016.05.02-19.29.12:830][  0]LogAIModule: Creating AISystem for world NewWorld
+[2016.05.02-19.29.13:175][  0]LogInit: XAudio2 using 'Digitalt ljud (S/PDIF) (High Definition Audio Device)' : 2 channels at 48 kHz using 16 bits per sample (channel mask 0x3)
+[2016.05.02-19.29.13:803][  0]LogInit: FAudioDevice initialized.
+[2016.05.02-19.29.13:826][  0]LogDerivedDataCache: Saved boot cache 0.02s 50MB C:/Users/Tothema/AppData/Local/UnrealEngine/4.11/DerivedDataCache/Boot.ddc.
+[2016.05.02-19.29.13:830][  0]LogInit: Texture streaming: Enabled
+[2016.05.02-19.29.15:071][  0]LogInit: Transaction tracking system initialized
+[2016.05.02-19.29.16:958][  0]BlueprintLog: New page: Editor Load
+[2016.05.02-19.29.21:994][  0]LocalizationService: Info Localization service is disabled
+[2016.05.02-19.29.27:850][  0]LogConsoleResponse:Display: 
+[2016.05.02-19.29.33:048][  0]LogFileCache: Scanning file cache for directory 'C:/Users/Tothema/Desktop/TreeEvolution/EvolutionTree 4.11/Content/' took 0.06s
+[2016.05.02-19.29.33:048][  0]LogCook:Display: Max memory allowance for cook 8192mb
+[2016.05.02-19.29.33:048][  0]LogCook:Display: Mobile HDR setting 1
+[2016.05.02-19.29.33:095][  0]LogCook:Display: Done creating registry. It took  0.00s.
+[2016.05.02-19.29.35:503][  0]SourceControl: Info Source control is disabled
+[2016.05.02-19.29.35:630][  0]Cmd: MAP LOAD FILE="../../../../../../Users/Tothema/Desktop/TreeEvolution/EvolutionTree 4.11/Content/StarterContent/Maps/Minimal_Default.umap" TEMPLATE=0 SHOWPROGRESS=1 FEATURELEVEL=3
+[2016.05.02-19.29.35:631][  0]LightingResults: New page: Lighting Build
+[2016.05.02-19.29.36:034][  0]MapCheck: New page: Map Check
+[2016.05.02-19.29.36:034][  0]LightingResults: New page: Lighting Build
+[2016.05.02-19.29.44:020][  0]LogAIModule: Creating AISystem for world Minimal_Default
+[2016.05.02-19.29.46:100][  0]LogEditorServer: Finished looking for orphan Actors (0.000 secs)
+[2016.05.02-19.29.46:294][  0]Cmd: MAP CHECKDEP NOCLEARLOG
+[2016.05.02-19.29.46:492][  0]MapCheck:Warning: Warning Cylinder StaticMeshComponent /Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.BranchBP_23.Cylinder : Externally referenced 
+[2016.05.02-19.29.46:492][  0]MapCheck:Warning: Warning Cylinder StaticMeshComponent /Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.BranchBP_23.Cylinder : Externally referenced 
+[2016.05.02-19.29.46:492][  0]MapCheck:Warning: Warning ModelComponent_80 ModelComponent /Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.ModelComponent_80 : Externally referenced 
+[2016.05.02-19.29.46:492][  0]MapCheck:Warning: Warning Model_3 Model /Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Model_3 : Externally referenced 
+[2016.05.02-19.29.46:492][  0]MapCheck:Warning: Warning Polys_19 Polys /Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.BoxBrush.Model_10.Polys_19 : Externally referenced 
+[2016.05.02-19.29.46:492][  0]MapCheck:Warning: Warning StaticMeshComponent0 StaticMeshComponent /Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Cube2.StaticMeshComponent0 : Externally referenced 
+[2016.05.02-19.29.46:492][  0]MapCheck:Warning: Warning StaticMeshComponent0 StaticMeshComponent /Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Cube_3.StaticMeshComponent0 : Externally referenced 
+[2016.05.02-19.29.46:492][  0]MapCheck:Warning: Warning StaticMeshComponent0 StaticMeshComponent /Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Cube2.StaticMeshComponent0 : Externally referenced 
+[2016.05.02-19.29.46:492][  0]MapCheck:Warning: Warning StaticMeshComponent0 StaticMeshComponent /Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Cube_3.StaticMeshComponent0 : Externally referenced 
+[2016.05.02-19.29.46:492][  0]MapCheck:Warning: Warning FoliageInstancedStaticMeshComponent_3 FoliageInstancedStaticMeshComponent /Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.InstancedFoliageActor_1.FoliageInstancedStaticMeshComponent_3 : Externally referenced 
+[2016.05.02-19.29.46:492][  0]MapCheck:Warning: Warning FoliageType_InstancedStaticMesh_2 FoliageType_InstancedStaticMesh /Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.InstancedFoliageActor_1.FoliageType_InstancedStaticMesh_2 : Externally referenced 
+[2016.05.02-19.29.46:492][  0]MapCheck:Warning: Warning FoliageInstancedStaticMeshComponent_1 FoliageInstancedStaticMeshComponent /Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.InstancedFoliageActor_1.FoliageInstancedStaticMeshComponent_1 : Externally referenced 
+[2016.05.02-19.29.46:492][  0]MapCheck:Warning: Warning FoliageType_InstancedStaticMesh_1 FoliageType_InstancedStaticMesh /Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.InstancedFoliageActor_1.FoliageType_InstancedStaticMesh_1 : Externally referenced 
+[2016.05.02-19.29.46:492][  0]MapCheck: Info Map check complete: 0 Error(s), 13 Warning(s), took 189.459ms to complete.
+[2016.05.02-19.29.47:045][  0]LogFileHelpers: Loading map 'Minimal_Default' took 11.440
+[2016.05.02-19.29.52:285][  0]LogCollectionManager: Loaded 0 collections in 0.106042 seconds
+[2016.05.02-19.29.53:416][  0]LogFileCache: Scanning file cache for directory 'C:/Users/Tothema/Desktop/TreeEvolution/EvolutionTree 4.11/Saved/Collections/' took 0.01s
+[2016.05.02-19.29.53:416][  0]LogFileCache: Scanning file cache for directory 'C:/Users/Tothema/Desktop/TreeEvolution/EvolutionTree 4.11/Content/Developers/Tothema/Collections/' took 0.01s
+[2016.05.02-19.29.53:416][  0]LogFileCache: Scanning file cache for directory 'C:/Users/Tothema/Desktop/TreeEvolution/EvolutionTree 4.11/Content/Collections/' took 0.01s
+[2016.05.02-19.29.53:416][  0]LogCollectionManager: Rebuilt the GUID cache for 0 collections in 0.000003 seconds
+[2016.05.02-19.29.53:503][  0]LogContentBrowser: Native class hierarchy populated in 0.0868 seconds. Added 1983 classes and 345 folders.
+[2016.05.02-19.29.53:752][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: Construct from data asset -  0.000 s
+[2016.05.02-19.29.53:752][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: GameplayTagTreeChangedEvent.Broadcast -  0.000 s
+[2016.05.02-19.29.53:772][  0]LogContentBrowser: Native class hierarchy updated for 'GameplayTags' in 0.0011 seconds. Added 12 classes and 0 folders.
+[2016.05.02-19.29.53:900][  0]LogContentBrowser: Native class hierarchy updated for 'WidgetCarousel' in 0.0010 seconds. Added 0 classes and 0 folders.
+[2016.05.02-19.29.54:346][  0]LogContentBrowser: Native class hierarchy updated for 'SuperSearch' in 0.0010 seconds. Added 1 classes and 2 folders.
+[2016.05.02-19.29.58:671][  0]LogContentBrowser: Native class hierarchy updated for 'AddContentDialog' in 0.0012 seconds. Added 0 classes and 0 folders.
+[2016.05.02-19.29.58:836][  0]LogContentBrowser: Native class hierarchy updated for 'SceneOutliner' in 0.0011 seconds. Added 1 classes and 2 folders.
+[2016.05.02-19.30.00:603][  0]LogCrashTracker: Crashtracker disabled due to settings.
+[2016.05.02-19.30.00:787][  0]LogUObjectGlobals:Warning: Failed to find object 'Class None.'
+[2016.05.02-19.30.01:002][  0]LogContentBrowser: Native class hierarchy updated for 'HierarchicalLODOutliner' in 0.0011 seconds. Added 1 classes and 2 folders.
+[2016.05.02-19.30.01:002][  0]LogLoad: Full Startup: 106.52 seconds (BP compile: 1.25 seconds)
+[2016.05.02-19.30.01:002][  0]LogExternalProfiler: Found external profiler: VSPerf
+[2016.05.02-19.30.01:002][  0]LogExternalProfiler: Using external profiler: VSPerf
+[2016.05.02-19.30.01:342][  0]LogOcInput: Can't find Oculus library dev build: is proper Runtime installed? Version: 0.8.0.0
+[2016.05.02-19.30.01:830][  0]LogContentStreaming: Texture pool size now 700 MB
+[2016.05.02-19.30.03:415][  0]LogRenderer: Reallocating scene render targets to support 1528x728 (Frame:2).
+[2016.05.02-19.30.07:973][  3]LogAssetRegistry: Asset discovery search completed in 63.7180 seconds
+[2016.05.02-19.30.07:993][  3]LogCollectionManager: Rebuilt the object cache for 0 collections in 0.000001 seconds (found 0 objects)
+[2016.05.02-19.30.07:993][  3]LogCollectionManager: Fixed up redirectors for 0 collections in 0.020069 seconds (updated 0 objects)
+[2016.05.02-19.30.50:598][298]Recompiling TreeEvolution...
+[2016.05.02-19.30.50:598][298]Launching UnrealBuildTool... [C:/Program Files (x86)/Epic Games/4.11/Engine/Binaries/DotNET/UnrealBuildTool.exe TreeEvolution -ModuleWithSuffix TreeEvolution 7663 Win64 Development -editorrecompile -canskiplink "C:/Users/Tothema/Desktop/TreeEvolution/EvolutionTree 4.11/TreeEvolution.uproject"  -2015]
+[2016.05.02-19.30.50:600][298]Warning: Starting HotReload took  0.2s.
+[2016.05.02-19.32.52:424][777]CompilerResultsLog: New page: Compilation - May 2, 2016, 10:32:52 PM
+[2016.05.02-19.32.52:424][777]CompilerResultsLog: Info Creating makefile for hot reloading TreeEvolution (working set of source files changed)
+[2016.05.02-19.32.52:424][777]CompilerResultsLog: Info Compiling game modules for hot reload
+[2016.05.02-19.32.52:424][777]CompilerResultsLog: Info Parsing headers for TreeEvolutionEditor
+[2016.05.02-19.32.52:424][777]CompilerResultsLog: Info   Running UnrealHeaderTool "C:\Users\Tothema\Desktop\TreeEvolution\EvolutionTree 4.11\TreeEvolution.uproject" "C:\Users\Tothema\Desktop\TreeEvolution\EvolutionTree 4.11\Intermediate\Build\Win64\TreeEvolutionEditor\Development\UnrealHeaderTool.manifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -installed
+[2016.05.02-19.32.52:424][777]CompilerResultsLog: Info Reflection code generated for TreeEvolutionEditor in 3,802749 seconds
+[2016.05.02-19.32.52:424][777]CompilerResultsLog: Info Performing 5 actions (4 in parallel)
+[2016.05.02-19.32.52:424][777]CompilerResultsLog: Info Tree.cpp
+[2016.05.02-19.32.52:425][777]CompilerResultsLog: Info TreeEvolution.generated.cpp
+[2016.05.02-19.32.52:425][777]CompilerResultsLog: Info SimLogic.cpp
+[2016.05.02-19.32.52:425][777]CompilerResultsLog: Info Branch.cpp
+[2016.05.02-19.32.52:425][777]CompilerResultsLog:Error: Error C:\Users\Tothema\Desktop\TreeEvolution\EvolutionTree 4.11\Source\TreeEvolution\Tree.cpp(806) : warning C4996: 'FRotator::operator -': The unary negation operator has been deprecated as componentwise negation is not meaningful for a Rotator. To get the inverse, please use FRotator::GetInverse() Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+[2016.05.02-19.32.52:425][777]CompilerResultsLog: Info c:\program files (x86)\epic games\4.11\engine\source\runtime\core\public\math\Rotator.h(473): note: see declaration of 'FRotator::operator -'
+[2016.05.02-19.32.52:425][777]CompilerResultsLog:Error: Error C:\Users\Tothema\Desktop\TreeEvolution\EvolutionTree 4.11\Source\TreeEvolution\Tree.cpp(824) : warning C4996: 'FRotator::operator -': The unary negation operator has been deprecated as componentwise negation is not meaningful for a Rotator. To get the inverse, please use FRotator::GetInverse() Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+[2016.05.02-19.32.52:425][777]CompilerResultsLog: Info c:\program files (x86)\epic games\4.11\engine\source\runtime\core\public\math\Rotator.h(473): note: see declaration of 'FRotator::operator -'
+[2016.05.02-19.32.52:425][777]CompilerResultsLog: Info [5/5] Link UE4Editor-TreeEvolution-7663.dll
+[2016.05.02-19.32.52:425][777]CompilerResultsLog: Info    Creating library C:\Users\Tothema\Desktop\TreeEvolution\EvolutionTree 4.11\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-TreeEvolution-7663.lib and object C:\Users\Tothema\Desktop\TreeEvolution\EvolutionTree 4.11\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-TreeEvolution-7663.exp
+[2016.05.02-19.32.52:425][777]CompilerResultsLog: Info -------- End Detailed Actions Stats -----------------------------------------------------------
+[2016.05.02-19.32.52:425][777]CompilerResultsLog: Info Total build time: 119,84 seconds
+[2016.05.02-19.32.52:425][777]LogMainFrame: MainFrame: Module compiling took 121.832 seconds
+[2016.05.02-19.32.52:551][777]LogClass: Could not find existing class Tree in package /Script/TreeEvolution for HotReload, assuming new class
+[2016.05.02-19.32.52:551][777]LogClass: Function calculateHits is new.
+[2016.05.02-19.32.52:551][777]LogClass: Function calculateHitsStraightAbove is new.
+[2016.05.02-19.32.52:551][777]LogClass: Function duplicate is new.
+[2016.05.02-19.32.52:551][777]LogClass: Function exportTree is new.
+[2016.05.02-19.32.52:551][777]LogClass: Function hillClimb is new.
+[2016.05.02-19.32.52:551][777]LogClass: Function manualDirectionHits is new.
+[2016.05.02-19.32.52:552][777]LogClass: Function mutate is new.
+[2016.05.02-19.32.52:552][777]LogClass: Function sweepHits is new.
+[2016.05.02-19.32.52:552][777]LogClass: Could not find existing class SimLogic in package /Script/TreeEvolution for HotReload, assuming new class
+[2016.05.02-19.32.52:552][777]LogClass: Function forceReCalculation is new.
+[2016.05.02-19.32.52:552][777]LogClass: Function GetAverageFitness is new.
+[2016.05.02-19.32.52:552][777]LogClass: Function GetBestPosition is new.
+[2016.05.02-19.32.52:552][777]LogClass: Function GetMaxFitness is new.
+[2016.05.02-19.32.52:552][777]LogClass: Function GetNumBranches is new.
+[2016.05.02-19.32.52:552][777]LogClass: Function GetNumLeafs is new.
+[2016.05.02-19.32.52:552][777]LogClass: Function GetNumTrees is new.
+[2016.05.02-19.32.52:552][777]LogClass: Function GetPositions is new.
+[2016.05.02-19.32.52:552][777]LogClass: Function hillClimb is new.
+[2016.05.02-19.32.52:552][777]LogClass: Function init is new.
+[2016.05.02-19.32.52:552][777]LogClass: Function introduceRandomDNA is new.
+[2016.05.02-19.32.52:552][777]LogClass: Function setMode is new.
+[2016.05.02-19.32.52:552][777]LogClass: Function setSun is new.
+[2016.05.02-19.32.52:552][777]LogClass: Function SetValues is new.
+[2016.05.02-19.32.52:552][777]LogClass: Function simulationTick is new.
+[2016.05.02-19.32.52:552][777]LogClass: Function writeHistoryToFile is new.
+[2016.05.02-19.32.52:556][777]LogHotReload: Re-instancing Tree after hot-reload.
+[2016.05.02-19.32.52:798][777]LogHotReload: Re-instancing SimLogic after hot-reload.
+[2016.05.02-19.32.53:020][777]LogContentBrowser: Native class hierarchy updated for 'TreeEvolution' in 0.0012 seconds. Added 5 classes and 2 folders.
+[2016.05.02-19.32.53:021][777]Warning: HotReload successful (0 functions remapped  0 scriptstructs remapped)
+[2016.05.02-19.32.53:111][777]LogContentBrowser: Native class hierarchy populated in 0.0086 seconds. Added 1986 classes and 351 folders.
+[2016.05.02-19.32.53:158][777]Warning: HotReload took 122.8s.
+[2016.05.02-19.42.52:109][770]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.05.02-19.42.52:109][770]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2016.05.02-19.42.52:157][770]PIE: New page: PIE session: Minimal_Default (May 2, 2016, 10:42:52 PM)
+[2016.05.02-19.42.52:167][770]LogPlayLevel: Creating play world package: /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default
+[2016.05.02-19.42.52:528][770]LogPlayLevel: PIE: StaticDuplicateObject took: (0.360451s)
+[2016.05.02-19.42.52:528][770]LogAIModule: Creating AISystem for world Minimal_Default
+[2016.05.02-19.42.52:528][770]LogPlayLevel: PIE: World Init took: (0.000639s)
+[2016.05.02-19.42.52:529][770]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/StarterContent/Maps/Minimal_Default.Minimal_Default to /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default (0.371090s)
+[2016.05.02-19.42.52:557][770]LogInit: XAudio2 using 'Digitalt ljud (S/PDIF) (High Definition Audio Device)' : 2 channels at 48 kHz using 16 bits per sample (channel mask 0x3)
+[2016.05.02-19.42.52:562][770]LogInit: FAudioDevice initialized.
+[2016.05.02-19.42.52:698][770]LogWorld: Game class is 'simGameMode_C'
+[2016.05.02-19.42.52:861][770]LogWorld: Bringing World /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default up for play (max tick rate 0) at 2016.05.02-21.42.52
+[2016.05.02-19.42.52:890][770]LogWorld: Bringing up level for play took: 0.031234
+[2016.05.02-19.42.53:064][770]LogContentBrowser: Native class hierarchy updated for 'MovieSceneCapture' in 0.0011 seconds. Added 9 classes and 0 folders.
+[2016.05.02-19.42.53:190][770]PIE: Info Play in editor start time for /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default 0.913
+[2016.05.02-19.42.53:190][770]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.05.02-19.43.01:721][587]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.05.02-19.43.01:911][587]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2016.05.02-19.43.04:690][765]LogContentBrowser: Native class hierarchy updated for 'BlueprintGraph' in 0.0015 seconds. Added 108 classes and 0 folders.
+[2016.05.02-19.45.00:831][411]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/mainGUI" FILE="../../../../../../Users/Tothema/Desktop/TreeEvolution/EvolutionTree 4.11/Content/mainGUI.uasset" SILENT=true
+[2016.05.02-19.45.42:489][411]LogSavePackage:Warning: 
+Referencers of Class /Engine/Transient.HOTRELOADED_SimLogic_1:
+[2016.05.02-19.45.42:556][411]LogSavePackage:Warning: 	Function /Game/mainGUI.mainGUI_C:ExecuteUbergraph_mainGUI (3 refs)
+[2016.05.02-19.45.42:557][411]LogSavePackage:Warning: 	Function /Game/mainGUI.mainGUI_C:updateText (2 refs)
+[2016.05.02-19.45.42:557][411]LogSavePackage:Warning: 	Function /Game/mainGUI.mainGUI_C:pushUpdateTree (1 refs)
+[2016.05.02-19.45.42:557][411]LogSavePackage:Warning: 	Function /Game/mainGUI.mainGUI_C:pullTreeInfo (3 refs)
+[2016.05.02-19.45.42:557][411]LogSavePackage:Warning: 
+Referencers of Package /Engine/Transient:
+[2016.05.02-19.45.44:166][411]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/mainGUI" FILE="../../../../../../Users/Tothema/Desktop/TreeEvolution/EvolutionTree 4.11/Content/mainGUI.uasset" SILENT=true
+[2016.05.02-19.45.45:449][411]LogSavePackage:Warning: 
+Referencers of Class /Engine/Transient.HOTRELOADED_SimLogic_1:
+[2016.05.02-19.45.45:501][411]LogSavePackage:Warning: 	Function /Game/mainGUI.mainGUI_C:ExecuteUbergraph_mainGUI (3 refs)
+[2016.05.02-19.45.45:501][411]LogSavePackage:Warning: 	Function /Game/mainGUI.mainGUI_C:updateText (2 refs)
+[2016.05.02-19.45.45:501][411]LogSavePackage:Warning: 	Function /Game/mainGUI.mainGUI_C:pushUpdateTree (1 refs)
+[2016.05.02-19.45.45:501][411]LogSavePackage:Warning: 	Function /Game/mainGUI.mainGUI_C:pullTreeInfo (3 refs)
+[2016.05.02-19.45.45:501][411]LogSavePackage:Warning: 
+Referencers of Package /Engine/Transient:
+[2016.05.02-19.45.46:062][411]EditorErrors: New page: Save Output
+[2016.05.02-19.45.46:062][411]EditorErrors:Warning: Warning Can't save ../../../../../../Users/Tothema/Desktop/TreeEvolution/EvolutionTree 4.11/Content/mainGUI.uasset: Graph is linked to external private object Class /Engine/Transient.HOTRELOADED_SimLogic_1 (unknown property ref)
+[2016.05.02-19.45.46:062][411]EditorErrors:Warning: Warning Can't save ../../../../../../Users/Tothema/Desktop/TreeEvolution/EvolutionTree 4.11/Content/mainGUI.uasset: Graph is linked to external private object Class /Engine/Transient.HOTRELOADED_SimLogic_1 (unknown property ref)
+[2016.05.02-19.45.49:249][578]LogFileHelpers: Editor autosave (incl. sublevels) for '/Game/StarterContent/Maps/Minimal_Default' took 0.016
+[2016.05.02-19.45.49:269][578]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/mainGUI] ([1] browsable assets)...
+[2016.05.02-19.45.49:269][578]OBJ SavePackage: Finished generating thumbnails for package [/Game/mainGUI]
+[2016.05.02-19.45.49:269][578]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/mainGUI" FILE="../../../../../../Users/Tothema/Desktop/TreeEvolution/EvolutionTree 4.11/Saved/Autosaves/Game/mainGUI_Auto1.uasset" SILENT=false AUTOSAVING=true
+[2016.05.02-19.45.50:795][578]LogSavePackage:Warning: 
+Referencers of Class /Engine/Transient.HOTRELOADED_SimLogic_1:
+[2016.05.02-19.45.50:846][578]LogSavePackage:Warning: 	Function /Game/mainGUI.mainGUI_C:ExecuteUbergraph_mainGUI (3 refs)
+[2016.05.02-19.45.50:846][578]LogSavePackage:Warning: 	Function /Game/mainGUI.mainGUI_C:updateText (2 refs)
+[2016.05.02-19.45.50:846][578]LogSavePackage:Warning: 	Function /Game/mainGUI.mainGUI_C:pushUpdateTree (1 refs)
+[2016.05.02-19.45.50:846][578]LogSavePackage:Warning: 	Function /Game/mainGUI.mainGUI_C:pullTreeInfo (3 refs)
+[2016.05.02-19.45.50:846][578]LogSavePackage:Warning: 
+Referencers of Package /Engine/Transient:
+[2016.05.02-19.45.50:942][578]Warning: Can't save ../../../../../../Users/Tothema/Desktop/TreeEvolution/EvolutionTree 4.11/Saved/Autosaves/Game/mainGUI_Auto1.uasset: Graph is linked to external private object Class /Engine/Transient.HOTRELOADED_SimLogic_1 (unknown property ref)
+[2016.05.02-19.45.54:067][880]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/mainGUI" FILE="../../../../../../Users/Tothema/Desktop/TreeEvolution/EvolutionTree 4.11/Content/mainGUI.uasset" SILENT=true
+[2016.05.02-19.45.55:778][880]LogSavePackage:Warning: 
+Referencers of Class /Engine/Transient.HOTRELOADED_SimLogic_1:
+[2016.05.02-19.45.55:831][880]LogSavePackage:Warning: 	Function /Game/mainGUI.mainGUI_C:ExecuteUbergraph_mainGUI (3 refs)
+[2016.05.02-19.45.55:831][880]LogSavePackage:Warning: 	Function /Game/mainGUI.mainGUI_C:updateText (2 refs)
+[2016.05.02-19.45.55:831][880]LogSavePackage:Warning: 	Function /Game/mainGUI.mainGUI_C:pushUpdateTree (1 refs)
+[2016.05.02-19.45.55:831][880]LogSavePackage:Warning: 	Function /Game/mainGUI.mainGUI_C:pullTreeInfo (3 refs)
+[2016.05.02-19.45.55:831][880]LogSavePackage:Warning: 
+Referencers of Package /Engine/Transient:
+[2016.05.02-19.45.56:754][880]EditorErrors: New page: Save Output
+[2016.05.02-19.45.56:754][880]EditorErrors:Warning: Warning Can't save ../../../../../../Users/Tothema/Desktop/TreeEvolution/EvolutionTree 4.11/Content/mainGUI.uasset: Graph is linked to external private object Class /Engine/Transient.HOTRELOADED_SimLogic_1 (unknown property ref)
+[2016.05.02-19.46.00:556][ 28]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/mainGUI" FILE="../../../../../../Users/Tothema/Desktop/TreeEvolution/EvolutionTree 4.11/Content/mainGUI.uasset" SILENT=true
+[2016.05.02-19.46.01:701][ 28]LogSavePackage:Warning: 
+Referencers of Class /Engine/Transient.HOTRELOADED_SimLogic_1:
+[2016.05.02-19.46.01:756][ 28]LogSavePackage:Warning: 	Function /Game/mainGUI.mainGUI_C:ExecuteUbergraph_mainGUI (3 refs)
+[2016.05.02-19.46.01:756][ 28]LogSavePackage:Warning: 	Function /Game/mainGUI.mainGUI_C:updateText (2 refs)
+[2016.05.02-19.46.01:756][ 28]LogSavePackage:Warning: 	Function /Game/mainGUI.mainGUI_C:pushUpdateTree (1 refs)
+[2016.05.02-19.46.01:756][ 28]LogSavePackage:Warning: 	Function /Game/mainGUI.mainGUI_C:pullTreeInfo (3 refs)
+[2016.05.02-19.46.01:756][ 28]LogSavePackage:Warning: 
+Referencers of Package /Engine/Transient:
+[2016.05.02-19.46.02:640][ 28]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/mainGUI" FILE="../../../../../../Users/Tothema/Desktop/TreeEvolution/EvolutionTree 4.11/Content/mainGUI.uasset" SILENT=true
+[2016.05.02-19.46.03:612][ 28]LogSavePackage:Warning: 
+Referencers of Class /Engine/Transient.HOTRELOADED_SimLogic_1:
+[2016.05.02-19.46.03:668][ 28]LogSavePackage:Warning: 	Function /Game/mainGUI.mainGUI_C:ExecuteUbergraph_mainGUI (3 refs)
+[2016.05.02-19.46.03:668][ 28]LogSavePackage:Warning: 	Function /Game/mainGUI.mainGUI_C:updateText (2 refs)
+[2016.05.02-19.46.03:668][ 28]LogSavePackage:Warning: 	Function /Game/mainGUI.mainGUI_C:pushUpdateTree (1 refs)
+[2016.05.02-19.46.03:668][ 28]LogSavePackage:Warning: 	Function /Game/mainGUI.mainGUI_C:pullTreeInfo (3 refs)
+[2016.05.02-19.46.03:668][ 28]LogSavePackage:Warning: 
+Referencers of Package /Engine/Transient:
+[2016.05.02-19.46.04:244][ 28]EditorErrors: New page: Save Output
+[2016.05.02-19.46.04:244][ 28]EditorErrors:Warning: Warning Can't save ../../../../../../Users/Tothema/Desktop/TreeEvolution/EvolutionTree 4.11/Content/mainGUI.uasset: Graph is linked to external private object Class /Engine/Transient.HOTRELOADED_SimLogic_1 (unknown property ref)
+[2016.05.02-19.46.04:244][ 28]EditorErrors:Warning: Warning Can't save ../../../../../../Users/Tothema/Desktop/TreeEvolution/EvolutionTree 4.11/Content/mainGUI.uasset: Graph is linked to external private object Class /Engine/Transient.HOTRELOADED_SimLogic_1 (unknown property ref)
+[2016.05.02-19.46.08:754][269]Cmd: QUIT_EDITOR
+[2016.05.02-19.46.09:222][269]LogExit: Preparing to exit.
+[2016.05.02-19.46.10:997][269]LogExit: Editor shut down
+[2016.05.02-19.46.10:997][269]LogExit: Transaction tracking system shut down
+[2016.05.02-19.46.14:245][269]LogObj: Freed 0b from 0 cluster array pools.
+[2016.05.02-19.46.14:245][269]LogExit: Object subsystem successfully closed.
+[2016.05.02-19.46.14:673][269]LogD3D11RHI: Shutdown
+[2016.05.02-19.46.14:673][269]LogD3D11RHI: CleanupD3DDevice
+[2016.05.02-19.46.14:993][269]LogD3D11RHI: ~FD3D11DynamicRHI
+[2016.05.02-19.46.15:121][269]LogDerivedDataCache: Shutdown
+[2016.05.02-19.46.16:998][269]LogModuleManager: Shutting down and abandoning module SequencerWidgets (207)
+[2016.05.02-19.46.16:998][269]LogModuleManager: Shutting down and abandoning module BlueprintGraph (206)
+[2016.05.02-19.46.16:998][269]LogModuleManager: Shutting down and abandoning module MovieSceneCapture (205)
+[2016.05.02-19.46.17:036][269]LogModuleManager: Shutting down and abandoning module HierarchicalLODOutliner (204)
+[2016.05.02-19.46.17:049][269]LogModuleManager: Shutting down and abandoning module CrashTracker (203)
+[2016.05.02-19.46.17:049][269]LogModuleManager: Shutting down and abandoning module SceneOutliner (202)
+[2016.05.02-19.46.17:072][269]LogModuleManager: Shutting down and abandoning module SuperSearch (201)
+[2016.05.02-19.46.17:072][269]LogModuleManager: Shutting down and abandoning module WidgetCarousel (200)
+[2016.05.02-19.46.17:072][269]LogModuleManager: Shutting down and abandoning module AddContentDialog (199)
+[2016.05.02-19.46.17:090][269]LogModuleManager: Shutting down and abandoning module GameplayTags (198)
+[2016.05.02-19.46.17:090][269]LogModuleManager: Shutting down and abandoning module EditorWidgets (197)
+[2016.05.02-19.46.17:090][269]LogModuleManager: Shutting down and abandoning module CollectionManager (196)
+[2016.05.02-19.46.17:122][269]LogModuleManager: Shutting down and abandoning module StatsViewer (195)
+[2016.05.02-19.46.17:142][269]LogModuleManager: Shutting down and abandoning module FoliageEdit (194)
+[2016.05.02-19.46.17:199][269]LogModuleManager: Shutting down and abandoning module LandscapeEditor (193)
+[2016.05.02-19.46.17:280][269]LogModuleManager: Shutting down and abandoning module ActorPickerMode (192)
+[2016.05.02-19.46.17:281][269]LogModuleManager: Shutting down and abandoning module GeometryMode (191)
+[2016.05.02-19.46.17:281][269]LogModuleManager: Shutting down and abandoning module TextureAlignMode (190)
+[2016.05.02-19.46.17:281][269]LogModuleManager: Shutting down and abandoning module BspMode (189)
+[2016.05.02-19.46.17:281][269]LogModuleManager: Shutting down and abandoning module PlacementMode (188)
+[2016.05.02-19.46.17:281][269]LogModuleManager: Shutting down and abandoning module AutomationWorker (187)
+[2016.05.02-19.46.17:281][269]LogModuleManager: Shutting down and abandoning module CharacterAI (186)
+[2016.05.02-19.46.17:281][269]LogModuleManager: Shutting down and abandoning module SmartSnapping (185)
+[2016.05.02-19.46.17:281][269]LogModuleManager: Shutting down and abandoning module ViewportSnapping (184)
+[2016.05.02-19.46.17:281][269]LogModuleManager: Shutting down and abandoning module LogVisualizer (183)
+[2016.05.02-19.46.17:352][269]LogModuleManager: Shutting down and abandoning module GameProjectGeneration (182)
+[2016.05.02-19.46.17:384][269]LogModuleManager: Shutting down and abandoning module IntroTutorials (181)
+[2016.05.02-19.46.17:413][269]LogModuleManager: Shutting down and abandoning module EditorLiveStreaming (180)
+[2016.05.02-19.46.17:413][269]LogModuleManager: Shutting down and abandoning module IOSPlatformEditor (179)
+[2016.05.02-19.46.17:442][269]LogModuleManager: Shutting down and abandoning module HTML5PlatformEditor (178)
+[2016.05.02-19.46.17:442][269]LogModuleManager: Shutting down and abandoning module AndroidDeviceDetection (177)
+[2016.05.02-19.46.17:526][269]LogModuleManager: Shutting down and abandoning module AndroidPlatformEditor (176)
+[2016.05.02-19.46.17:526][269]LogModuleManager: Shutting down and abandoning module IOSRuntimeSettings (175)
+[2016.05.02-19.46.17:526][269]LogModuleManager: Shutting down and abandoning module AndroidRuntimeSettings (174)
+[2016.05.02-19.46.17:526][269]LogModuleManager: Shutting down and abandoning module MergeActors (173)
+[2016.05.02-19.46.17:721][269]LogModuleManager: Shutting down and abandoning module SizeMap (172)
+[2016.05.02-19.46.17:736][269]LogModuleManager: Shutting down and abandoning module TreeMap (171)
+[2016.05.02-19.46.17:766][269]LogModuleManager: Shutting down and abandoning module ReferenceViewer (170)
+[2016.05.02-19.46.17:776][269]LogModuleManager: Shutting down and abandoning module LocalizationService (169)
+[2016.05.02-19.46.17:873][269]LogModuleManager: Shutting down and abandoning module LocalizationDashboard (168)
+[2016.05.02-19.46.17:914][269]LogModuleManager: Shutting down and abandoning module HardwareTargeting (167)
+[2016.05.02-19.46.17:914][269]LogModuleManager: Shutting down and abandoning module DeviceProfileEditor (166)
+[2016.05.02-19.46.17:940][269]LogModuleManager: Shutting down and abandoning module UndoHistory (165)
+[2016.05.02-19.46.17:962][269]LogModuleManager: Shutting down and abandoning module UserFeedback (164)
+[2016.05.02-19.46.17:962][269]LogModuleManager: Shutting down and abandoning module XmlParser (163)
+[2016.05.02-19.46.17:975][269]LogModuleManager: Shutting down and abandoning module Blutility (162)
+[2016.05.02-19.46.17:993][269]LogModuleManager: Shutting down and abandoning module ProjectTargetPlatformEditor (161)
+[2016.05.02-19.46.17:994][269]LogModuleManager: Shutting down and abandoning module ProjectSettingsViewer (160)
+[2016.05.02-19.46.17:994][269]LogModuleManager: Shutting down and abandoning module InputBindingEditor (159)
+[2016.05.02-19.46.18:118][269]LogModuleManager: Shutting down and abandoning module EditorSettingsViewer (158)
+[2016.05.02-19.46.18:118][269]LogModuleManager: Shutting down and abandoning module SettingsEditor (157)
+[2016.05.02-19.46.18:177][269]LogModuleManager: Shutting down and abandoning module ProjectLauncher (156)
+[2016.05.02-19.46.18:216][269]LogModuleManager: Shutting down and abandoning module SessionFrontend (155)
+[2016.05.02-19.46.18:234][269]LogModuleManager: Shutting down and abandoning module ProfilerClient (154)
+[2016.05.02-19.46.18:267][269]LogModuleManager: Shutting down and abandoning module TargetDeviceServices (153)
+[2016.05.02-19.46.18:267][269]LogModuleManager: Shutting down and abandoning module DeviceManager (152)
+[2016.05.02-19.46.18:421][269]LogModuleManager: Shutting down and abandoning module AutomationController (151)
+[2016.05.02-19.46.18:710][269]LogModuleManager: Shutting down and abandoning module AutomationWindow (150)
+[2016.05.02-19.46.18:822][269]LogModuleManager: Shutting down and abandoning module Layers (149)
+[2016.05.02-19.46.18:917][269]LogModuleManager: Shutting down and abandoning module ComponentVisualizers (148)
+[2016.05.02-19.46.18:917][269]LogModuleManager: Shutting down and abandoning module DetailCustomizations (147)
+[2016.05.02-19.46.18:972][269]LogModuleManager: Shutting down and abandoning module PackagesDialog (146)
+[2016.05.02-19.46.18:972][269]LogModuleManager: Shutting down and abandoning module Persona (145)
+[2016.05.02-19.46.19:100][269]LogModuleManager: Shutting down and abandoning module Kismet (144)
+[2016.05.02-19.46.19:106][269]LogModuleManager: Shutting down and abandoning module GraphEditor (143)
+[2016.05.02-19.46.19:106][269]LogModuleManager: Shutting down and abandoning module ClassViewer (142)
+[2016.05.02-19.46.19:199][269]LogModuleManager: Shutting down and abandoning module Toolbox (141)
+[2016.05.02-19.46.19:361][269]LogModuleManager: Shutting down and abandoning module ModuleUI (140)
+[2016.05.02-19.46.19:375][269]LogModuleManager: Shutting down and abandoning module MovieSceneTools (139)
+[2016.05.02-19.46.19:375][269]LogModuleManager: Shutting down and abandoning module OutputLog (138)
+[2016.05.02-19.46.19:447][269]LogModuleManager: Shutting down and abandoning module GammaUI (137)
+[2016.05.02-19.46.19:463][269]LogModuleManager: Shutting down and abandoning module Documentation (136)
+[2016.05.02-19.46.19:463][269]LogModuleManager: Shutting down and abandoning module StreamingPauseRendering (135)
+[2016.05.02-19.46.19:463][269]LogModuleManager: Shutting down and abandoning module AnalyticsET (134)
+[2016.05.02-19.46.19:463][269]LogModuleManager: Shutting down and abandoning module Analytics (133)
+[2016.05.02-19.46.19:463][269]LogModuleManager: Shutting down and abandoning module PortalServices (132)
+[2016.05.02-19.46.19:463][269]LogModuleManager: Shutting down and abandoning module PortalRpc (131)
+[2016.05.02-19.46.19:463][269]LogModuleManager: Shutting down and abandoning module MessagingRpc (130)
+[2016.05.02-19.46.19:463][269]LogModuleManager: Shutting down and abandoning module AITestSuite (129)
+[2016.05.02-19.46.19:478][269]LogModuleManager: Shutting down and abandoning module GameplayDebugger (128)
+[2016.05.02-19.46.19:484][269]LogModuleManager: Shutting down and abandoning module AIModule (127)
+[2016.05.02-19.46.19:484][269]LogModuleManager: Shutting down and abandoning module ProfilerService (126)
+[2016.05.02-19.46.19:721][269]LogModuleManager: Shutting down and abandoning module TaskGraph (125)
+[2016.05.02-19.46.19:824][269]LogModuleManager: Shutting down and abandoning module SlateRemote (124)
+[2016.05.02-19.46.19:824][269]LogModuleManager: Shutting down and abandoning module SteamVRController (123)
+[2016.05.02-19.46.19:824][269]LogModuleManager: Shutting down and abandoning module SteamVR (122)
+[2016.05.02-19.46.19:824][269]LogModuleManager: Shutting down and abandoning module ProceduralMeshComponent (121)
+[2016.05.02-19.46.19:824][269]LogModuleManager: Shutting down and abandoning module OculusLibrary (120)
+[2016.05.02-19.46.19:824][269]LogModuleManager: Shutting down and abandoning module OculusInput (119)
+[2016.05.02-19.46.19:824][269]LogModuleManager: Shutting down and abandoning module CustomMeshComponent (118)
+[2016.05.02-19.46.19:824][269]LogModuleManager: Shutting down and abandoning module CableComponent (117)
+[2016.05.02-19.46.19:824][269]LogModuleManager: Shutting down and abandoning module ArchVisCharacter (116)
+[2016.05.02-19.46.19:824][269]LogModuleManager: Shutting down and abandoning module MediaPlayerEditor (115)
+[2016.05.02-19.46.19:903][269]LogModuleManager: Shutting down and abandoning module HTML5Networking (114)
+[2016.05.02-19.46.19:903][269]LogModuleManager: Shutting down and abandoning module SpeedTreeImporter (113)
+[2016.05.02-19.46.19:903][269]LogModuleManager: Shutting down and abandoning module PluginBrowser (112)
+[2016.05.02-19.46.20:092][269]LogModuleManager: Shutting down and abandoning module EpicSurvey (111)
+[2016.05.02-19.46.20:114][269]LogModuleManager: Shutting down and abandoning module DesktopPlatform (110)
+[2016.05.02-19.46.21:702][269]LogModuleManager: Shutting down and abandoning module VisualStudioSourceCodeAccess (109)
+[2016.05.02-19.46.21:702][269]LogModuleManager: Shutting down and abandoning module UObjectPlugin (108)
+[2016.05.02-19.46.21:702][269]LogModuleManager: Shutting down and abandoning module SubversionSourceControl (107)
+[2016.05.02-19.46.21:718][269]LogModuleManager: Shutting down and abandoning module PerforceSourceControl (106)
+[2016.05.02-19.46.21:775][269]LogModuleManager: Shutting down and abandoning module SourceControl (105)
+[2016.05.02-19.46.21:834][269]LogModuleManager: Shutting down and abandoning module GitSourceControl (104)
+[2016.05.02-19.46.23:015][269]LogModuleManager: Shutting down and abandoning module LightPropagationVolumeEditor (103)
+[2016.05.02-19.46.23:015][269]LogModuleManager: Shutting down and abandoning module PaperTiledImporter (102)
+[2016.05.02-19.46.23:053][269]LogModuleManager: Shutting down and abandoning module PaperSpriteSheetImporter (101)
+[2016.05.02-19.46.23:053][269]LogModuleManager: Shutting down and abandoning module MeshPaint (100)
+[2016.05.02-19.46.23:083][269]LogModuleManager: Shutting down and abandoning module HotReload (99)
+[2016.05.02-19.46.23:120][269]LogModuleManager: Shutting down and abandoning module MainFrame (98)
+[2016.05.02-19.46.23:120][269]LogModuleManager: Shutting down and abandoning module LevelEditor (97)
+[2016.05.02-19.46.23:140][269]LogModuleManager: Shutting down and abandoning module DirectoryWatcher (96)
+[2016.05.02-19.46.23:140][269]LogModuleManager: Shutting down and abandoning module AssetRegistry (95)
+[2016.05.02-19.46.23:439][269]LogModuleManager: Shutting down and abandoning module ContentBrowser (94)
+[2016.05.02-19.46.23:440][269]LogModuleManager: Shutting down and abandoning module Paper2DEditor (93)
+[2016.05.02-19.46.23:465][269]LogModuleManager: Shutting down and abandoning module TreeEvolution (92)
+[2016.05.02-19.46.23:465][269]LogModuleManager: Shutting down and abandoning module UdpMessaging (91)
+[2016.05.02-19.46.23:565][269]LogModuleManager: Shutting down and abandoning module LightPropagationVolumeRuntime (90)
+[2016.05.02-19.46.23:565][269]LogModuleManager: Shutting down and abandoning module Paper2D (89)
+[2016.05.02-19.46.23:606][269]LogModuleManager: Shutting down and abandoning module WindowsMoviePlayer (88)
+[2016.05.02-19.46.23:606][269]LogModuleManager: Shutting down and abandoning module Media (87)
+[2016.05.02-19.46.23:606][269]LogModuleManager: Shutting down and abandoning module WmfMedia (86)
+[2016.05.02-19.46.23:649][269]LogModuleManager: Shutting down and abandoning module GameLiveStreaming (85)
+[2016.05.02-19.46.23:649][269]LogModuleManager: Shutting down and abandoning module GameplayTagsEditor (84)
+[2016.05.02-19.46.23:649][269]LogModuleManager: Shutting down and abandoning module OnlineBlueprintSupport (83)
+[2016.05.02-19.46.23:649][269]LogModuleManager: Shutting down and abandoning module GameplayTasksEditor (82)
+[2016.05.02-19.46.23:649][269]LogModuleManager: Shutting down and abandoning module PropertyEditor (81)
+[2016.05.02-19.46.23:677][269]LogModuleManager: Shutting down and abandoning module BehaviorTreeEditor (80)
+[2016.05.02-19.46.23:698][269]LogModuleManager: Shutting down and abandoning module FunctionalTesting (79)
+[2016.05.02-19.46.23:698][269]LogModuleManager: Shutting down and abandoning module CollisionAnalyzer (78)
+[2016.05.02-19.46.23:772][269]LogModuleManager: Shutting down and abandoning module WorkspaceMenuStructure (77)
+[2016.05.02-19.46.23:772][269]LogModuleManager: Shutting down and abandoning module MessageLog (76)
+[2016.05.02-19.46.23:772][269]LogModuleManager: Shutting down and abandoning module Sequencer (75)
+[2016.05.02-19.46.23:772][269]LogModuleManager: Shutting down and abandoning module AssetTools (74)
+[2016.05.02-19.46.23:838][269]LogModuleManager: Shutting down and abandoning module UMGEditor (73)
+[2016.05.02-19.46.23:838][269]LogModuleManager: Shutting down and abandoning module UMG (72)
+[2016.05.02-19.46.23:838][269]LogModuleManager: Shutting down and abandoning module SlateReflector (71)
+[2016.05.02-19.46.23:874][269]LogModuleManager: Shutting down and abandoning module Slate (70)
+[2016.05.02-19.46.23:874][269]LogModuleManager: Shutting down and abandoning module EditorStyle (69)
+[2016.05.02-19.46.23:876][269]LogModuleManager: Shutting down and abandoning module SessionServices (68)
+[2016.05.02-19.46.23:876][269]LogModuleManager: Shutting down and abandoning module SourceCodeAccess (67)
+[2016.05.02-19.46.23:876][269]LogModuleManager: Shutting down and abandoning module HeadMountedDisplay (66)
+[2016.05.02-19.46.23:876][269]LogModuleManager: Shutting down and abandoning module XAudio2 (65)
+[2016.05.02-19.46.23:876][269]LogModuleManager: Shutting down and abandoning module Networking (63)
+[2016.05.02-19.46.23:876][269]LogModuleManager: Shutting down and abandoning module Core (62)
+[2016.05.02-19.46.23:876][269]LogModuleManager: Shutting down and abandoning module KismetCompiler (61)
+[2016.05.02-19.46.23:895][269]LogModuleManager: Shutting down and abandoning module PhysXFormats (60)
+[2016.05.02-19.46.23:919][269]LogModuleManager: Shutting down and abandoning module MeshUtilities (59)
+[2016.05.02-19.46.23:938][269]LogModuleManager: Shutting down and abandoning module CookingStats (58)
+[2016.05.02-19.46.23:938][269]LogModuleManager: Shutting down and abandoning module DerivedDataCache (57)
+[2016.05.02-19.46.23:938][269]LogDerivedDataCache: Shutdown
+[2016.05.02-19.46.23:938][269]LogModuleManager: Shutting down and abandoning module ShaderFormatOpenGL (56)
+[2016.05.02-19.46.23:983][269]LogModuleManager: Shutting down and abandoning module ShaderFormatD3D (55)
+[2016.05.02-19.46.24:018][269]LogModuleManager: Shutting down and abandoning module MetalShaderFormat (54)
+[2016.05.02-19.46.24:045][269]LogModuleManager: Shutting down and abandoning module TextureFormatUncompressed (53)
+[2016.05.02-19.46.24:046][269]LogModuleManager: Shutting down and abandoning module TextureFormatPVR (52)
+[2016.05.02-19.46.24:060][269]LogModuleManager: Shutting down and abandoning module TextureFormatIntelISPCTexComp (51)
+[2016.05.02-19.46.24:068][269]LogModuleManager: Shutting down and abandoning module TextureFormatDXT (50)
+[2016.05.02-19.46.24:069][269]LogModuleManager: Shutting down and abandoning module ImageWrapper (49)
+[2016.05.02-19.46.24:069][269]LogModuleManager: Shutting down and abandoning module TextureFormatASTC (48)
+[2016.05.02-19.46.24:069][269]LogModuleManager: Shutting down and abandoning module TextureFormatAndroid (47)
+[2016.05.02-19.46.24:069][269]LogModuleManager: Shutting down and abandoning module AudioFormatOpus (46)
+[2016.05.02-19.46.24:103][269]LogModuleManager: Shutting down and abandoning module AudioFormatOgg (45)
+[2016.05.02-19.46.24:160][269]LogModuleManager: Shutting down and abandoning module AudioFormatADPCM (44)
+[2016.05.02-19.46.24:166][269]LogModuleManager: Shutting down and abandoning module LinuxTargetPlatform (43)
+[2016.05.02-19.46.24:166][269]LogModuleManager: Shutting down and abandoning module LinuxServerTargetPlatform (42)
+[2016.05.02-19.46.24:175][269]LogModuleManager: Shutting down and abandoning module LinuxNoEditorTargetPlatform (41)
+[2016.05.02-19.46.24:193][269]LogModuleManager: Shutting down and abandoning module TVOSTargetPlatform (40)
+[2016.05.02-19.46.24:193][269]LogModuleManager: Shutting down and abandoning module Messaging (39)
+[2016.05.02-19.46.24:193][269]LogModuleManager: Shutting down and abandoning module IOSTargetPlatform (38)
+[2016.05.02-19.46.24:193][269]LogModuleManager: Shutting down and abandoning module HTML5TargetPlatform (37)
+[2016.05.02-19.46.24:193][269]LogModuleManager: Shutting down and abandoning module Android_PVRTCTargetPlatform (36)
+[2016.05.02-19.46.24:194][269]LogModuleManager: Shutting down and abandoning module Android_MultiTargetPlatform (35)
+[2016.05.02-19.46.24:203][269]LogModuleManager: Shutting down and abandoning module Android_ETC2TargetPlatform (34)
+[2016.05.02-19.46.24:203][269]LogModuleManager: Shutting down and abandoning module Android_ETC1TargetPlatform (33)
+[2016.05.02-19.46.24:203][269]LogModuleManager: Shutting down and abandoning module Android_DXTTargetPlatform (32)
+[2016.05.02-19.46.24:203][269]LogModuleManager: Shutting down and abandoning module Android_ATCTargetPlatform (31)
+[2016.05.02-19.46.24:203][269]LogModuleManager: Shutting down and abandoning module Android_ASTCTargetPlatform (30)
+[2016.05.02-19.46.24:203][269]LogModuleManager: Shutting down and abandoning module AndroidTargetPlatform (29)
+[2016.05.02-19.46.24:203][269]LogModuleManager: Shutting down and abandoning module WindowsTargetPlatform (28)
+[2016.05.02-19.46.24:203][269]LogModuleManager: Shutting down and abandoning module WindowsServerTargetPlatform (27)
+[2016.05.02-19.46.24:209][269]LogModuleManager: Shutting down and abandoning module WindowsNoEditorTargetPlatform (26)
+[2016.05.02-19.46.24:218][269]LogModuleManager: Shutting down and abandoning module WindowsClientTargetPlatform (25)
+[2016.05.02-19.46.24:223][269]LogModuleManager: Shutting down and abandoning module AllDesktopTargetPlatform (24)
+[2016.05.02-19.46.24:223][269]LogModuleManager: Shutting down and abandoning module TargetPlatform (23)
+[2016.05.02-19.46.24:223][269]LogModuleManager: Shutting down and abandoning module InputCore (22)
+[2016.05.02-19.46.24:223][269]LogModuleManager: Shutting down and abandoning module Settings (21)
+[2016.05.02-19.46.24:223][269]LogModuleManager: Shutting down and abandoning module OnlineSubsystem (19)
+[2016.05.02-19.46.24:223][269]LogModuleManager: Shutting down and abandoning module HTTP (18)
+[2016.05.02-19.46.25:223][269]LogModuleManager: Shutting down and abandoning module XMPP (17)
+[2016.05.02-19.46.25:341][269]LogModuleManager: Shutting down and abandoning module OculusRift (16)
+[2016.05.02-19.46.25:378][269]LogModuleManager: Shutting down and abandoning module ExampleDeviceProfileSelector (15)
+[2016.05.02-19.46.25:378][269]LogModuleManager: Shutting down and abandoning module TextureCompressor (14)
+[2016.05.02-19.46.25:378][269]LogModuleManager: Shutting down and abandoning module ShaderCore (13)
+[2016.05.02-19.46.25:378][269]LogModuleManager: Shutting down and abandoning module Landscape (12)
+[2016.05.02-19.46.25:378][269]LogModuleManager: Shutting down and abandoning module SlateRHIRenderer (11)
+[2016.05.02-19.46.25:423][269]LogModuleManager: Shutting down and abandoning module OpenGLDrv (10)
+[2016.05.02-19.46.25:560][269]LogModuleManager: Shutting down and abandoning module D3D11RHI (9)
+[2016.05.02-19.46.25:560][269]LogModuleManager: Shutting down and abandoning module AnimGraphRuntime (8)
+[2016.05.02-19.46.25:560][269]LogModuleManager: Shutting down and abandoning module Renderer (7)
+[2016.05.02-19.46.25:560][269]LogModuleManager: Shutting down and abandoning module Engine (6)
+[2016.05.02-19.46.25:560][269]LogModuleManager: Shutting down and abandoning module CoreUObject (5)
+[2016.05.02-19.46.25:560][269]LogModuleManager: Shutting down and abandoning module NetworkFile (4)
+[2016.05.02-19.46.25:645][269]LogModuleManager: Shutting down and abandoning module StreamingFile (3)
+[2016.05.02-19.46.25:645][269]LogModuleManager: Shutting down and abandoning module SandboxFile (2)
+[2016.05.02-19.46.25:662][269]LogModuleManager: Shutting down and abandoning module PakFile (1)
+[2016.05.02-19.46.25:820][269]LogExit: Exiting.
+[2016.05.02-19.46.25:841][269]Log file closed, 05/02/16 21:46:25

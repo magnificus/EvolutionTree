@@ -10,8 +10,9 @@
 #include "Tree.generated.h"
 
 const int MODE_STRAIGHT = 0;
-const int MODE_HEMISPHERE = 1;
-const int MODE_STRAIGHT_HEMISPHERE = 2;
+const int MODE_MANUAL_DIRECTION = 1;
+const int MODE_SWEEP = 2;
+const int MODE_HEMISPHERE = 3;
 
 
 using namespace std;
@@ -41,15 +42,19 @@ public:
 		float calculateHits();
 
 	UFUNCTION(BlueprintCallable, Category = "Statistics")
+		float sweepHits();
+
+	UFUNCTION(BlueprintCallable, Category = "Statistics")
 		float hemisphereHits();
 
 	UFUNCTION(BlueprintCallable, Category = "Statistics")
-		float calculateHitsStraightAbove();
+		float manualDirectionHits();
 
 	UFUNCTION(BlueprintCallable, Category = "Statistics")
 		void exportTree();
 
-
+	UFUNCTION(BlueprintCallable, Category = "Statistics")
+		float calculateHitsStraightAbove();
 
 	UFUNCTION(BlueprintCallable, Category = "Mutation")
 		void mutate(bool reCalc);
@@ -99,6 +104,7 @@ public:
 	vector<int> getDependencies(ABranch* b);
 
 	void setAngles(float inTheta, float inPhi);
+	void setMode(int m);
 
 	void illustrateSun();
 
@@ -124,7 +130,7 @@ private:
 	TSubclassOf<class ABranch> Branch_BP;
 	TSubclassOf<class ALeaf> Leaf_BP;
 	TSubclassOf<class AActor> Sun_BP;
-	int mode = MODE_HEMISPHERE;
+	int mode = MODE_STRAIGHT;
 	float theta = 0.0;
 	float phi = 0.0;
 	FVector sunPos;

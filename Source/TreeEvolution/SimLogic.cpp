@@ -180,6 +180,14 @@ void ASimLogic::introduceRandomDNA() {
 	}
 }
 
+void ASimLogic::setMode(int m) {
+
+	for (ATree* t : trees) {
+		t->setMode(m);
+	}
+
+}
+
 void ASimLogic::setSun(float theta, float phi) {
 
 	for (ATree* t : trees) {
