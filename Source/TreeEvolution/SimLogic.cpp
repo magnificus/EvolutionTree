@@ -228,3 +228,8 @@ void ASimLogic::writeHistoryToFile() {
 	}
 
 }
+
+void ASimLogic::hillClimb() {
+	trees[0]->hillClimb();
+	simulationTick();
+}

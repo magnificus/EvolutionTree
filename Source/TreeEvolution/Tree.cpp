@@ -315,6 +315,7 @@ void ATree::cascadePositionUpdate(ABranch* b, int limit) {
 		if (newB->overlapsProps()) {
 
 			// new position was not good, overlapped with other actors, so displace the branch
+			newB->placedOn = NOT_PLACED;
 			displaceBranch(newB);
 			toRemove.Add(newB);
 		}
@@ -377,7 +378,7 @@ void ATree::mutate(bool reCalc) {
 	for (int i = 0; i < count1; ++i) {
 		int index = random.RandRange(0, leafs.Num() - 1);
 		float oldOffset = leafs[index]->branchOffset;
-		float newOffset = oldOffset + (random.FRand() / 2) - 1 / 4;
+		float newOffset = oldOffset + (random.FRand() / 4) - (1 / 8);
 		newOffset = newOffset > 1 ? 1 : newOffset;
 		newOffset = newOffset < 0 ? 0 : newOffset;
 		leafs[index]->branchOffset = newOffset;
@@ -495,6 +496,7 @@ void ATree::GetRandomPositionFor(ABranch* b, int recursiveLimit) {
 		//abandon if the branch overlaps 
 		if (b->placedOn != NOT_PLACED) {
 			branchDependencies[branches[b->placedOn]].Remove(b);
+			b->placedOn = NOT_PLACED;
 		}
 		GetRandomPositionFor(b, recursiveLimit);
 		return;
@@ -641,4 +643,100 @@ vector<int> ATree::getDependencies(ABranch* b) {
 		total.insert(total.end(), newV.begin(), newV.end());
 	}
 	return total;
+}
+
+void ATree::exportTree() {
+
+}
+
+void ATree::hillClimb() {
+	for (ABranch* b : branches) {
+		float currentBest = calculateHits();
+		FRotator pre = b->GetActorRotation();
+		FRotator best = pre;
+
+		// PITCH
+		testRotation(b, FRotator(5, 0, 0));
+		testRotation(b, FRotator(-5, 0, 0));
+		// YAW
+		testRotation(b, FRotator(0, 5, 0));
+		testRotation(b, FRotator(0, -5, 0));
+		//ROLL
+		testRotation(b, FRotator(0, 0, 5));
+		testRotation(b, FRotator(0, 0, -5));
+
+		
+	}
+	for (ALeaf* l : leafs) {
+
+		// location
+		testLocation(l);
+
+		// PITCH
+		testRotation(l, FRotator(2, 0, 0));
+		testRotation(l, FRotator(-2, 0, 0));
+		// YAW
+		testRotation(l, FRotator(0, 2, 0));
+		testRotation(l, FRotator(0, -2, 0));
+		//ROLL
+		testRotation(l, FRotator(0, 0, 2));
+		testRotation(l, FRotator(0, 0, -2));
+	}
+
+	currentValue = calculateHits();
+}
+
+void ATree::testRotation(ABranch* b, FRotator r) {
+	float currentBest = calculateHits();
+	float latestHits = currentBest;
+	int count = 0;
+	int bestFirstMeasuredAt = 0;
+	while (currentBest == latestHits && count < 360 / 5) {
+		b->AddActorLocalRotation(r);
+		cascadePositionUpdate(b, RECURSIVE_DEPTH_LIMIT);
+		latestHits = calculateHits();
+		if (latestHits > currentBest) {
+			bestFirstMeasuredAt = count;
+			currentBest = latestHits;
+		}
+		count++;
+	}
+	b->AddActorLocalRotation(-(((count - bestFirstMeasuredAt)/2) * r));
+	cascadePositionUpdate(b, RECURSIVE_DEPTH_LIMIT);
+}
+
+void ATree::testRotation(ALeaf* l, FRotator r) {
+	float currentBest = calculateHits();
+	float latestHits = currentBest;
+	int bestFirstMeasuredAt = 0;
+	int count = 0;
+	while (currentBest == latestHits && count < 360 / 2) {
+		l->AddActorLocalRotation(r);
+		latestHits = calculateHits();
+		if (latestHits > currentBest) {
+			bestFirstMeasuredAt = count;
+			currentBest = latestHits;
+		}
+		count++;
+	}
+	l->AddActorLocalRotation(-(((count - bestFirstMeasuredAt)/2) * r));
+}
+
+void ATree::testLocation(ALeaf* l) {
+	float currentBest = 0;
+	float bestDist = 0;
+
+	for (float dist = 0; dist < 1; dist += 0.1) {
+		l->branchOffset = dist;
+		l->SetActorLocation(branches[l->attachedToIndex]->getPositionOnBranch(l->branchOffset) + l->offsetVector);
+		float currRes = calculateHits();
+		if (currRes > currentBest) {
+			bestDist = dist;
+			currentBest = currRes;
+		}
+
+	}
+	l->branchOffset = bestDist;
+	l->SetActorLocation(branches[l->attachedToIndex]->getPositionOnBranch(l->branchOffset) + l->offsetVector);
+
 }

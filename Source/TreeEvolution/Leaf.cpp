@@ -38,7 +38,7 @@ void ALeaf::duplicate(ALeaf* spawnedLeaf) {
 
 void ALeaf::mutate() {
 	if (random.FRand() < rotationChance) {
-		FRotator f(random.FRand() * 40 - 20, random.FRand() * 40 - 20, random.FRand() * 40 - 20);
+		FRotator f(random.FRand() * 30 - 15, random.FRand() * 30 - 15, random.FRand() * 30 - 15);
 		AddActorWorldRotation(f);
 	}
 

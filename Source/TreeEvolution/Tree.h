@@ -34,6 +34,9 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "General")
 		void duplicate(ATree* tree, FVector location);
 
+	UFUNCTION(BlueprintCallable, Category = "General")
+		void hillClimb();
+
 	UFUNCTION(BlueprintCallable, Category = "Statistics")
 		float calculateHits();
 
@@ -42,6 +45,10 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category = "Statistics")
 		float calculateHitsStraightAbove();
+
+	UFUNCTION(BlueprintCallable, Category = "Statistics")
+		void exportTree();
+
 
 
 	UFUNCTION(BlueprintCallable, Category = "Mutation")
@@ -71,6 +78,7 @@ public:
 		int32 numBranches = 15;
 	UPROPERTY(EditAnywhere, Category = "Algorithm")
 		int32 numLeafs = 60;
+
 
 	vector<float> createChildDNA(ATree* otherParent);
 
@@ -105,6 +113,11 @@ public:
 
 	TMap<ABranch*, TArray<ABranch*>> branchDependencies;
 	TMap<ABranch*, TArray<ALeaf*>> leafDependencies;
+
+	void testRotation(ABranch* b, FRotator r);
+	void testRotation(ALeaf* l, FRotator r);
+
+	void testLocation(ALeaf* l);
 
 private:
 	FRandomStream random;

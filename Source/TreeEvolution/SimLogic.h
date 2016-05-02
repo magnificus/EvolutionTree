@@ -42,6 +42,9 @@ public:
 		}
 		return toReturn;
 	}
+	UFUNCTION(BlueprintCallable, Category = "Gameplay")
+		void hillClimb();
+	
 
 	UFUNCTION(BlueprintCallable, Category = "Gameplay")
 		int32 GetNumTrees() { return nbrTrees; }
