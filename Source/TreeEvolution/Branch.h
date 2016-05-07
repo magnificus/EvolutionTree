@@ -42,13 +42,15 @@ public:
 
 	float calculateCost();
 
-	void displace(FVector loc, FRotator rot);
+	void displace(FVector loc, FRotator rot, FVector origin);
 
 	bool mutate();
 	bool overlapsProps();
 
 	int32 placedOn = NOT_PLACED;
+	int32 myIndex = NOT_PLACED;
 
+	FVector treeOffset;
 
 private:
 	FRandomStream random;

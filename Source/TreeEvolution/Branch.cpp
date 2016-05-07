@@ -111,7 +111,8 @@ bool ABranch::overlapsProps() {
 }
 
 
-void ABranch::displace(FVector loc, FRotator rot) {
+void ABranch::displace(FVector loc, FRotator rot, FVector origin) {
+	treeOffset = loc - origin;
 	SetActorLocation(loc);
 	SetActorRotation(rot);
 }

@@ -476,7 +476,8 @@ void ATree::initRandomBranch() {
 	ABranch* spawnedBranch = GetWorld()->SpawnActor<ABranch>(Branch_BP, FVector(), FRotator(), FActorSpawnParameters());
 	branchDependencies.Add(spawnedBranch, TArray<ABranch*>());
 	leafDependencies.Add(spawnedBranch, TArray<ALeaf*>());
-	branches.Add(spawnedBranch);
+	
+	spawnedBranch->myIndex = branches.Add(spawnedBranch);
 
 	GetRandomPositionFor(spawnedBranch, RECURSIVE_DEPTH_LIMIT);
 
@@ -521,7 +522,7 @@ void ATree::cascadePositionUpdate(ABranch* b, int limit) {
 	TArray<ABranch*> toRemove;
 	for (ABranch* newB : branchDependencies[b]) {
 
-		newB->SetActorLocation(b->getEnd());
+		newB->displace(b->getEnd(), newB->GetActorRotation(), GetActorLocation());
 		if (newB->overlapsProps()) {
 
 			// new position was not good, overlapped with other actors, so displace the branch
@@ -638,19 +639,19 @@ void ATree::GetRandomPositionFor(ABranch* b, int recursiveLimit) {
 		throw "No valid positions for branch";
 	}
 
-	if (branches.Num() > 0 && random.FRand() > .5) {
+	if (b->myIndex > 0 && random.FRand() > .5) {
 		// X % chance to spawn on another branch instead of the stem
-		int32 index = random.RandRange(0, branches.Num() - 1);
+		int32 index = random.RandRange(0, b->myIndex-1);
 		ABranch* toBuildFrom = branches[index];
-		if (selfInChain(b, toBuildFrom)) {
-			// abandon because this branch was parent to the branch it attempted to extend
-			GetRandomPositionFor(b, recursiveLimit);
-			return;
-		}
+		//if (selfInChain(b, toBuildFrom)) {
+		//	// abandon because this branch was parent to the branch it attempted to extend
+		//	GetRandomPositionFor(b, recursiveLimit);
+		//	return;
+		//}
 		branchDependencies[toBuildFrom].Add(b);
 		b->placedOn = index;
 		FVector pos = toBuildFrom->getEnd();
-		b->displace(pos, toBuildFrom->GetActorRotation() - FRotator(random.FRand() * 150 - 75, random.FRand() * 150 - 75, random.FRand() * 150 - 75));
+		b->displace(pos, toBuildFrom->GetActorRotation() - FRotator(random.FRand() * 150 - 75, random.FRand() * 150 - 75, random.FRand() * 150 - 75), GetActorLocation());
 	}
 	else {
 		// spawn on stem
@@ -699,7 +700,7 @@ void ATree::GetRandomPositionFor(ABranch* b, int recursiveLimit) {
 		}
 
 		b->placedOn = NOT_PLACED;
-		b->displace(RV_Hit.Location, getR());
+		b->displace(RV_Hit.Location, getR(), GetActorLocation());
 	}
 
 	if (b->overlapsProps()) {
@@ -754,10 +755,12 @@ vector<float> ATree::createChildDNA(ATree* otherParent) {
 	vector<float> DNA;
 
 	for (int i = 0; i < branches.Num(); ++i) {
-		ABranch* b(branches[i]);
-		DNA.push_back(b->GetActorLocation().X - GetActorLocation().X);
-		DNA.push_back(b->GetActorLocation().Y - GetActorLocation().Y);
-		DNA.push_back(b->GetActorLocation().Z - GetActorLocation().Z);
+		ABranch* b = (random.FRand() < .5) ? (branches[i]) : otherParent->branches[i];
+		//ABranch* b = branches[i];
+		DNA.push_back(b->treeOffset.X);
+		DNA.push_back(b->treeOffset.Y);
+		DNA.push_back(b->treeOffset.Z);
+
 		DNA.push_back(b->GetActorRotation().Pitch);
 		DNA.push_back(b->GetActorRotation().Yaw);
 		DNA.push_back(b->GetActorRotation().Roll);
@@ -794,16 +797,22 @@ void ATree::buildFromDNA(vector<float> DNA) {
 	int currPos = 0;
 	for (int i = 0; i < branches.Num(); ++i) {
 		ABranch* b = branches[i];
-		b->SetActorLocation(FVector(DNA[currPos] + GetActorLocation().X, DNA[currPos + 1] + GetActorLocation().Y, DNA[currPos + 2] + GetActorLocation().Z));
-		b->SetActorRotation(FRotator(DNA[currPos + 3], DNA[currPos + 4], DNA[currPos + 5]));
-		b->placedOn = DNA[currPos + 6];
 
+		FRotator rot = FRotator(DNA[currPos + 3], DNA[currPos + 4], DNA[currPos + 5]);
+		b->placedOn = DNA[currPos + 6];
 		if (b->placedOn != NOT_PLACED) {
 			branchDependencies[branches[b->placedOn]].Add(b);
+			b->displace(branches[b->placedOn]->getEnd(), rot, GetActorLocation());
+		}
+		else {
+			b->displace(FVector(DNA[currPos] + GetActorLocation().X, DNA[currPos + 1] + GetActorLocation().Y, DNA[currPos + 2] + GetActorLocation().Z), rot, GetActorLocation());
 		}
 
 		currPos += 7;
 	}
+
+
+	// leafs
 	for (int i = 0; i < leafs.Num(); ++i) {
 		ALeaf* l = leafs[i];
 		ABranch* b = branches[l->attachedToIndex];
