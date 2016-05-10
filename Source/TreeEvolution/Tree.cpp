@@ -643,11 +643,7 @@ void ATree::GetRandomPositionFor(ABranch* b, int recursiveLimit) {
 		// X % chance to spawn on another branch instead of the stem
 		int32 index = random.RandRange(0, b->myIndex-1);
 		ABranch* toBuildFrom = branches[index];
-		//if (selfInChain(b, toBuildFrom)) {
-		//	// abandon because this branch was parent to the branch it attempted to extend
-		//	GetRandomPositionFor(b, recursiveLimit);
-		//	return;
-		//}
+
 		branchDependencies[toBuildFrom].Add(b);
 		b->placedOn = index;
 		FVector pos = toBuildFrom->getEnd();
@@ -756,7 +752,6 @@ vector<float> ATree::createChildDNA(ATree* otherParent) {
 
 	for (int i = 0; i < branches.Num(); ++i) {
 		ABranch* b = (random.FRand() < .5) ? (branches[i]) : otherParent->branches[i];
-		//ABranch* b = branches[i];
 		DNA.push_back(b->treeOffset.X);
 		DNA.push_back(b->treeOffset.Y);
 		DNA.push_back(b->treeOffset.Z);
@@ -803,6 +798,9 @@ void ATree::buildFromDNA(vector<float> DNA) {
 		if (b->placedOn != NOT_PLACED) {
 			branchDependencies[branches[b->placedOn]].Add(b);
 			b->displace(branches[b->placedOn]->getEnd(), rot, GetActorLocation());
+			if (b->overlapsProps()) {
+				displaceBranch(b);
+			}
 		}
 		else {
 			b->displace(FVector(DNA[currPos] + GetActorLocation().X, DNA[currPos + 1] + GetActorLocation().Y, DNA[currPos + 2] + GetActorLocation().Z), rot, GetActorLocation());
@@ -953,7 +951,6 @@ void ATree::testLocation(ALeaf* l) {
 			bestDist = dist;
 			currentBest = currRes;
 		}
-
 	}
 	l->branchOffset = bestDist;
 	l->SetActorLocation(branches[l->attachedToIndex]->getPositionOnBranch(l->branchOffset) + l->offsetVector);
