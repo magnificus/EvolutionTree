@@ -231,8 +231,11 @@ void ASimLogic::writeHistoryToFile() {
 		FString AbsoluteFilePath = SaveDirectory + "/" + FileName;
 
 		FFileHelper::SaveStringToFile(TextToSave, *AbsoluteFilePath);
-		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, TEXT("** Successfully exported data **"));
+		
 
+	}
+	else {
+		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("** Could not export data **"));
 	}
 
 }
