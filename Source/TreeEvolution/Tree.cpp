@@ -63,6 +63,7 @@ float ATree::calculateHits() {
 
 
 float ATree::calculateCost() {
+
 	float costConstant = 0.001;
 
 	float total = 0;
@@ -336,6 +337,21 @@ float ATree::sweepHits() {
 }
 
 
+FVector GetForwardVector(FRotator InRot)
+{
+	return FRotationMatrix(InRot).GetScaledAxis(EAxis::X);
+}
+
+FVector GetRightVector(FRotator InRot)
+{
+	return FRotationMatrix(InRot).GetScaledAxis(EAxis::Y);
+}
+
+FVector GetUpVector(FRotator InRot)
+{
+	return FRotationMatrix(InRot).GetScaledAxis(EAxis::Z);
+}
+
 
 float ATree::hemisphereHits() {
 
@@ -349,8 +365,12 @@ float ATree::hemisphereHits() {
 
 	FRotator ActorRotation = GetActorRotation();
 	setAngles(ang, 0.0);
-	float angleDiff = 180.0 / 4.0;
-	float twistDiff = 360.0 / 3.0;
+
+	int pointsInAngle = 8;
+	int pointsInTwist = 5;
+
+	float angleDiff = 180.0 / 8.0;
+	float twistDiff = 360.0 / 5.0;
 
 	//Re-initialize hit info
 	FHitResult RV_Hit(ForceInit);
@@ -361,9 +381,8 @@ float ATree::hemisphereHits() {
 	RV_TraceParams.bReturnPhysicalMaterial = false;
 
 
-	for (int s = 0; s < 3; ++s) {
-	
-		for (int k = 0; k < 5; ++k) {
+	for (int s = 0; s < pointsInTwist; ++s) {
+		for (int k = 1; k < pointsInAngle; ++k) {
 
 			ang = 90.0 - angleDiff*k;
 			if (ang < 0.0) {
@@ -375,14 +394,14 @@ float ATree::hemisphereHits() {
 				setAngles(ang, twistDiff*s);
 			}
 
-			if (s > 0 && k != 2 || s == 0) {
-				ActorRotation.Pitch -= FMath::RadiansToDegrees(theta);
-				ActorRotation.Yaw += FMath::RadiansToDegrees(phi);
-				SetActorRotation(ActorRotation);
+			if (s > 0 && k != pointsInAngle/2 || s == 0) {
+				FRotator r = GetActorRotation();
+				r.Pitch -= FMath::RadiansToDegrees(theta);
+				r.Yaw += FMath::RadiansToDegrees(phi);
 
-				FVector  forward = GetActorForwardVector();
-				FVector right = GetActorRightVector();
-				FVector sunDir = -GetActorUpVector();
+				FVector forward = GetForwardVector(r);
+				FVector right = GetRightVector(r);
+				FVector sunDir = -GetUpVector(r);
 
 				for (int x = -numberRays / 2; x < numberRays / 2; ++x) {
 
@@ -404,7 +423,7 @@ float ATree::hemisphereHits() {
 							ECC_Pawn, //collision channel
 							RV_TraceParams
 						);
-						FColor color = FColor(75, 120, 100);
+						FColor color = FColor((s==0) ? 255 : 0	, 120, 100);
 						if (s == 0) color = FColor(255, 0, 0);
 						else if (s == 1) color = FColor(0, 255, 0);
 						else color = FColor(140, 140, 140);
@@ -429,24 +448,19 @@ float ATree::hemisphereHits() {
 
 					}
 				}
-				ActorRotation.Pitch += FMath::RadiansToDegrees(theta);
-				ActorRotation.Yaw -= FMath::RadiansToDegrees(phi);
-				SetActorRotation(ActorRotation);
-
+				r.Pitch += FMath::RadiansToDegrees(theta);
+				r.Yaw -= FMath::RadiansToDegrees(phi);
 				
 
 			}
 		}
 	}
 
-	return hits / ((numberRays*numberRays)*13.0);
+	return hits / (numberRays*numberRays)/(pointsInAngle*pointsInTwist);
 
 
 
 }
-
-
-
 
 
 

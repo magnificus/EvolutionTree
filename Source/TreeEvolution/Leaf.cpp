@@ -55,7 +55,6 @@ UPrimitiveComponent* ALeaf::getComponentWithName(FString name) {
 	{
 		if ((*Itr)->GetName() == name)
 			return (*Itr);
-
 	}
 
 	throw - 1;

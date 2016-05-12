@@ -26,12 +26,14 @@ ASimLogic::ASimLogic()
 		Leaf_BP = LeafFinder.Object;
 
 	random.GenerateNewSeed();
-	//currentBestLocation.X = -1000;
+
 }
 
 void ASimLogic::BeginPlay()
 {
 	Super::BeginPlay();
+	//init();	
+
 }
 
 // Called every frame
@@ -86,7 +88,6 @@ void ASimLogic::simulationTick()
 		else {
 			parent1->duplicate(t, t->GetActorLocation());
 		}
-
 		t->mutate(true);
 	}
 
@@ -231,7 +232,8 @@ void ASimLogic::writeHistoryToFile() {
 		FString AbsoluteFilePath = SaveDirectory + "/" + FileName;
 
 		FFileHelper::SaveStringToFile(TextToSave, *AbsoluteFilePath);
-		
+
+		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, TEXT("** Successfully exported data **"));
 
 	}
 	else {
