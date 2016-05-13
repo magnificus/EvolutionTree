@@ -64,13 +64,12 @@ float ATree::calculateHits() {
 
 float ATree::calculateCost() {
 
-	float costConstant = 0.001;
 
 	float total = 0;
 	for (ABranch* b : branches) {
 		total += lengthOfChain(b);
 	}
-	total *= costConstant;
+	total *= branchExtensionCost;
 
 	return total;
 }
@@ -358,7 +357,7 @@ float ATree::hemisphereHits() {
 
 	int size = maxSpread *2.0;
 	float offset = size / numberRays;
-	float sunDist = 2800;
+	float sunDist = 2000;
 	float hits = 0.0;
 	float ang = 90.0;
 	
@@ -369,8 +368,8 @@ float ATree::hemisphereHits() {
 	int pointsInAngle = 8;
 	int pointsInTwist = 5;
 
-	float angleDiff = 180.0 / 8.0;
-	float twistDiff = 360.0 / 5.0;
+	float angleDiff = 180.0 / pointsInAngle;
+	float twistDiff = 360.0 / pointsInTwist;
 
 	//Re-initialize hit info
 	FHitResult RV_Hit(ForceInit);
@@ -393,8 +392,12 @@ float ATree::hemisphereHits() {
 			else {
 				setAngles(ang, twistDiff*s);
 			}
+			
+			//ang = angleDiff*k;
+			//setAngles(angleDiff*k, twistDiff*s);
 
-			if (s > 0 && k != pointsInAngle/2 || s == 0) {
+			// if either this is the first beam (s == 0) or it's not the beam from above
+			if (k != pointsInAngle/2 || s == 0) {
 				FRotator r = GetActorRotation();
 				r.Pitch -= FMath::RadiansToDegrees(theta);
 				r.Yaw += FMath::RadiansToDegrees(phi);
