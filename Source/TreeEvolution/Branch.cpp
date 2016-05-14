@@ -83,11 +83,6 @@ UPrimitiveComponent* ABranch::getComponentWithName(FString name) {
 }
 
 
-
-float ABranch::calculateCost() {
-	return cost;
-}
-
 bool ABranch::overlapsProps() {
 
 	if (!useOverlap)
@@ -113,15 +108,19 @@ bool ABranch::overlapsProps() {
 
 void ABranch::displace(FVector loc, FRotator rot, FVector origin) {
 	treeOffset = loc - origin;
-	SetActorLocation(loc);
-	SetActorRotation(rot);
+	getComponentWithName("start")->SetWorldLocation(loc);
+	//SetActorLocation(loc);
+	if (rot != FRotator())
+		SetActorRotation(rot);
 }
 
 bool ABranch::mutate() {
 	if (random.FRand() < rotationChance) {
+		FRotator pre = GetActorRotation();
 		AddActorLocalRotation(FQuat(FRotator(random.FRand() * 60 - 30, random.FRand() * 60 - 30, random.FRand() * 60 - 30)));
-		while (overlapsProps()) {
-			AddActorLocalRotation(FQuat(FRotator(random.FRand() * 60 - 30, random.FRand() * 60 - 30, random.FRand() * 60 - 30)));
+		if (overlapsProps()) {
+			SetActorRotation(pre);
+			return false;
 		}
 		return true;
 	}

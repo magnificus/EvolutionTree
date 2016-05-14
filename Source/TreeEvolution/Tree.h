@@ -84,6 +84,7 @@ public:
 
 
 	vector<float> createChildDNA(ATree* otherParent);
+	vector<float> createChildDNA();
 
 	void buildFromDNA(vector<float>);
 	void init(int32 numB, int32 numL);
@@ -118,10 +119,10 @@ public:
 	TMap<ABranch*, TArray<ABranch*>> branchDependencies;
 	TMap<ABranch*, TArray<ALeaf*>> leafDependencies;
 
-	void testRotation(ABranch* b, FRotator r);
-	void testRotation(ALeaf* l, FRotator r);
+	void testRotation(ABranch* b, FRotator r, int stepSize);
+	void testRotation(ALeaf* l, FRotator r, int stepSize);
 
-	void testLocation(ALeaf* l);
+	void testLocation(ALeaf* l, int stepSize);
 
 private:
 	FRandomStream random;

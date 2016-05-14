@@ -78,16 +78,12 @@ void ASimLogic::simulationTick()
 		}
 	}
 	for (ATree* t : losers) {
-		// replace all losing trees with new trees that are either clones of old trees or children of two of them depending on the boolean "sexualReproduction"
+		// replace all losing trees with new trees that are children of two other trees
 		ATree* parent1 = winners[random.RandRange(0, winners.Num() - 1)];
+		ATree* parent2 = winners[random.RandRange(0, winners.Num() - 1)];
+		combine(t, parent1, parent2, t->GetActorLocation());
 
-		if (sexualReproduction) {
-			ATree* parent2 = winners[random.RandRange(0, winners.Num() - 1)];
-			combine(t, parent1, parent2, t->GetActorLocation());
-		}
-		else {
-			parent1->duplicate(t, t->GetActorLocation());
-		}
+
 		t->mutate(true);
 	}
 

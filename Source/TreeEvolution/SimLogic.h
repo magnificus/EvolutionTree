@@ -73,8 +73,6 @@ public:
 		int32 distance = 2000;
 	UPROPERTY(EditAnywhere, Category = "Gameplay")
 		FVector currentBestLocation;
-	UPROPERTY(EditAnywhere, Category = "Gameplay")
-		bool sexualReproduction = true;
 
 	UPROPERTY(EditAnywhere, Category = "Algorithm")
 		int32 numBranches = 30;

@@ -35,12 +35,7 @@ public:
 	UPROPERTY(EditAnywhere, Category = "Algorithm")
 		float rotationChance = .005f;
 	UPROPERTY(EditAnywhere, Category = "Algorithm")
-		float cost = 0.5;
-	UPROPERTY(EditAnywhere, Category = "Algorithm")
 		bool useOverlap = true;
-
-
-	float calculateCost();
 
 	void displace(FVector loc, FRotator rot, FVector origin);
 
