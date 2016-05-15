@@ -619,35 +619,6 @@ void ATree::mutate(bool reCalc) {
 		}
 	}
 
-	//for (int i = 0; i < count1; ++i) {
-	//	int index = random.RandRange(0, leafs.Num() - 1);
-	//	float oldOffset = leafs[index]->branchOffset;
-	//	float newOffset = oldOffset + (random.FRand() / 4) - (1 / 8);
-	//	newOffset = newOffset > 1 ? 1 : newOffset;
-	//	newOffset = newOffset < 0 ? 0 : newOffset;
-	//	leafs[index]->branchOffset = newOffset;
-
-	//	FVector oldVectorOffset = leafs[index]->offsetVector;
-	//	FVector newVectorOffset = oldVectorOffset + FVector(random.FRand() * 5 - 2.5, random.FRand() * 5 - 2.5, random.FRand() * 5 - 2.5);
-	//	newVectorOffset.X = newVectorOffset.X > 20 ? 20 : newVectorOffset.X;
-	//	newVectorOffset.X = newVectorOffset.X < -20 ? -20 : newVectorOffset.X;
-	//	newVectorOffset.Y = newVectorOffset.Y > 20 ? 20 : newVectorOffset.Y;
-	//	newVectorOffset.Y = newVectorOffset.Y < -20 ? -20 : newVectorOffset.Y;
-	//	newVectorOffset.Z = newVectorOffset.Z > 10 ? 10 : newVectorOffset.Z;
-	//	newVectorOffset.Z = newVectorOffset.Z < -10 ? -10 : newVectorOffset.Z;
-	//	leafs[index]->offsetVector = newVectorOffset;
-	//	leafs[index]->SetActorLocation(branches[leafs[index]->attachedToIndex]->getPositionOnBranch(newOffset) + newVectorOffset);
-	//}
-
-	//for (int i = 0; i < count2; ++i) {
-	//	int index = random.RandRange(0, leafs.Num() - 1);
-	//	ALeaf* l = leafs[index];
-	//	leafDependencies[branches[l->attachedToIndex]].Remove(l);
-	//	l->attachedToIndex = random.RandRange(0, branches.Num() - 1);
-	//	leafDependencies[branches[l->attachedToIndex]].Add(l);
-	//	l->SetActorLocation(branches[l->attachedToIndex]->getPositionOnBranch(l->branchOffset) + l->offsetVector);
-	//}
-
 	for (ALeaf* l : leafs) {
 		l->mutate();
 	}
@@ -890,9 +861,6 @@ void ATree::exportTree() {
 
 void ATree::hillClimb() {
 	for (ABranch* b : branches) {
-		float currentBest = calculateHits();
-		FRotator pre = b->GetActorRotation();
-		FRotator best = pre;
 
 		// PITCH
 		testRotation(b, FRotator(5, 0, 0), 5);
@@ -961,7 +929,7 @@ void ATree::testRotation(ALeaf* l, FRotator r, int stepSize) {
 	l->AddActorLocalRotation(-(((count - bestFirstMeasuredAt)/2) * r));
 }
 
-void ATree::testLocation(ALeaf* l, int stepSize) {
+void ATree::testLocation(ALeaf* l, float stepSize) {
 	float currentBest = 0;
 	float bestDist = 0;
 

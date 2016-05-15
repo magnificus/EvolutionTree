@@ -122,7 +122,7 @@ public:
 	void testRotation(ABranch* b, FRotator r, int stepSize);
 	void testRotation(ALeaf* l, FRotator r, int stepSize);
 
-	void testLocation(ALeaf* l, int stepSize);
+	void testLocation(ALeaf* l, float stepSize);
 
 private:
 	FRandomStream random;
