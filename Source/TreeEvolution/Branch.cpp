@@ -110,8 +110,7 @@ void ABranch::displace(FVector loc, FRotator rot, FVector origin) {
 	treeOffset = loc - origin;
 	getComponentWithName("start")->SetWorldLocation(loc);
 	//SetActorLocation(loc);
-	if (rot != FRotator())
-		SetActorRotation(rot);
+	SetActorRotation(rot);
 }
 
 bool ABranch::mutate() {

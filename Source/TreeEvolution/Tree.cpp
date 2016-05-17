@@ -541,7 +541,7 @@ void ATree::cascadePositionUpdate(ABranch* b, int limit) {
 			continue;
 		}
 		FVector end = b->getEnd();
-		newB->displace(end, FRotator(), GetActorLocation());
+		newB->displace(end, newB->GetActorRotation(), GetActorLocation());
 		if (newB->overlapsProps()) {
 
 			// new position was not good, overlapped with other actors, so displace the branch
@@ -614,7 +614,8 @@ void ATree::mutate(bool reCalc) {
 			leafDependencies[branches[l->attachedToIndex]].Remove(l);
 			l->attachedToIndex = random.RandRange(0, branches.Num() - 1);
 			leafDependencies[branches[l->attachedToIndex]].Add(l);
-			l->SetActorLocation(branches[l->attachedToIndex]->getPositionOnBranch(l->branchOffset) + l->offsetVector);
+			l->updateLocation(branches[l->attachedToIndex]->getPositionOnBranch(l->branchOffset));
+			//l->SetActorLocation(branches[l->attachedToIndex]->getPositionOnBranch(l->branchOffset) + l->offsetVector);
 
 		}
 	}
@@ -935,7 +936,8 @@ void ATree::testLocation(ALeaf* l, float stepSize) {
 
 	for (float dist = 0; dist < 1; dist += stepSize) {
 		l->branchOffset = dist;
-		l->SetActorLocation(branches[l->attachedToIndex]->getPositionOnBranch(l->branchOffset) + l->offsetVector);
+		l->updateLocation(branches[l->attachedToIndex]->getPositionOnBranch(l->branchOffset));
+		//l->SetActorLocation(branches[l->attachedToIndex]->getPositionOnBranch(l->branchOffset) + l->offsetVector);
 		float currRes = calculateHits();
 		if (currRes > currentBest) {
 			bestDist = dist;
@@ -943,6 +945,7 @@ void ATree::testLocation(ALeaf* l, float stepSize) {
 		}
 	}
 	l->branchOffset = bestDist;
-	l->SetActorLocation(branches[l->attachedToIndex]->getPositionOnBranch(l->branchOffset) + l->offsetVector);
+	l->updateLocation(branches[l->attachedToIndex]->getPositionOnBranch(l->branchOffset));
+	//l->SetActorLocation(branches[l->attachedToIndex]->getPositionOnBranch(l->branchOffset) + l->offsetVector);
 
 }

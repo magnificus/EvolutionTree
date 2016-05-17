@@ -80,7 +80,7 @@ public:
 		float leafChangeBranchChance = 0.005f;
 
 	UPROPERTY(EditAnywhere, Category = "Algorithm")
-		float branchExtensionCost = 0.001f;
+		float branchExtensionCost = 0.0001f;
 
 
 	vector<float> createChildDNA(ATree* otherParent);

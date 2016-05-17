@@ -45,7 +45,8 @@ void ALeaf::mutate() {
 }
 
 void ALeaf::updateLocation(FVector branchLoc) {
-	SetActorLocation(branchLoc + offsetVector);
+	//SetActorLocation(branchLoc + offsetVector);
+	SetActorLocation(branchLoc);
 }
 
 UPrimitiveComponent* ALeaf::getComponentWithName(FString name) {
