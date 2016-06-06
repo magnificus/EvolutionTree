@@ -2,7 +2,7 @@
 
 Evolution of a tree where the environment is customizable by the user. The fitness function is based on how much sunlight a tree is able to catch on its leaves.
 
-You can find a link to download the [full executable here](https://mega.nz/#!JAQGUagA!qUTmYWQTm0dmkJJs1m_vgQYtUTOzTDhMj2VHq9V-Ht0)
+You can find a link to download the full executable  [here](https://mega.nz/#!JAQGUagA!qUTmYWQTm0dmkJJs1m_vgQYtUTOzTDhMj2VHq9V-Ht0)
 
 
 ![Evolved Tree](http://i.imgur.com/Hf8dNUa.jpg)
